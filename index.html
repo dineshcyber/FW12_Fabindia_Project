@@ -17,7 +17,44 @@
     <header class="header" id="myHeader">
             <div class="top-header">
                 <div class="header-left">
-                    <button> <img src="./image/icon-signin-black.png" alt=""> Sign In</button>
+                    <button id="signin"> <img src="./image/icon-signin-black.png" alt=""> Sign In</button>
+                    <!-- The Modal -->
+<div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+       <div style = "padding: 4px; margin-bottom: 5px;"><h2>Sign in</h2></div> 
+        <hr style="width:65%;text-align:left;margin: auto; font-size: 2px;">
+      </div>
+      <div class="modal-body">
+          <div id="workspace">
+              <div>Email Address:*</div> 
+              <div style="padding: 0px;">
+                  <div style="margin-bottom: 0px;"><input type="text" id="mail" placeholder=""/></div>
+                  <div  style="font-size: 10px; color: red; padding: 0px 5px;">a</div>
+              </div>
+              <div>Password:*</div>
+              <div  style="padding: 0px;">
+                 <div style="margin-bottom: 0px;"><input type="password" id="password" placeholder="Minimum 8 characters"/></div> 
+                  <div style="font-size: 10px; color: red; padding: 0px 5px;">a</div>
+                </div> 
+              <div></div>
+              <div><button>Sign In</button>
+                <div id="show-flex">
+                    <div>Forgot Password?</div>
+                    <div>New to Fabindia?</div>
+                    <div><button style="padding: 0%;" id="create-acc">Create Account</button></div>
+              </div>
+              
+              </div>
+          </div>
+      </div>
+    </div>
+  
+  </div>
+
                 </div>
                 <div class="header-middle">
                     <img src="https://www.fabindia.com/file/general/Fabindia_logo.svg" alt="LOGO">
@@ -73,8 +110,6 @@
             </div>
         </div>
     </header>
-    <h1>Sayak changes</h1>
-    <h2>Priya__s</h2>
     <!-- Header End-->
 
     <!--Slider start-->
