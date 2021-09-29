@@ -19,10 +19,6 @@ function myFunction() {
 
 let images = [
 
- 
-
-
-
     "https://www.fabindia.com/file/general/hp-mb-14sep21-1.jpg",
     "https://www.fabindia.com/file/general/hp-mb-27sep21-4.jpg",
     "https://www.fabindia.com/file/general/hp-mb-27sep21-5.jpg",
@@ -45,8 +41,6 @@ let images = [
         container.append(img);
         counter = counter+1;
     }, 3000);
-
-    
 }
 startSlideshow();
 
@@ -77,3 +71,9 @@ window.onclick = function (event) {
 
 };
 
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
