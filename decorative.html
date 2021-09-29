@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decorative</title>
+    <style>
+        body{
+            background-color:#f4f2e5;
+        }
+        .header{
+    float: left;
+    
+    height: 150px;
+    width: 100%;
+    margin: auto;
+   
+    background-color: #fff;
+}
+#productsbox{
+display:flex;
+width:100%;
+
+}
+.sort{
+    width:40%;
+}
+#products {
+    width:100%;
+    font-family: 'Muli','Helvetica Neue',Helvetica,Arial,sans-serif;
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    
+    
+}
+   
+    #products img{
+          width:87%;
+          height:80%;
+          
+    }
+
+    #products #wishlist{
+        width:20px;
+        height:20px;
+        position:relative;
+        float: right;
+        left:-15%;
+        top:2%;
+    }
+        
+
+    
+   
+    
+    
+  
+
+    </style>
+</head>
+<body>
+    <div class ="header"></div>
+    <div id="productsbox">
+        <div class="sort">
+            category
+            <div><a  href="products.html">Allproducts</a></div>
+            <div><a  href="men.html">men</a></div>
+            <div><a  href="women.html">women</a></div>
+            <div><a  href="decorative.html">Decorative</a></div>
+            price
+             <div><button onclick="sort1()">₹0 - ₹1500</button></div>
+             <div><button onclick="sort2()">₹1500 - ₹10000</button></div>
+             
+         
+            
+ 
+         </div>
+        <div id="products"></div>
+    </div>
+    
+</body>
+<script src="decorative.js"></script>
+</html>
