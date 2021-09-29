@@ -175,7 +175,11 @@ li a {
 /* The Close Button */
 .close {
   float: right;
-  font-size: 28px;
+    font-size: 20px;
+    border: 1px solid #000;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
 }
 
 .close:hover,
