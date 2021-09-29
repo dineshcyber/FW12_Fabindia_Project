@@ -100,7 +100,7 @@
 }
 ul {
     list-style-type: none;
-    margin: 10px 75px;
+    margin: 10px 80px 10px 150px;
     padding: 0;
     overflow: hidden;
     
@@ -115,14 +115,15 @@ ul {
     display: inline-block;
     color: #000;
     text-align: center;
-    padding: 14px 16px;
+    padding: 14px 10px;
     text-decoration: none;
+    border: 1px solid black;
   }
   
   
 /* Navbar end */
 
-.modal {
+.modal, .modal2{
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
@@ -137,7 +138,7 @@ ul {
   }
   
   /* Modal Content */
-  .modal-content {
+  .modal-content, .modal-content2 {
     font-family: Nunito Sans;
     position: relative;
     background-color: #fefefe;
@@ -165,33 +166,44 @@ ul {
   }
   
   /* The Close Button */
-  .close {
+  .close, .close{
     float: right;
     font-size: 28px;
     font-weight: bold;
   }
   
   .close:hover,
-  .close:focus {
+  .close:focus,
+  .close2:hover,
+  .close2:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;
   }
+
   
-  .modal-header {
+  .modal-header, .modal-header2{
     padding: 10px 16px;
     background-color:white;
     text-align: center;
   }
   
-  .modal-body {padding: 2px 16px;}
+  #modal-body {
+      padding: 2px 16px;
+      background-color: white;
+    }
   #workspace {
       width: 65%;
       margin: auto;
-      display: grid;
-      gap: 2%;
-      grid-template-columns: 28% 70%;
-      grid-template-rows: 60px 50px 80px;
+      
+  }
+  #removable {
+    width: 100%;
+    display: grid;
+    height: 230px;
+    gap: 2%;
+    grid-template-columns: 28% 70%;
+    grid-template-rows: 60px 60px 60px 60px 60px 60px 13px 30px;
   }
 #mail, #password {
    width: 95%;
@@ -199,7 +211,7 @@ ul {
    border-radius: 4px;
    padding: 8px;
 }
-#workspace > div:nth-child(6) > button {
+#removable > div:nth-child(6) > button {
     margin: 0%;
     background-color: yellow;
     width: 100%;
@@ -225,6 +237,77 @@ padding: 0%;
 font-size: 12px;
 margin-top: 0%;
 margin-bottom: 0%;
-
 }
+ #workspace >  div{
+  width: 100%;
+  display: grid;
+  gap: 2%;
+  grid-template-columns: 28% 70%;
+  grid-template-rows: 53px 53px 53px;
+ }
+
+
+/* .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: maroon;
+  min-width: 80%;
+  z-index:1;
+  border: 1px solid black;
+  margin-top: 1.5%;
+  text-align:left;
+  height: 200px;
+  padding: 20px;
+}
+
+.dropdown-content a:hover {
+  cursor: pointer;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .menu1 {
+  background-color: white;
+}
+.dropdown .dropdown-content:after {
+    content: '';
+    display: block;  
+    position: absolute;
+    left: 3%;
+    bottom: 100%;
+    border: 9px solid transparent;
+    border-bottom: 15px solid red;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+} */
+
+.d {
+	float: left;
+	overflow: hidden;
+}
+.d .d-btn {
+	padding: 8px 12px;
+	background: inherit;
+	text-transform: uppercase;
+}
+
+.d-content {
+	display: none;
+	position: absolute;
+	background: maroon;
+	width: 90%;
+	left: 0;
+	z-index: 10;
+  height: 200px;
+  margin: 1% 5%;
+  padding: 20px;
+}
+.d:hover .d-content {
+	display: block;
+}
+
+
+
   
