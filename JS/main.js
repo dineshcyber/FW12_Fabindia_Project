@@ -20,6 +20,7 @@ let images = [
     "https://www.fabindia.com/file/general/hp-mb-14sep21-1.jpg",
     "https://www.fabindia.com/file/general/hp-mb-27sep21-4.jpg",
     "https://www.fabindia.com/file/general/hp-mb-27sep21-5.jpg",
+    "https://www.fabindia.com/file/general/hp-mb-27sep21-2.jpg"
   ];
 
 
