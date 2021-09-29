@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   padding: 0;
@@ -196,9 +197,7 @@ li a {
   text-align: center;
   background-color: #f4f2e5;
 }
-.modal-body {
-  padding: 2px 16px;
-}
+
 #workspace {
   width: 65%;
   margin: auto;
@@ -238,11 +237,7 @@ li a {
   padding-left: 21px;
 }
 #create-acc {
-  /* margin: 0%;
-  padding: 0%;
-  font-size: 12px;
-  margin-top: 0%;
-  margin-bottom: 0%; */
+  
   color: maroon;
 }
 
@@ -307,5 +302,90 @@ li a {
   text-align: center;
 }
 /* Trending Section */
+
+  #modal-body {
+      padding: 2px 16px;
+      background-color: white;
+    }
+  #workspace {
+      width: 65%;
+      margin: auto;
+      
+  }
+  #removable {
+    width: 100%;
+    display: grid;
+    height: 230px;
+    gap: 2%;
+    grid-template-columns: 28% 70%;
+    grid-template-rows: 60px 60px 60px 60px 60px 60px 13px 30px;
+  }
+#mail, #password {
+   width: 95%;
+   border: 1px solid black;
+   border-radius: 4px;
+   padding: 8px;
+}
+#removable > div:nth-child(6) > button {
+    margin: 0%;
+    background-color: yellow;
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 3px;
+    font-size: 20px;
+}
+#show-flex {
+    display: flex;
+    margin-top: 10px;
+}
+#show-flex > div{
+font-size: 12px;
+padding: 2px;
+
+}
+#show-flex > div:nth-child(1){
+  flex-grow: 1;
+    }
+#create-acc {
+margin:0%;
+padding: 0%;
+font-size: 12px;
+margin-top: 0%;
+margin-bottom: 0%;
+}
+ #workspace >  div{
+  width: 100%;
+  display: grid;
+  gap: 2%;
+  grid-template-columns: 28% 70%;
+  grid-template-rows: 53px 53px 53px;
+ }
+
+
+
+.d {
+	float: left;
+	overflow: hidden;
+}
+.d .d-btn {
+	padding: 8px 12px;
+	background: inherit;
+	text-transform: uppercase;
+}
+
+.d-content {
+	display: none;
+	position: absolute;
+	background: maroon;
+	width: 90%;
+	left: 0;
+	z-index: 10;
+  height: 200px;
+  margin: 1% 5%;
+  padding: 20px;
+}
+.d:hover .d-content {
+	display: block;
+}
   
 
