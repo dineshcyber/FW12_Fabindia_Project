@@ -1,7 +1,7 @@
 
   let productdata = [
     {
-      name: "viscose slimfit long kurta ",
+      name: "Henley Shirt",
       price: "M.R.P. ₹2790.00",
       img: "https://www.fabindia.com/ccstore/v1/images/?source=/file/v334622535619501789/products/10702336BU.f.230921.JPG&height=475&width=475",
       category:"men",
@@ -9,7 +9,7 @@
 
     },
     {
-      name: "cotton trouser",
+      name: "Cotton trouser",
       price: "M.R.P. ₹2190.00",
       img: "https://www.fabindia.com/ccstore/v1/images/?source=/file/v8534366497497831468/products/10679252BU.b.020421.jpg&height=475&width=475",
       category:"men",
@@ -23,50 +23,50 @@
       cost:1490
     },
     {
-      name: "cotton regular salwar",
+      name: "Cotton regular salwar",
       price: "M.R.P. ₹490.00",
       img: "https://www.fabindia.com/ccstore/v1/images/?source=/file/v5979244302314366052/products/10584859WH.f.14032019.jpg&height=475&width=475",
       category:"men",
       cost:490
     },
     {
-      name: "henley shirt",
+      name: "Viscose slimfit kurta",
       price: "M.R.P. ₹790.00",
-      img: "https://www.fabindia.com/file/general/clp-shirt-latestforyou-2.jpg",
+      img: "https://www.fabindia.com/ccstore/v1/images/?source=/file/v8213431944360027281/products/10697663GD.f.230921.JPG&height=475&width=475",
       category:"men",
       cost:790
     },
 
     {
-      name: "cotton silk kurta",
+      name: "Cotton silk kurta",
       price: "M.R.P. ₹3490.00",
       img: "https://www.fabindia.com/ccstore/v1/images/?source=/file/v1337066270086581501/products/10701109BU.f.25.09.21.jpg&height=475&width=475",
       category:"women",
       cost:3490
     },
     {
-      name: "cotton silk Dupta",
+      name: "Silk Dupta",
       price: "M.R.P. ₹1490.00",
       img: "https://www.fabindia.com/ccstore/v1/images/?source=/file/v6052351309828903515/products/10700958BU.f.23.09.21.JPG&height=475&width=475",
       category:"women",
       cost:1490
     },
     {
-      name: "cotton silk kurta red",
+      name: "Cotton silk kurta red",
       price: "M.R.P. ₹3790.00",
       img: "https://www.fabindia.com/ccstore/v1/images/?source=/file/v6311478562554356972/products/10668524WN.f.041020.jpg&height=475&width=475",
       category:"women",
       cost:3790
     },
     {
-      name: "cotton silk printed kurta",
+      name: "Cotton silk printed kurta",
       price: "M.R.P. ₹2900.00",
       img: "https://www.fabindia.com/ccstore/v1/images/?source=/file/v5068411366971496723/products/10634946BG.f.080212.jpg&height=475&width=475",
       category:"women",
       cost:2900
     },
     {
-      name: "cotton woven jamdani sari",
+      name: " Woven jamdani sari",
       price: "M.R.P. ₹5900.00",
       img: "https://www.fabindia.com/ccstore/v1/images/?source=/file/v8581662257803837945/products/10702075GR.f.23.09.21.JPG&height=475&width=475",
       category:"women",
@@ -101,7 +101,7 @@
       cost:5690
     },
     {
-      name: "kapish T-lite holder",
+      name: "Kapish T-lite holder",
       price: "M.R.P. ₹590.00",
       img: "https://www.fabindia.com/ccstore/v1/images/?source=/file/v7959643868958455864/products/10674200BR.f.220221.jpg&height=475&width=475",
       category:"Decorative",
@@ -139,7 +139,7 @@
    
     
         let div = document.createElement('div');
-        
+      
         let img = document.createElement('img');
         
         img.src = product.img;
@@ -252,9 +252,7 @@ function sort2(){
  
    }
 
-   function appear(){
-     document.querySelectorAll('.disappear').style.display ="block";
-   }
+   
 
 
   
