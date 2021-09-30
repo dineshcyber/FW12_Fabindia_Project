@@ -7,7 +7,8 @@
     <title>Fabindia | Shop for Handwoven Garments & Home Furnishings</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
-      
+      <link rel="stylesheet" href="./slick-1.8.1/slick-1.8.1/slick/slick.css">
+      <link rel="stylesheet" href="./slick-1.8.1/slick-1.8.1/slick/slick-theme.css">
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
@@ -23,33 +24,36 @@
     <div class="modal-content">
       <div class="modal-header">
         <span class="close">&times;</span>
-
-
-        <div style = "padding: 4px; margin-bottom: 5px;"><p>Sign In</p></div> 
-        <hr style="width:65%;margin: auto;">
-
+       <div style = "padding: 4px; margin-bottom: 5px;"><h2  id="change_me">Sign in</h2></div> 
+        <hr style="width:65%;text-align:left;margin: auto; font-size: 2px;">
       </div>
-      <div class="modal-body">
+      <div id="modal-body">
           <div id="workspace">
-              <div>Email Address:*</div> 
-
-
-                  <div>
-                    <input type="email" id="mail"/>
-                  </div>
-              <div>Password:*</div>
-                 <div><input type="password" id="password" placeholder="Minimum 8 characters"/></div>
-                 <div></div>
-              <div>
-                  <button>Sign In</button>
-              <div id="show-flex">
-
-                    <div><a href="#">Forgot Password?</a></div>
-                    <div>New to Fabindia?</div>
-                    <div id="create-acc"><a href="#">Create Account</a></div>
-              </div>             
+              <div id=removable>
+                <div>Email Address:*</div> 
+                <div style="padding: 0px;">
+                    <div style="margin-bottom: 0px;"><input type="text" id="mail" placeholder=""/></div>
+                    <div  style="font-size: 10px; color: red; padding: 0px 5px;">a</div>
+                </div>
+                <div>Password:*</div>
+                <div  style="padding: 0px;">
+                   <div style="margin-bottom: 0px;"><input type="password" id="password" placeholder="Minimum 8 characters"/></div> 
+                    <div style="font-size: 10px; color: red; padding: 0px 5px;">a</div>
+                  </div> 
+                <div></div>
+                <div><button>Sign In</button>
+                  <div id="show-flex">
+                      <div>Forgot Password?</div>
+                      <div>New to Fabindia?</div>
+                      <div><button onclick="sign_up()" style="padding: 0%;" id="create-acc">Create Account</button>
+                 </div>
+                </div>
+                
+                
+                </div>
 
               </div>
+             
           </div>
       </div>
     </div>
@@ -71,42 +75,72 @@
             </div>
             <div class="nav-bar">
                 <ul>
-                    <li>
-                        <a href="#home">NEW ARRIVALS</a>
-                        
+                    <li class="d">
+                            <div class="d-btn">NEW ARRIVALS</div>   
+                            <div class="d-content">
+                                assa    
+                                </div>           
                     </li>
-                    <li>
-                        <a href="#news">COLLECTIONS</a>
-                        
+                    <li class="d">
+                        <div class="d-btn">COLLECTIONS</div>   
+                        <div class="d-content">
+                            jhfkjhjkfhs     
+                            </div>        
                     </li>
-                    <li>
-                        <a href="#">WOMEN</a>
-                        
-                        </li>
-                    <li>
-                        <a href="#">MEN</a>
-                        
-                        </li>
-                    <li>
-                        <a href="#news">KIDS</a>
-                        
-                        </li>
-                    <li>
-                        <a href="#news">HOME LINEN</a>
-                        
-                        </li>
-                    <li>
-                        <a href="#news">DINING & DECOR</a>
-                        
+                    <li class="d">
+                        <div class="d-btn">WOMEN</div>   
+                        <div class="d-content">
+                            women     
+                            </div>       
                     </li>
-                    <li>
-                        <a href="#news">FURNITURE</a>
+                    <li class="d">
+                        <div class="d-btn">MEN</div>   
+                        <div class="d-content">
+                            men  
+                            </div>        
                     </li>
-                    <li><a href="#news">BEAUTY</a></li>
-                    <li><a href="#news">FOOD</a></li>
-                    <li><a href="#news">CUSTOM KURTAS!</a></li>
-                    <li><a href="#news">SALE!</a></li>
-                    
+                    <li class="d">
+                        <div class="d-btn">KIDS</div>   
+                        <div class="d-content">
+                            kids 
+                            </div>            
+                    </li>
+                    <li class="d">
+                        <div class="d-btn">HOME LINEN</div>   
+                        <div class="d-content">
+                            home    
+                            </div>      
+                    </li>
+                    <li class="d">
+                        <div class="d-btn">DINING & DECOR</div>   
+                        <div class="d-content">
+                            dining   
+                            </div>        
+                    </li>
+                    <li class="d">
+                        <div class="d-btn">FURNITURES</div>   
+                        <div class="d-content">
+                         furniture 
+                         </div>         
+                    </li>
+                    <li class="d">
+                        <div class="d-btn">BEAUTY</div>   
+                        <div class="d-content">
+                            beautys  
+                            </div>           
+                    </li>
+                    <li class="d">
+                        <div class="d-btn">FOOD</div>   
+                        <div class="d-content">
+                            food 
+                        </div>         
+                    </li>
+                    <li class="d">
+                        <div class="d-btn">CUSTOM KURTAS!</div>           
+                    </li>
+                    <li class="d">
+                        <div class="d-btn">SALE!</div>           
+                    </li>
                   </ul>
             </div>
         </div>
@@ -118,7 +152,6 @@
         
     </div>
     <!--Slider end-->
-
     <!-- Section trending start-->
     <section class="trending">
         <div class="section-heading">
@@ -131,18 +164,9 @@
         <img src="" alt="">
     </section>
     <!-- Section trending end-->
-
-    <!-- Section Latest start-->
-
-
-    
-    <!-- Section Latest end-->
-
-
-
-    
     <script src="./JS/main.js"></script>
     <script src="./JS/trending.js"></script>
+    <script src="./JS/signup.js"></script>
     
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
