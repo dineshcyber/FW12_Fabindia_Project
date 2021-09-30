@@ -26,10 +26,25 @@
         height: 80px;
       }
       #ship_bill {
+        border-bottom: 1px solid gray;
+        border-top: 1px solid gray;
+        border-right: 1px solid gray;
         width: 75%;
+      }
+      #ship_bill > h2 {
+        /* padding: 0px; */
+        margin: 0px;
+      }
+      #ship_bill > p {
+        padding: 0px;
+        margin-top: 0px;
+        color: maroon;
+        font-weight: bold;
+        font-size: 13px;
       }
       #form {
         border-right: 1px solid grey;
+        border-bottom: 1px solid grey;
         width: 75%;
         display: grid;
         grid-template-columns: auto auto auto;
@@ -55,7 +70,8 @@
       }
       #details {
         width: 75%;
-        border-right: 1px solid black;
+        border-right: 1px solid gray;
+        border-top: 1px solid gray;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -101,6 +117,7 @@
 
     <div id="ship_bill">
       <h2>Shipping/Billing Address</h2>
+      <p id="warning">Please Select a Shipping Address to continue</p>
     </div>
 
     <div id="ship_bill2">
@@ -161,3 +178,19 @@
     <div id="bottom"></div>
   </body>
 </html>
+<script>
+  //Shipping-bill panel - Start
+  let sb = document.getElementById(`ship_bill`);
+  let sb2 = document.getElementById(`ship_bill2`);
+  let alert = document.getElementById(`warning`);
+  sb.onclick = function () {
+    if (sb2.style.display !== "none") {
+      sb2.style.display = "none";
+      alert.style.display = `block`;
+    } else {
+      sb2.style.display = "block";
+      alert.style.display = `none`;
+    }
+  };
+  //Shipping-bill panel - End
+</script>
