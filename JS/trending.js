@@ -1,22 +1,22 @@
 let data = [
     {
       name: "BOY'S SETS",
-      content:"Smart choices to let your little champs dress to the occasion",
+     detail:"Smart choices to let your little champs dress to the occasion",
       img: "https://www.fabindia.com/file/general/hp-wehave-27ep21-10.jpg",
     },
     {
         name: "BED LINEN",
-        content:"In vivid shades & patterns for a home bathed in the festive spirit",
+       detail:"In vivid shades & patterns for a home bathed in the festive spirit",
         img: "https://www.fabindia.com/file/general/hp-wehave-27ep21-11.jpg",
       },
       {
         name: "TABLE LINEN",
-        content:"To dress up warm, celebratory tablescapes",
+       detail:"To dress up warm, celebratory tablescapes",
         img: "https://www.fabindia.com/file/general/hp-wehave-27ep21-13.jpg",
       },
       {
         name: "DRINKWARE",
-        content:"Finely crafted pieces to delight guests with sherbets, tea or traditional beverages",
+       detail:"Finely crafted pieces to delight guests with sherbets, tea or traditional beverages",
         img: "https://www.fabindia.com/file/general/hp-wehave-27ep21-14.jpg",
       },
   ];
@@ -33,7 +33,7 @@ let data = [
         img.src=slide.img;
 
         let product_content = document.createElement('p');
-        product_content.textContent = slide.content;
+        product_content.textContent = slide.detail;
 
         let product_name = document.createElement('p');
         product_name.textContent = slide.name;
