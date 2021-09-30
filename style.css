@@ -86,8 +86,57 @@
 .trending {
   float: left;
   width: 100%;
-  height: 600px;
-  background-color: red;
+  height: 700px;
+  background-color: #f5f5f5;
+}
+.section-heading {
+  width: 1000px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.section-heading #heading {
+  font-size: 36px;
+  font-weight: 500;
+  color: #604b3b;
+  margin: 50px 0px 0px 0px;
+  line-height: 35px;
+  text-align: center;
+  letter-spacing: 5px;
+  padding-bottom: 20px;
+}
+
+.section-heading #sec-content {
+  max-width: 1000px !important;
+  text-align: center;
+  display: inline-block;
+  padding: 10px;
+  line-height: 30px;
+  font-family: GothamRnd-Book;
+  font-size: 17px;
+  color: #604b3b;
+  min-height: 80px;
+}
+
+#slider {
+  max-width: 1100px;
+  margin: auto;
+  padding: 10px;
+  height: 320px;
+  display: grid;
+  grid-gap: 5%;
+  grid-template-columns: 20% 20% 20% 20%;
+  justify-content: center;
+}
+
+#slider img {
+  width: 100%;
+}
+
+#slider p {
+  width: 200px;
+  padding: 10px;
+  text-align: center;
 }
 
 /* Navbar start */
@@ -338,3 +387,160 @@ li a {
   text-align: center;
 }
 /* Trending Section */
+
+
+/* Priya's CSS */
+
+#workspace >  div{
+  width: 100%;
+  display: grid;
+  gap: 2%;
+  grid-template-columns: 28% 70%;
+  grid-template-rows: 53px 53px 53px;
+  }
+  
+  .d {
+  float: left;
+  overflow: hidden;
+  }
+  .d:hover {
+    cursor: pointer;
+  }
+  
+  .d .d-btn {
+  padding: 22px 12px 0px 12px;
+  background: inherit;
+  text-transform: uppercase;
+  }
+  
+  .d-content1, .d-content2, .d-content3, .d-content4,.d-content5, 
+  .d-content6, .d-content7, .d-content8, .d-content9, .d-content10 {
+  display: none;
+  position: absolute;
+  background: maroon;
+  width: 90%;
+  left: 0;
+  z-index: 10;
+  height: 200px;
+  margin: 1.7% 5%;
+  padding: 20px;
+  }
+  .d:hover .d-content1, .d:hover .d-content2, .d:hover .d-content3, .d:hover .d-content4,
+  .d:hover .d-content5, .d:hover .d-content6, .d:hover .d-content7, .d:hover .d-content8,
+  .d:hover .d-content9, .d:hover .d-content10{
+  display: block;
+  cursor: pointer;
+  }
+  
+  .d .d-content1:after{
+    content: '';
+    display: block;  
+    position: absolute;
+    left: 12%;
+    bottom: 100%;
+    border: 9px solid transparent;
+    border-bottom: 15px solid maroon;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+  } 
+  .d .d-content2:after{
+    content: '';
+    display: block;  
+    position: absolute;
+    left: 21%;
+    bottom: 100%;
+    border: 9px solid transparent;
+    border-bottom: 15px solid maroon;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+  }
+  .d .d-content3:after{
+    content: '';
+    display: block;  
+    position: absolute;
+    left: 28.2%;
+    bottom: 100%;
+    border: 9px solid transparent;
+    border-bottom: 15px solid maroon;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+  } 
+  .d .d-content4:after{
+    content: '';
+    display: block;  
+    position: absolute;
+    left: 33%;
+    bottom: 100%;
+    border: 9px solid transparent;
+    border-bottom: 15px solid maroon;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+  }
+  .d .d-content5:after{
+    content: '';
+    display: block;  
+    position: absolute;
+    left: 37%;
+    bottom: 100%;
+    border: 9px solid transparent;
+    border-bottom: 15px solid maroon;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+  } 
+  .d .d-content6:after{
+    content: '';
+    display: block;  
+    position: absolute;
+    left: 43.5%;
+    bottom: 100%;
+    border: 9px solid transparent;
+    border-bottom: 15px solid maroon;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+  }
+  .d .d-content7:after{
+    content: '';
+    display: block;  
+    position: absolute;
+    left: 52.5%;
+    bottom: 100%;
+    border: 9px solid transparent;
+    border-bottom: 15px solid maroon;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+  } 
+  .d .d-content8:after{
+    content: '';
+    display: block;  
+    position: absolute;
+    left: 61%;
+    bottom: 100%;
+    border: 9px solid transparent;
+    border-bottom: 15px solid maroon;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+  }
+  .d .d-content9:after{
+    content: '';
+    display: block;  
+    position: absolute;
+    left: 68.5%;
+    bottom: 100%;
+    border: 9px solid transparent;
+    border-bottom: 15px solid maroon;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+  } 
+  .d .d-content10:after{
+    content: '';
+    display: block;  
+    position: absolute;
+    left: 73.6%;
+    bottom: 100%;
+    border: 9px solid transparent;
+    border-bottom: 15px solid maroon;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+  }
+
+/* Priya's CSS */

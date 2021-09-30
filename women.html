@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>women</title>
+    <style>
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%
+  }
+
+.top-header{
+    width: 1200px;
+    height: 90px;
+    margin: auto;
+    display: flex;
+}
+.header-left{
+    width: 150px;
+    height: 90px;
+}
+.header-left button{
+    width: 100px;
+    display: inline-flex;
+    margin: 25px 25px;
+    height: 40px;
+   border: none;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 19px;
+    background-color: transparent;
+}
+
+.header-left button img{
+    width: 18%;
+}
+
+.header-middle{
+    width: 900px;
+    
+    height: 90px;
+    align-content: center;
+}
+
+.header-middle img{
+    width: 15%;
+    margin: 21px 383px;
+}
+.header-right{
+    width: 150px;
+    
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.wishlist img{
+    width: 60%;
+}
+
+.cart img{
+    width: 60%;
+}
+
+
+
+
+
+/* Navbar start */
+.nav-bar {
+    width: 1400px;
+    margin: auto;
+}
+ul {
+    list-style-type: none;
+    margin: 10px 75px;
+    padding: 0;
+    overflow: hidden;
+    
+  }
+  
+  li {
+    float: left;
+    font-size: 14px;
+  }
+  
+  li a{
+    display: inline-block;
+    color: #000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+
+/* header end */
+
+
+
+    body{
+            background-color:#f4f2e5;
+
+        }
+        .header{
+    float: left;
+    
+    height: 150px;
+    width: 100%;
+    margin: auto;
+   
+    background-color: #f4f2e5;
+}
+#productsbox{
+display:flex;
+width:100%;
+
+}
+.sort{
+    width:30%;
+    margin-left:5%;
+}
+#products {
+    width:100%;
+      font-family: 'Muli','Helvetica Neue',Helvetica,Arial,sans-serif;
+    display: grid;
+    grid-template-columns: 28% 28% 28%;
+   gap:2%;
+   
+}
+#products img{
+width:100%;
+
+}
+#products img:hover{
+opacity: .5;
+
+}
+
+#products #wishlist{
+        width:20px;
+        height:20px;
+        position:relative;
+        float: right;
+        left:-8%;
+        top:7%;
+        z-index: 1;
+
+    }
+    .mrpred{
+        color:rgba(82, 12, 12, 0.767);
+        margin-top:1%;
+    }
+    .category{
+        font-size:17px;
+        margin-top:10%;
+        font-family: 'Muli','Helvetica Neue',Helvetica,Arial,sans-serif;
+    }
+    .price{
+        font-size:17px;
+        margin-top:5%;
+        font-family: 'Muli','Helvetica Neue',Helvetica,Arial,sans-serif;
+    }
+    .disappear{
+        display:none;
+        font-size: 15px;
+        font-family: 'Muli','Helvetica Neue',Helvetica,Arial,sans-serif;
+       
+    }
+    .category:hover .disappear{
+        display: block;
+    }
+    .disappear{
+        display:none;
+        margin-top:4%;
+        
+    }
+    .price:hover .disappear{
+        display: block;
+        
+    }
+    hr{
+      width:50%; 
+       margin-right:300px ;
+    }
+    a{
+        color:rgb(85, 82, 82);
+        font-weight: lighter;
+    }
+    a:hover{
+        color:rgba(133, 19, 19, 0.767);
+    }
+    .sort{
+       align-items: center;
+       font-size: 14px;
+    }
+    .price button{
+        font-family: sans-serif;
+        box-shadow: 0px 0px 0px transparent;
+        border:0px solid transparent;
+        color:rgb(85, 82, 82);
+        background-color:#f4f2e5;
+    }
+    
+    
+  
+
+    </style>
+</head>
+<body>
+    <div class ="header">
+        <header class="header" id="myHeader">
+            <div class="top-header">
+                <div class="header-left">
+                    <button> <img src="./image/icon-signin-black.png" alt=""> Sign In</button>
+                </div>
+                <div class="header-middle">
+                    <img src="https://www.fabindia.com/file/general/Fabindia_logo.svg" alt="LOGO">
+                </div>
+                <div class="header-right">
+                    <div class="wishlist">
+                        <img src="./image/icon-heart-black.png" alt="">
+                    </div>
+                    <div class="cart">
+                        <img src="./image/icon-bag-black.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="nav-bar">
+                <ul>
+                    <li>
+                        <a href="#home">NEW ARRIVALS</a>
+                        
+                    </li>
+                    <li>
+                        <a href="#news">COLLECTIONS</a>
+                        
+                    </li>
+                    <li>
+                        <a href="#">WOMEN</a>
+                        
+                        </li>
+                    <li>
+                        <a href="#">MEN</a>
+                        
+                        </li>
+                    <li>
+                        <a href="#news">KIDS</a>
+                        
+                        </li>
+                    <li>
+                        <a href="#news">HOME LINEN</a>
+                        
+                        </li>
+                    <li>
+                        <a href="#news">DINING & DECOR</a>
+                        
+                    </li>
+                    <li>
+                        <a href="#news">FURNITURE</a>
+                    </li>
+                    <li><a href="#news">BEAUTY</a></li>
+                    <li><a href="#news">FOOD</a></li>
+                    <li><a href="#news">CUSTOM KURTAS!</a></li>
+                    <li><a href="#news">SALE!</a></li>
+                    
+                  </ul>
+            </div>
+        </div>
+    </header>
+
+
+
+
+    </div>
+    <div id="productsbox">
+        <div class="sort">
+          <div class= "category">Category 
+           <div class= "disappear"><a  href="products.html">All</a></div>
+           <div class= "disappear"><a  href="men.html">Men</a></div>
+           <div class= "disappear"><a  href="women.html">Women</a></div>
+           <div class= "disappear"><a  href="decorative.html">Decorative</a></div><hr/>
+        </div> 
+          
+           <div class="price">Price 
+            <div class= "disappear"><a href="#nothing"> <button onclick="sort1()">₹0 - ₹1500</a></button></div>
+            <div class= "disappear"><a href="#nothing"><button onclick="sort2()">₹1500 - ₹10000</a></button></div><hr/>
+        </div>
+             
+         
+            
+ 
+         </div>
+        <div id="products"></div>
+    </div>
+    
+</body>
+<script src="women.js"></script>
+</html>
