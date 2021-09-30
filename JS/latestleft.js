@@ -16,8 +16,8 @@ let imageslatest = [
     let containerlatest=document.getElementById("partleft");
     let intervallatest;
 
-    function startSlide(){
-        //1.
+    function startSlideleft(){
+        
         let counter=0;
         intervallatest = setInterval( function() {
             containerlatest.innerHTML = null;
@@ -35,4 +35,4 @@ let imageslatest = [
         counter = counter+1;
     }, 3000);
     }
-    startSlide();
+    startSlideleft();
