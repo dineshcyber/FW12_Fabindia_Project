@@ -18,7 +18,9 @@ let data = [
         name: "DRINKWARE",
        detail:"Finely crafted pieces to delight guests with sherbets, tea or traditional beverages",
         img: "https://www.fabindia.com/file/general/hp-wehave-27ep21-14.jpg",
+        
       },
+     
   ];
 
   let parent = document.getElementById('slider');
@@ -45,5 +47,4 @@ let data = [
     }
     runslider();
 
-    
     
