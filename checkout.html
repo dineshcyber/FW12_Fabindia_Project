@@ -15,7 +15,7 @@
       @import url("https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap");
       body {
         background-color: #f4f2e5;
-        padding-left: 10px;
+        /* padding-left: 10px; */
       }
       p {
         font-family: "Mulish", sans-serif;
@@ -25,11 +25,30 @@
         justify-content: space-between;
         height: 80px;
       }
+
+      /* SHIPPING AND BILLING PANEL END*/
       #ship_bill {
+        border-bottom: 1px solid gray;
+        border-top: 1px solid gray;
+        border-right: 1px solid gray;
         width: 75%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+      #ship_bill > h2 {
+        margin: 0px;
+      }
+      #ship_bill > p {
+        display: none;
+        margin: 0px;
+        color: maroon;
+        font-weight: bold;
+        font-size: 13px;
       }
       #form {
         border-right: 1px solid grey;
+        border-bottom: 1px solid grey;
+        padding-bottom: 30px;
         width: 75%;
         display: grid;
         grid-template-columns: auto auto auto;
@@ -41,21 +60,29 @@
       #form > div {
         padding-top: 30px;
       }
-      #form > div > input {
+      #form > div > input,
+      #form > div > select {
         width: 60%;
-        padding-left: 20px;
+        padding-left: 5px;
         font-family: "Mulish", sans-serif;
         height: 30px;
         border: 1px solid #cccccc;
         background-color: #f9f8f1;
       }
+      #form > div > select {
+        height: 35px;
+        width: 62%;
+      }
+      /* SHIPPING AND BILLING PANEL END*/
+
       #bottom {
         height: 300px;
         background-color: #dbd9cd;
       }
       #details {
         width: 75%;
-        border-right: 1px solid black;
+        border-right: 1px solid gray;
+        border-top: 1px solid gray;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -77,6 +104,37 @@
         border: none;
         border-radius: 3px;
         width: 200px;
+      }
+      /* FINAL PAYMENT PANEL START */
+      #pay2 {
+        border-top: 1px solid gray;
+        border-right: 1px solid gray;
+        width: 75%;
+      }
+      #pay3 {
+        width: 100%;
+        display: flex;
+        gap: 2%;
+        padding-bottom: 20px;
+      }
+      #p3l {
+        width: 30%;
+        background-color: #f9f8f1;
+      }
+      #p3r {
+        width: 70%;
+        background-color: #f9f8f1;
+        padding-bottom: 20px;
+      }
+      #p3r-t {
+        width: 95%;
+        margin: auto;
+        background-color: white;
+        display: flex;
+      }
+      #p3r-b {
+        width: 85%;
+        margin: auto;
       }
     </style>
   </head>
@@ -101,6 +159,7 @@
 
     <div id="ship_bill">
       <h2>Shipping/Billing Address</h2>
+      <p id="warning">Please Select a Shipping Address to continue</p>
     </div>
 
     <div id="ship_bill2">
@@ -111,12 +170,24 @@
         </div>
         <div>
           <p>Country*</p>
-          <input type="text" />
+          <select id="country">
+            <option value="india">India</option>
+            <option value="usa">United States of America</option>
+            <option value="bangladesh">Bangladesh</option>
+            <option value="singapore">Singapore</option>
+          </select>
         </div>
         <div></div>
         <div>
           <p>State*</p>
-          <input type="text" />
+          <select id="state">
+            <option value="default">State/Region</option>
+            <option value="ap">Andhra Pradesh</option>
+            <option value="haryana">Haryana</option>
+            <option value="up">Uttar Pradesh</option>
+            <option value="delhi">Delhi</option>
+            <option value="wb">West Bengal</option>
+          </select>
         </div>
         <div>
           <p>City*</p>
@@ -157,7 +228,52 @@
     <div>
       <h2>Payment Details</h2>
     </div>
-
+    <div id="pay2">
+      <h2>Make Payment</h2>
+      <div id="pay3">
+        <div id="p3l"></div>
+        <div id="p3r">
+          <div id="p3r-t">
+            <img src="https://www.fabindia.com/file/general/logo-hdfc.png" />
+            <p>
+              Get 10% discount on Rs. 5000/- or above with your HDFC credit
+              card. T&C apply.
+            </p>
+          </div>
+          <div id="p3r-b">
+            <h3>Enter your card details</h3>
+            <form>
+              <p>Card Number*</p>
+              <input type="number" />
+              <p>Name on Card*</p>
+              <input type="text" />
+              <p>Expires On*</p>
+              <input type="number" />
+              <input type="number" />
+              <input type="number" />
+              <p>Be quick, be safe. Save your card details</p>
+              <button>Pay Now</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
     <div id="bottom"></div>
   </body>
 </html>
+<script>
+  //Shipping-bill panel - Start
+  let sb = document.getElementById(`ship_bill`);
+  let sb2 = document.getElementById(`ship_bill2`);
+  let alert = document.getElementById(`warning`);
+  sb.onclick = function () {
+    if (sb2.style.display !== "none") {
+      sb2.style.display = "none";
+      alert.style.display = `block`;
+    } else {
+      sb2.style.display = "block";
+      alert.style.display = `none`;
+    }
+  };
+  //Shipping-bill panel - End
+</script>
