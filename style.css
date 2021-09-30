@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *{
   margin: 0;
   padding: 0;
@@ -273,3 +274,396 @@ display: block;
 
 
 
+=======
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+.header{
+    float: left;
+    border-bottom: 2px solid #000;
+    height: 150px;
+    width: 100%;
+    margin: auto;
+   
+    background-color: #fff;
+
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.top-header {
+  width: 1200px;
+  height: 90px;
+  margin: auto;
+  display: flex;
+}
+.header-left {
+  width: 150px;
+  height: 90px;
+}
+.header-left button {
+  width: 100px;
+  display: inline-flex;
+  margin: 25px 25px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 19px;
+  background-color: transparent;
+}
+
+.header-left button img {
+  width: 18%;
+}
+
+.header-middle {
+  width: 900px;
+
+  height: 90px;
+  align-content: center;
+}
+
+.header-middle img {
+  width: 15%;
+  margin: 21px 383px;
+}
+.header-right {
+  width: 150px;
+
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wishlist img {
+  width: 60%;
+}
+
+.cart img {
+  width: 60%;
+}
+
+.slider-crousel {
+  float: left;
+  width: 100%;
+  height: 700px;
+  background-color: #000000;
+}
+
+.slider-crousel img {
+  width: 100%;
+}
+
+
+
+
+
+
+/* Navbar start */
+.nav-bar {
+  width: 1400px;
+  margin: auto;
+}
+ul {
+  list-style-type: none;
+  margin: 10px 75px;
+  padding: 0;
+  overflow: hidden;
+}
+
+li {
+  float: left;
+  font-size: 14px;
+}
+
+li a {
+  display: inline-block;
+  color: #000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Navbar end */
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  position: relative;
+  margin: auto;
+  border: 1px solid #888;
+  max-width: 700px;
+  height: 310px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+  background-color: #f4f2e5;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+/* The Close Button */
+.close {
+  float: right;
+    font-size: 20px;
+    border: 1px solid #000;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+}
+
+.close:hover,
+.close:focus {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 20px 16px;
+  font-family: "Mulish", sans-serif;
+  font-size: 23px;
+  font-weight: 500;
+  text-align: center;
+  background-color: #f4f2e5;
+}
+
+#workspace {
+  width: 65%;
+  margin: auto;
+  display: grid;
+  gap: 1%;
+  grid-template-columns: 30% 70%;
+  grid-template-rows: 60px 50px 80px;
+}
+#mail,
+#password {
+  width: 95%;
+  border: 1px solid #cccccc;
+  background-color: #f4f2e5;
+  border-radius: 5px;
+  padding: 8px;
+}
+#workspace > div:nth-child(6) > button {
+  margin: 0%;
+  background-color: #ddbc4b;
+  width: 100%;
+  border-radius: 5px;
+  font-size: 15px;
+}
+#show-flex {
+  /* border: 1px solid red; */
+  display: flex;
+  margin-top: 15px;
+}
+#show-flex > div {
+  font-size: 12px;
+  padding: 2px;
+}
+#show-flex > div:nth-child(1) {
+  color: maroon;
+}
+#show-flex > div:nth-child(2) {
+  padding-left: 21px;
+}
+#create-acc {
+  
+  color: maroon;
+}
+
+
+/* Trending Section */
+
+.trending{
+  float: left;
+  width: 100%;
+  height: 700px;
+  background: #f5f5f5;
+}
+
+.section-heading{
+  width: 1000px;
+  margin: 20px auto;
+  text-align: center;
+  
+}
+
+.section-heading #heading{
+  font-size: 36px;
+  font-weight: 500;
+  color: #604b3b;
+  margin: 50px 0px 0px 0px;
+  line-height: 35px;
+  text-align: center;
+  letter-spacing: 5px;
+  padding-bottom: 20px;
+}
+
+.section-heading #sec-content{
+  max-width: 1000px !important;
+    text-align: center;
+    display: inline-block;
+    padding: 10px;
+    line-height: 30px;
+    font-family: GothamRnd-Book;
+    font-size: 17px;
+    color: #604b3b;
+    min-height: 80px;
+}
+
+#slider{
+  max-width: 1100px;
+  margin: auto;
+  padding: 10px;
+  height: 320px;
+  display: grid;
+  grid-gap: 5%;
+    grid-template-columns: 20% 20% 20% 20%;
+    justify-content: center;
+}
+
+#slider img{
+  width: 100%;
+}
+
+#slider p{
+  width: 200px;
+  padding: 10px;
+  text-align: center;
+}
+/* Trending Section */
+
+  #modal-body {
+      padding: 2px 16px;
+      background-color: white;
+    }
+  #workspace {
+      width: 65%;
+      margin: auto;
+      
+  }
+  #removable {
+    width: 100%;
+    display: grid;
+    height: 230px;
+    gap: 2%;
+    grid-template-columns: 28% 70%;
+    grid-template-rows: 60px 60px 60px 60px 60px 60px 13px 30px;
+  }
+#mail, #password {
+   width: 95%;
+   border: 1px solid black;
+   border-radius: 4px;
+   padding: 8px;
+}
+#removable > div:nth-child(6) > button {
+    margin: 0%;
+    background-color: yellow;
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 3px;
+    font-size: 20px;
+}
+#show-flex {
+    display: flex;
+    margin-top: 10px;
+}
+#show-flex > div{
+font-size: 12px;
+padding: 2px;
+
+}
+#show-flex > div:nth-child(1){
+  flex-grow: 1;
+    }
+#create-acc {
+margin:0%;
+padding: 0%;
+font-size: 12px;
+margin-top: 0%;
+margin-bottom: 0%;
+}
+ #workspace >  div{
+  width: 100%;
+  display: grid;
+  gap: 2%;
+  grid-template-columns: 28% 70%;
+  grid-template-rows: 53px 53px 53px;
+ }
+
+
+
+.d {
+	float: left;
+	overflow: hidden;
+}
+.d .d-btn {
+	padding: 8px 12px;
+	background: inherit;
+	text-transform: uppercase;
+}
+
+.d-content {
+	display: none;
+	position: absolute;
+	background: maroon;
+	width: 90%;
+	left: 0;
+	z-index: 10;
+  height: 200px;
+  margin: 1% 5%;
+  padding: 20px;
+}
+.d:hover .d-content {
+	display: block;
+}
+  
+
+>>>>>>> 7e83b924956463a983b48d4dde657c825c6e3688
