@@ -338,3 +338,160 @@ li a {
   text-align: center;
 }
 /* Trending Section */
+
+
+/* Priya's CSS */
+
+#workspace >  div{
+  width: 100%;
+  display: grid;
+  gap: 2%;
+  grid-template-columns: 28% 70%;
+  grid-template-rows: 53px 53px 53px;
+  }
+  
+  .d {
+  float: left;
+  overflow: hidden;
+  }
+  .d:hover {
+    cursor: pointer;
+  }
+  
+  .d .d-btn {
+  padding: 22px 12px 0px 12px;
+  background: inherit;
+  text-transform: uppercase;
+  }
+  
+  .d-content1, .d-content2, .d-content3, .d-content4,.d-content5, 
+  .d-content6, .d-content7, .d-content8, .d-content9, .d-content10 {
+  display: none;
+  position: absolute;
+  background: maroon;
+  width: 90%;
+  left: 0;
+  z-index: 10;
+  height: 200px;
+  margin: 1.7% 5%;
+  padding: 20px;
+  }
+  .d:hover .d-content1, .d:hover .d-content2, .d:hover .d-content3, .d:hover .d-content4,
+  .d:hover .d-content5, .d:hover .d-content6, .d:hover .d-content7, .d:hover .d-content8,
+  .d:hover .d-content9, .d:hover .d-content10{
+  display: block;
+  cursor: pointer;
+  }
+  
+  .d .d-content1:after{
+    content: '';
+    display: block;  
+    position: absolute;
+    left: 12%;
+    bottom: 100%;
+    border: 9px solid transparent;
+    border-bottom: 15px solid maroon;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+  } 
+  .d .d-content2:after{
+    content: '';
+    display: block;  
+    position: absolute;
+    left: 21%;
+    bottom: 100%;
+    border: 9px solid transparent;
+    border-bottom: 15px solid maroon;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+  }
+  .d .d-content3:after{
+    content: '';
+    display: block;  
+    position: absolute;
+    left: 28.2%;
+    bottom: 100%;
+    border: 9px solid transparent;
+    border-bottom: 15px solid maroon;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+  } 
+  .d .d-content4:after{
+    content: '';
+    display: block;  
+    position: absolute;
+    left: 33%;
+    bottom: 100%;
+    border: 9px solid transparent;
+    border-bottom: 15px solid maroon;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+  }
+  .d .d-content5:after{
+    content: '';
+    display: block;  
+    position: absolute;
+    left: 37%;
+    bottom: 100%;
+    border: 9px solid transparent;
+    border-bottom: 15px solid maroon;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+  } 
+  .d .d-content6:after{
+    content: '';
+    display: block;  
+    position: absolute;
+    left: 43.5%;
+    bottom: 100%;
+    border: 9px solid transparent;
+    border-bottom: 15px solid maroon;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+  }
+  .d .d-content7:after{
+    content: '';
+    display: block;  
+    position: absolute;
+    left: 52.5%;
+    bottom: 100%;
+    border: 9px solid transparent;
+    border-bottom: 15px solid maroon;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+  } 
+  .d .d-content8:after{
+    content: '';
+    display: block;  
+    position: absolute;
+    left: 61%;
+    bottom: 100%;
+    border: 9px solid transparent;
+    border-bottom: 15px solid maroon;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+  }
+  .d .d-content9:after{
+    content: '';
+    display: block;  
+    position: absolute;
+    left: 68.5%;
+    bottom: 100%;
+    border: 9px solid transparent;
+    border-bottom: 15px solid maroon;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+  } 
+  .d .d-content10:after{
+    content: '';
+    display: block;  
+    position: absolute;
+    left: 73.6%;
+    bottom: 100%;
+    border: 9px solid transparent;
+    border-bottom: 15px solid maroon;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+  }
+
+/* Priya's CSS */
