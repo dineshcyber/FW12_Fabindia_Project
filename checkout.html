@@ -25,6 +25,8 @@
         justify-content: space-between;
         height: 80px;
       }
+
+      /* SHIPPING AND BILLING PANEL END*/
       #ship_bill {
         border-bottom: 1px solid gray;
         border-top: 1px solid gray;
@@ -34,11 +36,10 @@
         padding-bottom: 20px;
       }
       #ship_bill > h2 {
-        /* padding: 0px; */
         margin: 0px;
       }
       #ship_bill > p {
-        /* padding: 0px; */
+        display: none;
         margin: 0px;
         color: maroon;
         font-weight: bold;
@@ -47,6 +48,7 @@
       #form {
         border-right: 1px solid grey;
         border-bottom: 1px solid grey;
+        padding-bottom: 30px;
         width: 75%;
         display: grid;
         grid-template-columns: auto auto auto;
@@ -58,14 +60,21 @@
       #form > div {
         padding-top: 30px;
       }
-      #form > div > input {
+      #form > div > input,
+      #form > div > select {
         width: 60%;
-        padding-left: 20px;
+        padding-left: 5px;
         font-family: "Mulish", sans-serif;
         height: 30px;
         border: 1px solid #cccccc;
         background-color: #f9f8f1;
       }
+      #form > div > select {
+        height: 35px;
+        width: 62%;
+      }
+      /* SHIPPING AND BILLING PANEL END*/
+
       #bottom {
         height: 300px;
         background-color: #dbd9cd;
@@ -130,12 +139,24 @@
         </div>
         <div>
           <p>Country*</p>
-          <input type="text" />
+          <select id="country">
+            <option value="india">India</option>
+            <option value="usa">United States of America</option>
+            <option value="bangladesh">Bangladesh</option>
+            <option value="singapore">Singapore</option>
+          </select>
         </div>
         <div></div>
         <div>
           <p>State*</p>
-          <input type="text" />
+          <select id="state">
+            <option value="default">State/Region</option>
+            <option value="ap">Andhra Pradesh</option>
+            <option value="haryana">Haryana</option>
+            <option value="up">Uttar Pradesh</option>
+            <option value="delhi">Delhi</option>
+            <option value="wb">West Bengal</option>
+          </select>
         </div>
         <div>
           <p>City*</p>
