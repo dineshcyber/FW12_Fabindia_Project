@@ -88,7 +88,9 @@ info.forEach(function (product){
     
           wishlist.setAttribute('id','wishlist');
     
-    
+          div.onclick = function(){
+            visible(product);
+          }
           
           div.append(wishlist,img, product_name, product_price);
       
@@ -130,6 +132,10 @@ info.forEach(function (product){
           wishlist.src ="file:///C:/Users/hgaut/Documents/GitHub/FW12_Fabindia_Project/image/icon-heart-black.png" ;
     
           wishlist.setAttribute('id','wishlist');
+
+          div.onclick = function(){
+            visible(product);
+          }
     
          div.append(wishlist,img, product_name, product_price);
       
