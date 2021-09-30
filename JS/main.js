@@ -77,11 +77,12 @@ window.onclick = function(event) {
  var conti = document.getElementById("workspace");
 
  function sign_up(){
-  item.parentNode.removeChild(item);
+  item.remove();
   document.getElementById("change_me").textContent = "Sign Up";
   conti.style.height ="700px";
-  let removable = document.createElement("div");
-  removable.style.height ="460px";
+
+  let changed_to_signup = document.createElement("div");
+  changed_to_signup.style.height ="460px";
 
   let div1 = document.createElement("div");
   div1.textContent = "First Name:*";
@@ -162,82 +163,31 @@ window.onclick = function(event) {
   div18.setAttribute("style", "font-size:10px; padding: 0px 100px 0px 0px" );
   div18.textContent = "By creating an account, you agree to Fabindia's terms of use and privacy policy";
 
-  removable.append(div1,div2,div3,div4,div5,div6,div7,div8,div9,
+  changed_to_signup.append(div1,div2,div3,div4,div5,div6,div7,div8,div9,
     div10,div11,div12,div13,div14,div15,div16,div17,div18);
 
   let line = document.createElement("hr");
-  line.setAttribute("style", "font-size: 2px;");
-  conti.append(removable, line);
+
+  let already_user = document.createElement("h2");
+  already_user.setAttribute("style", "text-align: center; margin-top: 2%")
+  already_user.textContent = "Already Have An Account?";
+
+  let div_Signin = document.createElement("div");
+  div_Signin.setAttribute("style", "width:80%; margin:auto; margin-top: 2%" );
+
+  let already_btn = document.createElement("button");
+  already_btn.setAttribute("id", "already_submit");
+  already_btn.innerText = "Sign In";
+  already_btn.setAttribute("style", "margin: 0%;border-radius: 0px; border: 1px solid black; background-color:white; font-size:23px");
+
+  already_btn.onclick = function() {
+    back();
   }
+  div_Signin.append(already_btn);
 
-
-window.onscroll = function() {myFunction()};
-
-
-var header = document.getElementById("myHeader");
-
-var sticky = header.offsetTop;
-
-
-function myFunction() {
-  if (window.pageYOffset > sticky) {
-    header.classList.add("sticky");
-  } else {
-    header.classList.remove("sticky");
+  conti.append(changed_to_signup, line, already_user,div_Signin);
+ 
   }
-}
-
-
-let images = [
-    "https://www.fabindia.com/file/general/hp-mb-14sep21-1.jpg",
-    "https://www.fabindia.com/file/general/hp-mb-27sep21-4.jpg",
-    "https://www.fabindia.com/file/general/hp-mb-27sep21-5.jpg",
-    "https://www.fabindia.com/file/general/hp-mb-27sep21-2.jpg",
-  ];
-
-
-    let container=document.getElementById("mySlideshow");
-    let interval;
-
-    function startSlideshow(){
-        //1.
-        let counter=0;
-        interval = setInterval( function() {
-            container.innerHTML = null;
-            if(counter === images.length){
-                counter=0;
-            }
-            let img = document.createElement("img");
-        img.src=images[counter];
-        container.append(img);
-        counter = counter+1;
-    }, 3000);
-    }
-    startSlideshow();
-        // Get the modal
-var modal = document.getElementById("myModal");
-
-// Get the button that opens the modal
-var btn = document.getElementById("signin");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks the button, open the modal 
-btn.onclick = function() {
-  modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
+  function back(){
+    alert("hi");
   }
-}
-
-
