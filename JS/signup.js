@@ -89,11 +89,7 @@ function sign_up(){
  div18.textContent = "By creating an account, you agree to Fabindia's terms of use and privacy policy";
 
 
- let div19 = document.createElement("div");
- div19.setAttribute("style", "font-size:14px; height:13px");
- div19.setAttribute("style", "font-size:10px; padding: 0px 100px 0px 0px" );
- div19.textContent = "By creating an account, you agree to Fabindia's terms of use and privacy policy";
-
+ 
 
  removable.append(div1,div2,div3,div4,div5,div6,div7,div8,div9,
    div10,div11,div12,div13,div14,div15,div16,div17,div18);
