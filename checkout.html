@@ -134,20 +134,31 @@
         display: flex;
       }
       #p3r-b {
-        border: 1px solid pink;
+        /* border: 1px solid pink; */
         width: 90%;
         margin: auto;
       }
       #form2 > input {
-        padding-left: 5px;
+        padding-left: 10px;
         font-family: "Mulish", sans-serif;
         height: 30px;
         border: 1px solid #cccccc;
         background-color: #f9f8f1;
         margin-bottom: 20px;
+        width: 50%;
+      }
+      #form2 > input:nth-of-type(3),
+      #form2 > input:nth-of-type(4) {
+        width: 90px;
+      }
+      #form2 > input:nth-of-type(5) {
+        width: 90px;
+        margin-left: 30px;
       }
       #form2 > p {
         margin: 0px;
+        font-weight: bold;
+        font-size: 14px;
       }
       /* FINAL PAYMENT END  */
     </style>
@@ -258,13 +269,13 @@
             <h3>Enter your card details</h3>
             <form id="form2">
               <p>Card Number*</p>
-              <input type="text" />
+              <input type="text" placeholder="Card Number" />
               <p>Name on Card*</p>
-              <input type="text" />
+              <input type="text" placeholder="Name on Card" />
               <p>Expires On*</p>
               <input type="number" />
               <input type="number" />
-              <input type="password" />
+              <input type="password" placeholder="CVV" />
               <p>Be quick, be safe. Save your card details</p>
               <button>Pay Now</button>
             </form>
