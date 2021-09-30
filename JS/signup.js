@@ -1,13 +1,14 @@
-
+// for sign up-pop up
 var item = document.getElementById("removable");
 var conti = document.getElementById("workspace");
 
 function sign_up(){
- item.parentNode.removeChild(item);
+ item.remove();
  document.getElementById("change_me").textContent = "Sign Up";
  conti.style.height ="700px";
- let removable = document.createElement("div");
- removable.style.height ="460px";
+
+ let changed_to_signup = document.createElement("div");
+ changed_to_signup.style.height ="460px";
 
  let div1 = document.createElement("div");
  div1.textContent = "First Name:*";
@@ -88,13 +89,31 @@ function sign_up(){
  div18.setAttribute("style", "font-size:10px; padding: 0px 100px 0px 0px" );
  div18.textContent = "By creating an account, you agree to Fabindia's terms of use and privacy policy";
 
-
- 
-
- removable.append(div1,div2,div3,div4,div5,div6,div7,div8,div9,
+ changed_to_signup.append(div1,div2,div3,div4,div5,div6,div7,div8,div9,
    div10,div11,div12,div13,div14,div15,div16,div17,div18);
 
  let line = document.createElement("hr");
- line.setAttribute("style", "font-size: 2px;");
- conti.append(removable, line);
+
+ let already_user = document.createElement("h2");
+ already_user.setAttribute("style", "text-align: center; margin-top: 2%")
+ already_user.textContent = "Already Have An Account?";
+
+ let div_Signin = document.createElement("div");
+ div_Signin.setAttribute("style", "width:80%; margin:auto; margin-top: 2%" );
+
+ let already_btn = document.createElement("button");
+ already_btn.setAttribute("id", "already_submit");
+ already_btn.innerText = "Sign In";
+ already_btn.setAttribute("style", "margin: 0%;border-radius: 0px; border: 1px solid black; background-color:white; font-size:23px");
+
+ already_btn.onclick = function() {
+   back();
+ }
+ div_Signin.append(already_btn);
+
+ conti.append(changed_to_signup, line, already_user,div_Signin);
+
+ }
+ function back(){
+   alert("hi");
  }
