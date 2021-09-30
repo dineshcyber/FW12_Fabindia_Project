@@ -105,6 +105,7 @@
         border-radius: 3px;
         width: 200px;
       }
+
       /* FINAL PAYMENT PANEL START */
       #pay2 {
         border-top: 1px solid gray;
@@ -118,7 +119,7 @@
         padding-bottom: 20px;
       }
       #p3l {
-        width: 30%;
+        width: 25%;
         background-color: #f9f8f1;
       }
       #p3r {
@@ -133,9 +134,22 @@
         display: flex;
       }
       #p3r-b {
-        width: 85%;
+        border: 1px solid pink;
+        width: 90%;
         margin: auto;
       }
+      #form2 > input {
+        padding-left: 5px;
+        font-family: "Mulish", sans-serif;
+        height: 30px;
+        border: 1px solid #cccccc;
+        background-color: #f9f8f1;
+        margin-bottom: 20px;
+      }
+      #form2 > p {
+        margin: 0px;
+      }
+      /* FINAL PAYMENT END  */
     </style>
   </head>
   <body>
@@ -242,15 +256,15 @@
           </div>
           <div id="p3r-b">
             <h3>Enter your card details</h3>
-            <form>
+            <form id="form2">
               <p>Card Number*</p>
-              <input type="number" />
+              <input type="text" />
               <p>Name on Card*</p>
               <input type="text" />
               <p>Expires On*</p>
               <input type="number" />
               <input type="number" />
-              <input type="number" />
+              <input type="password" />
               <p>Be quick, be safe. Save your card details</p>
               <button>Pay Now</button>
             </form>
