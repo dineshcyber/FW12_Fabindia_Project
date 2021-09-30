@@ -15,23 +15,57 @@
       @import url("https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap");
       body {
         background-color: #f4f2e5;
-        /* padding-left: 10px; */
+        margin-left: 2.5%;
       }
       p {
         font-family: "Mulish", sans-serif;
       }
+      /*====== HEADER START ======*/
       #top {
         display: flex;
         justify-content: space-between;
         height: 80px;
+        border-bottom: 1px solid gray;
       }
+      #top > img {
+        margin: 1.7%;
+      }
+      /*====== HEADER END ========*/
 
-      /* SHIPPING AND BILLING PANEL END*/
+      /* ------------------------- */
+      #main_panel {
+        display: flex;
+      }
+      #main_panel_left {
+        width: 74%;
+        border-right: 1px solid gray;
+      }
+      #main_panel_right {
+        width: 26%;
+      }
+      /* ------------------------- */
+
+      /*=========== LOGIN DETAILS START ==========*/
+      #details {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      #details button {
+        background-color: black;
+        border: black;
+        color: white;
+        width: 100px;
+        height: 35px;
+        border-radius: 5px;
+        margin-right: 50px;
+      }
+      /*=========== LOGIN DETAILS END ==========*/
+
+      /*========= SHIPPING/BILLING START*=========*/
       #ship_bill {
         border-bottom: 1px solid gray;
         border-top: 1px solid gray;
-        border-right: 1px solid gray;
-        width: 75%;
         padding-top: 20px;
         padding-bottom: 20px;
       }
@@ -46,10 +80,8 @@
         font-size: 13px;
       }
       #form {
-        border-right: 1px solid grey;
         border-bottom: 1px solid grey;
         padding-bottom: 30px;
-        width: 75%;
         display: grid;
         grid-template-columns: auto auto auto;
       }
@@ -73,29 +105,6 @@
         height: 35px;
         width: 62%;
       }
-      /* SHIPPING AND BILLING PANEL END*/
-
-      #bottom {
-        height: 300px;
-        background-color: #dbd9cd;
-      }
-      #details {
-        width: 75%;
-        border-right: 1px solid gray;
-        border-top: 1px solid gray;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-      #details button {
-        background-color: black;
-        border: black;
-        color: white;
-        width: 100px;
-        height: 35px;
-        border-radius: 5px;
-        margin-right: 50px;
-      }
       #proceed {
         font-family: "Mulish", sans-serif;
         font-weight: bold;
@@ -105,37 +114,116 @@
         border-radius: 3px;
         width: 200px;
       }
-      /* FINAL PAYMENT PANEL START */
+      /*========= SHIPPING/BILLING END =========*/
+
+      /*========= FINAL PAYMENT START ===========*/
+      #pay1 {
+        border-bottom: 1px solid gray;
+      }
       #pay2 {
-        border-top: 1px solid gray;
-        border-right: 1px solid gray;
-        width: 75%;
+        margin-right: 2.5%;
       }
       #pay3 {
-        width: 100%;
+        margin: auto;
         display: flex;
-        gap: 2%;
+        gap: 10px;
         padding-bottom: 20px;
       }
       #p3l {
-        width: 30%;
+        height: 400px;
+        width: 35%;
         background-color: #f9f8f1;
+        padding-left: 20px;
+        font-size: 12px;
+        line-height: 30px;
       }
+
       #p3r {
-        width: 70%;
         background-color: #f9f8f1;
         padding-bottom: 20px;
       }
       #p3r-t {
-        width: 95%;
+        width: 90%;
         margin: auto;
         background-color: white;
+        margin-top: 15px;
         display: flex;
+      }
+      #p3r-t > img {
+        margin: auto;
+      }
+      #p3r-t > p {
+        margin: 2%;
       }
       #p3r-b {
         width: 85%;
         margin: auto;
       }
+      #form2 > input {
+        padding-left: 10px;
+        font-family: "Mulish", sans-serif;
+        height: 30px;
+        border: 1px solid #cccccc;
+        background-color: #f9f8f1;
+        margin-bottom: 20px;
+        width: 50%;
+      }
+      #form2 > input:nth-of-type(3),
+      #form2 > input:nth-of-type(4) {
+        width: 90px;
+      }
+      #form2 > input:nth-of-type(5) {
+        width: 90px;
+        margin-left: 30px;
+      }
+      #form2 > p {
+        margin: 0px;
+        font-weight: bold;
+        font-size: 14px;
+      }
+      h4 {
+        font-family: "Mulish", sans-serif;
+        font-weight: 300;
+        font-size: 12px;
+      }
+      #confirm {
+        font-family: "Mulish", sans-serif;
+        font-weight: bold;
+        height: 40px;
+        background-color: #ddc36c;
+        border: none;
+        border-radius: 3px;
+        width: 50%;
+      }
+      /*========= FINAL PAYMENT END ===========*/
+
+      /*========== RIGHT PANEL START ========== */
+      #mp_box {
+        margin: auto;
+        width: 70%;
+      }
+      /*========== RIGHT PANEL END ========== */
+
+      /*======= FOOTER START ========*/
+      #bottom {
+        background-color: #dbd9cd;
+        height: 480px;
+      }
+      #bottom_t {
+        display: flex;
+      }
+      #bottom_t > div {
+        margin: 1% auto;
+        padding: 0px 20px;
+      }
+      #bottom_b {
+        display: flex;
+        justify-content: space-between;
+      }
+      #bottom_b > img {
+        margin: 1.7%;
+      }
+      /*======= FOOTER END =========*/
     </style>
   </head>
   <body>
@@ -143,122 +231,207 @@
       <img
         src="https://www.fabindia.com/file/v8385693196996654632/general/fab_india_logo.png"
       />
-      <img src="https://www.fabindia.com/file/general/call-answer_n.svg" />
-      <p>+918010488888</p>
+      <p>📞 +918010488888</p>
     </div>
 
-    <div id="details">
-      <div>
-        <h2>Login Details</h2>
-        <p>dummyEmail@gmail.com</p>
-      </div>
-      <div>
-        <button>Change</button>
-      </div>
-    </div>
-
-    <div id="ship_bill">
-      <h2>Shipping/Billing Address</h2>
-      <p id="warning">Please Select a Shipping Address to continue</p>
-    </div>
-
-    <div id="ship_bill2">
-      <form id="form">
-        <div>
-          <p>Pin/Zip Code*</p>
-          <input type="number" placeholder="Pin/Zip Code" />
-        </div>
-        <div>
-          <p>Country*</p>
-          <select id="country">
-            <option value="india">India</option>
-            <option value="usa">United States of America</option>
-            <option value="bangladesh">Bangladesh</option>
-            <option value="singapore">Singapore</option>
-          </select>
-        </div>
-        <div></div>
-        <div>
-          <p>State*</p>
-          <select id="state">
-            <option value="default">State/Region</option>
-            <option value="ap">Andhra Pradesh</option>
-            <option value="haryana">Haryana</option>
-            <option value="up">Uttar Pradesh</option>
-            <option value="delhi">Delhi</option>
-            <option value="wb">West Bengal</option>
-          </select>
-        </div>
-        <div>
-          <p>City*</p>
-          <input type="text" placeholder="City" />
-        </div>
-        <div></div>
-        <div>
-          <p>First Name*</p>
-          <input type="text" placeholder="First Name" />
-        </div>
-        <div>
-          <p>Last Name*</p>
-          <input type="text" placeholder="Last Name" />
-        </div>
-        <div></div>
-        <div>
-          <p>Address Line 1*</p>
-          <input type="text" placeholder="Address Line 1" />
-        </div>
-        <div>
-          <p>Address Line 2</p>
-          <input type="text" placeholder="Address Line 2" />
-        </div>
-        <div></div>
-        <div>
-          <p>Mobile</p>
-          <input type="number" placeholder="Mobile" />
-        </div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div>
-          <button id="proceed">Save and Continue</button>
-        </div>
-      </form>
-    </div>
-
-    <div>
-      <h2>Payment Details</h2>
-    </div>
-    <div id="pay2">
-      <h2>Make Payment</h2>
-      <div id="pay3">
-        <div id="p3l"></div>
-        <div id="p3r">
-          <div id="p3r-t">
-            <img src="https://www.fabindia.com/file/general/logo-hdfc.png" />
-            <p>
-              Get 10% discount on Rs. 5000/- or above with your HDFC credit
-              card. T&C apply.
-            </p>
+    <div id="main_panel">
+      <div id="main_panel_left">
+        <div id="details">
+          <div>
+            <h2>Login Details</h2>
+            <p>dummyEmail@gmail.com</p>
           </div>
-          <div id="p3r-b">
-            <h3>Enter your card details</h3>
-            <form>
-              <p>Card Number*</p>
-              <input type="number" />
-              <p>Name on Card*</p>
-              <input type="text" />
-              <p>Expires On*</p>
-              <input type="number" />
-              <input type="number" />
-              <input type="number" />
-              <p>Be quick, be safe. Save your card details</p>
-              <button>Pay Now</button>
-            </form>
+          <div>
+            <button>Change</button>
           </div>
         </div>
+
+        <div id="ship_bill">
+          <h2>Shipping/Billing Address</h2>
+          <p id="warning">Please Select a Shipping Address to continue</p>
+        </div>
+
+        <div id="ship_bill2">
+          <form id="form">
+            <div>
+              <p>Pin/Zip Code*</p>
+              <input type="number" placeholder="Pin/Zip Code" />
+            </div>
+            <div>
+              <p>Country*</p>
+              <select id="country">
+                <option value="india">India</option>
+                <option value="usa">United States of America</option>
+                <option value="bangladesh">Bangladesh</option>
+                <option value="singapore">Singapore</option>
+              </select>
+            </div>
+            <div></div>
+            <div>
+              <p>State*</p>
+              <select id="state">
+                <option value="default">State/Region</option>
+                <option value="ap">Andhra Pradesh</option>
+                <option value="haryana">Haryana</option>
+                <option value="up">Uttar Pradesh</option>
+                <option value="delhi">Delhi</option>
+                <option value="wb">West Bengal</option>
+              </select>
+            </div>
+            <div>
+              <p>City*</p>
+              <input type="text" placeholder="City" />
+            </div>
+            <div></div>
+            <div>
+              <p>First Name*</p>
+              <input type="text" placeholder="First Name" />
+            </div>
+            <div>
+              <p>Last Name*</p>
+              <input type="text" placeholder="Last Name" />
+            </div>
+            <div></div>
+            <div>
+              <p>Address Line 1*</p>
+              <input type="text" placeholder="Address Line 1" />
+            </div>
+            <div>
+              <p>Address Line 2</p>
+              <input type="text" placeholder="Address Line 2" />
+            </div>
+            <div></div>
+            <div>
+              <p>Mobile</p>
+              <input type="number" placeholder="Mobile" />
+            </div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div>
+              <button id="proceed">Save and Continue</button>
+            </div>
+          </form>
+        </div>
+
+        <div id="pay1">
+          <h2>Payment Details</h2>
+        </div>
+        <div id="pay2">
+          <h2>Make Payment</h2>
+          <div id="pay3">
+            <div id="p3l">
+              <p>Credit/Debit card</p>
+              <p>Net Banking</p>
+              <p>UPI</p>
+              <p>Google Pay</p>
+              <p>Wallet</p>
+              <p>Gift Card</p>
+              <p>EMI</p>
+            </div>
+            <div id="p3r">
+              <div id="p3r-t">
+                <img
+                  src="https://www.fabindia.com/file/general/logo-hdfc.png"
+                />
+                <p>
+                  Get 10% discount on Rs. 5000/- or above with your HDFC credit
+                  card. T&C apply.
+                </p>
+              </div>
+              <div id="p3r-b">
+                <h3>Enter your card details</h3>
+                <form id="form2">
+                  <p>Card Number*</p>
+                  <input type="text" placeholder="Card Number" />
+                  <p>Name on Card*</p>
+                  <input type="text" placeholder="Name on Card" />
+                  <p>Expires On*</p>
+                  <input type="number" />
+                  <input type="number" />
+                  <input type="password" placeholder="CVV" />
+                  <h4>Be quick, be safe. Save your card details</h4>
+                  <button id="confirm">Pay Now</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="main_panel_right">
+        <div id="mp_box">
+          <h3>Order Summary</h3>
+          <hr />
+          <p>Dummy product name</p>
+          <p>Qty:</p>
+          <p>Size:</p>
+          <br />
+          <br />
+          <br />
+          <br />
+          <p>Sub Total:</p>
+          <hr />
+          <p>Delivery Charges:</p>
+          <hr />
+          <p>Total:</p>
+        </div>
       </div>
     </div>
-    <div id="bottom"></div>
+
+    <div id="bottom">
+      <div id="bottom_t">
+        <div>
+          <h3>Let Us Help You</h3>
+          <p>Order Tracking</p>
+          <p>Bulk Orders</p>
+          <p>Store Locator</p>
+          <p>Franchise Form</p>
+          <p>Furniture Warranty Policy</p>
+        </div>
+        <div>
+          <h3>Support</h3>
+          <p>Customer Service</p>
+          <p>How To Order</p>
+          <p>Billing And Payments</p>
+          <p>Shipping And Delivery</p>
+          <p>Returns And Exchanges</p>
+          <p>FAQs</p>
+        </div>
+        <div>
+          <h3>Company</h3>
+          <p>About Us</p>
+          <p>Style Guides</p>
+          <p>Contact Us</p>
+          <p>Careers</p>
+          <p>Privacy Policy</p>
+          <p>Terms Of Use</p>
+          <p>Business Enquiries</p>
+          <p>The Fabindia Schools</p>
+        </div>
+        <div>
+          <h3>About Fabindia</h3>
+          <p>60 Years Of Fabindia</p>
+          <p>Philosophy</p>
+          <p>About Fabindia Products</p>
+          <p>Organic Certification</p>
+          <p>Fabric Care</p>
+          <p>FabCafe</p>
+          <p>Fabfamily- Loyalty Program</p>
+          <p>Interior Design Solutions</p>
+        </div>
+        <div>
+          <h3>Stay in Touch</h3>
+        </div>
+      </div>
+      <hr />
+      <div id="bottom_b">
+        <h3>© Copyright 2018 Fabindia.com. All Rights Reserved</h3>
+        <img
+          src="https://www.fabindia.com/file/v4659334362150706955/widget/FabindiaFooter/images/payment-cards-n_1.jpg"
+        />
+      </div>
+    </div>
   </body>
 </html>
 <script>
