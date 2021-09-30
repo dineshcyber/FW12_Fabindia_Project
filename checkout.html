@@ -105,6 +105,31 @@
         border-radius: 3px;
         width: 200px;
       }
+      /* FINAL PAYMENT PANEL START */
+      #pay2 {
+        border-top: 1px solid gray;
+        border-right: 1px solid gray;
+        width: 75%;
+      }
+      #pay3 {
+        width: 100%;
+        display: flex;
+        gap: 2%;
+      }
+      #p3l {
+        width: 30%;
+        background-color: #f9f8f1;
+      }
+      #p3r {
+        width: 70%;
+        background-color: #f9f8f1;
+      }
+      #p3r-t {
+        width: 95%;
+        margin: auto;
+        background-color: white;
+        display: flex;
+      }
     </style>
   </head>
   <body>
@@ -197,7 +222,36 @@
     <div>
       <h2>Payment Details</h2>
     </div>
-
+    <div id="pay2">
+      <h2>Make Payment</h2>
+      <div id="pay3">
+        <div id="p3l"></div>
+        <div id="p3r">
+          <div id="p3r-t">
+            <img src="https://www.fabindia.com/file/general/logo-hdfc.png" />
+            <p>
+              Get 10% discount on Rs. 5000/- or above with your HDFC credit
+              card. T&C apply.
+            </p>
+          </div>
+          <div>
+            <h3>Enter your card details</h3>
+            <form>
+              <p>Card Number*</p>
+              <input type="number" />
+              <p>Name on Card*</p>
+              <input type="text" />
+              <p>Expires On*</p>
+              <input type="number" />
+              <input type="number" />
+              <input type="number" />
+              <p>Be quick, be safe. Save your card details</p>
+              <button>Pay Now</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
     <div id="bottom"></div>
   </body>
 </html>
