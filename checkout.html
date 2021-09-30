@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Unna&display=swap"
+      rel="stylesheet"
+    />
+    <title>Fabindia Checkout</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap");
+      body {
+        background-color: #f4f2e5;
+        padding-left: 20px;
+      }
+      p {
+        font-family: "Mulish", sans-serif;
+      }
+      #top {
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+      }
+      #form {
+        border-right: 1px solid grey;
+        width: 75%;
+        display: grid;
+        grid-template-columns: auto auto auto;
+      }
+      #form > div > p {
+        font-weight: bold;
+        margin: 5px;
+      }
+      #form > div {
+        padding-bottom: 30px;
+      }
+      #form > input {
+        width: 60%;
+        padding-left: 20px;
+        font-family: "Mulish", sans-serif;
+        height: 30px;
+        border: 1px solid #cccccc;
+        background-color: #f9f8f1;
+      }
+      #bottom {
+        height: 300px;
+        background-color: #dbd9cd;
+      }
+      #details {
+        width: 75%;
+        border-right: 1px solid black;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      #details button {
+        background-color: black;
+        border: black;
+        color: white;
+        width: 100px;
+        height: 35px;
+        border-radius: 5px;
+        margin-right: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="top">
+      <img
+        src="https://www.fabindia.com/file/v8385693196996654632/general/fab_india_logo.png"
+      />
+      <img src="https://www.fabindia.com/file/general/call-answer_n.svg" />
+      <p>+918010488888</p>
+    </div>
+    <hr />
+    <div id="details">
+      <div>
+        <h2>Login Details</h2>
+        <p>dummyEmail@gmail.com</p>
+      </div>
+      <div>
+        <button>Change</button>
+      </div>
+    </div>
+    <div>
+      <hr />
+      <h2>Shipping/Billing Address</h2>
+      <hr />
+    </div>
+    <div>
+      <form id="form">
+        <div>
+          <p>Pin/Zip Code*</p>
+          <input type="number" placeholder="Pin/Zip Code" />
+        </div>
+        <div>
+          <p>Country*</p>
+          <input type="text" />
+        </div>
+        <div></div>
+        <div>
+          <p>State*</p>
+          <input type="text" />
+        </div>
+        <div>
+          <p>City*</p>
+          <input type="text" placeholder="City" />
+        </div>
+        <div></div>
+        <div>
+          <p>First Name*</p>
+          <input type="text" placeholder="First Name" />
+        </div>
+        <div>
+          <p>Last Name*</p>
+          <input type="text" placeholder="Last Name" />
+        </div>
+        <div></div>
+        <div>
+          <p>Address Line 1*</p>
+          <input type="text" placeholder="Address Line 1" />
+        </div>
+        <div>
+          <p>Address Line 2</p>
+          <input type="text" placeholder="Address Line 2" />
+        </div>
+        <div></div>
+        <div>
+          <p>Mobile</p>
+          <input type="number" placeholder="Mobile" />
+        </div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div>
+          <button>Save and Continue</button>
+        </div>
+      </form>
+      <hr />
+      <div>
+        <h2>Payment Details</h2>
+      </div>
+    </div>
+    <div id="bottom"></div>
+  </body>
+</html>
