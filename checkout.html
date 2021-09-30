@@ -15,7 +15,7 @@
       @import url("https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap");
       body {
         background-color: #f4f2e5;
-        /* padding-left: 10px; */
+        padding-left: 20px;
       }
       p {
         font-family: "Mulish", sans-serif;
@@ -26,7 +26,7 @@
         height: 80px;
       }
 
-      /* SHIPPING AND BILLING PANEL END*/
+      /* SHIPPING AND BILLING PANEL START*/
       #ship_bill {
         border-bottom: 1px solid gray;
         border-top: 1px solid gray;
@@ -105,7 +105,12 @@
         border-radius: 3px;
         width: 200px;
       }
+
       /* FINAL PAYMENT PANEL START */
+      #pay1 {
+        border-right: 1px solid gray;
+        width: 75%;
+      }
       #pay2 {
         border-top: 1px solid gray;
         border-right: 1px solid gray;
@@ -118,7 +123,7 @@
         padding-bottom: 20px;
       }
       #p3l {
-        width: 30%;
+        width: 25%;
         background-color: #f9f8f1;
       }
       #p3r {
@@ -133,9 +138,47 @@
         display: flex;
       }
       #p3r-b {
+        /* border: 1px solid pink; */
         width: 85%;
         margin: auto;
       }
+      #form2 > input {
+        padding-left: 10px;
+        font-family: "Mulish", sans-serif;
+        height: 30px;
+        border: 1px solid #cccccc;
+        background-color: #f9f8f1;
+        margin-bottom: 20px;
+        width: 50%;
+      }
+      #form2 > input:nth-of-type(3),
+      #form2 > input:nth-of-type(4) {
+        width: 90px;
+      }
+      #form2 > input:nth-of-type(5) {
+        width: 90px;
+        margin-left: 30px;
+      }
+      #form2 > p {
+        margin: 0px;
+        font-weight: bold;
+        font-size: 14px;
+      }
+      h4 {
+        font-family: "Mulish", sans-serif;
+        font-weight: 300;
+        font-size: 12px;
+      }
+      #confirm {
+        font-family: "Mulish", sans-serif;
+        font-weight: bold;
+        height: 40px;
+        background-color: #ddc36c;
+        border: none;
+        border-radius: 3px;
+        width: 50%;
+      }
+      /* FINAL PAYMENT END  */
     </style>
   </head>
   <body>
@@ -225,7 +268,7 @@
       </form>
     </div>
 
-    <div>
+    <div id="pay1">
       <h2>Payment Details</h2>
     </div>
     <div id="pay2">
@@ -242,17 +285,17 @@
           </div>
           <div id="p3r-b">
             <h3>Enter your card details</h3>
-            <form>
+            <form id="form2">
               <p>Card Number*</p>
-              <input type="number" />
+              <input type="text" placeholder="Card Number" />
               <p>Name on Card*</p>
-              <input type="text" />
+              <input type="text" placeholder="Name on Card" />
               <p>Expires On*</p>
               <input type="number" />
               <input type="number" />
-              <input type="number" />
-              <p>Be quick, be safe. Save your card details</p>
-              <button>Pay Now</button>
+              <input type="password" placeholder="CVV" />
+              <h4>Be quick, be safe. Save your card details</h4>
+              <button id="confirm">Pay Now</button>
             </form>
           </div>
         </div>
