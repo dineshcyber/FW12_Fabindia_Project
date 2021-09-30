@@ -1,3 +1,18 @@
+window.onscroll = function() {myFunction()};
+
+
+var header = document.getElementById("myHeader");
+
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+
 
   let productdata = [
     {
@@ -124,11 +139,13 @@
    
     arr.push(productdata[i]);
 
-    
-   }
+}
    localStorage.setItem("productinfo",  JSON.stringify(arr));
  }
  save();
+
+
+
 
  let parent = document.getElementById("products");
  function showProducts(){
@@ -145,7 +162,7 @@
         img.src = product.img;
         
         let product_price = document.createElement('p');
-        product_price.setAttribute('class','mrpred')
+        product_price.setAttribute('class','mrpred');
         product_price.textContent = product.price;
     
         let product_name = document.createElement('p');
@@ -158,7 +175,9 @@
   
         wishlist.setAttribute('id','wishlist');
   
-  
+        div.onclick = function(){
+          visible(product);
+        }
         
         div.append(wishlist,img, product_name, product_price);
     
@@ -194,15 +213,19 @@ function sort1(){
         let product_name = document.createElement('p');
     
         product_name.textContent = product.name;
+        
     
         let wishlist = document.createElement('img');
   
         wishlist.src ="file:///C:/Users/hgaut/Documents/GitHub/FW12_Fabindia_Project/image/icon-heart-black.png" ;
   
         wishlist.setAttribute('id','wishlist');
+
+        div.onclick = function(){
+          visible(product);
+        }
   
-  
-        
+
         div.append(wishlist,img, product_name, product_price);
     
         parent.append(div);
@@ -243,6 +266,10 @@ function sort2(){
         wishlist.src ="file:///C:/Users/hgaut/Documents/GitHub/FW12_Fabindia_Project/image/icon-heart-black.png" ;
   
         wishlist.setAttribute('id','wishlist');
+
+        div.onclick = function(){
+          visible(product);
+        }
   
        div.append(wishlist,img, product_name, product_price);
     
@@ -252,10 +279,19 @@ function sort2(){
  
    }
 
+if(localStorage.getItem('visible') === null){
+  localStorage.setItem('visible',JSON.stringify([]));
+}
    
+  function visible(pro){
+    let take = JSON.parse(localStorage.getItem('visible'));
 
+   take=[];
 
-  
+   take.push(pro);
+   localStorage.setItem('visible',JSON.stringify(take));
+   
+   window.location.href = "bigview.html";
 
-    
+  }
 
