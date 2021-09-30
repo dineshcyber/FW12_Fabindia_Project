@@ -20,17 +20,19 @@
       p {
         font-family: "Mulish", sans-serif;
       }
-      /* TOP PANEL START */
+      /*====== HEADER START ======*/
       #top {
         display: flex;
         justify-content: space-between;
         height: 80px;
+        border-bottom: 1px solid gray;
       }
       #top > img {
         margin: 1.7%;
       }
-      /* TOP PANEL END */
+      /*====== HEADER END ========*/
 
+      /* ------------------------- */
       #main_panel {
         display: flex;
       }
@@ -38,8 +40,26 @@
         width: 74%;
         border-right: 1px solid gray;
       }
+      /* ------------------------- */
 
-      /* SHIPPING AND BILLING PANEL START*/
+      /*=========== LOGIN DETAILS START ==========*/
+      #details {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      #details button {
+        background-color: black;
+        border: black;
+        color: white;
+        width: 100px;
+        height: 35px;
+        border-radius: 5px;
+        margin-right: 50px;
+      }
+      /*=========== LOGIN DETAILS END ==========*/
+
+      /*========= SHIPPING/BILLING START*=========*/
       #ship_bill {
         border-bottom: 1px solid gray;
         border-top: 1px solid gray;
@@ -82,23 +102,6 @@
         height: 35px;
         width: 62%;
       }
-      /* SHIPPING AND BILLING PANEL END*/
-
-      #details {
-        border-top: 1px solid gray;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-      #details button {
-        background-color: black;
-        border: black;
-        color: white;
-        width: 100px;
-        height: 35px;
-        border-radius: 5px;
-        margin-right: 50px;
-      }
       #proceed {
         font-family: "Mulish", sans-serif;
         font-weight: bold;
@@ -108,8 +111,9 @@
         border-radius: 3px;
         width: 200px;
       }
+      /*========= SHIPPING/BILLING END =========*/
 
-      /* FINAL PAYMENT PANEL START */
+      /*========= FINAL PAYMENT START ===========*/
       #pay1 {
         border-bottom: 1px solid gray;
       }
@@ -178,14 +182,14 @@
         border-radius: 3px;
         width: 50%;
       }
-      /* FINAL PAYMENT END  */
+      /*========= FINAL PAYMENT END ===========*/
 
-      /* FOOTER START*/
+      /*======= FOOTER START ========*/
       #bottom {
         height: 300px;
         background-color: #dbd9cd;
       }
-      /* FOOTER END */
+      /*======= FOOTER END =========*/
     </style>
   </head>
   <body>
