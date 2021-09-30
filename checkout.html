@@ -43,10 +43,6 @@
       #main_panel_right {
         width: 26%;
       }
-      #mp_box {
-        margin: auto;
-        width: 70%;
-      }
       /* ------------------------- */
 
       /*=========== LOGIN DETAILS START ==========*/
@@ -137,16 +133,27 @@
         height: 400px;
         width: 35%;
         background-color: #f9f8f1;
+        padding-left: 20px;
+        font-size: 12px;
+        line-height: 30px;
       }
+
       #p3r {
         background-color: #f9f8f1;
         padding-bottom: 20px;
       }
       #p3r-t {
-        width: 95%;
+        width: 90%;
         margin: auto;
         background-color: white;
+        margin-top: 15px;
         display: flex;
+      }
+      #p3r-t > img {
+        margin: auto;
+      }
+      #p3r-t > p {
+        margin: 2%;
       }
       #p3r-b {
         width: 85%;
@@ -189,6 +196,13 @@
         width: 50%;
       }
       /*========= FINAL PAYMENT END ===========*/
+
+      /*========== RIGHT PANEL START ========== */
+      #mp_box {
+        margin: auto;
+        width: 70%;
+      }
+      /*========== RIGHT PANEL END ========== */
 
       /*======= FOOTER START ========*/
       #bottom {
@@ -292,7 +306,15 @@
         <div id="pay2">
           <h2>Make Payment</h2>
           <div id="pay3">
-            <div id="p3l"></div>
+            <div id="p3l">
+              <p>Credit/Debit card</p>
+              <p>Net Banking</p>
+              <p>UPI</p>
+              <p>Google Pay</p>
+              <p>Wallet</p>
+              <p>Gift Card</p>
+              <p>EMI</p>
+            </div>
             <div id="p3r">
               <div id="p3r-t">
                 <img
@@ -326,11 +348,18 @@
         <div id="mp_box">
           <h3>Order Summary</h3>
           <hr />
-          <p>rs</p>
+          <p>Dummy product name</p>
+          <p>Qty:</p>
+          <p>Size:</p>
+          <br />
+          <br />
+          <br />
+          <br />
+          <p>Sub Total:</p>
           <hr />
-          <p>rs</p>
+          <p>Delivery Charges:</p>
           <hr />
-          <p>rs</p>
+          <p>Total:</p>
         </div>
       </div>
     </div>
