@@ -1,80 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fabindia | Shop for Handwoven Garments & Home Furnishings</title>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
-      <link rel="stylesheet" href="./slick-1.8.1/slick-1.8.1/slick/slick.css">
-      <link rel="stylesheet" href="./slick-1.8.1/slick-1.8.1/slick/slick-theme.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
     <link rel="stylesheet" href="./style.css">
+
 </head>
+
 <body>
     <!-- Header Start-->
     <header class="header" id="myHeader">
-            <div class="top-header">
-                <div class="header-left">
-                    <button id="signin"> <img src="./image/icon-signin-black.png" alt=""> Sign In</button>
-                    <!-- The Modal -->
-<div id="myModal" class="modal">
+        <div class="top-header">
+            <div class="header-left">
+                <button id="signin"> <img src="./image/icon-signin-black.png" alt=""> Sign In</button>
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
 
-    <!-- Modal content -->
-    <div class="modal-content">
-      <div class="modal-header">
-        <span class="close">&times;</span>
-       <div style = "padding: 4px; margin-bottom: 5px;"><h2  id="change_me">Sign in</h2></div> 
-        <hr style="width:65%;text-align:left;margin: auto; font-size: 2px;">
-      </div>
-      <div id="modal-body">
-          <div id="workspace">
-              <div id=removable>
-                <div>Email Address:*</div> 
-                <div style="padding: 0px;">
-                    <div style="margin-bottom: 0px;"><input type="text" id="mail" placeholder=""/></div>
-                    <div  style="font-size: 10px; color: red; padding: 0px 5px;">a</div>
-                </div>
-                <div>Password:*</div>
-                <div  style="padding: 0px;">
-                   <div style="margin-bottom: 0px;"><input type="password" id="password" placeholder="Minimum 8 characters"/></div> 
-                    <div style="font-size: 10px; color: red; padding: 0px 5px;">a</div>
-                  </div> 
-                <div></div>
-                <div><button>Sign In</button>
-                  <div id="show-flex">
-                      <div>Forgot Password?</div>
-                      <div>New to Fabindia?</div>
-                      <div><button onclick="sign_up()" style="padding: 0%;" id="create-acc">Create Account</button>
-                 </div>
-                </div>
-                
-                
-                </div>
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <span class="close">&times;</span>
+                            <div style="padding: 4px; margin-bottom: 5px;">
+                                <p id="change_me">Sign in</p>
+                            </div>
+                            <hr style="width:65%;margin: auto;">
+                        </div>
+                        <div id="modal-body">
+                            <div id="workspace">
+                                <div id=removable>
+                                    <div>Email Address:*</div>
+                                    <div style="padding: 0px;">
+                                        <div><input type="email" id="mail" placeholder="" />
+                                        </div>
+                                    </div>
+                                    <div>Password:*</div>
+                                    <div style="padding: 0px;">
+                                        <div style="margin-bottom: 0px;"><input type="password" id="password"
+                                                placeholder="Minimum 8 characters" /></div>              
+                                    </div>
+                                    <div></div>
+                                    <div>
+                                        <button>Sign In</button>
+                                        <div id="show-flex">
+                                            <div>Forgot Password?</div>
+                                            <div>New to Fabindia?</div>
+                                            <div><button onclick="sign_up()"  id="create-acc">Create
+                                                    Account</button>
+                                            </div>
+                                        </div>
 
-              </div>
-             
-          </div>
-      </div>
-    </div>
-  
-  </div>
 
-                </div>
-                <div class="header-middle">
-                    <img src="https://www.fabindia.com/file/general/Fabindia_logo.svg" alt="LOGO">
-                </div>
-                <div class="header-right">
-                    <div class="wishlist">
-                        <img src="./image/icon-heart-black.png" alt="">
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
                     </div>
-                    <div class="cart">
-                        <img src="./image/icon-bag-black.png" alt="">
-                    </div>
+
                 </div>
+
             </div>
             <div class="nav-bar">
-                <ul>
+            <div class="header-middle">
+                <img src="https://www.fabindia.com/file/general/Fabindia_logo.svg" alt="LOGO">
+            </div>
+            <div class="header-right">
+                <div class="wishlist">
+                    <img src="./image/icon-heart-black.png" alt="">
+                </div>
+                <div class="cart">
+                    <img src="./image/icon-bag-black.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="nav-bar">
+             <ul>
                     <li class="d">
                             <div class="d-btn">NEW ARRIVALS</div>   
                             <div class="d-content1" style="height: 220px; line-height: 20px;">
@@ -350,21 +356,23 @@
                         <div class="d-btn">SALE!</div>           
                     </li>
                   </ul>
-            </div>
+        </div>
         </div>
     </header>
     <!-- Header End-->
 
     <!--Slider start-->
     <div class="slider-crousel" id="mySlideshow">
-        
+
     </div>
+
     <!--Slider end-->
     <!-- Section trending start-->
     <section class="trending">
         <div class="section-heading">
             <h3 id="heading"> WE HAVE SOMETHING FOR EVERYONE</h3>
-            <p id="sec-content">Bright hues & versatile styles: get that perfect festive look for yourself & your home with our wide assortment</p>
+            <p id="sec-content">Bright hues & versatile styles: get that perfect festive look for yourself & your home
+                with our wide assortment</p>
         </div>
         <div id="slider" class="slider-slick">
 
@@ -372,12 +380,38 @@
         <img src="" alt="">
     </section>
     <!-- Section trending end-->
+
+
+    <!-- section latest -->
+
+    <section class="latest-section">
+        <div class="section-heading">
+            <h3 id="heading"> WE HAVE SOMETHING FOR EVERYONE</h3>
+        </div>
+        <div class="latest-part">
+            <div class="part-left" id="partleft">
+
+            </div>
+            <div class="part-right" id="partright">
+
+            </div>
+        </div>
+    </section>
+
+    <!-- section latest -->
+
     <script src="./JS/main.js"></script>
     <script src="./JS/trending.js"></script>
     <script src="./JS/signup.js"></script>
-    
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="./JS/latestleft.js"></script>
+    <script src="./JS/latestright.js"></script>
+
+
+    <!-- script -->
+
+
+    <!-- script -->
 
 </body>
+
 </html>
