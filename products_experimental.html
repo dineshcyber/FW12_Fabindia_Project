@@ -6,5 +6,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Products</title>
   </head>
-  <body></body>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Mulish&display=swap");
+    * {
+      margin: 0;
+      font-family: "Mulish", sans-serif;
+      background-color: #f4f2e5;
+    }
+    #message {
+      background-color: #8f2c34;
+      height: 25px;
+      text-align: center;
+      padding-top: 5px;
+      font-size: 13px;
+      font-weight: 600;
+      line-height: 21px;
+      color: white;
+    }
+
+    /* SCROLLER START */
+    #scroller {
+      position: fixed;
+      border-bottom: 1px solid gray;
+      width: 100%;
+      height: 130px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+    #scroller-t {
+      display: flex;
+      border: 1px solid red;
+      height: 100%;
+    }
+    #scroller-t > div {
+      width: 33%;
+      border: 1px solid red;
+    }
+    #scroller-t > div {
+    }
+    #scroller-t img {
+      width: 33%;
+      height: auto;
+    }
+    #scroller-t input {
+      vertical-align: middle;
+      border: #f4f2e5;
+      background-color: #f9f8f1;
+    }
+    #scroller-b {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 5%;
+    }
+    /* SCROLLER END */
+  </style>
+  <body>
+    <div>
+      <p id="message">Call 1800 100 1212 and shop in comfort at home</p>
+    </div>
+    <div id="scroller">
+      <div id="scroller-t">
+        <div>
+          <img src="https://www.fabindia.com/file/general/fab_india_logo.png" />
+        </div>
+        <div>
+          <input type="text" placeholder="Enter your search text" />
+          <label>🔍</label>
+        </div>
+        <div>
+          <p>signin</p>
+        </div>
+      </div>
+      <div id="scroller-b">
+        <p>New Arrivals ˅</p>
+        <p>Collections ˅</p>
+        <p>Women ˅</p>
+        <p>Men ˅</p>
+        <p>Kids ˅</p>
+        <p>Home Linen ˅</p>
+        <p>Dining & Decor ˅</p>
+        <p>Furniture ˅</p>
+        <p>Beauty ˅</p>
+        <p>Food ˅</p>
+      </div>
+    </div>
+  </body>
 </html>
+<script></script>
