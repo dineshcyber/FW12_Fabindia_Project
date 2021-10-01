@@ -6,7 +6,7 @@ var conti = document.getElementById("workspace");
 function sign_up() {
   item.remove();
   document.getElementById("change_me").textContent = "Sign Up";
-  conti.style.height = "700px";
+  conti.style.height = "600px";
 
   let changed_to_signup = document.createElement("div");
   changed_to_signup.style.height = "460px";
@@ -89,7 +89,7 @@ function sign_up() {
   let div13 = document.createElement("div");
   div13.setAttribute("style", " height:15px");
   let div14 = document.createElement("div");
-  div14.setAttribute("style", "font-size:15px; height:15px");
+  div14.setAttribute("style", "font-size:13px; height:15px");
   div14.textContent = "I wish to receive the newsletter.";
 
   let div15 = document.createElement("div");
@@ -109,7 +109,11 @@ function sign_up() {
   div17.setAttribute("style", "font-size:14px; height:13px");
   let div18 = document.createElement("div");
   div18.setAttribute("style", "font-size:14px; height:13px");
-  div18.setAttribute("style", "font-size:10px; padding: 20px 100px 15px 0px");
+  div18.setAttribute(
+    "style",
+    "font-size:12px; padding: 20px 100px 15px 0px; font"
+  );
+  div18.style.fontFamily = "Mulish, sans - serif";
   div18.textContent =
     "By creating an account, you agree to Fabindia's terms of use and privacy policy";
 
