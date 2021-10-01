@@ -127,6 +127,13 @@ function myFunction() {
   ];
 
 
+
+
+  
+
+//saving products to local storage
+
+
   if(localStorage.getItem('productinfo') === null){
     localStorage.setItem('productinfo',JSON.stringify([]));
   }
@@ -145,6 +152,10 @@ function myFunction() {
  save();
 
 
+
+
+
+//displaying products
 
 
  let parent = document.getElementById("products");
@@ -190,8 +201,15 @@ function myFunction() {
          
      }
      showProducts();
-    
      
+    
+
+
+
+
+  //sorting1 
+  
+  
 function sort1(){
 
   parent.innerHTML = null; 
@@ -239,6 +257,12 @@ function sort1(){
 
 }
 
+
+
+
+//soritng2
+
+
 function sort2(){
 
   parent.innerHTML = null; 
@@ -279,6 +303,8 @@ function sort2(){
  
    }
 
+
+   
 if(localStorage.getItem('visible') === null){
   localStorage.setItem('visible',JSON.stringify([]));
 }
