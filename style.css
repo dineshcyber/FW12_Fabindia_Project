@@ -417,11 +417,10 @@ li a {
   .d-content6, .d-content7, .d-content8, .d-content9, .d-content10 {
   display: none;
   position: absolute;
-  background: maroon;
+  background: #620613;
   width: 90%;
   left: 0;
   z-index: 10;
-  height: 200px;
   margin: 1.7% 5%;
   padding: 20px;
   }
@@ -439,7 +438,7 @@ li a {
     left: 12%;
     bottom: 100%;
     border: 9px solid transparent;
-    border-bottom: 15px solid maroon;
+    border-bottom: 15px solid #620613;
     border-left: 15px solid transparent;
     border-right: 15px solid transparent;
   } 
@@ -450,7 +449,7 @@ li a {
     left: 21%;
     bottom: 100%;
     border: 9px solid transparent;
-    border-bottom: 15px solid maroon;
+    border-bottom: 15px solid #620613;
     border-left: 15px solid transparent;
     border-right: 15px solid transparent;
   }
@@ -461,7 +460,7 @@ li a {
     left: 28.2%;
     bottom: 100%;
     border: 9px solid transparent;
-    border-bottom: 15px solid maroon;
+    border-bottom: 15px solid #620613;
     border-left: 15px solid transparent;
     border-right: 15px solid transparent;
   } 
@@ -472,7 +471,7 @@ li a {
     left: 33%;
     bottom: 100%;
     border: 9px solid transparent;
-    border-bottom: 15px solid maroon;
+    border-bottom: 15px solid #620613;
     border-left: 15px solid transparent;
     border-right: 15px solid transparent;
   }
@@ -483,7 +482,7 @@ li a {
     left: 37%;
     bottom: 100%;
     border: 9px solid transparent;
-    border-bottom: 15px solid maroon;
+    border-bottom: 15px solid #620613;
     border-left: 15px solid transparent;
     border-right: 15px solid transparent;
   } 
@@ -494,7 +493,7 @@ li a {
     left: 43.5%;
     bottom: 100%;
     border: 9px solid transparent;
-    border-bottom: 15px solid maroon;
+    border-bottom: 15px solid #620613;
     border-left: 15px solid transparent;
     border-right: 15px solid transparent;
   }
@@ -505,7 +504,7 @@ li a {
     left: 52.5%;
     bottom: 100%;
     border: 9px solid transparent;
-    border-bottom: 15px solid maroon;
+    border-bottom: 15px solid #620613;
     border-left: 15px solid transparent;
     border-right: 15px solid transparent;
   } 
@@ -516,7 +515,7 @@ li a {
     left: 61%;
     bottom: 100%;
     border: 9px solid transparent;
-    border-bottom: 15px solid maroon;
+    border-bottom: 15px solid #620613;
     border-left: 15px solid transparent;
     border-right: 15px solid transparent;
   }
@@ -527,7 +526,7 @@ li a {
     left: 68.5%;
     bottom: 100%;
     border: 9px solid transparent;
-    border-bottom: 15px solid maroon;
+    border-bottom: 15px solid #620613;
     border-left: 15px solid transparent;
     border-right: 15px solid transparent;
   } 
@@ -538,9 +537,123 @@ li a {
     left: 73.6%;
     bottom: 100%;
     border: 9px solid transparent;
-    border-bottom: 15px solid maroon;
+    border-bottom: 15px solid #620613;
     border-left: 15px solid transparent;
     border-right: 15px solid transparent;
   }
+  
 
 /* Priya's CSS */
+
+/* New Edits */
+.d-content1 > div, .d-content2 > div,  .d-content3 > div, .d-content4 > div, .d-content5 > div,
+.d-content6 > div, .d-content7 > div, .d-content8 > div, .d-content9 > div, .d-content10 > div{
+display: inline-block;
+}
+.NA_text_block1, .NA_text_block2, .coll_text_block1, .coll_text_block2, .coll_text_block3,
+.women_text_block1, .women_text_block2, .women_text_block3, .women_text_block4, .women_text_block5,
+.men_text_block1, .men_text_block2, .men_text_block3, .men_text_block4, .men_text_block5,
+.kid_text_block1, .kid_text_block2, .kid_text_block3, .kid_text_block4, .kid_text_block5, .kid_text_block6,
+.home_text_block1, .home_text_block2, .home_text_block3, .home_text_block4, .home_text_block5, 
+.dine_text_block1, .dine_text_block2, .dine_text_block3, .dine_text_block4, .dine_text_block5, .dine_text_block6,
+.furni_text_block1, .furni_text_block2, .furni_text_block3, .furni_text_block4, .furni_text_block5, .furni_text_block6,
+.furni_text_block7, .beauty_text_block1, .beauty_text_block2, .beauty_text_block3, .beauty_text_block4,
+.food_text_block1, .food_text_block2, .food_text_block3, .food_text_block4, .food_text_block5
+ {
+  width: 12%;
+  color: #fff;
+  font-size: 15px;
+  text-align: left;
+  margin: 1% 5% 2% 1%;
+  vertical-align: top;
+  font-family: GothamRnd-Book;
+}
+.NA_text_block1 > p, .NA_text_block2 > p {
+  padding: 0px 0px 22px 10px;
+}
+
+.coll_text_block1, .coll_text_block2, .coll_text_block3 {
+margin: 1% 10% 2% 1%;
+width: 18%;
+}
+.coll_text_block1 > p, .coll_text_block2 > p, .coll_text_block3 > p {
+  padding: 0px 0px 15px 20px;
+  
+}
+.women_text_block1, .women_text_block2, .women_text_block3, .women_text_block4, .women_text_block5,
+.men_text_block1, .men_text_block2, .men_text_block3, .men_text_block4, .men_text_block5,
+.home_text_block1, .home_text_block2, .home_text_block3, .home_text_block4, .home_text_block5,
+.kid_text_block1,.kid_text_block2,.kid_text_block3,.kid_text_block4,.kid_text_block5,.kid_text_block6,
+.dine_text_block1, .dine_text_block2, .dine_text_block3, .dine_text_block4, .dine_text_block5, .dine_text_block6,
+.furni_text_block1, .furni_text_block2, .furni_text_block3, .furni_text_block4, .furni_text_block5,
+.furni_text_block6, .furni_text_block7{
+margin: 0% 0% 2% 0%;
+width: 13%;
+}
+.d-content2 > div >p, .d-content3 > div >p, .d-content4 > div >p, .d-content5 > div >p,
+.d-content6 > div >p, .d-content7 > div >p, .d-content8 > div >p, .d-content9 > div >p,
+.d-content10 > div >p
+ {
+  padding: 0px 0px 8px 2px; 
+}
+
+.women_text_block1 >p:nth-child(n+2):nth-child(-n+7),
+.women_text_block1 >p:nth-child(n+9), .women_text_block4 >p:nth-child(n+2),
+.men_text_block1 >p:nth-child(n+2):nth-child(-n+7), .men_text_block1 >p:nth-child(n+9),
+.men_text_block2>p:nth-child(n+3), .men_text_block4 >p:nth-child(n+2),
+.kid_text_block5 >p:nth-child(n+2), .kid_text_block3 > p:nth-child(n+3),
+.kid_text_block1 > p:nth-child(n+2):nth-child(-n+9), .kid_text_block1 > p:nth-child(n+11),
+.kid_text_block2 > p:nth-child(n+2):nth-child(-n+4), .kid_text_block2 > p:nth-child(n+6),
+.home_text_block1 >p:nth-child(n+2):nth-child(-n+7), .home_text_block1 >p:nth-child(n+9):nth-child(-n+11),
+.home_text_block2>p:nth-child(n+2):nth-child(-n+8),.home_text_block2>p:nth-child(n+10),
+.home_text_block4 >p:nth-child(n+2), .dine_text_block1 >p:nth-child(n+2):nth-child(-n+5), 
+.dine_text_block1 > p:nth-child(n+7):nth-child(-n+10), .dine_text_block1 > p:nth-child(n+12),
+.dine_text_block2 > p:nth-child(n+2):nth-child(-n+3), .dine_text_block2 > p:nth-child(n+5),
+.dine_text_block3> p:nth-child(n+2), .dine_text_block5> p:nth-child(n+2),
+.furni_text_block1 >p:nth-child(n+2):nth-child(-n+6), .furni_text_block1 > p:nth-child(n+8),
+.furni_text_block3> p:nth-child(n+2),.furni_text_block2 > p:nth-child(n+6),
+.furni_text_block2 > p:nth-child(n+2):nth-child(-n+4), .furni_text_block2 > p:nth-child(n+5),
+.furni_text_block4> p:nth-child(n+2), .furni_text_block6> p:nth-child(n+2),
+.beauty_text_block1 >p:nth-child(n+2):nth-child(-n+4), .beauty_text_block1 > p:nth-child(n+11),
+.beauty_text_block3> p:nth-child(n+2),.beauty_text_block2 > p:nth-child(n+2),
+.beauty_text_block1 > p:nth-child(n+6):nth-child(-n+9), 
+.food_text_block1 >p:nth-child(n+2):nth-child(-n+3), .food_text_block1 > p:nth-child(n+8),
+.food_text_block1 > p:nth-child(n+5):nth-child(-n+6),
+.food_text_block2 >p:nth-child(n+2):nth-child(-n+4), .food_text_block2 > p:nth-child(n+9),
+.food_text_block2> p:nth-child(n+6):nth-child(-n+8),
+.food_text_block3> p:nth-child(n+2),.food_text_block4 > p:nth-child(n+2)
+
+
+{
+  color: #beac83;
+    font-size: 14px;    
+}
+
+.kid_text_block1, .kid_text_block2{
+  width: 10%;
+}
+
+.women_img, .men_img, .kid_img, .home_img, .dine_img,
+ .furni_img, .food_img{
+  width: 280px;
+  height: 280px; 
+}
+.img_size {
+  max-width: 100%;
+}
+
+.d-content3 > div > p:hover, .d-content4 > div > p:hover , .d-content5 > div > p:hover,
+.d-content6 > div > p:hover , .d-content7 > div > p:hover , .d-content8 > div > p:hover,
+.d-content9 > div > p:hover, .d-content10 > div > p:hover   {
+  color: #eacb7f;;
+}
+
+#nme_mand, #lnme_mand, #phne_mand, #mail_mand, #pass_mand, #cpass_mand {
+  height: 10px;
+  width: 95%;
+  color: red;
+  font-size: 12px;
+  padding: 0px 6px;
+}
+
+ /* New Edits end */
