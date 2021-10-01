@@ -122,6 +122,7 @@
       }
       #pay2 {
         margin-right: 2.5%;
+        display: none;
       }
       #pay3 {
         margin: auto;
@@ -431,7 +432,6 @@
         />
       </div>
     </div>
-    
   </body>
 </html>
 <script>
@@ -449,4 +449,17 @@
     }
   };
   //Shipping-bill panel - End
+
+  //Make Payment Panel - Start
+  let proceed1 = document.getElementById(`proceed`);
+  let payment = document.getElementById(`pay2`);
+  proceed1.addEventListener(`click`, function (e) {
+    e.preventDefault();
+    if (payment.style.display !== "none") {
+      payment.style.display = "none";
+    } else {
+      sb2.style.display = `none`;
+      payment.style.display = "block";
+    }
+  });
 </script>
