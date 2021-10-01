@@ -660,7 +660,8 @@ width: 13%;
   color: #eacb7f;;
 }
 
-#nme_mand, #lnme_mand, #phne_mand, #mail_mand, #pass_mand, #cpass_mand {
+#nme_mand, #lnme_mand, #phne_mand, #mail_mand,
+ #pass_mand, #cpass_mand, #signin_mail, #signin_pass{
   height: 10px;
   width: 95%;
   color: red;
