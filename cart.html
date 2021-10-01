@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Buy fabindia product</title>
+    <title>Shopping Cart</title>
     <style>
 
 *{
@@ -77,84 +77,130 @@
 /* header ends*/
 
         body{
-            background-color: #f4f2e5;
+            background-color: #f3f1ea;
             font-family: 'Muli','Helvetica Neue',Helvetica,Arial,sans-serif;;
         }
-     #bigview{
-         width:84%;
-         background-color: #f3f1ea;
+        #cartbox{
+            display: flex;
+            width:95%;
+             
+            margin:auto;
+        }
+        #cartimage{
+              
+               width:65%;
+              
+        }
+        #orderdetail{
+            width:30%;
+            text-align: justify;
+            margin-left:3.5%;
+            
+            
+            
+        }
+      .c_all,.cpcn{
+          display: flex;
+          font-size: small; 
          
-         margin: auto;
-         display: flex;
-     }
-     #imagebox{
-         width:50%;
-        
-        
-     }
-     #imagebox img{
-         width:75%;
-        
-     }
-     #detailsbox{
-         width:50%;
-         
-     }
+      }
+      #cartimage img{
+          width:12.5%;
+      }
+      .c_all{
+          background-color:#f8f8f6 ;
+          margin:3%;
+          padding:5% 2%;
+           height:125px;
+          width:90%;
+      }
+      
+      .itemprice{
+          margin-left: 150%;
+      }
+      .cpcn{
+          width:100%;
+          margin-left: 30%;
+          height:80px;
+      }
+      p{
+          font-weight: 700;
+      }
      
-    li{
-        font-size: small;
-        margin-top:.5%;
-          margin-right: 30%;
- }
-    p{
-        font-size: 120%;
-        margin-top: 2%;
-    }
-    
-    button{
-        width:25%;
-        height:6%;
-        background-color:#e5cc76 ;
-        font-weight: bold;
-        border: none;
-        margin-top: 1%;
-    }
-   
-    .checkbtn{
-        background-color: black;
-        color:white;
-        height:30px;
-        width:18%;
-    }
-input{
-    height:25px;
-    background-color:#f3f1ea ;
-    width:30%;
-}
-    hr{
-        width:70%;
-        margin-right: 30%;
-        margin-top: 5%;
-    } 
-    img:hover{
-        opacity: .5;
-    }
-    input::-webkit-outer-spin-button,input::-webkit-inner-spin-button{
-        -webkit-appearance: none;
-    }
-    .header{
+      body hr{
+          width:58%;
+          margin-left:2.5%;
+      }
+    body .c_all hr{
+       position:static;
+         margin-top: 30px;
+        width:350%;
+      }
+       h2{
+          margin-left:4.5%;
+      }
+     
+      #orderdetail p{
+         font-weight: bold;
+         margin-left: 5%;
+        
+      }
+      #orderdetail .total{
+          font-size: small;
+      }
+     #orderdetail button{
+         
+          width:80%;
+         height:45px;
+          margin-left: 5%;
+          margin-top: 5%;
+          background-color: #e5cc76;
+          border:none;
+          font-weight: bold;
+      }
+      #orderdetail hr{
+          margin: 4%;
+      }
+       .total{
+          color:rgba(82, 12, 12, 0.767);
+      }
+
+      .header{
     float: left;
-    
+
     height: 155px;
     width: 100%;
     margin: auto;
    
     background-color: #f4f2e5;
 }
-button:hover{
+#divr{
+    display: flex;
+}
+#divr #remov{
+    width:22px;
+    height:22px;
+    
+    position:relative;
+    right:70px;
+    bottom:-40px;
+}
+img:hover{
     opacity:.5;
 }
-
+#continue button{
+    border:none;
+    background-color:#e5cc76 ;
+    width:280px;
+    height:40px;
+    border-radius:  8px;
+    font-weight: bold;
+    margin:50px;
+}
+button:hover{
+    opacity:.8;
+}  
+ 
 /*======= FOOTER START ========*/
 #bottom {
   padding-top: 20px;
@@ -162,7 +208,7 @@ button:hover{
     width: 100%;
     background-color: #dbd9cd;
     height: fit-content;
-    margin-top: 100px;
+    margin-top: 150px;
 }
 #bottom_t {
   display: grid;
@@ -170,8 +216,8 @@ button:hover{
     grid-template-columns: 20% 20% 20% 20% 20%;
 }
 #bottom p{
+    font-weight: normal;
   margin: 10px 0px;
-  font-size: medium;
 }
 
 #bottom_t > div {
@@ -193,9 +239,9 @@ button:hover{
     width:100%;
 }
  
-  
 /*======= FOOTER END =========*/
 
+      
     </style>
 </head>
 <body>
@@ -227,6 +273,16 @@ button:hover{
         <div id="detailsbox"></div>
 
     </div>
+
+    <h2 id="empty">Your Shopping Cart</h2><hr/>
+    <div id="cartbox">
+        <div id="cartimage">
+            
+        </div>
+        
+        <div id="orderdetail"></div>
+    </div>
+    <div id="continue"><a href="products.html"><button>Continue Shopping</button></a></div>
 
 
     <div id="bottom">
@@ -283,11 +339,10 @@ button:hover{
         </div>
 
 
-</body>
-<script src="bigview.js">
-    
-    
-    
 
+
+</body>
+<script src="cart.js">
+    
 </script>
 </html>

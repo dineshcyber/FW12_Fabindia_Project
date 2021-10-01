@@ -13,6 +13,10 @@ function myFunction() {
   }
 }
 
+
+
+//to display women products
+
 let parent = document.getElementById("products");
 
 let info = JSON.parse(localStorage.getItem('productinfo'));
@@ -63,6 +67,11 @@ info.forEach(function (product){
   
    showProducts();
 
+
+
+
+//sorting1
+
    function sort1(){
 
     parent.innerHTML = null; 
@@ -91,21 +100,25 @@ info.forEach(function (product){
     
           wishlist.setAttribute('id','wishlist');
     
-    
+          div.onclick = function(){
+            visible(product);
+          }
           
           div.append(wishlist,img, product_name, product_price);
       
           parent.append(div);
        
-         
-      
-      
     }});
    
      
   
   }
   
+
+
+
+//sorting2
+
   function sort2(){
   
     parent.innerHTML = null; 
@@ -133,6 +146,9 @@ info.forEach(function (product){
           wishlist.src ="file:///C:/Users/hgaut/Documents/GitHub/FW12_Fabindia_Project/image/icon-heart-black.png" ;
     
           wishlist.setAttribute('id','wishlist');
+          div.onclick = function(){
+            visible(product);
+          }
     
          div.append(wishlist,img, product_name, product_price);
       

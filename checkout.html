@@ -11,6 +11,7 @@
       rel="stylesheet"
     />
     <title>Fabindia Checkout</title>
+    <link rel="stylesheet" href="./style.css">
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap");
       body {
@@ -122,6 +123,7 @@
       }
       #pay2 {
         margin-right: 2.5%;
+        display: none;
       }
       #pay3 {
         margin: auto;
@@ -204,26 +206,7 @@
       }
       /*========== RIGHT PANEL END ========== */
 
-      /*======= FOOTER START ========*/
-      #bottom {
-        background-color: #dbd9cd;
-        height: 480px;
-      }
-      #bottom_t {
-        display: flex;
-      }
-      #bottom_t > div {
-        margin: 1% auto;
-        padding: 0px 20px;
-      }
-      #bottom_b {
-        display: flex;
-        justify-content: space-between;
-      }
-      #bottom_b > img {
-        margin: 1.7%;
-      }
-      /*======= FOOTER END =========*/
+      
     </style>
   </head>
   <body>
@@ -431,7 +414,6 @@
         />
       </div>
     </div>
-    
   </body>
 </html>
 <script>
@@ -449,4 +431,17 @@
     }
   };
   //Shipping-bill panel - End
+
+  //Make Payment Panel - Start
+  let proceed1 = document.getElementById(`proceed`);
+  let payment = document.getElementById(`pay2`);
+  proceed1.addEventListener(`click`, function (e) {
+    e.preventDefault();
+    if (payment.style.display !== "none") {
+      payment.style.display = "none";
+    } else {
+      sb2.style.display = `none`;
+      payment.style.display = "block";
+    }
+  });
 </script>

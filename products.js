@@ -16,7 +16,7 @@ function myFunction() {
 
   let productdata = [
     {
-      name: "Henley Shirt",
+      name: "Henley Shirt men",
       price: "M.R.P. ₹2790.00",
       img: "https://www.fabindia.com/ccstore/v1/images/?source=/file/v334622535619501789/products/10702336BU.f.230921.JPG&height=475&width=475",
       category:"men",
@@ -24,14 +24,14 @@ function myFunction() {
 
     },
     {
-      name: "Cotton trouser",
+      name: "Cotton trouser men",
       price: "M.R.P. ₹2190.00",
       img: "https://www.fabindia.com/ccstore/v1/images/?source=/file/v8534366497497831468/products/10679252BU.b.020421.jpg&height=475&width=475",
       category:"men",
       cost:2190
     },
     {
-      name: "Nehru jacket",
+      name: "Nehru jacket men",
       price: "M.R.P. ₹1490.00",
       img: "https://www.fabindia.com/ccstore/v1/images/?source=/file/v8235932954286286566/products/10675304BK.f.20.02.21.jpg&height=475&width=475",
       category:"men",
@@ -67,14 +67,14 @@ function myFunction() {
       cost:1490
     },
     {
-      name: "Cotton silk kurta red",
+      name: "Cotton kurta red",
       price: "M.R.P. ₹3790.00",
       img: "https://www.fabindia.com/ccstore/v1/images/?source=/file/v6311478562554356972/products/10668524WN.f.041020.jpg&height=475&width=475",
       category:"women",
       cost:3790
     },
     {
-      name: "Cotton silk printed kurta",
+      name: "Cotton printed kurta",
       price: "M.R.P. ₹2900.00",
       img: "https://www.fabindia.com/ccstore/v1/images/?source=/file/v5068411366971496723/products/10634946BG.f.080212.jpg&height=475&width=475",
       category:"women",
@@ -88,14 +88,14 @@ function myFunction() {
       cost:5900
     },
     {
-      name: "Global Bosho coffee-mug",
+      name: "Bosho coffee-mug",
       price: "M.R.P. ₹490.00",
       img: "https://www.fabindia.com/ccstore/v1/images/?source=/file/v6328376165428136595/products/10693032BU.f.270721.jpg&height=475&width=475",
       category:"Decorative",
       cost:490
     },
     {
-      name: "Jeev cane wood Tripod",
+      name: "Jeev wood Tripod",
       price: "M.R.P. ₹9490.00",
       img: "https://www.fabindia.com/ccstore/v1/images/?source=/file/v9114850615711217690/products/10674238NT.f.240321.jpg&height=475&width=475",
       category:"Decorative",
@@ -127,6 +127,13 @@ function myFunction() {
   ];
 
 
+
+
+  
+
+//saving products to local storage
+
+
   if(localStorage.getItem('productinfo') === null){
     localStorage.setItem('productinfo',JSON.stringify([]));
   }
@@ -145,6 +152,10 @@ function myFunction() {
  save();
 
 
+
+
+
+//displaying products
 
 
  let parent = document.getElementById("products");
@@ -190,8 +201,15 @@ function myFunction() {
          
      }
      showProducts();
-    
      
+    
+
+
+
+
+  //sorting1 
+  
+  
 function sort1(){
 
   parent.innerHTML = null; 
@@ -239,6 +257,12 @@ function sort1(){
 
 }
 
+
+
+
+//soritng2
+
+
 function sort2(){
 
   parent.innerHTML = null; 
@@ -279,6 +303,8 @@ function sort2(){
  
    }
 
+
+   
 if(localStorage.getItem('visible') === null){
   localStorage.setItem('visible',JSON.stringify([]));
 }
