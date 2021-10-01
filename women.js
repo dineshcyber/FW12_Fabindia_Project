@@ -13,6 +13,10 @@ function myFunction() {
   }
 }
 
+
+
+//to display women products
+
 let parent = document.getElementById("products");
 
 let info = JSON.parse(localStorage.getItem('productinfo'));
@@ -63,6 +67,11 @@ info.forEach(function (product){
   
    showProducts();
 
+
+
+
+//sorting1
+
    function sort1(){
 
     parent.innerHTML = null; 
@@ -99,15 +108,17 @@ info.forEach(function (product){
       
           parent.append(div);
        
-         
-      
-      
     }});
    
      
   
   }
   
+
+
+
+//sorting2
+
   function sort2(){
   
     parent.innerHTML = null; 
