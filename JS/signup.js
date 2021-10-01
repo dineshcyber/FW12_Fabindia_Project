@@ -3,8 +3,9 @@
 var item = document.getElementById("removable");
 var conti = document.getElementById("workspace");
 
+
 function sign_up() {
-  item.remove();
+  conti.removeChild(item);
   document.getElementById("change_me").textContent = "Sign Up";
   conti.style.height = "600px";
 
@@ -21,7 +22,11 @@ function sign_up() {
     "style",
     "width: 95%; border: 1px solid #cccccc; border-radius: 4px; padding: 8px; background-color: #f4f2e5;"
   );
-  div2.append(inp1);
+  let name_mandatory = document.createElement("div");
+ name_mandatory.setAttribute("id", "nme_mand");
+ name_mandatory.textContent = "";
+ namecheck();
+ div2.append(inp1, name_mandatory);
 
   let div3 = document.createElement("div");
   div3.textContent = "Last Name:*";
@@ -33,7 +38,10 @@ function sign_up() {
     "style",
     "width: 95%; border: 1px solid #cccccc; border-radius: 4px; padding: 8px; background-color: #f4f2e5;"
   );
-  div4.append(inp2);
+   let lname_mandatory = document.createElement("div");
+ lname_mandatory.setAttribute("id", "lnme_mand");
+ lname_mandatory.textContent = "";
+ div4.append(inp2, lname_mandatory);
 
   let div5 = document.createElement("div");
   div5.textContent = "Mobile Number:*";
@@ -45,7 +53,10 @@ function sign_up() {
     "style",
     "width: 95%; border: 1px solid #cccccc; border-radius: 4px; padding: 8px; background-color: #f4f2e5;"
   );
-  div6.append(inp3);
+ let phne_mandatory = document.createElement("div");
+ phne_mandatory.setAttribute("id", "phne_mand");
+ phne_mandatory.textContent = "";
+ div6.append(inp3, phne_mandatory);
 
   let div7 = document.createElement("div");
   div7.textContent = "Email Address:*";
@@ -57,7 +68,10 @@ function sign_up() {
     "style",
     "width: 95%; border: 1px solid #cccccc; border-radius: 4px; padding: 8px; background-color: #f4f2e5;"
   );
-  div8.append(inp4);
+  let mail_mandatory = document.createElement("div");
+ mail_mandatory.setAttribute("id", "mail_mand");
+ mail_mandatory.textContent = "";
+ div8.append(inp4, mail_mandatory);
 
   let div9 = document.createElement("div");
   div9.textContent = "Password:*";
@@ -71,7 +85,10 @@ function sign_up() {
     "width: 95%; border: 1px solid #cccccc; border-radius: 4px; padding: 8px; background-color: #f4f2e5;"
   );
   inp5.placeholder = `Minimum 8 charecters`;
-  div10.append(inp5);
+  let pass_mandatory = document.createElement("div");
+ pass_mandatory.setAttribute("id", "pass_mand");
+ pass_mandatory.textContent = "";
+ div10.append(inp5, pass_mandatory);
 
   let div11 = document.createElement("div");
   div11.textContent = "Confirm your password:*";
@@ -84,7 +101,10 @@ function sign_up() {
     "style",
     "width: 95%; border: 1px solid #cccccc; border-radius: 4px; padding: 8px; background-color: #f4f2e5;"
   );
-  div12.append(inp6);
+ let cpass_mandatory = document.createElement("div");
+ cpass_mandatory.setAttribute("id", "cpass_mand");
+ cpass_mandatory.textContent = "";
+ div12.append(inp6, cpass_mandatory);
 
   let div13 = document.createElement("div");
   div13.setAttribute("style", " height:15px");
@@ -99,6 +119,9 @@ function sign_up() {
   let sub_btn = document.createElement("button");
   sub_btn.innerText = "Submit";
   sub_btn.setAttribute("id", "signup_submit");
+   sub_btn.onclick = function() {
+  up_details();
+}
   sub_btn.setAttribute(
     "style",
     "margin: 0%; width: 100%;border-radius: 3px; background-color: #EFD06B; font-size:13px; font-weight: 600 "
@@ -168,3 +191,20 @@ function sign_up() {
 function back() {
   alert("hi");
 }
+function up_details() {
+   alert("signup working");
+   
+   let f_name = document.getElementById("first_name").value;
+   console.log('f_name:', f_name)
+   let l_name = document.getElementById("last_name").value;
+   console.log('l_name:', l_name)
+   let contact = document.getElementById("Phne_number").value;
+   console.log('contact:', contact)
+   let signup_mail = document.getElementById("mail_up").value;
+   console.log('signup_mail:', signup_mail)
+   let signup_pass = document.getElementById("pass_up").value;
+   console.log('signup_pass:', signup_pass)
+   let signup_Cpass = document.getElementById("password_conf").value;
+   console.log('signup_Cpass:', signup_Cpass)
+}
+
