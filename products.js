@@ -16,7 +16,7 @@ function myFunction() {
 
   let productdata = [
     {
-      name: "Henley Shirt",
+      name: "Henley Shirt men",
       price: "M.R.P. ₹2790.00",
       img: "https://www.fabindia.com/ccstore/v1/images/?source=/file/v334622535619501789/products/10702336BU.f.230921.JPG&height=475&width=475",
       category:"men",
@@ -24,14 +24,14 @@ function myFunction() {
 
     },
     {
-      name: "Cotton trouser",
+      name: "Cotton trouser men",
       price: "M.R.P. ₹2190.00",
       img: "https://www.fabindia.com/ccstore/v1/images/?source=/file/v8534366497497831468/products/10679252BU.b.020421.jpg&height=475&width=475",
       category:"men",
       cost:2190
     },
     {
-      name: "Nehru jacket",
+      name: "Nehru jacket men",
       price: "M.R.P. ₹1490.00",
       img: "https://www.fabindia.com/ccstore/v1/images/?source=/file/v8235932954286286566/products/10675304BK.f.20.02.21.jpg&height=475&width=475",
       category:"men",
@@ -127,6 +127,13 @@ function myFunction() {
   ];
 
 
+
+
+  
+
+//saving products to local storage
+
+
   if(localStorage.getItem('productinfo') === null){
     localStorage.setItem('productinfo',JSON.stringify([]));
   }
@@ -145,6 +152,10 @@ function myFunction() {
  save();
 
 
+
+
+
+//displaying products
 
 
  let parent = document.getElementById("products");
@@ -190,8 +201,15 @@ function myFunction() {
          
      }
      showProducts();
-    
      
+    
+
+
+
+
+  //sorting1 
+  
+  
 function sort1(){
 
   parent.innerHTML = null; 
@@ -239,6 +257,12 @@ function sort1(){
 
 }
 
+
+
+
+//soritng2
+
+
 function sort2(){
 
   parent.innerHTML = null; 
@@ -279,6 +303,8 @@ function sort2(){
  
    }
 
+
+   
 if(localStorage.getItem('visible') === null){
   localStorage.setItem('visible',JSON.stringify([]));
 }

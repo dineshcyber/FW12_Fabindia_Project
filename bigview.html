@@ -6,6 +6,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>bigview</title>
     <style>
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%
+  }
+
+.top-header{
+    width: 1200px;
+    height: 90px;
+    margin: auto;
+    display: flex;
+}
+.header-left{
+    width: 150px;
+    height: 90px;
+}
+.header-left button{
+    width: 100px;
+    display: inline-flex;
+    margin: 25px 25px;
+    height: 40px;
+   border: none;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 19px;
+    background-color: transparent;
+}
+
+
+
+.header-middle{
+    width: 900px;
+    
+    height: 90px;
+    align-content: center;
+}
+
+.header-middle img{
+    width: 15%;
+    margin: 21px 500px;
+}
+.header-right{
+    width: 150px;
+    
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.wishlist img{
+    width: 60%;
+    margin-left:550%;
+}
+
+.cart img{
+    margin-left:600%;
+    width: 60%;
+}
+
+/* header ends*/
+
         body{
             background-color: #f4f2e5;
             font-family: 'Muli','Helvetica Neue',Helvetica,Arial,sans-serif;;
@@ -37,7 +106,8 @@
           margin-right: 30%;
  }
     p{
-        font-size: 120%;;
+        font-size: 120%;
+        margin-top: 2%;
     }
     
     button{
@@ -46,6 +116,7 @@
         background-color:#e5cc76 ;
         font-weight: bold;
         border: none;
+        margin-top: 1%;
     }
    
     .checkbtn{
@@ -62,18 +133,50 @@ input{
     hr{
         width:70%;
         margin-right: 30%;
-        margin-top: 2%;
+        margin-top: 5%;
     } 
     img:hover{
-        opacity: .8;
+        opacity: .5;
     }
     input::-webkit-outer-spin-button,input::-webkit-inner-spin-button{
         -webkit-appearance: none;
     }
+    .header{
+    float: left;
+    
+    height: 155px;
+    width: 100%;
+    margin: auto;
+   
+    background-color: #f4f2e5;
+}
+button:hover{
+    opacity:.5;
+}
     </style>
 </head>
 <body>
-   
+    <div class ="header">
+        <header class="header" id="myHeader">
+            <div class="top-header">
+                
+                <div class="header-middle">
+                    <img src="https://www.fabindia.com/file/general/Fabindia_logo.svg" alt="LOGO">
+                </div>
+                <div class="header-right">
+                    <div class="wishlist">
+                        <img src="./image/icon-heart-black.png" alt="">
+                    </div>
+                    <div class="cart">
+                        <a href="cart.html"><img src="./image/icon-bag-black.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </header>
+        
+    </div>
 
     <div id="bigview">
 
@@ -84,97 +187,10 @@ input{
 
 
 </body>
-<script>
-
-    let big = JSON.parse(localStorage.getItem('visible'));
-
-   function showProducts(){
-
-  
-big.forEach(function (product){
-
-      
-      let img = document.createElement('img');
-      
-      img.src = product.img;
-      
-      let product_price = document.createElement('p');
-  
-      product_price.textContent = product.price;
-  
-      let product_name = document.createElement('p');
-  
-      product_name.textContent = product.name;
-
-      let hrline1 = document.createElement('hr');
-      let hrline2 = document.createElement('hr');
-      let hrline3 = document.createElement('hr');
-      let hrline4= document.createElement('hr');
-      let hrline5= document.createElement('hr');
-   
-
-      let addtocartbtn = document.createElement('button');
-      addtocartbtn.innerText = "Add to Cart";
-         
-      let check = document.createElement('p');
-      check.innerText = "Check Delivery Service Availability";
-     
-       let pindiv = document.createElement('div');
-      
-      let pincode = document.createElement('input');  pincode.setAttribute('class','pvalue');
-      pincode.placeholder = "Enter Pincode";
-      
-
-      let checkbtn = document.createElement('button');
-      checkbtn.innerText = "Check";
-      checkbtn.setAttribute('class','checkbtn');
-
-      checkbtn.onclick = function(){
-          itemavail();
-      }
-      
-
-      let pinverify = document.createElement('div'); pinverify.setAttribute('class','verify');
-      pinverify.innerText = "";
-
-      let itemdetail = document.createElement('p');
-      itemdetail.innerText = "Details";
-
-      let point1= document.createElement('li');  
-       point1.innerText = "Comfort Fit";
-      let point2= document.createElement('li');       
-      point2.innerText = "Dry Clean Only";
-      let point3 = document.createElement('li');      
-      point3.innerText = "Dobby Weave";
-      let point4 = document.createElement('li'); 
-      point4.innerText = "Modal Fabric";
-
-
-      let time = document.createElement('p');
-      time.innerText = "Shipping and Dispatching Time";
-      let timeinfo = document.createElement('li');
-      timeinfo.innerText = "5 Working Days From The Date Of Placing Your Order. Free shipping for all orders above Rs.1000";
+<script src="bigview.js">
     
-
-      time.setAttribute("class","time");
-      itemdetail.setAttribute("class","time");
-      
-let div1 = document.getElementById('imagebox');
-div1.append(img);
-
-pindiv.append(pincode , checkbtn,pinverify)
-
-    let div2 = document.getElementById('detailsbox');  
-      div2.append(product_name,hrline1,product_price,addtocartbtn,hrline2,check,pindiv,hrline3,itemdetail,point1,point2,point3,point4,hrline4,time,timeinfo,hrline5);
-     
-  
-  
-  });
-       
-   }
-   showProducts();
-  
-
+    
+    
 
 </script>
 </html>
