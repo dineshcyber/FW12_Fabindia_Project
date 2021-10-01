@@ -61,6 +61,7 @@ big.forEach(function (product){
       
       let pincode = document.createElement('input');  pincode.setAttribute('id','pinvalue');
       pincode.placeholder = "Enter Pincode";
+      pincode.type = "number";
       
 
       let checkbtn = document.createElement('button');
