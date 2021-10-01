@@ -145,6 +145,9 @@ function empty(){
 empty();
 
 
+
+//to payment page
+
 function paymentpage(){
     window.location.href = "checkout.html"
 }
