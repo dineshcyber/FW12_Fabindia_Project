@@ -680,7 +680,7 @@ width: 13%;
   width: 100%;
   margin: auto;
 
-  height: 935px;
+  height: 810px;
 }
 
 .latest-part {
@@ -844,3 +844,37 @@ width: 150px;
 
 
 /* Decor */
+
+/*======= FOOTER START ========*/
+#bottom {
+  padding-top: 20px;
+    float: left;
+    width: 100%;
+    background-color: #dbd9cd;
+    height: 400px;
+}
+#bottom_t {
+  display: grid;
+    width: 100%;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+}
+#bottom p{
+  margin: 10px 0px;
+}
+
+#bottom_t > div {
+  margin: 1% auto;
+  padding: 0px 20px;
+}
+#bottom_b {
+  display: flex;
+  justify-content: space-between;
+}
+
+#bottom_b > h3 {
+  margin: 2.7%;
+}
+#bottom_b > img {
+  margin: 1.7%;
+}
+/*======= FOOTER END =========*/
