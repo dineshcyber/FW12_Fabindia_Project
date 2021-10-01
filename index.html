@@ -37,24 +37,23 @@
                                     <div style="padding: 0px;">
                                         <div><input type="email" id="mail" placeholder="" />
                                         </div>
+                                        <div id="signin_mail"> </div>
                                     </div>
                                     <div>Password:*</div>
                                     <div style="padding: 0px;">
-                                        <div style="margin-bottom: 0px;"><input type="password" id="password"
-                                                placeholder="Minimum 8 characters" /></div>              
-                                    </div>
-                                    <div></div>
+                                        <div style="margin-bottom: 0px;">
+                                            <input type="password" id="password"  placeholder="Minimum 8 characters" />
+                                        </div>
+                                        <div id="signin_pass"> </div>
+                                    </div><div></div>
                                     <div>
-                                        <button>Sign In</button>
+                                        <button onclick="sign_in()">Sign In</button>
                                         <div id="show-flex">
                                             <div>Forgot Password?</div>
                                             <div>New to Fabindia?</div>
-                                            <div><button onclick="sign_up()"  id="create-acc">Create
-                                                    Account</button>
+                                            <div><button onclick="sign_up()"  id="create-acc">Create Account</button>
                                             </div>
                                         </div>
-
-
                                     </div>
 
                                 </div>
@@ -73,15 +72,17 @@
                 <div class="wishlist">
                     <img src="./image/icon-heart-black.png" alt="">
                 </div>
-                <div class="cart">
-                    <img src="./image/icon-bag-black.png" alt="">
+                <div class="cart"><button style="background-color: white; border: none;" onclick="go_to_cart()"> 
+                    <img src="./image/icon-bag-black.png" alt=""></button>
+                   
                 </div>
             </div>
         </div>
         <div class="nav-bar">
              <ul>
                     <li class="d">
-                            <div class="d-btn">NEW ARRIVALS</div>   
+                            <div class="d-btn"><button style="background-color: white; border: none;" onclick="go_to_products()">
+                                NEW ARRIVALS</button> </div>   
                             <div class="d-content1" style="height: 220px; line-height: 20px;">
                                 <div class="NA_text_block1">
                                     <p>Women</p><p>Men</p><p>Kids</p><p>Home Linen</p><p>Home Decor</p>
@@ -109,7 +110,8 @@
                             </div>        
                     </li>
                     <li class="d">
-                        <div class="d-btn">WOMEN</div>   
+                        <div class="d-btn"><button style="background-color: white; border: none;" onclick="go_to_women()"> 
+                            WOMEN</button></div>   
                         <div class="d-content3" style="height: 400px;">
                             <div class="women_text_block1" style="margin-left: 4%;">
                                 <p>ETHNIC WEAR</p><p>Kurtas</p><p>Dupattas</p><p>Chudidars</p><p>Salwars</p>
@@ -138,7 +140,8 @@
                             </div>       
                     </li>
                     <li class="d">
-                        <div class="d-btn">MEN</div>   
+                        <div class="d-btn"><button style="background-color: white; border: none;" onclick="go_to_men()">
+                             MEN</button></div>   
                         <div class="d-content4" style="height: 290px;">
                             <div class="men_text_block1" style="margin-left: 4%; margin-right: 0%; margin-top: 0%;">
                                 <p>ETHNIC WEAR</p><p>Kurtas</p><p>Nehru Jacket</p><p>Churidars</p><p>Pyjamas</p><p>Salwar</p>
@@ -260,7 +263,8 @@
                             </div>        
                     </li>
                     <li class="d">
-                        <div class="d-btn">FURNITURES</div>   
+                        <div class="d-btn"><button style="background-color: white; border: none;" onclick="go_to_decor()"> 
+                            FURNITURES</button></div>   
                         <div class="d-content8" style="height: 410px;">
                             <div class="furni_text_block1" style="width: 8%; margin-left: 4%; margin-right: 0%; margin-top: 0%;">
                                 <p>VARANDAH</p><p>Tables</p><p>Chairs</p><p>Benches</p><p>Tents</p><p style="margin-bottom: 5%;">Umberellas</p>
