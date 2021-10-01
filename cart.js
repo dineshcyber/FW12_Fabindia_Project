@@ -79,6 +79,9 @@ let hrline3 = document.createElement('hr');
 let proceedbtn = document.createElement('button');
 proceedbtn.innerText = "Proceed to Checkout";
 
+proceedbtn.onclick = function(){
+    paymentpage();
+}
 
 let odiv = document.getElementById('orderdetail');
 odiv.append(summary,hrline2,noofitems,hrline3,total,proceedbtn);
@@ -140,3 +143,8 @@ function empty(){
 }
 
 empty();
+
+
+function paymentpage(){
+    window.location.href = "checkout.html"
+}
