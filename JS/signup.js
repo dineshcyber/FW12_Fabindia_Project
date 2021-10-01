@@ -24,8 +24,7 @@ function sign_up() {
   );
   let name_mandatory = document.createElement("div");
  name_mandatory.setAttribute("id", "nme_mand");
- name_mandatory.textContent = "";
- namecheck();
+ name_mandatory.textContent = "a";
  div2.append(inp1, name_mandatory);
 
   let div3 = document.createElement("div");
@@ -40,7 +39,7 @@ function sign_up() {
   );
    let lname_mandatory = document.createElement("div");
  lname_mandatory.setAttribute("id", "lnme_mand");
- lname_mandatory.textContent = "";
+ lname_mandatory.textContent = "a";
  div4.append(inp2, lname_mandatory);
 
   let div5 = document.createElement("div");
@@ -55,7 +54,7 @@ function sign_up() {
   );
  let phne_mandatory = document.createElement("div");
  phne_mandatory.setAttribute("id", "phne_mand");
- phne_mandatory.textContent = "";
+ phne_mandatory.textContent = "a";
  div6.append(inp3, phne_mandatory);
 
   let div7 = document.createElement("div");
@@ -70,7 +69,7 @@ function sign_up() {
   );
   let mail_mandatory = document.createElement("div");
  mail_mandatory.setAttribute("id", "mail_mand");
- mail_mandatory.textContent = "";
+ mail_mandatory.textContent = "a";
  div8.append(inp4, mail_mandatory);
 
   let div9 = document.createElement("div");
@@ -87,7 +86,7 @@ function sign_up() {
   inp5.placeholder = `Minimum 8 charecters`;
   let pass_mandatory = document.createElement("div");
  pass_mandatory.setAttribute("id", "pass_mand");
- pass_mandatory.textContent = "";
+ pass_mandatory.textContent = "a";
  div10.append(inp5, pass_mandatory);
 
   let div11 = document.createElement("div");
@@ -103,7 +102,7 @@ function sign_up() {
   );
  let cpass_mandatory = document.createElement("div");
  cpass_mandatory.setAttribute("id", "cpass_mand");
- cpass_mandatory.textContent = "";
+ cpass_mandatory.textContent = "a";
  div12.append(inp6, cpass_mandatory);
 
   let div13 = document.createElement("div");
@@ -134,7 +133,7 @@ function sign_up() {
   div18.setAttribute("style", "font-size:14px; height:13px");
   div18.setAttribute(
     "style",
-    "font-size:12px; padding: 20px 100px 15px 0px; font"
+    "font-size:12px; padding: 15px 80px 15px 0px; font"
   );
   div18.style.fontFamily = "Mulish, sans - serif";
   div18.textContent =
