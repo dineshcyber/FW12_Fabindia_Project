@@ -4,7 +4,8 @@ var item = document.getElementById("removable");
 var conti = document.getElementById("workspace");
 
 function sign_up(){
- item.remove();
+  conti.removeChild(item);
+
  document.getElementById("change_me").textContent = "Sign Up";
  conti.style.height ="700px";
 
@@ -18,7 +19,12 @@ function sign_up(){
  let inp1 = document.createElement("input");
  inp1.setAttribute("id", "first_name");
  inp1.setAttribute("style", "width: 95%; border: 1px solid black; border-radius: 4px; padding: 8px;");
- div2.append(inp1);
+ let name_mandatory = document.createElement("div");
+ name_mandatory.setAttribute("id", "nme_mand");
+ name_mandatory.textContent = "";
+ namecheck();
+ div2.append(inp1, name_mandatory);
+
 
  let div3 = document.createElement("div");
  div3.textContent = "Last Name:*";
@@ -27,7 +33,10 @@ function sign_up(){
  let inp2 = document.createElement("input");
  inp2.setAttribute("id", "last_name");
  inp2.setAttribute("style", "width: 95%; border: 1px solid black; border-radius: 4px; padding: 8px;");
- div4.append(inp2);
+ let lname_mandatory = document.createElement("div");
+ lname_mandatory.setAttribute("id", "lnme_mand");
+ lname_mandatory.textContent = "";
+ div4.append(inp2, lname_mandatory);
 
  
  let div5 = document.createElement("div");
@@ -37,7 +46,10 @@ function sign_up(){
  let inp3 = document.createElement("input");
  inp3.setAttribute("id", "Phne_number");
  inp3.setAttribute("style", "width: 95%; border: 1px solid black; border-radius: 4px; padding: 8px;");
- div6.append(inp3);
+ let phne_mandatory = document.createElement("div");
+ phne_mandatory.setAttribute("id", "phne_mand");
+ phne_mandatory.textContent = "";
+ div6.append(inp3, phne_mandatory);
 
  let div7 = document.createElement("div");
  div7.textContent = "Email Address:*";
@@ -46,7 +58,10 @@ function sign_up(){
  let inp4 = document.createElement("input");
  inp4.setAttribute("id", "mail_up");
  inp4.setAttribute("style", "width: 95%; border: 1px solid black; border-radius: 4px; padding: 8px;");
- div8.append(inp4);
+ let mail_mandatory = document.createElement("div");
+ mail_mandatory.setAttribute("id", "mail_mand");
+ mail_mandatory.textContent = "";
+ div8.append(inp4, mail_mandatory);
 
  let div9 = document.createElement("div");
  div9.textContent = "Password:*";
@@ -55,7 +70,10 @@ function sign_up(){
  let inp5 = document.createElement("input");
  inp5.setAttribute("id", "pass_up");
  inp5.setAttribute("style", "width: 95%; border: 1px solid black; border-radius: 4px; padding: 8px;");
- div10.append(inp5);
+ let pass_mandatory = document.createElement("div");
+ pass_mandatory.setAttribute("id", "pass_mand");
+ pass_mandatory.textContent = "";
+ div10.append(inp5, pass_mandatory);
 
  let div11 = document.createElement("div");
  div11.textContent = "Confirm your password:*";
@@ -64,7 +82,10 @@ function sign_up(){
  let inp6 = document.createElement("input");
  inp6.setAttribute("id", "password_conf");
  inp6.setAttribute("style", "width: 95%; border: 1px solid black; border-radius: 4px; padding: 8px;");
- div12.append(inp6);
+ let cpass_mandatory = document.createElement("div");
+ cpass_mandatory.setAttribute("id", "cpass_mand");
+ cpass_mandatory.textContent = "";
+ div12.append(inp6, cpass_mandatory);
 
 
  let div13 = document.createElement("div");
@@ -80,6 +101,10 @@ function sign_up(){
  let sub_btn = document.createElement("button");
  sub_btn.innerText = "Submit";
  sub_btn.setAttribute("id", "signup_submit");
+ sub_btn.onclick = function() {
+  up_details();
+}
+
  sub_btn.setAttribute("style", "margin: 0%; width: 100%; border: 1px solid black; border-radius: 3px; background-color:yellow; font-size:20px");
  div16.append(sub_btn);
 
@@ -87,7 +112,7 @@ function sign_up(){
  div17.setAttribute("style", "font-size:14px; height:13px");
  let div18 = document.createElement("div");
  div18.setAttribute("style", "font-size:14px; height:13px");
- div18.setAttribute("style", "font-size:10px; padding: 0px 100px 0px 0px" );
+ div18.setAttribute("style", "font-size:10px; padding: 10px 100px 0px 0px" );
  div18.textContent = "By creating an account, you agree to Fabindia's terms of use and privacy policy";
 
  changed_to_signup.append(div1,div2,div3,div4,div5,div6,div7,div8,div9,
@@ -115,6 +140,49 @@ function sign_up(){
  conti.append(changed_to_signup, line, already_user,div_Signin);
 
  }
+var body = document.getElementsByClassName("modal-content");
+
+ console.log(getback);
  function back(){
-   alert("hi");
+   alert("working");
+  
+ }
+function namecheck(){
+if(document.getElementById("first_name").value == ""){
+  document.getElementById("nme_mand").textContent = "Name is Mandatory";
+}}
+
+ function up_details() {
+   alert("signup working");
+   
+   let f_name = document.getElementById("first_name").value;
+   console.log('f_name:', f_name)
+   let l_name = document.getElementById("last_name").value;
+   console.log('l_name:', l_name)
+   let contact = document.getElementById("Phne_number").value;
+   console.log('contact:', contact)
+   let signup_mail = document.getElementById("mail_up").value;
+   console.log('signup_mail:', signup_mail)
+   let signup_pass = document.getElementById("pass_up").value;
+   console.log('signup_pass:', signup_pass)
+   let signup_Cpass = document.getElementById("password_conf").value;
+   console.log('signup_Cpass:', signup_Cpass)
+   
+
+  //  if(localStorage.getItem('movie-users') === null){
+  //      localStorage.setItem("movie-users", JSON.stringify([]));
+  //  }
+  //   /*grab and prepare user data*/
+  //  let user ={
+  //      name,
+  //      contact,
+  //      email,
+  //      password,
+  //  };
+   
+  //   // get array from localstorage
+  //   let arr=JSON.parse(localStorage.getItem("movie-users"));
+  //   //push new user to array
+  //   arr.push(user); // adding new user
+  //   localStorage.setItem("movie-users", JSON.stringify(arr));
  }
