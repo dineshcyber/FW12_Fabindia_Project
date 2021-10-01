@@ -1,15 +1,15 @@
 let imageslatestright = [
-    "https://www.fabindia.com/file/general/hp-wehave-27ep21-10.jpg",
-    "https://www.fabindia.com/file/general/hp-wehave-27ep21-11.jpg",
-    "https://www.fabindia.com/file/general/hp-wehave-27ep21-13.jpg",
-    "https://www.fabindia.com/file/general/hp-wehave-27ep21-14.jpg",
+    "https://www.fabindia.com/file/general/mn-hp-lfts1-21july21.jpg",
+    "https://www.fabindia.com/file/general/mn-hp-tfts1-1july21.jpg",
+    "https://www.fabindia.com/file/general/mn-hp-lfts-9aug21-1.jpg",
+    "https://www.fabindia.com/file/general/mn-hp-lfts-27sep-2.jpg",
   ];
 
   let detaillatestright = [
-      "Smart choices to let your little champs dress to the occasion",
-      "In vivid shades & patterns for a home bathed in the festive spirit",
-      "To dress up warm, celebratory tablescapes",
-      "Finely crafted pieces to delight guests with sherbets, tea or traditional beverages",
+      "GET IN BACK TO WORK MODE WITH A RANGE OF SHIRTS MADE WITH FINEST QUALITY FABRICS",
+      "AWAY FROM THE DAILY WHIRL OF ACTIVITIES, GIVE YOURSELF A BREAK & GET COMFORTABLE IN OUR KURTAS & SHIRTS",
+      "REJUVENATE YOUR FESTIVE WARDROBE WITH OUR MUST-HAVE KURTAS, SHIRTS, NEHRU JACKETS FOR YOU",
+      "Unique festive finds to surprise the men in your life",
   ];
 
 
