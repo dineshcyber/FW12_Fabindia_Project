@@ -107,7 +107,7 @@
           </a>
         </div>
         <div>
-          <input type="text" placeholder="Enter your search text" />
+          <input id="search" type="text" placeholder="Enter your search text" />
         </div>
         <div>
           <p style="text-align: right; padding-bottom: 10px">
@@ -174,5 +174,19 @@
   });
   links[6].addEventListener(`click`, function () {
     window.location.href = "decorative.html";
+  });
+
+  //input-bar
+  var input = document.getElementById(`search`);
+  input.addEventListener("keypress", function (e) {
+    if (e.key === "Enter") {
+      if (input.value == `men` || input.value == `MEN`) {
+        window.location.href = "men.html";
+      } else if (input.value == `women` || input.value == `WOMEN`) {
+        window.location.href = "women.html";
+      } else if (input.value == `decor` || input.value == `DECOR`) {
+        window.location.href = "decorative.html";
+      }
+    }
   });
 </script>
