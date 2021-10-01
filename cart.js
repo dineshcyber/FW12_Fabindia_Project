@@ -79,13 +79,6 @@ let hrline3 = document.createElement('hr');
 let proceedbtn = document.createElement('button');
 proceedbtn.innerText = "Proceed to Checkout";
 
-let coupon = document.createElement('input');
-coupon.type = "text";
-
-let applybtn = document.createElement('button');
-applybtn.innerText = "Apply";
-
-
 
 let odiv = document.getElementById('orderdetail');
 odiv.append(summary,hrline2,noofitems,hrline3,total,proceedbtn);
