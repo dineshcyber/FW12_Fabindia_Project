@@ -39,29 +39,37 @@
     }
     #scroller-t {
       display: flex;
-      border: 1px solid red;
       height: 100%;
     }
     #scroller-t > div {
-      width: 33%;
-      border: 1px solid red;
-    }
-    #scroller-t > div {
+      flex-grow: 1;
+      margin: auto;
+      padding: 0 20px;
     }
     #scroller-t img {
-      width: 33%;
+      width: 30%;
       height: auto;
     }
     #scroller-t input {
-      vertical-align: middle;
+      padding-left: 10px;
       border: #f4f2e5;
       background-color: #f9f8f1;
+      border-radius: 2px;
+      height: 40px;
+      width: 80%;
     }
     #scroller-t-r {
       display: flex;
+      justify-content: right;
+      gap: 20px;
     }
     #scroller-t-r img {
       width: 25px;
+      height: auto;
+      margin: auto 0;
+    }
+    #scroller-t-r p {
+      margin: auto 0;
     }
     #scroller-b {
       display: flex;
@@ -81,10 +89,9 @@
         </div>
         <div>
           <input type="text" placeholder="Enter your search text" />
-          <label>🔍</label>
         </div>
         <div>
-          <p>
+          <p style="text-align: right; padding-bottom: 10px">
             Sign In | Sign Up | <strong>Fab</strong><em>family</em> | Track Your
             Order | Store Locator
           </p>
@@ -93,9 +100,14 @@
             <img
               src="https://www.fabindia.com/file/v8385693196996654632/general/india_flag.svg"
             />
+            <p>˅</p>
             <img
               src="https://www.fabindia.com/file/general/icon-loyalty-star-old-page.png"
             />
+            <img src="./image/icon-heart-black.png" alt="" />
+            <a href="cart.html"
+              ><img src="./image/icon-bag-black.png" alt=""
+            /></a>
           </div>
         </div>
       </div>
