@@ -1,9 +1,4 @@
 
-
-
-
-
-
 //cart display
 
 var totalamount = 0;
