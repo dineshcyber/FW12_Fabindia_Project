@@ -11,7 +11,7 @@
       rel="stylesheet"
     />
     <title>Fabindia Checkout</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css" />
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap");
       body {
@@ -197,6 +197,24 @@
         border-radius: 3px;
         width: 50%;
       }
+      #warning2 {
+        color: maroon;
+        padding-top: 5px;
+        display: none;
+      }
+      #warning3 {
+        color: maroon;
+        padding-top: 5px;
+        font-size: 13px;
+        display: none;
+      }
+      #warning4 {
+        color: maroon;
+        padding-top: 5px;
+        font-size: 16px;
+        display: none;
+        font-weight: 500;
+      }
       /*========= FINAL PAYMENT END ===========*/
 
       /*========== RIGHT PANEL START ========== */
@@ -205,8 +223,6 @@
         width: 70%;
       }
       /*========== RIGHT PANEL END ========== */
-
-      
     </style>
   </head>
   <body>
@@ -293,6 +309,7 @@
             <div></div>
             <div>
               <button id="proceed">Save and Continue</button>
+              <p id="warning3">You must fill the required mandatory * fields</p>
             </div>
           </form>
         </div>
@@ -330,11 +347,14 @@
                   <p>Name on Card*</p>
                   <input type="text" placeholder="Name on Card" />
                   <p>Expires On*</p>
-                  <input type="number" />
-                  <input type="number" />
+                  <input type="number" placeholder="Month" />
+                  <input type="number" placeholder="Year" />
                   <input type="password" placeholder="CVV" />
                   <h4>Be quick, be safe. Save your card details</h4>
                   <button id="confirm">Pay Now</button>
+                  <h4 id="warning2">
+                    One or more of the required fields are empty
+                  </h4>
                 </form>
               </div>
             </div>
@@ -353,11 +373,17 @@
           <br />
           <br />
           <br />
-          <p>Sub Total:</p>
+          <p>Sub Total: <strong id="subTot">Rs 0</strong></p>
           <hr />
-          <p>Delivery Charges:</p>
+          <p>
+            Delivery Charges: <strong>Rs </strong
+            ><strong id="delivery">0</strong>
+          </p>
           <hr />
-          <p>Total:</p>
+          <p>Total: <strong id="total">Rs 0</strong></p>
+          <p id="warning4">
+            Cart is Empty <a href="products.html">Continue Shopping</a>
+          </p>
         </div>
       </div>
     </div>
@@ -417,6 +443,24 @@
   </body>
 </html>
 <script>
+  //Money Workaround - Start
+  let products = JSON.parse(localStorage.getItem(`cart`));
+  let total = 0;
+  products.forEach(function (el) {
+    total += Number(el.price.slice(8, el.price.length));
+  });
+  let st = document.getElementById(`subTot`);
+  let tt = document.getElementById(`total`);
+  let del = document.getElementById(`delivery`);
+  if (products.length == 0) {
+    del.textContent = 0;
+  } else {
+    del.textContent = 150;
+  }
+  st.textContent = `Rs ` + total;
+  tt.textContent = `Rs ` + (total + Number(del.textContent));
+  //Money Workaround - End
+
   //Shipping-bill panel - Start
   let sb = document.getElementById(`ship_bill`);
   let sb2 = document.getElementById(`ship_bill2`);
@@ -433,15 +477,53 @@
   //Shipping-bill panel - End
 
   //Make Payment Panel - Start
+  let form_details = document.getElementById(`form`);
+  let warning3 = document.getElementById(`warning3`);
   let proceed1 = document.getElementById(`proceed`);
   let payment = document.getElementById(`pay2`);
   proceed1.addEventListener(`click`, function (e) {
     e.preventDefault();
-    if (payment.style.display !== "none") {
-      payment.style.display = "none";
+    var validation_counter = 0;
+    for (var i = 0; i < form_details.length - 3; i++) {
+      if (
+        form_details[i].value == `` ||
+        form_details[i].value == null ||
+        form_details[2].value == `default`
+      ) {
+        validation_counter++;
+      }
+    }
+    if (validation_counter == 0) {
+      if (payment.style.display !== "none") {
+        payment.style.display = "none";
+      } else {
+        sb2.style.display = `none`;
+        payment.style.display = "block";
+      }
     } else {
-      sb2.style.display = `none`;
-      payment.style.display = "block";
+      warning3.style.display = `block`;
     }
   });
+  let form_details2 = document.getElementById(`form2`);
+  let final = document.getElementById(`confirm`);
+  let warning2 = document.getElementById(`warning2`);
+  let warning4 = document.getElementById(`warning4`);
+  final.addEventListener(`click`, function (e) {
+    e.preventDefault();
+    var validation_counter2 = 0;
+    for (var i = 0; i < form_details2.length - 1; i++) {
+      if (form_details2[i].value == `` || form_details2[i].value == null) {
+        validation_counter2++;
+      }
+    }
+    if (validation_counter2 == 0 && del.textContent == 150) {
+      window.location.href = `index.html`;
+    } else if (validation_counter2 == 0 && del.textContent == 0) {
+      warning4.style.display = `block`;
+    } else {
+      warning2.style.display = `block`;
+    }
+  });
+
+  //Make Payment Panel - End
 </script>
