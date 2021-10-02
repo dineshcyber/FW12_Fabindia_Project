@@ -328,11 +328,14 @@
                   <p>Name on Card*</p>
                   <input type="text" placeholder="Name on Card" />
                   <p>Expires On*</p>
-                  <input type="number" />
-                  <input type="number" />
+                  <input type="number" placeholder="Month" />
+                  <input type="number" placeholder="Year" />
                   <input type="password" placeholder="CVV" />
                   <h4>Be quick, be safe. Save your card details</h4>
                   <button id="confirm">Pay Now</button>
+                  <h4 id="warning2">
+                    One or more of the required fields are empty
+                  </h4>
                 </form>
               </div>
             </div>
@@ -351,11 +354,14 @@
           <br />
           <br />
           <br />
-          <p id="subTot">Sub Total:</p>
+          <p>Sub Total: <strong id="subTot">Rs 0</strong></p>
           <hr />
-          <p>Delivery Charges: <strong>Rs 200</strong></p>
+          <p>
+            Delivery Charges: <strong>Rs </strong
+            ><strong id="delivery">0</strong>
+          </p>
           <hr />
-          <p id="total">Total:</p>
+          <p>Total: <strong id="total">Rs 0</strong></p>
         </div>
       </div>
     </div>
@@ -442,18 +448,37 @@
       payment.style.display = "block";
     }
   });
+  let form_details = document.getElementById(`form2`);
+  let final = document.getElementById(`confirm`);
+  final.addEventListener(`click`, function (e) {
+    e.preventDefault();
+    for (var i = 0; i < form_details.length - 1; i++) {
+      console.log(form_details[i].value);
+      if (form_details[i].value == ``) {
+        console.log(`empty`);
+        break;
+      }
+    }
+  });
+
   //Make Payment Panel - End
 
   //Money Workaround - Start
   let products = JSON.parse(localStorage.getItem(`cart`));
-  console.log(products);
+  // console.log(products);
   let total = 0;
   products.forEach(function (el) {
-    // console.log(el.price.slice(8, el.price.length));
     total += Number(el.price.slice(8, el.price.length));
   });
   let st = document.getElementById(`subTot`);
   let tt = document.getElementById(`total`);
-  st.textContent = `Sub Total: Rs ` + total;
-  tt.textContent = `Total: Rs ` + (total + 200);
+  let del = document.getElementById(`delivery`);
+  if (products.length == 0) {
+    del.textContent = 0;
+  } else {
+    del.textContent = 150;
+  }
+  st.textContent = `Rs ` + total;
+  tt.textContent = `Rs ` + (total + Number(del.textContent));
+  //Money Workaround - End
 </script>
