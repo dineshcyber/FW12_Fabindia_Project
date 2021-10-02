@@ -1,23 +1,23 @@
 let suggestedimage = [
     {
-      name: "IZNAL COTTON PRINTED BED COVER",
-     price:"Rs. 8,999.00",
-      img: "https://www.fabindia.com/file/general/hdf-car1-1oct21-1.jpg",
+      name: "COTTON SILK EMBROIDERY GOTTAPATTI DUPATTA",
+     price:"Rs. 3,990.00",
+      img: "https://www.fabindia.com/file/general/hp-sfu1-13aug21.jpg",
     },
     {
-        name: "TAANI ETCHED HURRICANE SMALL",
-        price:"Rs. 2,999.00",
-        img: "https://www.fabindia.com/file/general/hdf-car1-1oct21-2.jpg",
+        name: "COTTON SLUB PRINTED TOP",
+        price:"Rs. 690.00",
+        img: "https://www.fabindia.com/file/general/hp-sfu2-13aug21.jpg",
       },
       {
-        name: "TRISHNA HANGING T-LITE HOLDER LARGE",
-        price:"Rs. 1,490.00",
-        img: "https://www.fabindia.com/file/general/hdf-car1-1oct21-6.jpg",
+        name: "VISCOSE TUSSAR KOSI NEHRU JACKET",
+        price:"Rs. 2,890.00",
+        img: "https://www.fabindia.com/file/general/hp-sfu3-13aug21.jpg",
       },
       {
-        name: "AGRIM LEAF PLATTER SMALL",
-        price:"Rs. 1,099.00",
-        img: "https://www.fabindia.com/file/general/hdf-car1-1oct21-10.jpg",
+        name: "FLOWER POWER COTTON SLUB CUSHION COVER",
+        price:"Rs. 690.00",
+        img: "https://www.fabindia.com/file/general/hp-sfu4-13aug21.jpg",
       },
   ];
 
