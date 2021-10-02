@@ -140,6 +140,11 @@
         font-size: 12px;
         line-height: 30px;
       }
+      #p3l > p:hover {
+        cursor: pointer;
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
 
       #p3r {
         background-color: #f9f8f1;
@@ -319,7 +324,7 @@
           <h2>Payment Details</h2>
         </div>
         <div id="pay2">
-          <h2>Make Payment</h2>
+          <h2 style="padding: 20px 0">Make Payment</h2>
           <div id="pay3">
             <div id="p3l">
               <p>Credit/Debit card</p>
@@ -341,7 +346,7 @@
                 </p>
               </div>
               <div id="p3r-b">
-                <h3>Enter your card details</h3>
+                <h3 style="padding: 15px 0">Enter your card details</h3>
                 <form id="form2">
                   <p>Card Number*</p>
                   <input type="text" placeholder="Card Number" />
