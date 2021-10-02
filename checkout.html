@@ -197,6 +197,11 @@
         border-radius: 3px;
         width: 50%;
       }
+      #warning2 {
+        color: maroon;
+        padding-top: 5px;
+        display: none;
+      }
       /*========= FINAL PAYMENT END ===========*/
 
       /*========== RIGHT PANEL START ========== */
@@ -448,15 +453,19 @@
       payment.style.display = "block";
     }
   });
-  let form_details = document.getElementById(`form2`);
+  let form_details2 = document.getElementById(`form2`);
   let final = document.getElementById(`confirm`);
+  let warning2 = document.getElementById(`warning2`);
   final.addEventListener(`click`, function (e) {
     e.preventDefault();
-    for (var i = 0; i < form_details.length - 1; i++) {
-      console.log(form_details[i].value);
-      if (form_details[i].value == ``) {
+    for (var i = 0; i < form_details2.length - 1; i++) {
+      console.log(form_details2[i].value);
+      if (form_details2[i].value == ``) {
         console.log(`empty`);
+        warning2.style.display = `block`; ///===============Final page link
         break;
+      } else {
+        window.location.href = "index.html";
       }
     }
   });
