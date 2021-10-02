@@ -112,10 +112,9 @@ function sort1() {
       let product_name = document.createElement("p");
 
       product_name.textContent = product.name;
-<<<<<<< HEAD
+
   
-   
-=======
+
 
       let wishlist = document.createElement("img");
 
