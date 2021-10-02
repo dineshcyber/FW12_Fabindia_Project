@@ -81,6 +81,7 @@ function sign_up() {
 
   let div6 = document.createElement("div");
   let inp3 = document.createElement("input");
+  inp3.placeholder = `10 digits Mobile Number`;
   inp3.setAttribute("id", "phne_number");
   inp3.setAttribute(
     "style",
@@ -117,7 +118,7 @@ function sign_up() {
     "style",
     "width: 95%; border: 1px solid #cccccc; border-radius: 4px; padding: 8px; background-color: #f4f2e5;"
   );
-  inp5.placeholder = `Minimum 8 charecters`;
+  inp5.placeholder = `Minimum 8 characters`;
   let pass_mandatory = document.createElement("div");
  pass_mandatory.setAttribute("id", "pass_mand");
  pass_mandatory.textContent = "";
