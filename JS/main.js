@@ -1,10 +1,12 @@
-window.onscroll = function () {
-  myFunction();
-};
+
+
+window.onscroll = function() {myFunction()};
+
 
 var header = document.getElementById("myHeader");
 
 var sticky = header.offsetTop;
+
 
 function myFunction() {
   if (window.pageYOffset > sticky) {
@@ -14,30 +16,32 @@ function myFunction() {
   }
 }
 
+
 let images = [
-  "https://www.fabindia.com/file/general/hp-mb-14sep21-1.jpg",
-  "https://www.fabindia.com/file/general/hp-mb-27sep21-4.jpg",
-  "https://www.fabindia.com/file/general/hp-mb-27sep21-5.jpg",
-];
+    "https://www.fabindia.com/file/general/hp-mb-14sep21-1.jpg",
+    "https://www.fabindia.com/file/general/hp-mb-27sep21-4.jpg",
+    "https://www.fabindia.com/file/general/hp-mb-27sep21-5.jpg",
+  ];
 
-let container = document.getElementById("mySlideshow");
-let interval;
 
-function startSlideshow() {
-  //1.
-  let counter = 0;
-  interval = setInterval(function () {
-    container.innerHTML = null;
-    if (counter === images.length) {
-      counter = 0;
+    let container=document.getElementById("mySlideshow");
+    let interval;
+
+    function startSlideshow(){
+        //1.
+        let counter=0;
+        interval = setInterval( function() {
+            container.innerHTML = null;
+            if(counter === images.length){
+                counter=0;
+            }
+            let img = document.createElement("img");
+        img.src=images[counter];
+        container.append(img);
+        counter = counter+1;
+    }, 3000);
     }
-    let img = document.createElement("img");
-    img.src = images[counter];
-    container.append(img);
-    counter = counter + 1;
-  }, 3000);
-}
-startSlideshow();
+    startSlideshow();
 
 //  for sign-in pop up
 var modal = document.getElementById("myModal");
@@ -48,21 +52,44 @@ var btn = document.getElementById("signin");
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
-// When the user clicks the button, open the modal
-btn.onclick = function () {
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
   modal.style.display = "block";
-};
+}
 
 // When the user clicks on <span> (x), close the modal
-span.onclick = function () {
+span.onclick = function() {
   modal.style.display = "none";
-};
+}
 
 // When the user clicks anywhere outside of the modal, close it
-window.onclick = function (event) {
+window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
-    // }else if(event.target == modal2){
-    //   modal2.style.display = "none";
+  // }else if(event.target == modal2){
+  //   modal2.style.display = "none";
   }
-};
+}
+
+function  go_to_cart() {
+  location.href = "cart.html"; 
+}
+function  go_to_products() {
+  location.href = "products.html"; 
+}
+function  go_to_women() {
+  location.href = "women.html"; 
+}
+function  go_to_men() {
+  location.href = "men.html"; 
+}
+function  go_to_cart() {
+  location.href = "cart.html"; 
+}
+function  go_to_decor() {
+  location.href = "decorative.html"; 
+}
+
+
+
+ 

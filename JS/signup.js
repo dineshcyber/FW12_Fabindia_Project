@@ -1,3 +1,37 @@
+function sign_in(){
+  let s_in_mail = document.getElementById("mail").value;
+   console.log('s_in_mail:', s_in_mail);
+   if(s_in_mail.length == 0){
+    document.getElementById("signin_mail").textContent = "Email Address is Mandatory";
+   }else{
+    document.getElementById("signin_mail").textContent = "";
+   }
+
+   let s_in_pass = document.getElementById("password").value;
+   console.log('s_in_pass:', s_in_pass);
+   if(s_in_pass == 0){
+    document.getElementById("signin_pass").textContent = "Password is Mandatory";
+   }else{
+    document.getElementById("signin_pass").textContent = "";
+   }  
+   
+
+  let all_users =JSON.parse(localStorage.getItem("signup-details"));
+    //console.log('all_users mail:', user.signup_mail);
+    var count =0;
+  all_users.forEach(function(user){
+        if((s_in_mail == user.signup_mail) && (s_in_pass == user.signup_pass)){
+             count++;
+         }
+  });
+  if(count > 0){
+   alert("Login successfull");  
+   modal.style.display = "none";
+  }else{
+   alert("Invalid Login Credentials");  
+  }
+}
+
 // for sign up-pop up
 
 var item = document.getElementById("removable");
@@ -24,7 +58,7 @@ function sign_up() {
   );
   let name_mandatory = document.createElement("div");
  name_mandatory.setAttribute("id", "nme_mand");
- name_mandatory.textContent = "a";
+ name_mandatory.textContent = "";
  div2.append(inp1, name_mandatory);
 
   let div3 = document.createElement("div");
@@ -39,7 +73,7 @@ function sign_up() {
   );
    let lname_mandatory = document.createElement("div");
  lname_mandatory.setAttribute("id", "lnme_mand");
- lname_mandatory.textContent = "a";
+ lname_mandatory.textContent = "";
  div4.append(inp2, lname_mandatory);
 
   let div5 = document.createElement("div");
@@ -47,14 +81,14 @@ function sign_up() {
 
   let div6 = document.createElement("div");
   let inp3 = document.createElement("input");
-  inp3.setAttribute("id", "Phne_number");
+  inp3.setAttribute("id", "phne_number");
   inp3.setAttribute(
     "style",
     "width: 95%; border: 1px solid #cccccc; border-radius: 4px; padding: 8px; background-color: #f4f2e5;"
   );
  let phne_mandatory = document.createElement("div");
  phne_mandatory.setAttribute("id", "phne_mand");
- phne_mandatory.textContent = "a";
+ phne_mandatory.textContent = "";
  div6.append(inp3, phne_mandatory);
 
   let div7 = document.createElement("div");
@@ -69,7 +103,7 @@ function sign_up() {
   );
   let mail_mandatory = document.createElement("div");
  mail_mandatory.setAttribute("id", "mail_mand");
- mail_mandatory.textContent = "a";
+ mail_mandatory.textContent = "";
  div8.append(inp4, mail_mandatory);
 
   let div9 = document.createElement("div");
@@ -86,7 +120,7 @@ function sign_up() {
   inp5.placeholder = `Minimum 8 charecters`;
   let pass_mandatory = document.createElement("div");
  pass_mandatory.setAttribute("id", "pass_mand");
- pass_mandatory.textContent = "a";
+ pass_mandatory.textContent = "";
  div10.append(inp5, pass_mandatory);
 
   let div11 = document.createElement("div");
@@ -102,7 +136,7 @@ function sign_up() {
   );
  let cpass_mandatory = document.createElement("div");
  cpass_mandatory.setAttribute("id", "cpass_mand");
- cpass_mandatory.textContent = "a";
+ cpass_mandatory.textContent = "";
  div12.append(inp6, cpass_mandatory);
 
   let div13 = document.createElement("div");
@@ -188,22 +222,90 @@ function sign_up() {
   conti.append(changed_to_signup, line, already_user, div_Signin);
 }
 function back() {
-  alert("hi");
-}
-function up_details() {
-   alert("signup working");
-   
-   let f_name = document.getElementById("first_name").value;
-   console.log('f_name:', f_name)
-   let l_name = document.getElementById("last_name").value;
-   console.log('l_name:', l_name)
-   let contact = document.getElementById("Phne_number").value;
-   console.log('contact:', contact)
-   let signup_mail = document.getElementById("mail_up").value;
-   console.log('signup_mail:', signup_mail)
-   let signup_pass = document.getElementById("pass_up").value;
-   console.log('signup_pass:', signup_pass)
-   let signup_Cpass = document.getElementById("password_conf").value;
-   console.log('signup_Cpass:', signup_Cpass)
+  modal.style.display = "none";
+  alert("Refresh the page");
 }
 
+
+function up_details() {
+
+  // *************validation********* //
+
+   let f_name = document.getElementById("first_name").value;
+   if(f_name.length == 0){
+    document.getElementById("nme_mand").textContent = "First Name is Mandatory";
+   }else{
+    document.getElementById("nme_mand").textContent = "";
+   }
+   console.log('f_name:', f_name);
+
+   let l_name = document.getElementById("last_name").value;
+   if(l_name.length == 0){
+    document.getElementById("lnme_mand").textContent = "Last Name is Mandatory";
+   }else{
+    document.getElementById("lnme_mand").textContent = "";
+   }
+   console.log('l_name:', l_name)
+
+   let contact = document.getElementById("phne_number").value;
+   if(contact.length == 0){
+    document.getElementById("phne_mand").textContent = "Mobile Number is Mandatory";
+   }else if(contact.length < 10){
+    document.getElementById("phne_mand").textContent = "Invalid Mobile Number";
+   }else{
+    document.getElementById("phne_mand").textContent = "";
+   }
+   console.log('contact:', contact);
+
+   let signup_mail = document.getElementById("mail_up").value;
+   console.log('signup_mail:', signup_mail);
+   if(signup_mail.length == 0){
+    document.getElementById("mail_mand").textContent = "Email Address is Mandatory";
+   }else{
+    document.getElementById("mail_mand").textContent = "";
+   }
+
+   let signup_pass = document.getElementById("pass_up").value;
+   if(signup_pass.length == 0){
+    document.getElementById("pass_mand").textContent = "Password is Mandatory";
+   }else if(signup_pass.length < 8){
+    document.getElementById("pass_mand").textContent = "Password is too weak";
+   }else{
+    document.getElementById("pass_mand").textContent = "";
+   }
+   console.log('signup_pass:', signup_pass)
+
+   let signup_Cpass = document.getElementById("password_conf").value;
+   if(signup_Cpass.length == 0){
+    document.getElementById("cpass_mand").textContent = "Please enter your password again";
+   }else if(signup_Cpass !==  signup_pass){
+    document.getElementById("cpass_mand").textContent = "Password Mismatch";
+   }else{
+    document.getElementById("cpass_mand").textContent = "";
+   }
+   console.log('signup_Cpass:', signup_Cpass)
+  
+    // *************validation********* //
+
+    if(localStorage.getItem("signup-details") === null){
+      localStorage.setItem(("signup-details"), JSON.stringify([]));
+      }
+   if((f_name.length != 0) && (l_name.length != 0) && (contact.length == 10) && (signup_mail.length !=0) && (signup_pass.length >= 8) && (signup_pass == signup_Cpass)){
+    let user ={
+      f_name,
+      l_name,
+      contact,
+      signup_mail,
+      signup_pass,
+  };
+  
+   // get array from localstorage
+   let arr=JSON.parse(localStorage.getItem("signup-details"));
+   //push new user to array
+   arr.push(user); // adding new user
+   console.log('arr:', arr);
+   localStorage.setItem(("signup-details"), JSON.stringify(arr));
+
+   }
+
+}
