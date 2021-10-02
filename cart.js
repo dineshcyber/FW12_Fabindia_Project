@@ -27,6 +27,9 @@ window.onscroll = function () {
   links[6].addEventListener(`click`, function () {
     window.location.href = "decorative.html";
   });
+  links[1].addEventListener(`click`, function () {
+    window.location.href = "products.html";
+  });
   
   //input-bar
   var input = document.getElementById(`search`);
