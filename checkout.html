@@ -16,7 +16,6 @@
       @import url("https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap");
       body {
         background-color: #f4f2e5;
-        margin-left: 2.5%;
       }
       p {
         font-family: "Mulish", sans-serif;
@@ -27,15 +26,17 @@
         justify-content: space-between;
         height: 80px;
         border-bottom: 1px solid gray;
+        margin-left: 2.5%;
       }
       #top > img {
-        margin: 1.7%;
+        margin: 1%;
       }
       /*====== HEADER END ========*/
 
       /* ------------------------- */
       #main_panel {
         display: flex;
+        margin-left: 2.5%;
       }
       #main_panel_left {
         width: 74%;
@@ -48,6 +49,7 @@
 
       /*=========== LOGIN DETAILS START ==========*/
       #details {
+        height: 80px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -119,11 +121,11 @@
 
       /*========= FINAL PAYMENT START ===========*/
       #pay1 {
-        border-bottom: 1px solid gray;
+        padding: 20px 0;
       }
       #pay2 {
-        margin-right: 2.5%;
         display: none;
+        border-top: 1px solid gray;
       }
       #pay3 {
         margin: auto;
@@ -138,6 +140,11 @@
         padding-left: 20px;
         font-size: 12px;
         line-height: 30px;
+      }
+      #p3l > p:hover {
+        cursor: pointer;
+        text-decoration: underline;
+        text-underline-offset: 3px;
       }
 
       #p3r {
@@ -318,7 +325,7 @@
           <h2>Payment Details</h2>
         </div>
         <div id="pay2">
-          <h2>Make Payment</h2>
+          <h2 style="padding: 20px 0">Make Payment</h2>
           <div id="pay3">
             <div id="p3l">
               <p>Credit/Debit card</p>
@@ -340,7 +347,7 @@
                 </p>
               </div>
               <div id="p3r-b">
-                <h3>Enter your card details</h3>
+                <h3 style="padding: 15px 0">Enter your card details</h3>
                 <form id="form2">
                   <p>Card Number*</p>
                   <input type="text" placeholder="Card Number" />
