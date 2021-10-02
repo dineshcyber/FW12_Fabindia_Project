@@ -185,7 +185,7 @@ function visible(pro) {
   window.location.href = "bigview.html";
 }
 
-///////////////////////////////////////////
+//-----Description and layout sort panel----
 var desc_b1 = document.getElementById(`desc-b1`);
 var desc_b2 = document.getElementById(`desc-b2`);
 var layout = document.getElementById(`products`);
