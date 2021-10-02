@@ -11,7 +11,7 @@
       rel="stylesheet"
     />
     <title>Fabindia Checkout</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css" />
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap");
       body {
@@ -205,8 +205,6 @@
         width: 70%;
       }
       /*========== RIGHT PANEL END ========== */
-
-      
     </style>
   </head>
   <body>
@@ -353,11 +351,11 @@
           <br />
           <br />
           <br />
-          <p>Sub Total:</p>
+          <p id="subTot">Sub Total:</p>
           <hr />
-          <p>Delivery Charges:</p>
+          <p>Delivery Charges: <strong>Rs 200</strong></p>
           <hr />
-          <p>Total:</p>
+          <p id="total">Total:</p>
         </div>
       </div>
     </div>
@@ -444,4 +442,18 @@
       payment.style.display = "block";
     }
   });
+  //Make Payment Panel - End
+
+  //Money Workaround - Start
+  let products = JSON.parse(localStorage.getItem(`cart`));
+  console.log(products);
+  let total = 0;
+  products.forEach(function (el) {
+    // console.log(el.price.slice(8, el.price.length));
+    total += Number(el.price.slice(8, el.price.length));
+  });
+  let st = document.getElementById(`subTot`);
+  let tt = document.getElementById(`total`);
+  st.textContent = `Sub Total: Rs ` + total;
+  tt.textContent = `Total: Rs ` + (total + 200);
 </script>
