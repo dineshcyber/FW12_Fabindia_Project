@@ -208,6 +208,12 @@
         font-size: 13px;
         display: none;
       }
+      #warning4 {
+        color: maroon;
+        padding-top: 5px;
+        font-size: 13px;
+        display: none;
+      }
       /*========= FINAL PAYMENT END ===========*/
 
       /*========== RIGHT PANEL START ========== */
@@ -374,6 +380,7 @@
           </p>
           <hr />
           <p>Total: <strong id="total">Rs 0</strong></p>
+          <p id="warning4">Cart is Empty</p>
         </div>
       </div>
     </div>
@@ -433,6 +440,24 @@
   </body>
 </html>
 <script>
+  //Money Workaround - Start
+  let products = JSON.parse(localStorage.getItem(`cart`));
+  let total = 0;
+  products.forEach(function (el) {
+    total += Number(el.price.slice(8, el.price.length));
+  });
+  let st = document.getElementById(`subTot`);
+  let tt = document.getElementById(`total`);
+  let del = document.getElementById(`delivery`);
+  if (products.length == 0) {
+    del.textContent = 0;
+  } else {
+    del.textContent = 150;
+  }
+  st.textContent = `Rs ` + total;
+  tt.textContent = `Rs ` + (total + Number(del.textContent));
+  //Money Workaround - End
+
   //Shipping-bill panel - Start
   let sb = document.getElementById(`ship_bill`);
   let sb2 = document.getElementById(`ship_bill2`);
@@ -457,7 +482,7 @@
     e.preventDefault();
     var validation_counter = 0;
     for (var i = 0; i < form_details.length - 3; i++) {
-      console.log(form_details[i].value);
+      // console.log(form_details[i].value);
       if (
         form_details[i].value == `` ||
         form_details[i].value == null ||
@@ -482,36 +507,19 @@
   let warning2 = document.getElementById(`warning2`);
   final.addEventListener(`click`, function (e) {
     e.preventDefault();
+    var validation_counter2 = 0;
     for (var i = 0; i < form_details2.length - 1; i++) {
-      console.log(form_details2[i].value);
-      if (form_details2[i].value == ``) {
-        console.log(`empty`);
-        warning2.style.display = `block`; ///===============Final page link
-        break;
-      } else {
-        window.location.href = "index.html";
+      // console.log(form_details2[i].value);
+      if (form_details2[i].value == `` || form_details2[i].value == null) {
+        validation_counter2++;
       }
+    }
+    if (validation_counter2 == 0) {
+      window.location.href = `index.html`;
+    } else {
+      warning2.style.display = `block`;
     }
   });
 
   //Make Payment Panel - End
-
-  //Money Workaround - Start
-  let products = JSON.parse(localStorage.getItem(`cart`));
-  // console.log(products);
-  let total = 0;
-  products.forEach(function (el) {
-    total += Number(el.price.slice(8, el.price.length));
-  });
-  let st = document.getElementById(`subTot`);
-  let tt = document.getElementById(`total`);
-  let del = document.getElementById(`delivery`);
-  if (products.length == 0) {
-    del.textContent = 0;
-  } else {
-    del.textContent = 150;
-  }
-  st.textContent = `Rs ` + total;
-  tt.textContent = `Rs ` + (total + Number(del.textContent));
-  //Money Workaround - End
 </script>
