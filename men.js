@@ -187,4 +187,15 @@ function visible(pro) {
 
 ///////////////////////////////////////////
 var desc_b1 = document.getElementById(`desc-b1`);
-desc_b1.addEventListener(`click`, function () {});
+var desc_b2 = document.getElementById(`desc-b2`);
+var layout = document.getElementById(`products`);
+desc_b1.addEventListener(`click`, function () {
+  layout.style.gridTemplateColumns = `auto auto auto`;
+  desc_b2.style.border = `1px solid gray`;
+  desc_b1.style.border = `2px solid black`;
+});
+desc_b2.addEventListener(`click`, function () {
+  layout.style.gridTemplateColumns = `auto auto auto auto`;
+  desc_b1.style.border = `1px solid gray`;
+  desc_b2.style.border = `2px solid black`;
+});
