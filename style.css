@@ -95,16 +95,7 @@
   text-align: center;
 }
 
-.section-heading #heading {
-  font-size: 36px;
-  font-weight: 500;
-  color: #604b3b;
-  margin: 50px 0px 0px 0px;
-  line-height: 35px;
-  text-align: center;
-  letter-spacing: 5px;
-  padding-bottom: 20px;
-}
+
 
 .section-heading #sec-content {
   max-width: 1000px !important;
@@ -361,6 +352,7 @@ li a {
   text-align: center;
   letter-spacing: 5px;
   padding-bottom: 20px;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .section-heading #sec-content {
@@ -1140,7 +1132,7 @@ li a {
   float: left;
   width: 100%;
   background-color: #dbd9cd;
-  height: 400px;
+  height: 350px;
 }
 #bottom_t {
   display: grid;
@@ -1158,12 +1150,36 @@ li a {
 #bottom_b {
   display: flex;
   justify-content: space-between;
+  height: 85px;
 }
 
 #bottom_b > h3 {
-  margin: 2.7%;
+  margin: 1.7%;
 }
 #bottom_b > img {
   margin: 1.7%;
 }
 /*======= FOOTER END =========*/
+
+/* whatsapp */
+
+.whatsapp_float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 70px;
+  right: 40px;
+  background-color: #25d366;
+  color: #FFF;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 100;
+}
+
+.whatsapp-icon {
+  margin-top: 16px;
+}
+
+/* whatsapp */
