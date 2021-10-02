@@ -202,6 +202,12 @@
         padding-top: 5px;
         display: none;
       }
+      #warning3 {
+        color: maroon;
+        padding-top: 5px;
+        font-size: 13px;
+        display: none;
+      }
       /*========= FINAL PAYMENT END ===========*/
 
       /*========== RIGHT PANEL START ========== */
@@ -296,6 +302,7 @@
             <div></div>
             <div>
               <button id="proceed">Save and Continue</button>
+              <p id="warning3">You must fill the required mandatory * fields</p>
             </div>
           </form>
         </div>
@@ -440,17 +447,34 @@
     }
   };
   //Shipping-bill panel - End
-  let form_details = document.getElementById(`form`);
+
   //Make Payment Panel - Start
+  let form_details = document.getElementById(`form`);
+  let warning3 = document.getElementById(`warning3`);
   let proceed1 = document.getElementById(`proceed`);
   let payment = document.getElementById(`pay2`);
   proceed1.addEventListener(`click`, function (e) {
     e.preventDefault();
-    if (payment.style.display !== "none") {
-      payment.style.display = "none";
+    var validation_counter = 0;
+    for (var i = 0; i < form_details.length - 3; i++) {
+      console.log(form_details[i].value);
+      if (
+        form_details[i].value == `` ||
+        form_details[i].value == null ||
+        form_details[2].value == `default`
+      ) {
+        validation_counter++;
+      }
+    }
+    if (validation_counter == 0) {
+      if (payment.style.display !== "none") {
+        payment.style.display = "none";
+      } else {
+        sb2.style.display = `none`;
+        payment.style.display = "block";
+      }
     } else {
-      sb2.style.display = `none`;
-      payment.style.display = "block";
+      warning3.style.display = `block`;
     }
   });
   let form_details2 = document.getElementById(`form2`);
