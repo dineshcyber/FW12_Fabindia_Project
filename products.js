@@ -198,8 +198,7 @@ function showProducts() {
 
     let wishlist = document.createElement("div");
 
-    wishlist.src =
-      "file:///C:/Users/hgaut/Documents/GitHub/FW12_Fabindia_Project/image/icon-heart-black.png";
+    wishlist.src = "image/icon-heart-black.png";
 
     wishlist.setAttribute("id", "wishlist");
 
