@@ -72,12 +72,18 @@ function showProducts() {
 
       product_name.textContent = product.name;
 
-      
+      let wishlist = document.createElement("img");
+
+      wishlist.src =
+        "file:///C:/Users/hgaut/Documents/GitHub/FW12_Fabindia_Project/image/icon-heart-black.png";
+
+      wishlist.setAttribute("id", "wishlist");
+
       div.onclick = function () {
         visible(product);
       };
 
-      div.append(img, product_name, product_price);
+      div.append(wishlist, img, product_name, product_price);
 
       parent.append(div);
     }
@@ -107,81 +113,23 @@ function sort1() {
 
       product_name.textContent = product.name;
 
-  
+      let wishlist = document.createElement("img");
 
+      wishlist.src =
+        "file:///C:/Users/hgaut/Documents/GitHub/FW12_Fabindia_Project/image/icon-heart-black.png";
 
+      wishlist.setAttribute("id", "wishlist");
 
       div.onclick = function () {
         visible(product);
       };
 
-      div.append( img, product_name, product_price);
+      div.append(wishlist, img, product_name, product_price);
 
-
-      
-      div.append(img, product_name, product_price);
-  
       parent.append(div);
-   
-     
-  
-  
- } });
-       
-   }
-  
-   showProducts();
-
-
-
-
-  //sorting1
-
-   function sort1(){
-
-    parent.innerHTML = null; 
-    info.forEach(function (product){
-    
-     if(Number(product.cost <= 1500) && (product.category == "Decorative")){
-     
-      
-          let div = document.createElement('div');
-          
-          let img = document.createElement('img');
-          
-          img.src = product.img;
-          
-          let product_price = document.createElement('p');  product_price.setAttribute('class','mrpred');
-      
-          product_price.textContent = product.price;
-      
-          let product_name = document.createElement('p');
-      
-          product_name.textContent = product.name;
-      
-          
-    
-          div.onclick = function(){
-            visible(product);
-          }
-          
-          div.append(img, product_name, product_price);
-      
-          parent.append(div);
-       
-         
-      
-      
-    }});
-   
-     
-  
-  }
-  
-
-
-
-  
+    }
+  });
+}
 
 //sorting2
 function sort2() {
