@@ -122,19 +122,15 @@ width:100%;
 width:100%;
 
 }
-#products img:hover{
-opacity: 0.5;
 
-}
-
-  
 
     #products #wishlist{
         width:20px;
         height:20px;
+          background-color: transparent;
         position:relative;
         float: right;
-      background-color: beige;
+      color:transparent;
         left:-8%;
         top:7%;
        
@@ -143,10 +139,7 @@ opacity: 0.5;
     
        
 
-    .mrpred{
-        color:rgba(82, 12, 12, 0.767);
-        margin-top:1%;
-    }
+    
     .category{
         font-size:17px;
         margin-top:10%;
@@ -204,12 +197,20 @@ opacity: 0.5;
     opacity:.5;
 }
 
-#bottom{
-    font-size:medium;
-    height: fit-content;
-    margin-top:400px;
+  #products p{
+     background-color: #f9f8f1;
+     font-size: small;
+     margin-left: 2px;
+     padding: 5px;
     
-}
+ }
+ #products .mrpred{
+        color:rgba(82, 12, 12, 0.767);
+       padding-bottom: 25px;
+       font-size: medium;
+ }
+ 
+
 
 /*======= FOOTER START ========*/
 #bottom {
@@ -217,28 +218,38 @@ opacity: 0.5;
     float: left;
     width: 100%;
     background-color: #dbd9cd;
-    height: 400px;
+    font-size:medium;
+    height: fit-content;
+    margin-top:400px;
+   
 }
 #bottom_t {
   display: grid;
     width: 100%;
-    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-columns: 20% 20% 20% 20% 20%; background-color: #dbd9cd;
+
 }
 #bottom p{
-  margin: 10px 0px;
+  margin: 10px 0px; background-color: #dbd9cd;
 }
 
 #bottom_t > div {
   margin: 1% auto;
   padding: 0px 20px;
+  background-color: #dbd9cd;
+
 }
 #bottom_b {
   display: flex;
   justify-content: space-between;
+  background-color: #dbd9cd;
+
 }
 
-#bottom_b > h3 {
+ #bottom_b > h3 {
   margin: 2.7%;
+  background-color: #dbd9cd;
+
 }
 #bottom_b > img {
   margin: 1.7%;
@@ -246,7 +257,9 @@ opacity: 0.5;
 #bottom hr{ 
     width:100%;
 }
- 
+ h3{
+     background-color:#dbd9cd; ;
+ }
 /*======= FOOTER END =========*/
  
 
