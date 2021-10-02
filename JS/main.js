@@ -71,4 +71,25 @@ window.onclick = function(event) {
   }
 }
 
+function  go_to_cart() {
+  location.href = "cart.html"; 
+}
+function  go_to_products() {
+  location.href = "products.html"; 
+}
+function  go_to_women() {
+  location.href = "women.html"; 
+}
+function  go_to_men() {
+  location.href = "men.html"; 
+}
+function  go_to_cart() {
+  location.href = "cart.html"; 
+}
+function  go_to_decor() {
+  location.href = "decorative.html"; 
+}
+
+
+
  
