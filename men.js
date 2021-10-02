@@ -1,5 +1,5 @@
- //Scroller hider start
- window.onscroll = function () {
+//Scroller hider start
+window.onscroll = function () {
   myFunction();
 };
 
@@ -49,165 +49,142 @@ input.addEventListener("keypress", function (e) {
   }
 });
 
-
-
-
-
 //to display men product
 
 let parent = document.getElementById("products");
 
-let info = JSON.parse(localStorage.getItem('productinfo'));
+let info = JSON.parse(localStorage.getItem("productinfo"));
 
+function showProducts() {
+  info.forEach(function (product) {
+    if (product.category == "men") {
+      let div = document.createElement("div");
 
-function showProducts(){
+      let img = document.createElement("img");
 
-  
-info.forEach(function (product){
-
-  if(product.category == "men")  { 
-  
-      let div = document.createElement('div');
-      
-      let img = document.createElement('img');
-      
       img.src = product.img;
-      
-      let product_price = document.createElement('p');
-      product_price.setAttribute('class','mrpred');
+
+      let product_price = document.createElement("p");
+      product_price.setAttribute("class", "mrpred");
       product_price.textContent = product.price;
-  
-      let product_name = document.createElement('p');
-  
+
+      let product_name = document.createElement("p");
+
       product_name.textContent = product.name;
-  
-      let wishlist = document.createElement('img');
 
-      wishlist.src ="file:///C:/Users/hgaut/Documents/GitHub/FW12_Fabindia_Project/image/icon-heart-black.png" ;
+      let wishlist = document.createElement("img");
 
-      wishlist.setAttribute('id','wishlist');
+      wishlist.src =
+        "file:///C:/Users/hgaut/Documents/GitHub/FW12_Fabindia_Project/image/icon-heart-black.png";
 
-      div.onclick = function(){
+      wishlist.setAttribute("id", "wishlist");
+
+      div.onclick = function () {
         visible(product);
-      }
-      
-      div.append(wishlist,img, product_name, product_price);
-  
+      };
+
+      div.append(wishlist, img, product_name, product_price);
+
       parent.append(div);
-   
-     
-  
-  
- } });
-       
-   }
-  
-   showProducts();
-
-
-
-
-
-   //sorting
-
-   function sort1(){
-
-    parent.innerHTML = null; 
-    info.forEach(function (product){
-    
-     if(Number(product.cost <= 1500) && (product.category == "men")){
-       
-      
-          let div = document.createElement('div');
-          
-          let img = document.createElement('img');
-          
-          img.src = product.img;
-          
-          let product_price = document.createElement('p');  product_price.setAttribute('class','mrpred')
-         
-      
-          product_price.textContent = product.price;
-      
-          let product_name = document.createElement('p');
-      
-          product_name.textContent = product.name;
-      
-          let wishlist = document.createElement('img');
-    
-          wishlist.src ="file:///C:/Users/hgaut/Documents/GitHub/FW12_Fabindia_Project/image/icon-heart-black.png" ;
-    
-          wishlist.setAttribute('id','wishlist');
-    
-          div.onclick = function(){
-            visible(product);
-          }
-          
-          div.append(wishlist,img, product_name, product_price);
-      
-          parent.append(div);
-          
-    }});  
-  
-  }
-  
-
-
-
-  //sorting2
-
-  function sort2(){
-  
-    parent.innerHTML = null; 
-    info.forEach(function (product){
-    
-     if(Number(product.cost > 1500 ) && (product.category == "men")){
-      
-      
-          let div = document.createElement('div');
-          
-          let img = document.createElement('img');
-          
-          img.src = product.img;
-          
-          let product_price = document.createElement('p');  product_price.setAttribute('class','mrpred')
-      
-          product_price.textContent = product.price;
-      
-          let product_name = document.createElement('p');
-      
-          product_name.textContent = product.name;
-      
-          let wishlist = document.createElement('img');
-    
-          wishlist.src ="file:///C:/Users/hgaut/Documents/GitHub/FW12_Fabindia_Project/image/icon-heart-black.png" ;
-    
-          wishlist.setAttribute('id','wishlist');
-
-          div.onclick = function(){
-            visible(product);
-          }
-    
-         div.append(wishlist,img, product_name, product_price);
-      
-          parent.append(div);
-       
-       }});
-   
-     }
-
-     if(localStorage.getItem('visible') === null){
-      localStorage.setItem('visible',JSON.stringify([]));
     }
-       
-      function visible(pro){
-        let take = JSON.parse(localStorage.getItem('visible'));
-    
-       take=[];
-    
-       take.push(pro);
-       localStorage.setItem('visible',JSON.stringify(take));
-       
-       window.location.href = "bigview.html";
-    
-      }
+  });
+}
+
+showProducts();
+
+//sorting
+
+function sort1() {
+  parent.innerHTML = null;
+  info.forEach(function (product) {
+    if (Number(product.cost <= 1500) && product.category == "men") {
+      let div = document.createElement("div");
+
+      let img = document.createElement("img");
+
+      img.src = product.img;
+
+      let product_price = document.createElement("p");
+      product_price.setAttribute("class", "mrpred");
+
+      product_price.textContent = product.price;
+
+      let product_name = document.createElement("p");
+
+      product_name.textContent = product.name;
+
+      let wishlist = document.createElement("img");
+
+      wishlist.src =
+        "file:///C:/Users/hgaut/Documents/GitHub/FW12_Fabindia_Project/image/icon-heart-black.png";
+
+      wishlist.setAttribute("id", "wishlist");
+
+      div.onclick = function () {
+        visible(product);
+      };
+
+      div.append(wishlist, img, product_name, product_price);
+
+      parent.append(div);
+    }
+  });
+}
+
+//sorting2
+
+function sort2() {
+  parent.innerHTML = null;
+  info.forEach(function (product) {
+    if (Number(product.cost > 1500) && product.category == "men") {
+      let div = document.createElement("div");
+
+      let img = document.createElement("img");
+
+      img.src = product.img;
+
+      let product_price = document.createElement("p");
+      product_price.setAttribute("class", "mrpred");
+
+      product_price.textContent = product.price;
+
+      let product_name = document.createElement("p");
+
+      product_name.textContent = product.name;
+
+      let wishlist = document.createElement("img");
+
+      wishlist.src =
+        "file:///C:/Users/hgaut/Documents/GitHub/FW12_Fabindia_Project/image/icon-heart-black.png";
+
+      wishlist.setAttribute("id", "wishlist");
+
+      div.onclick = function () {
+        visible(product);
+      };
+
+      div.append(wishlist, img, product_name, product_price);
+
+      parent.append(div);
+    }
+  });
+}
+
+if (localStorage.getItem("visible") === null) {
+  localStorage.setItem("visible", JSON.stringify([]));
+}
+
+function visible(pro) {
+  let take = JSON.parse(localStorage.getItem("visible"));
+
+  take = [];
+
+  take.push(pro);
+  localStorage.setItem("visible", JSON.stringify(take));
+
+  window.location.href = "bigview.html";
+}
+
+///////////////////////////////////////////
+var desc_b1 = document.getElementById(`desc-b1`);
+desc_b1.addEventListener(`click`, function () {});
