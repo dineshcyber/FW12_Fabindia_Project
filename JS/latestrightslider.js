@@ -1,18 +1,18 @@
 let rightimageslider = [
     {
-      name: "BOY'S SETS",
-     price:"Rs. 4500",
-      img: "https://www.fabindia.com/file/general/hp-wehave-27ep21-10.jpg",
+      name: "VISCOSE TUSSAR PLACKET DETAIL LONG KURTA",
+     price:"Rs. 2490.00",
+      img: "https://www.fabindia.com/file/general/mw-catcr-11aug21-5.jpg",
     },
     {
-        name: "BED LINEN",
-        price:"Rs. 4500",
-        img: "https://www.fabindia.com/file/general/hp-wehave-27ep21-11.jpg",
+        name: "VISCOSE TUSSAR KOSI NEHRU JACKETT",
+        price:"Rs. 2890.00",
+        img: "https://www.fabindia.com/file/general/mw-catcr-11aug21-8.jpg",
       },
       {
-        name: "TABLE LINEN",
-        price:"Rs. 4500",
-        img: "https://www.fabindia.com/file/general/hp-wehave-27ep21-13.jpg",
+        name: "SILK VISCOSE LONG KURTA",
+        price:"Rs. 3899.00",
+        img: "https://www.fabindia.com/file/general/mw-catcr-1oct21-4.jpg",
       },
      
   ];
