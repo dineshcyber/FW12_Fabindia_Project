@@ -985,6 +985,31 @@ li a {
 }
 /* decor slideshow */
 
+/* celebrity */
+
+#celebrity{
+  float: left;
+  width: 100%;
+  
+  height: 480px;
+}
+
+.celebrity-slider-item {
+  width: 1100px;
+  margin: 10px auto;
+  height: 350px;
+  
+  display: grid;
+  grid-template-columns: 21% 21% 21% 21%;
+  grid-gap: 6%;
+}
+
+.celebrity-slider-item img{
+  width: 100%
+}
+
+/* celebrity */
+
 
 
 
