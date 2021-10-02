@@ -124,10 +124,10 @@ width:100%;
 }
 #products {
     width:100%;
-      font-family: "Mulish", sans-serif;
-      display: grid;
-    grid-template-columns: 28% 28% 28%;
-   gap:2%;
+    font-family: "Mulish", sans-serif;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap:2%;
    
 }
 #products img{
@@ -202,9 +202,9 @@ cursor: pointer;
 
 }
     
-img:hover{
-    /* opacity:.5; */
-} 
+/* img:hover{
+    opacity:.5;
+}  */
 #products p{
      background-color: #f9f8f1;
      font-size: small;
@@ -260,6 +260,33 @@ h3{
 
   
 /*======= FOOTER END =========*/
+/*======= Description Panel Start =====*/
+#desc{
+  margin-top: 10px;
+  height: 70px;
+  width: 100%;
+  background-color: #F9F8F1;
+  display: flex;
+}
+#desc > div{
+  margin: auto;
+}
+#desc > div:nth-child(1){
+  margin: auto 2% auto;
+}
+#desc-sort{
+  display: flex;
+  gap: 10px;
+  background-color: #F9F8F1;
+}
+#desc-sort button{
+  letter-spacing: 2px;
+  font-weight: 600;
+  padding: 5px 7px;
+  border: 1px solid black;
+  cursor: pointer;
+}
+/*======= Description Panel End =====*/
 
     </style>
 </head>
@@ -345,7 +372,23 @@ h3{
             
  
          </div>
-        <div id="products"></div>
+         <div style="margin-right: 5%;">
+
+           <div id="desc">
+            <div>
+              <p>
+                <strong style="background-color: #F9F8F1;">Mens Ethnic Wear</strong>
+              </p>
+            </div>
+            <div id="desc-sort">
+              <p style="background-color:#F9F8F1;">View By:</p>
+              <button id="desc-b1">|||</button>
+              <button id="desc-b2">||||</button>
+            </div>
+          </div>
+
+           <div id="products"></div>
+         </div>
     </div>
 
     <div id="bottom">
