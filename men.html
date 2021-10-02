@@ -124,8 +124,8 @@ width:100%;
 }
 #products {
     width:100%;
-      font-family: 'Muli','Helvetica Neue',Helvetica,Arial,sans-serif;
-    display: grid;
+      font-family: "Mulish", sans-serif;
+      display: grid;
     grid-template-columns: 28% 28% 28%;
    gap:2%;
    
@@ -143,33 +143,31 @@ width:100%;
         left:-8%;
         top:7%;
         background-color: transparent;
-
-    
     }
     
     .category{
         font-size:17px;
+        font-weight: 600;
         margin-top:10%;
-        font-family: 'Muli','Helvetica Neue',Helvetica,Arial,sans-serif;
-    }
-    .price{
+        font-family: "Mulish", sans-serif;
+      }
+      .price{
         font-size:17px;
+        font-weight: 600;
         margin-top:5%;
-        font-family: 'Muli','Helvetica Neue',Helvetica,Arial,sans-serif;
+        font-family: "Mulish", sans-serif;
     }
     .disappear{
         display:none;
-        font-size: 15px;
-        font-family: 'Muli','Helvetica Neue',Helvetica,Arial,sans-serif;
-       
+        font-size: 13px;
+        font-family: "Mulish", sans-serif;
     }
     .category:hover .disappear{
         display: block;
     }
     .disappear{
         display:none;
-        margin-top:4%;
-        
+        margin-top:4%;      
     }
     .price:hover .disappear{
         display: block;
@@ -177,11 +175,12 @@ width:100%;
     }
     hr{
       width:50%; 
-       margin-right:300px ;
+      margin-right:300px ;
+      margin-top: 10px;
     }
     a{
-        color:rgb(85, 82, 82);
-        font-weight: lighter;
+      color:rgb(85, 82, 82);
+      font-weight: lighter;
     }
     a:hover{
         color:rgba(133, 19, 19, 0.767);
@@ -198,22 +197,23 @@ width:100%;
         background-color:#f4f2e5;
     }
     #products img:hover{
-opacity: .5;
+/* opacity: .5; */
+cursor: pointer;
 
 }
     
 img:hover{
-    opacity:.5;
+    /* opacity:.5; */
 } 
 #products p{
      background-color: #f9f8f1;
      font-size: small;
-     margin-left: 2px;
+     margin-left: 0px;
      padding: 5px;
     
  }
  #products .mrpred{
-        color:rgba(82, 12, 12, 0.767);
+      color:rgba(82, 12, 12, 0.767);
        padding-bottom: 25px;
        font-size: medium;
  }  
