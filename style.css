@@ -1146,11 +1146,12 @@ li a {
 }
 
 #bottom_b > h3 {
-  /* margin: 1.7%; */
   margin: auto 1.7%;
 }
 #bottom_b > img {
-  margin: 1%;
+  height: 55px;
+  width: auto;
+  margin: auto 2%;
 }
 /*======= FOOTER END =========*/
 
