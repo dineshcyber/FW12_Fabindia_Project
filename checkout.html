@@ -30,6 +30,11 @@
       }
       #top > img {
         margin: 1%;
+        cursor: pointer;
+      }
+      #top > p {
+        margin: 25px;
+        cursor: pointer;
       }
       /*====== HEADER END ========*/
 
@@ -55,6 +60,7 @@
         align-items: center;
       }
       #details button {
+        cursor: pointer;
         background-color: black;
         border: black;
         color: white;
@@ -71,6 +77,7 @@
         border-top: 1px solid gray;
         padding-top: 20px;
         padding-bottom: 20px;
+        cursor: pointer;
       }
       #ship_bill > h2 {
         margin: 0px;
@@ -116,6 +123,7 @@
         border: none;
         border-radius: 3px;
         width: 200px;
+        cursor: pointer;
       }
       /*========= SHIPPING/BILLING END =========*/
 
@@ -196,6 +204,7 @@
         font-size: 12px;
       }
       #confirm {
+        cursor: pointer;
         font-family: "Mulish", sans-serif;
         font-weight: bold;
         height: 40px;
@@ -226,7 +235,7 @@
 
       /*========== RIGHT PANEL START ========== */
       #mp_box {
-        margin: auto;
+        margin: 58px auto;
         width: 70%;
       }
       /*========== RIGHT PANEL END ========== */
@@ -235,6 +244,7 @@
   <body>
     <div id="top">
       <img
+        id="logo"
         src="https://www.fabindia.com/file/v8385693196996654632/general/fab_india_logo.png"
       />
       <p>📞 +918010488888</p>
@@ -432,11 +442,12 @@
           <p>Organic Certification</p>
           <p>Fabric Care</p>
           <p>FabCafe</p>
-          <p>Fabfamily- Loyalty Program</p>
+          <p><strong>Fab</strong><em>family</em> - Loyalty Program</p>
           <p>Interior Design Solutions</p>
         </div>
         <div>
           <h3>Stay in Touch</h3>
+          <img src="image\st.png" style="margin-top: 10px; cursor: pointer" />
         </div>
       </div>
       <hr />
@@ -533,4 +544,9 @@
   });
 
   //Make Payment Panel - End
+
+  var logo = document.getElementById(`logo`);
+  logo.addEventListener(`click`, function () {
+    window.location.href = `index.html`;
+  });
 </script>
