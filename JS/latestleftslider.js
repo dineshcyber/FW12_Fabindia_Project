@@ -1,18 +1,18 @@
 let leftimageslider = [
     {
-      name: "BOY'S SETS",
-     price:"Rs. 4500",
-      img: "https://www.fabindia.com/file/general/hp-wehave-27ep21-10.jpg",
+      name: "COTTON SILK PRINTED KURTA SET",
+     price:"Rs. 4,599.00",
+      img: "https://www.fabindia.com/file/general/wm-cat-1oct21-6.jpg",
     },
     {
-        name: "BED LINEN",
-        price:"Rs. 4500",
-        img: "https://www.fabindia.com/file/general/hp-wehave-27ep21-11.jpg",
+        name: "COTTON SILK IKAT LONG KURTA",
+        price:"Rs. 4890.00",
+        img: "https://www.fabindia.com/file/general/wm-cat-11aug21-3.jpg",
       },
       {
-        name: "TABLE LINEN",
-        price:"Rs. 4500",
-        img: "https://www.fabindia.com/file/general/hp-wehave-27ep21-13.jpg",
+        name: "COTTON SILK MAHESHWARI SARI",
+        price:"Rs. 4590.00",
+        img: "https://www.fabindia.com/file/general/wm-cat-11aug21-11.jpg",
       },
      
   ];
