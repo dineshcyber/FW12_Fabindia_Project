@@ -1,7 +1,9 @@
-window.onscroll = function() {myFunction()};
+ //Scroller hider start
+ window.onscroll = function () {
+  myFunction();
+};
 
-
-var header = document.getElementById("myHeader");
+var header = document.getElementById("scroller");
 
 var sticky = header.offsetTop;
 
@@ -12,7 +14,44 @@ function myFunction() {
     header.classList.remove("sticky");
   }
 }
+//scroller hider end
 
+//mouseover start
+let links = document.getElementById(`scroller-b`).querySelectorAll(`p`);
+links[2].addEventListener(`click`, function () {
+  window.location.href = "women.html";
+});
+links[3].addEventListener(`click`, function () {
+  window.location.href = "men.html";
+});
+links[6].addEventListener(`click`, function () {
+  window.location.href = "decorative.html";
+});
+links[1].addEventListener(`click`, function () {
+  window.location.href = "products.html";
+});
+
+//input-bar
+var input = document.getElementById(`search`);
+var warning = document.getElementById(`warning`);
+input.addEventListener("keypress", function (e) {
+  if (e.key === "Enter") {
+    if (input.value == `men` || input.value == `MEN`) {
+      window.location.href = "men.html";
+    } else if (input.value == `women` || input.value == `WOMEN`) {
+      window.location.href = "women.html";
+    } else if (input.value == `decor` || input.value == `DECOR`) {
+      window.location.href = "decorative.html";
+    } else {
+      warning.style.display = `block`;
+      input.value = null;
+    }
+  }
+});
+
+
+
+// All products
 
   let productdata = [
     {
@@ -166,7 +205,7 @@ function myFunction() {
   
    
     
-        let div = document.createElement('div');
+        let div = document.createElement('div');   
       
         let img = document.createElement('img');
         
@@ -177,7 +216,7 @@ function myFunction() {
         product_price.textContent = product.price;
     
         let product_name = document.createElement('p');
-    
+
         product_name.textContent = product.name;
     
         let wishlist = document.createElement('img');
@@ -190,7 +229,7 @@ function myFunction() {
           visible(product);
         }
         
-        div.append(wishlist,img, product_name, product_price);
+        div.append(wishlist,img, product_name,product_price);
     
         parent.append(div);
      
@@ -224,7 +263,7 @@ function sort1(){
         
         img.src = product.img;
         
-        let product_price = document.createElement('p');
+        let product_price = document.createElement('p'); product_price.setAttribute('class','mrpred')
     
         product_price.textContent = product.price;
     
@@ -277,7 +316,7 @@ function sort2(){
         
         img.src = product.img;
         
-        let product_price = document.createElement('p');
+        let product_price = document.createElement('p');   product_price.setAttribute('class','mrpred')
     
         product_price.textContent = product.price;
     
