@@ -1,23 +1,23 @@
 let celebrityimage = [
     {
-      name: "IZNAL COTTON PRINTED BED COVER",
-     price:"Rs. 8,999.00",
-      img: "https://www.fabindia.com/file/general/hdf-car1-1oct21-1.jpg",
+      name: "COTTON STRIPED SLIM FIT KURTA",
+     price:"Rs. 1,390.00",
+      img: "https://www.fabindia.com/file/general/celeb-21june21-1.jpg",
     },
     {
-        name: "TAANI ETCHED HURRICANE SMALL",
-        price:"Rs. 2,999.00",
-        img: "https://www.fabindia.com/file/general/hdf-car1-1oct21-2.jpg",
+        name: "COTTON HAND BLOCK PRINTED SARI",
+        price:"Rs. 2,990.00",
+        img: "https://www.fabindia.com/file/general/celeb-21june21-2.jpg",
       },
       {
-        name: "TRISHNA HANGING T-LITE HOLDER LARGE",
+        name: "COTTON CAMBRIC PRINTED BUSHSHIRT",
         price:"Rs. 1,490.00",
-        img: "https://www.fabindia.com/file/general/hdf-car1-1oct21-6.jpg",
+        img: "https://www.fabindia.com/file/general/celeb-19june21-1.jpg",
       },
       {
-        name: "AGRIM LEAF PLATTER SMALL",
-        price:"Rs. 1,099.00",
-        img: "https://www.fabindia.com/file/general/hdf-car1-1oct21-10.jpg",
+        name: "COTTON PRINTED LONG LENGTH KAFTAN",
+        price:"Rs. 2,490.00",
+        img: "https://www.fabindia.com/file/general/celeb-19june21-2.jpg",
       },
   ];
 

@@ -1035,6 +1035,104 @@ li a {
 
 /* suggested */
 
+/* fab edit */
+
+#fabedit{
+  float: left;
+  width: 100%;
+  
+  height: 460px;
+}
+
+.fabedit-slider-item {
+  width: 1100px;
+  margin: 10px auto;
+  height: 350px;
+  
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+    grid-gap: 2%;
+    text-align: center;
+}
+
+.fabedit-slider-item img{
+  width: 100%
+}
+/* fab edit */
+
+/* sale */
+
+.saledecor {
+  float: left;
+  width: 100%;
+  height: 780px;
+  background-color: #f5f5f5;
+}
+.sale-heading {
+  width: 1000px;
+  margin: 20px auto 0px auto;
+  text-align: center;
+}
+
+.sale-heading #salehead {
+  font-size: 36px;
+  font-weight: 500;
+  color: #604b3b;
+  margin: 50px 0px 20px 0px;
+  line-height: 35px;
+  text-align: center;
+  letter-spacing: 5px;
+  padding-bottom: 20px;
+}
+
+
+
+/* sale */
+
+
+/* video */
+
+.video {
+  float: left;
+  width: 100%;
+  height: 780px;
+  background-color: #f5f5f5;
+}
+.video-heading {
+  width: 1000px;
+  margin: 20px auto 0px auto;
+  text-align: center;
+}
+
+.video-heading #videohead {
+  font-size: 36px;
+  font-weight: 500;
+  color: #604b3b;
+  margin: 50px 0px 0px 0px;
+  line-height: 35px;
+  text-align: center;
+  letter-spacing: 5px;
+  padding-bottom: 20px;
+}
+
+.video-heading #video-content {
+  max-width: 1000px !important;
+  text-align: center;
+  display: inline-block;
+  padding: 10px;
+  line-height: 30px;
+  font-family: GothamRnd-Book;
+  font-size: 17px;
+  color: #604b3b;
+  min-height: 80px;
+}
+
+#videofab{
+  width: 1190px;
+  margin: auto;
+}
+
+/* video */
 
 /*======= FOOTER START ========*/
 #bottom {
