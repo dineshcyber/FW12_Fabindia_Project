@@ -211,8 +211,9 @@
       #warning4 {
         color: maroon;
         padding-top: 5px;
-        font-size: 13px;
+        font-size: 16px;
         display: none;
+        font-weight: 500;
       }
       /*========= FINAL PAYMENT END ===========*/
 
@@ -380,7 +381,9 @@
           </p>
           <hr />
           <p>Total: <strong id="total">Rs 0</strong></p>
-          <p id="warning4">Cart is Empty</p>
+          <p id="warning4">
+            Cart is Empty <a href="products.html">Continue Shopping</a>
+          </p>
         </div>
       </div>
     </div>
@@ -482,7 +485,6 @@
     e.preventDefault();
     var validation_counter = 0;
     for (var i = 0; i < form_details.length - 3; i++) {
-      // console.log(form_details[i].value);
       if (
         form_details[i].value == `` ||
         form_details[i].value == null ||
@@ -505,17 +507,19 @@
   let form_details2 = document.getElementById(`form2`);
   let final = document.getElementById(`confirm`);
   let warning2 = document.getElementById(`warning2`);
+  let warning4 = document.getElementById(`warning4`);
   final.addEventListener(`click`, function (e) {
     e.preventDefault();
     var validation_counter2 = 0;
     for (var i = 0; i < form_details2.length - 1; i++) {
-      // console.log(form_details2[i].value);
       if (form_details2[i].value == `` || form_details2[i].value == null) {
         validation_counter2++;
       }
     }
-    if (validation_counter2 == 0) {
+    if (validation_counter2 == 0 && del.textContent == 150) {
       window.location.href = `index.html`;
+    } else if (validation_counter2 == 0 && del.textContent == 0) {
+      warning4.style.display = `block`;
     } else {
       warning2.style.display = `block`;
     }
