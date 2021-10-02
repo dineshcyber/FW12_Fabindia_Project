@@ -112,6 +112,10 @@ function sort1() {
       let product_name = document.createElement("p");
 
       product_name.textContent = product.name;
+<<<<<<< HEAD
+  
+    
+=======
 
       let wishlist = document.createElement("img");
 
@@ -119,9 +123,113 @@ function sort1() {
         "file:///C:/Users/hgaut/Documents/GitHub/FW12_Fabindia_Project/image/icon-heart-black.png";
 
       wishlist.setAttribute("id", "wishlist");
+>>>>>>> main
 
       div.onclick = function () {
         visible(product);
+<<<<<<< HEAD
+      }
+      
+      div.append(img, product_name, product_price);
+  
+      parent.append(div);
+   
+     
+  
+  
+ } });
+       
+   }
+  
+   showProducts();
+
+
+
+
+
+   //sorting
+
+   function sort1(){
+
+    parent.innerHTML = null; 
+    info.forEach(function (product){
+    
+     if(Number(product.cost <= 1500) && (product.category == "men")){
+       
+      
+          let div = document.createElement('div');
+          
+          let img = document.createElement('img');
+          
+          img.src = product.img;
+          
+          let product_price = document.createElement('p');  product_price.setAttribute('class','mrpred')
+         
+      
+          product_price.textContent = product.price;
+      
+          let product_name = document.createElement('p');
+      
+          product_name.textContent = product.name;
+      
+        
+    
+          div.onclick = function(){
+            visible(product);
+          }
+          
+          div.append(img, product_name, product_price);
+      
+          parent.append(div);
+          
+    }});  
+  
+  }
+  
+
+
+
+  //sorting2
+
+  function sort2(){
+  
+    parent.innerHTML = null; 
+    info.forEach(function (product){
+    
+     if(Number(product.cost > 1500 ) && (product.category == "men")){
+      
+      
+          let div = document.createElement('div');
+          
+          let img = document.createElement('img');
+          
+          img.src = product.img;
+          
+          let product_price = document.createElement('p');  product_price.setAttribute('class','mrpred')
+      
+          product_price.textContent = product.price;
+      
+          let product_name = document.createElement('p');
+      
+          product_name.textContent = product.name;
+      
+       
+
+          div.onclick = function(){
+            visible(product);
+          }
+    
+         div.append(img, product_name, product_price);
+      
+          parent.append(div);
+       
+       }});
+   
+     }
+
+     if(localStorage.getItem('visible') === null){
+      localStorage.setItem('visible',JSON.stringify([]));
+=======
       };
 
       div.append(wishlist, img, product_name, product_price);
@@ -166,6 +274,7 @@ function sort2() {
       div.append(wishlist, img, product_name, product_price);
 
       parent.append(div);
+>>>>>>> main
     }
   });
 }
