@@ -219,17 +219,13 @@ input.addEventListener("keypress", function (e) {
 
         product_name.textContent = product.name;
     
-        let wishlist = document.createElement('img');
-  
-        wishlist.src ="file:///C:/Users/hgaut/Documents/GitHub/FW12_Fabindia_Project/image/icon-heart-black.png" ;
-  
-        wishlist.setAttribute('id','wishlist');
+      
   
         div.onclick = function(){
           visible(product);
         }
         
-        div.append(wishlist,img, product_name,product_price);
+        div.append(img, product_name,product_price);
     
         parent.append(div);
      
@@ -272,18 +268,14 @@ function sort1(){
         product_name.textContent = product.name;
         
     
-        let wishlist = document.createElement('img');
-  
-        wishlist.src ="file:///C:/Users/hgaut/Documents/GitHub/FW12_Fabindia_Project/image/icon-heart-black.png" ;
-  
-        wishlist.setAttribute('id','wishlist');
+        
 
         div.onclick = function(){
           visible(product);
         }
   
 
-        div.append(wishlist,img, product_name, product_price);
+        div.append(img, product_name, product_price);
     
         parent.append(div);
      
@@ -324,17 +316,13 @@ function sort2(){
     
         product_name.textContent = product.name;
     
-        let wishlist = document.createElement('img');
-  
-        wishlist.src ="file:///C:/Users/hgaut/Documents/GitHub/FW12_Fabindia_Project/image/icon-heart-black.png" ;
-  
-        wishlist.setAttribute('id','wishlist');
+     
 
         div.onclick = function(){
           visible(product);
         }
   
-       div.append(wishlist,img, product_name, product_price);
+       div.append(img, product_name, product_price);
     
         parent.append(div);
      
