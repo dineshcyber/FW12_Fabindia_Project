@@ -255,10 +255,12 @@
         <div id="details">
           <div>
             <h2>Login Details</h2>
-            <p>dummyEmail@gmail.com</p>
+            <p id="loggedUser">Please Log In</p>
           </div>
           <div>
-            <button>Change</button>
+            <a href="index.html">
+              <button id="reset">Change</button>
+            </a>
           </div>
         </div>
 
@@ -383,9 +385,9 @@
         <div id="mp_box">
           <h3>Order Summary</h3>
           <hr />
-          <p>Dummy product name</p>
-          <p>Qty:</p>
-          <p>Size:</p>
+          <p style="padding-top: 20px;"><strong> Your Items:</strong><p id="mpr_i"></p></p>
+          <p id="mpr_q" style="padding-top: 10px;">Qty:</p>
+          <!-- <p>Size:</p> -->
           <br />
           <br />
           <br />
@@ -535,7 +537,8 @@
       }
     }
     if (validation_counter2 == 0 && del.textContent == 150) {
-      window.location.href = `index.html`;
+      window.location.href = `thankyou.html`;
+      localStorage.removeItem(`cart`)
     } else if (validation_counter2 == 0 && del.textContent == 0) {
       warning4.style.display = `block`;
     } else {
@@ -549,4 +552,21 @@
   logo.addEventListener(`click`, function () {
     window.location.href = `index.html`;
   });
+
+  //Current Logged In user - Start
+  let user = JSON.parse(localStorage.getItem(`signin-details`));
+  let resetLogin = JSON.parse(localStorage.getItem(`reset`));
+  let loggedUser = document.getElementById(`loggedUser`);
+  loggedUser.textContent = user[0].s_in_mail;
+  //Current Logged In user - Start
+
+  // Order Summary Start
+  let mpr_i = document.getElementById(`mpr_i`);
+  let mpr_q = document.getElementById(`mpr_q`);
+  var str = ``;
+  products.forEach(function (el) {
+    str += `, ` + el.name;
+  });
+  mpr_i.textContent = str.slice(1, str.length) + ` .`;
+  mpr_q.textContent = `Qty: `+ products.length;
 </script>
