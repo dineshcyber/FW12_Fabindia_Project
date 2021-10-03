@@ -26,10 +26,27 @@ function sign_in(){
   });
   if(count > 0){
    alert("Login successfull");  
-   modal.style.display = "none";
+     
+   if(localStorage.getItem("signin-details") === null){
+    localStorage.setItem(("signin-details"), JSON.stringify([]));
+    }
+    let signin_user ={
+      s_in_mail,
+      s_in_pass,
+  };
+  let signin_arr=JSON.parse(localStorage.getItem("signin-details"));
+ //push new user to array
+ signin_arr.push(signin_user); // adding new user
+ console.log('signin_arr:', signin_arr)
+ localStorage.setItem(("signin-details"), JSON.stringify(signin_arr));
+ location.href = "index.html"; 
+
+
   }else{
    alert("Invalid Login Credentials");  
   }
+  
+ 
 }
 
 // for sign up-pop up
@@ -224,7 +241,7 @@ function sign_up() {
 }
 function back() {
   modal.style.display = "none";
-  alert("Refresh the page");
+  location.href = "index.html"; 
 }
 
 
@@ -306,7 +323,7 @@ function up_details() {
    arr.push(user); // adding new user
    console.log('arr:', arr);
    localStorage.setItem(("signup-details"), JSON.stringify(arr));
-
+   location.href = "index.html"; 
    }
 
 }
