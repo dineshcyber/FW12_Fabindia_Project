@@ -26,10 +26,35 @@ function sign_in(){
   });
   if(count > 0){
    alert("Login successfull");  
-   modal.style.display = "none";
+     
+   if(localStorage.getItem("signin-details") === null){
+    localStorage.setItem(("signin-details"), JSON.stringify([]));
+    }
+    let signin_user ={
+      s_in_mail,
+      s_in_pass,
+  };
+  var counter=0;
+  let signin_arr=JSON.parse(localStorage.getItem("signin-details"));
+    if(signin_arr.length > 0){
+      signin_arr.pop();
+      signin_arr.push(signin_user); // adding new user
+      console.log('signin_arr:', signin_arr)
+      localStorage.setItem(("signin-details"), JSON.stringify(signin_arr));
+      location.href = "index.html";   
+    }else {
+      signin_arr.push(signin_user); // adding new user
+      console.log('signin_arr:', signin_arr)
+      localStorage.setItem(("signin-details"), JSON.stringify(signin_arr));
+      location.href = "index.html";  
+    }
+    
+ 
   }else{
    alert("Invalid Login Credentials");  
   }
+  
+ 
 }
 
 // for sign up-pop up
@@ -116,7 +141,7 @@ function sign_up() {
   inp5.setAttribute("id", "pass_up");
   inp5.setAttribute(
     "style",
-    "width: 95%; border: 1px solid #cccccc; border-radius: 4px; padding: 8px; background-color: #f4f2e5;"
+    "width: 95%; border: 1px solid #cccccc; border-radius: 4px; padding: 8px; background-color: #f4f2e5; font-family: 'FontAwesome';"
   );
   inp5.placeholder = `Minimum 8 characters`;
   let pass_mandatory = document.createElement("div");
@@ -133,7 +158,7 @@ function sign_up() {
   inp6.setAttribute("id", "password_conf");
   inp6.setAttribute(
     "style",
-    "width: 95%; border: 1px solid #cccccc; border-radius: 4px; padding: 8px; background-color: #f4f2e5;"
+    "width: 95%; border: 1px solid #cccccc; border-radius: 4px; padding: 8px; background-color: #f4f2e5;font-family: 'FontAwesome';"
   );
  let cpass_mandatory = document.createElement("div");
  cpass_mandatory.setAttribute("id", "cpass_mand");
@@ -224,7 +249,7 @@ function sign_up() {
 }
 function back() {
   modal.style.display = "none";
-  alert("Refresh the page");
+  location.href = "index.html"; 
 }
 
 
@@ -306,7 +331,7 @@ function up_details() {
    arr.push(user); // adding new user
    console.log('arr:', arr);
    localStorage.setItem(("signup-details"), JSON.stringify(arr));
-
+   location.href = "index.html"; 
    }
 
 }
