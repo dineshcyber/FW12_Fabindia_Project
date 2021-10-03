@@ -105,16 +105,16 @@
       }
       #cartbox {
         display: flex;
-        width: 95%;
-
+        width: 100%;
+        /* border: 1px solid red; */
         margin: auto;
       }
       #cartimage {
-        width: 65%;
+        width: 100%;
+        /* border: 1px solid red; */
       }
       #orderdetail {
         width: 30%;
-        text-align: justify;
         margin-left: 3.5%;
       }
       .c_all,
@@ -123,21 +123,23 @@
         font-size: small;
       }
       #cartimage img {
-        width: 12.5%;
+        cursor: pointer;
+        width: 15%;
       }
       .c_all {
         background-color: #f8f8f6;
-        margin: 3%;
-        padding: 5% 2%;
-        height: 125px;
-        width: 90%;
+        margin: 20px 20px 0;
+        width: 100%;
+        padding: 10px;
       }
       .c_all p {
         font-weight: bold;
+        padding-top: 20px;
+        line-height: 20px;
       }
 
       .itemprice {
-        margin-left: 150%;
+        margin-left: 100%;
       }
       .cpcn {
         width: 100%;
@@ -150,9 +152,11 @@
         margin-left: 2.5%;
       }
       body .c_all hr {
-        position: static;
+        /* position: static; */
         margin-top: 30px;
-        width: 350%;
+        width: 200%;
+        margin-left: 30%;
+        /* border: 1px solid red; */
       }
       h2 {
         margin-top: 50px;
@@ -193,20 +197,18 @@
         right: 70px;
         bottom: -40px;
       }
-      img:hover {
-        opacity: 0.5;
-      }
       #continue button {
         border: none;
         background-color: #e5cc76;
         width: 280px;
         height: 40px;
-        border-radius: 8px;
+        border-radius: 3px;
         font-weight: bold;
         margin: 50px;
       }
       button:hover {
         opacity: 0.8;
+        cursor: pointer;
       }
 
       /*======= FOOTER START ========*/
@@ -311,7 +313,7 @@
     </div>
 
     <h2 id="empty">Your Shopping Cart</h2>
-    <hr />
+    <hr style="margin-top: 20px" />
     <div id="cartbox">
       <div id="cartimage"></div>
 
