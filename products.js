@@ -178,54 +178,40 @@ save();
 
 //displaying products
 
+let parent = document.getElementById("products");
+function showProducts() {
+  parent.innerHTML = null;
+  productdata.forEach(function (product) {
+    let div = document.createElement("div");
 
- function showProducts(){
- 
- parent.innerHTML = null; 
-  productdata.forEach(function (product){
-  
-   
-    
-        let div = document.createElement('div');   
-      
-        let img = document.createElement('img');
-        
-        img.src = product.img;
-        
-        let product_price = document.createElement('p');
-        product_price.setAttribute('class','mrpred');
-        product_price.textContent = product.price;
-    
-        let product_name = document.createElement('p');
+    let img = document.createElement("img");
 
-        product_name.textContent = product.name;
-    
-      
-  
-        div.onclick = function(){
-          visible(product);
-        }
-        
-        div.append(img, product_name,product_price);
-    
-        parent.append(div);
-     
-       
-    
-    
-   });
-         
-     }
-     showProducts();
-     
-    
+    img.src = product.img;
 
+    let product_price = document.createElement("p");
+    product_price.setAttribute("class", "mrpred");
+    product_price.textContent = product.price;
 
+    let product_name = document.createElement("p");
 
+    product_name.textContent = product.name;
 
-  
-  
+    let wishlist = document.createElement("div");
 
+    wishlist.src = "image/icon-heart-black.png";
+
+    wishlist.setAttribute("id", "wishlist");
+
+    div.onclick = function () {
+      visible(product);
+    };
+
+    div.append(wishlist, img, product_name, product_price);
+
+    parent.append(div);
+  });
+}
+showProducts();
 
 //sorting1
 
@@ -268,46 +254,42 @@ function sort1() {
 
 //soritng2
 
+function sort2() {
+  parent.innerHTML = null;
+  productdata.forEach(function (product) {
+    if (Number(product.cost > 1500)) {
+      let div = document.createElement("div");
 
-function sort2(){
+      let img = document.createElement("img");
 
-  parent.innerHTML = null; 
-  productdata.forEach(function (product){
-  
-   if(Number(product.cost > 1500 )){
-    
-    
-        let div = document.createElement('div');
-        
-        let img = document.createElement('img');
-        
-        img.src = product.img;
-        
-        let product_price = document.createElement('p');   product_price.setAttribute('class','mrpred')
-    
-        product_price.textContent = product.price;
-    
-        let product_name = document.createElement('p');
-    
-        product_name.textContent = product.name;
-    
-     
+      img.src = product.img;
 
-        div.onclick = function(){
-          visible(product);
-        }
-  
-       div.append(img, product_name, product_price);
-    
-        parent.append(div);
-     
-     }});
- 
-   }
+      let product_price = document.createElement("p");
+      product_price.setAttribute("class", "mrpred");
 
+      product_price.textContent = product.price;
 
-   
+      let product_name = document.createElement("p");
 
+      product_name.textContent = product.name;
+
+      let wishlist = document.createElement("img");
+
+      wishlist.src =
+        "file:///C:/Users/hgaut/Documents/GitHub/FW12_Fabindia_Project/image/icon-heart-black.png";
+
+      wishlist.setAttribute("id", "wishlist");
+
+      div.onclick = function () {
+        visible(product);
+      };
+
+      div.append(wishlist, img, product_name, product_price);
+
+      parent.append(div);
+    }
+  });
+}
 
 if (localStorage.getItem("visible") === null) {
   localStorage.setItem("visible", JSON.stringify([]));
