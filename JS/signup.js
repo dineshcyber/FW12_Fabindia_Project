@@ -26,10 +26,34 @@ function sign_in(){
   });
   if(count > 0){
    alert("Login successfull");  
-   modal.style.display = "none";
+     
+   if(localStorage.getItem("signin-details") === null){
+    localStorage.setItem(("signin-details"), JSON.stringify([]));
+    }
+    let signin_user ={
+      s_in_mail,
+      s_in_pass,
+  };
+  var counter=0;
+  let signin_arr=JSON.parse(localStorage.getItem("signin-details"));
+  signin_arr.forEach(function(user){
+      if((s_in_mail == user.s_in_mail) && (s_in_pass == user.s_in_pass)){
+        counter++
+      }
+  });
+  if(counter == 0){
+    signin_arr.push(signin_user); // adding new user
+    console.log('signin_arr:', signin_arr)
+    localStorage.setItem(("signin-details"), JSON.stringify(signin_arr));
+    location.href = "index.html"; 
+  }
+
+ 
   }else{
    alert("Invalid Login Credentials");  
   }
+  
+ 
 }
 
 // for sign up-pop up
@@ -81,6 +105,7 @@ function sign_up() {
 
   let div6 = document.createElement("div");
   let inp3 = document.createElement("input");
+  inp3.placeholder = `10 digits Mobile Number`;
   inp3.setAttribute("id", "phne_number");
   inp3.setAttribute(
     "style",
@@ -117,7 +142,7 @@ function sign_up() {
     "style",
     "width: 95%; border: 1px solid #cccccc; border-radius: 4px; padding: 8px; background-color: #f4f2e5;"
   );
-  inp5.placeholder = `Minimum 8 charecters`;
+  inp5.placeholder = `Minimum 8 characters`;
   let pass_mandatory = document.createElement("div");
  pass_mandatory.setAttribute("id", "pass_mand");
  pass_mandatory.textContent = "";
@@ -223,7 +248,7 @@ function sign_up() {
 }
 function back() {
   modal.style.display = "none";
-  alert("Refresh the page");
+  location.href = "index.html"; 
 }
 
 
@@ -305,7 +330,7 @@ function up_details() {
    arr.push(user); // adding new user
    console.log('arr:', arr);
    localStorage.setItem(("signup-details"), JSON.stringify(arr));
-
+   location.href = "index.html"; 
    }
 
 }

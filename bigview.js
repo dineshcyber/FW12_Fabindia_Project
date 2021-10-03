@@ -114,14 +114,33 @@ big.forEach(function (product){
       let itemdetail = document.createElement('p');
       itemdetail.innerText = "Details";
 
-      let point1= document.createElement('li');  
-       point1.innerText = "Comfort Fit";
-      let point2= document.createElement('li');       
-      point2.innerText = "Dry Clean Only";
-      let point3 = document.createElement('li');      
-      point3.innerText = "Dobby Weave";
+      let point1= document.createElement('li'); 
+      let point2= document.createElement('li'); 
+      let point3 = document.createElement('li'); 
       let point4 = document.createElement('li'); 
-      point4.innerText = "Modal Fabric";
+
+     if(product.category == "Decorative") {
+        
+       point1.innerText = "Classic";
+            
+      point2.innerText = "Multicolour available";
+         
+      point3.innerText = "Metal";
+      
+      point4.innerText = "Glazed";
+    }
+
+      else{
+      
+        point1.innerText = "Comfort Fit";
+           
+       point2.innerText = "Dry Clean Only";
+          
+       point3.innerText = "Dobby Weave";
+     
+       point4.innerText = "Modal Fabric";
+
+      }
 
 
       let time = document.createElement('p');
