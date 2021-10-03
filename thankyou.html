@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thank You</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Mulish&display=swap");
+      * {
+        margin: 0;
+        font-family: "Mulish", sans-serif;
+        background-color: #f4f2e5;
+      }
+      #message {
+        background-color: #8f2c34;
+        height: 25px;
+        text-align: center;
+        padding-top: 5px;
+        font-size: 13px;
+        font-weight: 600;
+        line-height: 21px;
+        color: white;
+      }
+      .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+      }
+      /* SCROLLER START */
+      #scroller {
+        border-bottom: 1px solid gray;
+        width: 100%;
+        height: 130px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+      }
+      #scroller p {
+        font-size: 13px;
+      }
+      #scroller-t {
+        display: flex;
+        height: 100%;
+      }
+      #scroller-t > div {
+        flex-grow: 1;
+        margin: auto;
+        padding: 0 20px;
+      }
+      #scroller-t img {
+        width: 30%;
+        height: auto;
+      }
+      #scroller-t input {
+        padding-left: 10px;
+        border: #f4f2e5;
+        background-color: #f9f8f1;
+        border-radius: 2px;
+        height: 40px;
+        width: 80%;
+      }
+      #scroller-t-r {
+        display: flex;
+        justify-content: right;
+        gap: 20px;
+      }
+      #scroller-t-r img {
+        cursor: pointer;
+        width: 25px;
+        height: auto;
+        margin: auto 0;
+      }
+      #scroller-t-r p {
+        cursor: pointer;
+        margin: auto 0;
+      }
+      #scroller-b {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 5%;
+      }
+      #scroller-b > p {
+        cursor: pointer;
+      }
+      #scroller-b > p:hover {
+        text-decoration: underline;
+        text-decoration-color: #8f2c34;
+        text-underline-offset: 5px;
+        text-decoration-thickness: 2px;
+      }
+      #warning {
+        color: #8f2c34;
+        padding-top: 5px;
+        display: none;
+      }
+
+      /* SCROLLER END */
+
+      /* ======= FOOTER START ========*/
+      #bottom {
+        padding-top: 20px;
+        float: left;
+        width: 100%;
+        background-color: #dbd9cd;
+        height: 400px;
+        margin-top: 100px;
+      }
+      #bottom_t {
+        display: grid;
+        width: 100%;
+        background-color: #dbd9cd;
+        grid-template-columns: auto auto auto auto auto;
+      }
+      #bottom p {
+        margin: 10px 0px;
+        background-color: #dbd9cd;
+      }
+
+      #bottom_t > div {
+        margin: 1% auto;
+        padding: 0px 20px;
+        background-color: #dbd9cd;
+      }
+      #bottom_b {
+        display: flex;
+        justify-content: space-between;
+        background-color: #dbd9cd;
+      }
+
+      #bottom_b > h3 {
+        margin: 2.7%;
+      }
+      #bottom_b > img {
+        height: 55px;
+        width: auto;
+        margin: auto 2%;
+      }
+      #bottom hr {
+        width: 100%;
+      }
+      h3 {
+        background-color: #dbd9cd;
+      }
+      /*======= FOOTER END ========= */
+      #thanks {
+        margin: auto;
+        /* border: 1px solid red; */
+        height: 200px;
+      }
+      #thanks h1,
+      #thanks h4 {
+        margin-top: 30px;
+        margin-left: 20px;
+      }
+      #thanks button {
+        cursor: pointer;
+        font-weight: 600;
+        margin: 100px auto 45% 45%;
+        background-color: #ddbc4b;
+        border: 0;
+        height: 40px;
+        width: 180px;
+        border-radius: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p id="message">Call 1800 100 1212 and shop in comfort at home</p>
+    </div>
+    <div id="scroller">
+      <div id="scroller-t">
+        <div>
+          <a href="index.html">
+            <img
+              src="https://www.fabindia.com/file/general/fab_india_logo.png"
+              alt="Fabindia Logo"
+            />
+          </a>
+        </div>
+        <div>
+          <input id="search" type="text" placeholder="Enter your search text" />
+          <p id="warning">
+            Sorry! We could not find any products to match your search.
+          </p>
+        </div>
+        <div>
+          <p style="text-align: right; padding-bottom: 10px; cursor: pointer">
+            Sign In | Sign Up | <strong>Fab</strong><em>family</em> | Track Your
+            Order | Store Locator
+          </p>
+          <div id="scroller-t-r">
+            <p>📞 INR</p>
+            <img
+              src="https://www.fabindia.com/file/v8385693196996654632/general/india_flag.svg"
+            />
+            <p>˅</p>
+            <img
+              src="https://www.fabindia.com/file/general/icon-loyalty-star-old-page.png"
+            />
+            <img src="./image/icon-heart-black.png" alt="" />
+            <a href="cart.html"
+              ><img src="./image/icon-bag-black.png" alt=""
+            /></a>
+          </div>
+        </div>
+      </div>
+      <div id="scroller-b">
+        <p>New Arrivals ˅</p>
+        <p>Collections ˅</p>
+        <p>Women ˅</p>
+        <p>Men ˅</p>
+        <p>Kids ˅</p>
+        <p>Home Linen ˅</p>
+        <p>Dining & Decor ˅</p>
+        <p>Furniture ˅</p>
+        <p>Beauty ˅</p>
+        <p>Food ˅</p>
+      </div>
+    </div>
+
+    <div id="thanks">
+      <h1>Your Order has been placed Successfully</h1>
+      <h4>Thank you for shopping with us</h4>
+      <a href="products.html">
+        <button>Continue Shopping</button>
+      </a>
+    </div>
+
+    <div id="bottom">
+      <div id="bottom_t">
+        <div>
+          <h3>Let Us Help You</h3>
+          <p>Order Tracking</p>
+          <p>Bulk Orders</p>
+          <p>Store Locator</p>
+          <p>Franchise Form</p>
+          <p>Furniture Warranty Policy</p>
+        </div>
+        <div>
+          <h3>Support</h3>
+          <p>Customer Service</p>
+          <p>How To Order</p>
+          <p>Billing And Payments</p>
+          <p>Shipping And Delivery</p>
+          <p>Returns And Exchanges</p>
+          <p>FAQs</p>
+        </div>
+        <div>
+          <h3>Company</h3>
+          <p>About Us</p>
+          <p>Style Guides</p>
+          <p>Contact Us</p>
+          <p>Careers</p>
+          <p>Privacy Policy</p>
+          <p>Terms Of Use</p>
+          <p>Business Enquiries</p>
+          <p>The Fabindia Schools</p>
+        </div>
+        <div>
+          <h3>About Fabindia</h3>
+          <p>60 Years Of Fabindia</p>
+          <p>Philosophy</p>
+          <p>About Fabindia Products</p>
+          <p>Organic Certification</p>
+          <p>Fabric Care</p>
+          <p>FabCafe</p>
+          <p>
+            <strong style="background-color: #dbd9cd">Fab</strong
+            ><em style="background-color: #dbd9cd">family</em> - Loyalty Program
+          </p>
+          <p>Interior Design Solutions</p>
+        </div>
+        <div>
+          <h3>Stay in Touch</h3>
+          <img src="image\st.png" style="margin-top: 10px; cursor: pointer" />
+        </div>
+      </div>
+      <hr />
+      <div id="bottom_b">
+        <h3>© Copyright 2018 Fabindia.com. All Rights Reserved</h3>
+        <img
+          src="https://www.fabindia.com/file/v4659334362150706955/widget/FabindiaFooter/images/payment-cards-n_1.jpg"
+        />
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  //Scroller hider start
+  window.onscroll = function () {
+    myFunction();
+  };
+
+  var header = document.getElementById("scroller");
+
+  var sticky = header.offsetTop;
+
+  function myFunction() {
+    if (window.pageYOffset > sticky) {
+      header.classList.add("sticky");
+    } else {
+      header.classList.remove("sticky");
+    }
+  }
+  //scroller hider end
+
+  //mouseover start
+  let links = document.getElementById(`scroller-b`).querySelectorAll(`p`);
+  links[2].addEventListener(`click`, function () {
+    window.location.href = "women.html";
+  });
+  links[3].addEventListener(`click`, function () {
+    window.location.href = "men.html";
+  });
+  links[6].addEventListener(`click`, function () {
+    window.location.href = "decorative.html";
+  });
+  links[1].addEventListener(`click`, function () {
+    window.location.href = "products.html";
+  });
+
+  //input-bar
+  var input = document.getElementById(`search`);
+  var warning = document.getElementById(`warning`);
+  input.addEventListener("keypress", function (e) {
+    if (e.key === "Enter") {
+      if (input.value == `men` || input.value == `MEN`) {
+        window.location.href = "men.html";
+      } else if (input.value == `women` || input.value == `WOMEN`) {
+        window.location.href = "women.html";
+      } else if (input.value == `decor` || input.value == `DECOR`) {
+        window.location.href = "decorative.html";
+      } else {
+        warning.style.display = `block`;
+        input.value = null;
+      }
+    }
+  });
+</script>
