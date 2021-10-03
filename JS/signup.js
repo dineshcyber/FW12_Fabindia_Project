@@ -140,7 +140,7 @@ function sign_up() {
   inp5.setAttribute("id", "pass_up");
   inp5.setAttribute(
     "style",
-    "width: 95%; border: 1px solid #cccccc; border-radius: 4px; padding: 8px; background-color: #f4f2e5;"
+    "width: 95%; border: 1px solid #cccccc; border-radius: 4px; padding: 8px; background-color: #f4f2e5; font-family: 'FontAwesome';"
   );
   inp5.placeholder = `Minimum 8 characters`;
   let pass_mandatory = document.createElement("div");
@@ -157,7 +157,7 @@ function sign_up() {
   inp6.setAttribute("id", "password_conf");
   inp6.setAttribute(
     "style",
-    "width: 95%; border: 1px solid #cccccc; border-radius: 4px; padding: 8px; background-color: #f4f2e5;"
+    "width: 95%; border: 1px solid #cccccc; border-radius: 4px; padding: 8px; background-color: #f4f2e5;font-family: 'FontAwesome';"
   );
  let cpass_mandatory = document.createElement("div");
  cpass_mandatory.setAttribute("id", "cpass_mand");
