@@ -34,14 +34,21 @@ function sign_in(){
       s_in_mail,
       s_in_pass,
   };
+  var counter=0;
   let signin_arr=JSON.parse(localStorage.getItem("signin-details"));
- //push new user to array
- signin_arr.push(signin_user); // adding new user
- console.log('signin_arr:', signin_arr)
- localStorage.setItem(("signin-details"), JSON.stringify(signin_arr));
- location.href = "index.html"; 
+  signin_arr.forEach(function(user){
+      if((s_in_mail == user.s_in_mail) && (s_in_pass == user.s_in_pass)){
+        counter++
+      }
+  });
+  if(counter == 0){
+    signin_arr.push(signin_user); // adding new user
+    console.log('signin_arr:', signin_arr)
+    localStorage.setItem(("signin-details"), JSON.stringify(signin_arr));
+    location.href = "index.html"; 
+  }
 
-
+ 
   }else{
    alert("Invalid Login Credentials");  
   }
