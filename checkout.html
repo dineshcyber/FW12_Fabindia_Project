@@ -537,7 +537,8 @@
       }
     }
     if (validation_counter2 == 0 && del.textContent == 150) {
-      window.location.href = `index.html`;
+      window.location.href = `thankyou.html`;
+      localStorage.removeItem(`cart`)
     } else if (validation_counter2 == 0 && del.textContent == 0) {
       warning4.style.display = `block`;
     } else {
