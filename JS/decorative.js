@@ -37,11 +37,11 @@ var warning = document.getElementById(`warning`);
 input.addEventListener("keypress", function (e) {
   if (e.key === "Enter") {
     if (input.value == `men` || input.value == `MEN`) {
-      window.location.href = "men.html";
+      window.location.href = "./Pages/men.html";
     } else if (input.value == `women` || input.value == `WOMEN`) {
-      window.location.href = "women.html";
+      window.location.href = "/Pages/women.html";
     } else if (input.value == `decor` || input.value == `DECOR`) {
-      window.location.href = "decorative.html";
+      window.location.href = "/Pages/decorative.html";
     } else {
       warning.style.display = `block`;
       input.value = null;
