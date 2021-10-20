@@ -72,22 +72,22 @@ window.onclick = function(event) {
 }
 
 function  go_to_cart() {
-  location.href = "cart.html"; 
+  location.href = "./Pages/cart.html"; 
 }
 function  go_to_products() {
-  location.href = "products.html"; 
+  location.href = "./Pages/products.html"; 
 }
 function  go_to_women() {
-  location.href = "women.html"; 
+  location.href = "./Pages/women.html"; 
 }
 function  go_to_men() {
-  location.href = "men.html"; 
+  location.href = "./Pages/men.html"; 
 }
 function  go_to_cart() {
-  location.href = "cart.html"; 
+  location.href = "./Pages/cart.html"; 
 }
 function  go_to_decor() {
-  location.href = "decorative.html"; 
+  location.href = "./Pages/decorative.html"; 
 }
 
 
