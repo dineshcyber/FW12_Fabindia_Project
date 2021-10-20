@@ -19,16 +19,16 @@ window.onscroll = function () {
   //mouseover start
   let links = document.getElementById(`scroller-b`).querySelectorAll(`p`);
   links[2].addEventListener(`click`, function () {
-    window.location.href = "women.html";
+    window.location.href = "./Pages/women.html";
   });
   links[3].addEventListener(`click`, function () {
-    window.location.href = "men.html";
+    window.location.href = "./Pages/men.html";
   });
   links[6].addEventListener(`click`, function () {
-    window.location.href = "decorative.html";
+    window.location.href = "./Pages/decorative.html";
   });
   links[1].addEventListener(`click`, function () {
-    window.location.href = "products.html";
+    window.location.href = "./Pages/products.html";
   });
   
   //input-bar
@@ -37,11 +37,11 @@ window.onscroll = function () {
   input.addEventListener("keypress", function (e) {
     if (e.key === "Enter") {
       if (input.value == `men` || input.value == `MEN`) {
-        window.location.href = "men.html";
+        window.location.href = "./Pages/men.html";
       } else if (input.value == `women` || input.value == `WOMEN`) {
-        window.location.href = "women.html";
+        window.location.href = "./Pages/women.html";
       } else if (input.value == `decor` || input.value == `DECOR`) {
-        window.location.href = "decorative.html";
+        window.location.href = "./Pages/decorative.html";
       } else {
         warning.style.display = `block`;
         input.value = null;
@@ -247,5 +247,5 @@ var checkpin;
     
 
     function cartgoingf(){
-        window.location.href='cart.html';
+        window.location.href='./Pages//cart.html';
     }
