@@ -36,18 +36,19 @@ function sign_in(){
   };
   var counter=0;
   let signin_arr=JSON.parse(localStorage.getItem("signin-details"));
-  signin_arr.forEach(function(user){
-      if((s_in_mail == user.s_in_mail) && (s_in_pass == user.s_in_pass)){
-        counter++
-      }
-  });
-  if(counter == 0){
-    signin_arr.push(signin_user); // adding new user
-    console.log('signin_arr:', signin_arr)
-    localStorage.setItem(("signin-details"), JSON.stringify(signin_arr));
-    location.href = "index.html"; 
-  }
-
+    if(signin_arr.length > 0){
+      signin_arr.pop();
+      signin_arr.push(signin_user); // adding new user
+      console.log('signin_arr:', signin_arr)
+      localStorage.setItem(("signin-details"), JSON.stringify(signin_arr));
+      location.href = "index.html";   
+    }else {
+      signin_arr.push(signin_user); // adding new user
+      console.log('signin_arr:', signin_arr)
+      localStorage.setItem(("signin-details"), JSON.stringify(signin_arr));
+      location.href = "index.html";  
+    }
+    
  
   }else{
    alert("Invalid Login Credentials");  

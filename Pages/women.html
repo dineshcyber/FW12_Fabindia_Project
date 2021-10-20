@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buy New Arrivals Decorative</title>
+    <title>Buy New Arrivals women</title>
     <style>
 @import url("https://fonts.googleapis.com/css2?family=Mulish&display=swap");
     * {
@@ -99,10 +99,19 @@
     /* SCROLLER END */
 
 
-   body{
+    body{
             background-color:#f4f2e5;
- }
 
+        }
+        .header{
+    float: left;
+    
+    height: 150px;
+    width: 100%;
+    margin: auto;
+   
+    background-color: #f4f2e5;
+}
 #productsbox{
 display:flex;
 width:100%;
@@ -116,32 +125,42 @@ width:100%;
   width:100%;
     font-family: "Mulish", sans-serif;
     display: grid;
-    grid-template-columns: 33% 33% 33%;
+    grid-template-columns: auto auto auto;
     gap:2%;
+   
 }
 #products img{
 width:100%;
 
 }
- 
+#products #wishlist{
+        width:20px;
+        height:20px;
+        position:relative;
+        float: right;
+        left:-8%;
+        top:7%;
+       background-color: transparent;
 
-    
+    }
+   
     .category{
-        font-size:17px;
+      font-size:17px;
         font-weight: 600;
         margin-top:10%;
         font-family: "Mulish", sans-serif;
-      }
-      .price{
-        font-size:17px;
+    }
+    .price{
+      font-size:17px;
         font-weight: 600;
         margin-top:5%;
         font-family: "Mulish", sans-serif;
     }
     .disappear{
-        display:none;
+      display:none;
         font-size: 13px;
         font-family: "Mulish", sans-serif;
+       
     }
     .category:hover .disappear{
         display: block;
@@ -178,13 +197,12 @@ width:100%;
         color:rgb(85, 82, 82);
         background-color:#f4f2e5;
     }
-
+    
     #products img:hover{
 /* opacity: .5; */
 cursor: pointer;
 
 }
-
 #products p{
      background-color: #f9f8f1;
      font-size: small;
@@ -198,6 +216,8 @@ cursor: pointer;
        font-size: medium;
  }
 
+
+
 /*======= FOOTER START ========*/
 #bottom {
   padding-top: 20px;
@@ -209,7 +229,7 @@ cursor: pointer;
 }
 #bottom_t {
   display: grid;
-    width: 100%;  background-color: #dbd9cd;
+    width: 100%;   background-color: #dbd9cd;
     grid-template-columns: 20% 20% 20% 20% 20%;
 }
 #bottom p{
@@ -231,15 +251,14 @@ cursor: pointer;
 #bottom_b > img {
   margin: 1.7%;
 }
-/*======= FOOTER END =========*/
-
 #bottom hr{ 
     width:100%;
 }
-  h3{
+h3{
     background-color: #dbd9cd;
-  }
-    
+}
+  
+/*======= FOOTER END =========*/
 /*======= Description Panel Start =====*/
 #desc{
   margin-top: 10px;
@@ -272,6 +291,7 @@ cursor: pointer;
   border: 1px solid gray;
 }
 /*======= Description Panel End =====*/
+
   
 
     </style>
@@ -311,15 +331,15 @@ cursor: pointer;
                 src="https://www.fabindia.com/file/general/icon-loyalty-star-old-page.png"
               />
               <img src="./image/icon-heart-black.png" alt="" />
-              <a href="cart.html"
+              <a href="./Pages/cart.html"
                 ><img src="./image/icon-bag-black.png" alt=""
               /></a>
             </div>
           </div>
         </div>
         <div id="scroller-b">
-             <p>New Arrivals ˅</p>  
-             <p>Collections ˅</p>
+          <p>New Arrivals ˅</p>
+          <p>Collections ˅</p>
           <p>Women ˅</p>
           <p>Men ˅</p>
           <p>Kids ˅</p>
@@ -330,7 +350,6 @@ cursor: pointer;
           <p>Food ˅</p>
         </div>
       </div>
-   
 
 
 
@@ -338,10 +357,10 @@ cursor: pointer;
     <div id="productsbox">
         <div class="sort">
           <div class= "category">Category 
-           <div class= "disappear"><a  href="products.html">All</a></div>
-           <div class= "disappear"><a  href="men.html">Men</a></div>
-           <div class= "disappear"><a  href="women.html">Women</a></div>
-           <div class= "disappear"><a  href="decorative.html">Decorative</a></div><hr/>
+           <div class= "disappear"><a  href="./Pages/products.html">All</a></div>
+           <div class= "disappear"><a  href="./Pages/men.html">Men</a></div>
+           <div class= "disappear"><a  href="./Pages/women.html">Women</a></div>
+           <div class= "disappear"><a  href="./Pages/decorative.html">Decorative</a></div><hr/>
         </div> 
           
            <div class="price">Price 
@@ -354,24 +373,21 @@ cursor: pointer;
  
          </div>
          <div style="margin-right: 5%;">
-
-          <div id="desc">
-           <div>
-             <p>
-               <strong style="background-color: #F9F8F1;">Dining & Decorative Items</strong>
-             </p>
-           </div>
-           <div id="desc-sort">
-             <p style="background-color:#F9F8F1;">View By:</p>
-             <button id="desc-b1">|||</button>
-             <button id="desc-b2">||||</button>
-           </div>
-         </div>
-
+        <div id="desc">
+            <div>
+              <p>
+                <strong style="background-color: #F9F8F1;">Women's Ethnic Wear</strong>
+              </p>
+            </div>
+            <div id="desc-sort">
+              <p style="background-color:#F9F8F1;">View By:</p>
+              <button id="desc-b1">|||</button>
+              <button id="desc-b2">||||</button>
+            </div>
+          </div>
           <div id="products"></div>
         </div>
     </div>
-
 
     <div id="bottom">
       <div id="bottom_t">
@@ -427,7 +443,6 @@ cursor: pointer;
         />
       </div>
     </div>
-    
 </body>
-<script src="decorative.js"></script>
+<script src="women.js"></script>
 </html>

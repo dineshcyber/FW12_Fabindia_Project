@@ -19,16 +19,16 @@ function myFunction() {
 //mouseover start
 let links = document.getElementById(`scroller-b`).querySelectorAll(`p`);
 links[2].addEventListener(`click`, function () {
-  window.location.href = "women.html";
+  window.location.href = "./Pages/women.html";
 });
 links[3].addEventListener(`click`, function () {
-  window.location.href = "men.html";
+  window.location.href = "./Pages/men.html";
 });
 links[6].addEventListener(`click`, function () {
-  window.location.href = "decorative.html";
+  window.location.href = "./Pages/decorative.html";
 });
 links[1].addEventListener(`click`, function () {
-  window.location.href = "products.html";
+  window.location.href = "./Pages/products.html";
 });
 
 //input-bar
@@ -37,11 +37,11 @@ var warning = document.getElementById(`warning`);
 input.addEventListener("keypress", function (e) {
   if (e.key === "Enter") {
     if (input.value == `men` || input.value == `MEN`) {
-      window.location.href = "men.html";
+      window.location.href = "./Pages/men.html";
     } else if (input.value == `women` || input.value == `WOMEN`) {
-      window.location.href = "women.html";
+      window.location.href = "./Pages/women.html";
     } else if (input.value == `decor` || input.value == `DECOR`) {
-      window.location.href = "decorative.html";
+      window.location.href = "./Pages/decorative.html";
     } else {
       warning.style.display = `block`;
       input.value = null;
@@ -49,7 +49,7 @@ input.addEventListener("keypress", function (e) {
   }
 });
 
-//to display women products
+//to display men product
 
 let parent = document.getElementById("products");
 
@@ -57,7 +57,7 @@ let info = JSON.parse(localStorage.getItem("productinfo"));
 
 function showProducts() {
   info.forEach(function (product) {
-    if (product.category == "women") {
+    if (product.category == "men") {
       let div = document.createElement("div");
 
       let img = document.createElement("img");
@@ -91,12 +91,12 @@ function showProducts() {
 
 showProducts();
 
-//sorting1
+//sorting
 
 function sort1() {
   parent.innerHTML = null;
   info.forEach(function (product) {
-    if (Number(product.cost <= 1500) && product.category == "women") {
+    if (Number(product.cost <= 1500) && product.category == "men") {
       let div = document.createElement("div");
 
       let img = document.createElement("img");
@@ -112,12 +112,9 @@ function sort1() {
 
       product_name.textContent = product.name;
 
-      let wishlist = document.createElement("img");
+      let wishlist = document.createElement("div");
 
-      wishlist.src =
-        "file:///C:/Users/hgaut/Documents/GitHub/FW12_Fabindia_Project/image/icon-heart-black.png";
-
-      wishlist.setAttribute("id", "wishlist");
+      wishlist.src = "image/icon-heart-black.png";
 
       div.onclick = function () {
         visible(product);
@@ -135,7 +132,7 @@ function sort1() {
 function sort2() {
   parent.innerHTML = null;
   info.forEach(function (product) {
-    if (Number(product.cost > 1500) && product.category == "women") {
+    if (Number(product.cost > 1500) && product.category == "men") {
       let div = document.createElement("div");
 
       let img = document.createElement("img");
@@ -151,12 +148,12 @@ function sort2() {
 
       product_name.textContent = product.name;
 
-      let wishlist = document.createElement("img");
+      let wishlist = document.createElement("div");
 
-      wishlist.src =
-        "file:///C:/Users/hgaut/Documents/GitHub/FW12_Fabindia_Project/image/icon-heart-black.png";
+      wishlist.src = "image/icon-heart-black.png";
 
       wishlist.setAttribute("id", "wishlist");
+
       div.onclick = function () {
         visible(product);
       };
@@ -180,7 +177,7 @@ function visible(pro) {
   take.push(pro);
   localStorage.setItem("visible", JSON.stringify(take));
 
-  window.location.href = "bigview.html";
+  window.location.href = "./Pages/bigview.html";
 }
 
 //-----Description and layout sort panel----

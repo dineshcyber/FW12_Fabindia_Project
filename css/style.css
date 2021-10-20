@@ -1,7 +1,8 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Urbanist', sans-serif;
+  font-family: "Urbanist", sans-serif;
+  /* font-family: "Mulish", sans-serif; */
 }
 
 .header {
@@ -9,7 +10,6 @@
   height: 150px;
   width: 100%;
   margin: auto;
-
   background-color: #fff;
 }
 
@@ -250,6 +250,7 @@ li a {
   margin: auto;
 }
 #removable {
+  font-family: "Mulish", sans-serif;
   width: 65%;
   margin: auto;
   display: grid;
@@ -260,6 +261,7 @@ li a {
 }
 #mail,
 #password {
+  font-family: "Mulish", sans-serif;
   width: 95%;
   border: 1px solid #cccccc;
   background-color: #f4f2e5;
@@ -351,7 +353,6 @@ li a {
   text-align: center;
   letter-spacing: 5px;
   padding-bottom: 20px;
- 
 }
 
 .section-heading #sec-content {
@@ -361,6 +362,7 @@ li a {
   padding: 10px;
   line-height: 30px;
   font-family: GothamRnd-Book;
+  /* font-family: "Urbanist", sans-serif; */
   font-size: 17px;
   color: #604b3b;
   min-height: 80px;

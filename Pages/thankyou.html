@@ -4,13 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>Shopping Cart</title>
+    <title>Thank You</title>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Mulish&display=swap");
       * {
         margin: 0;
         font-family: "Mulish", sans-serif;
+        background-color: #f4f2e5;
       }
       #message {
         background-color: #8f2c34;
@@ -27,10 +27,8 @@
         top: 0;
         width: 100%;
       }
-
       /* SCROLLER START */
       #scroller {
-        background-color: #f4f2e5;
         border-bottom: 1px solid gray;
         width: 100%;
         height: 130px;
@@ -99,133 +97,22 @@
 
       /* SCROLLER END */
 
-      body {
-        background-color: #f3f1ea;
-        font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
-      }
-      #cartbox {
-        display: flex;
-        width: 95%;
-
-        margin: auto;
-      }
-      #cartimage {
-        width: 65%;
-      }
-      #orderdetail {
-        width: 30%;
-        text-align: justify;
-        margin-left: 3.5%;
-      }
-      .c_all,
-      .cpcn {
-        display: flex;
-        font-size: small;
-      }
-      #cartimage img {
-        width: 12.5%;
-      }
-      .c_all {
-        background-color: #f8f8f6;
-        margin: 3%;
-        padding: 5% 2%;
-        height: 125px;
-        width: 90%;
-      }
-      .c_all p {
-        font-weight: bold;
-      }
-
-      .itemprice {
-        margin-left: 150%;
-      }
-      .cpcn {
-        width: 100%;
-        margin-left: 30%;
-        height: 80px;
-      }
-
-      body hr {
-        width: 58%;
-        margin-left: 2.5%;
-      }
-      body .c_all hr {
-        position: static;
-        margin-top: 30px;
-        width: 350%;
-      }
-      h2 {
-        margin-top: 50px;
-        margin-left: 4.5%;
-      }
-
-      #orderdetail p {
-        font-weight: bold;
-        margin-left: 5%;
-      }
-      #orderdetail .total {
-        font-size: small;
-      }
-      #orderdetail button {
-        width: 80%;
-        height: 45px;
-        margin-left: 5%;
-        margin-top: 5%;
-        background-color: #e5cc76;
-        border: none;
-        font-weight: bold;
-      }
-      #orderdetail hr {
-        margin: 4%;
-      }
-      .total {
-        color: rgba(82, 12, 12, 0.767);
-      }
-
-      #divr {
-        display: flex;
-      }
-      #divr #remov {
-        width: 22px;
-        height: 22px;
-
-        position: relative;
-        right: 70px;
-        bottom: -40px;
-      }
-      img:hover {
-        opacity: 0.5;
-      }
-      #continue button {
-        border: none;
-        background-color: #e5cc76;
-        width: 280px;
-        height: 40px;
-        border-radius: 8px;
-        font-weight: bold;
-        margin: 50px;
-      }
-      button:hover {
-        opacity: 0.8;
-      }
-
-      /*======= FOOTER START ========*/
+      /* ======= FOOTER START ========*/
       #bottom {
         padding-top: 20px;
         float: left;
         width: 100%;
         background-color: #dbd9cd;
-        height: fit-content;
-        margin-top: 350px;
+        height: 400px;
+        margin-top: 100px;
       }
       #bottom_t {
         display: grid;
         width: 100%;
-        grid-template-columns: 20% 20% 20% 20% 20%;
         background-color: #dbd9cd;
+        grid-template-columns: auto auto auto auto auto;
       }
       #bottom p {
-        font-weight: normal;
         margin: 10px 0px;
         background-color: #dbd9cd;
       }
@@ -243,16 +130,39 @@
 
       #bottom_b > h3 {
         margin: 2.7%;
-        background-color: #dbd9cd;
       }
       #bottom_b > img {
-        margin: 1.7%;
+        height: 55px;
+        width: auto;
+        margin: auto 2%;
       }
       #bottom hr {
         width: 100%;
       }
-
-      /*======= FOOTER END =========*/
+      h3 {
+        background-color: #dbd9cd;
+      }
+      /*======= FOOTER END ========= */
+      #thanks {
+        margin: auto;
+        /* border: 1px solid red; */
+        height: 200px;
+      }
+      #thanks h1,
+      #thanks h4 {
+        margin-top: 30px;
+        margin-left: 20px;
+      }
+      #thanks button {
+        cursor: pointer;
+        font-weight: 600;
+        margin: 100px auto 45% 45%;
+        background-color: #ddbc4b;
+        border: 0;
+        height: 40px;
+        width: 180px;
+        border-radius: 2px;
+      }
     </style>
   </head>
   <body>
@@ -290,7 +200,7 @@
               src="https://www.fabindia.com/file/general/icon-loyalty-star-old-page.png"
             />
             <img src="./image/icon-heart-black.png" alt="" />
-            <a href="cart.html"
+            <a href="./Pages/cart.html"
               ><img src="./image/icon-bag-black.png" alt=""
             /></a>
           </div>
@@ -310,15 +220,12 @@
       </div>
     </div>
 
-    <h2 id="empty">Your Shopping Cart</h2>
-    <hr />
-    <div id="cartbox">
-      <div id="cartimage"></div>
-
-      <div id="orderdetail"></div>
-    </div>
-    <div id="continue">
-      <a href="products.html"><button>Continue Shopping</button></a>
+    <div id="thanks">
+      <h1>Your Order has been placed Successfully</h1>
+      <h4>Thank you for shopping with us</h4>
+      <a href="./Pages/products.html">
+        <button>Continue Shopping</button>
+      </a>
     </div>
 
     <div id="bottom">
@@ -379,5 +286,56 @@
       </div>
     </div>
   </body>
-  <script src="cart.js"></script>
 </html>
+<script>
+  //Scroller hider start
+  window.onscroll = function () {
+    myFunction();
+  };
+
+  var header = document.getElementById("scroller");
+
+  var sticky = header.offsetTop;
+
+  function myFunction() {
+    if (window.pageYOffset > sticky) {
+      header.classList.add("sticky");
+    } else {
+      header.classList.remove("sticky");
+    }
+  }
+  //scroller hider end
+
+  //mouseover start
+  let links = document.getElementById(`scroller-b`).querySelectorAll(`p`);
+  links[2].addEventListener(`click`, function () {
+    window.location.href = "./Pages/women.html";
+  });
+  links[3].addEventListener(`click`, function () {
+    window.location.href = "./Pages/men.html";
+  });
+  links[6].addEventListener(`click`, function () {
+    window.location.href = "./Pages/decorative.html";
+  });
+  links[1].addEventListener(`click`, function () {
+    window.location.href = "./Pages/products.html";
+  });
+
+  //input-bar
+  var input = document.getElementById(`search`);
+  var warning = document.getElementById(`warning`);
+  input.addEventListener("keypress", function (e) {
+    if (e.key === "Enter") {
+      if (input.value == `men` || input.value == `MEN`) {
+        window.location.href = "./Pages/men.html";
+      } else if (input.value == `women` || input.value == `WOMEN`) {
+        window.location.href = "./Pages/women.html";
+      } else if (input.value == `decor` || input.value == `DECOR`) {
+        window.location.href = "./Pages/decorative.html";
+      } else {
+        warning.style.display = `block`;
+        input.value = null;
+      }
+    }
+  });
+</script>
