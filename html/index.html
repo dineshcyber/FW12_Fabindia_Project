@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fabindia | Shop for Handwoven Garments & Home Furnishings</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- fonts -->
+    <link href="//db.onlinewebfonts.com/c/90820e3d7b32d7491b62bd1aae2aafbe?family=Neutra+Text" rel="stylesheet" type="text/css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist&display=swap" rel="stylesheet">
+    <!-- fonts -->
+
+</head>
+
+<body>
+     <!-- Header Start-->
+     <header class="header" id="myHeader">
+        <div class="top-header">
+            <div class="header-left">
+                <button id="signin"> <img src="./image/icon-signin-black.png" alt=""> Sign In</button>
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <span class="close">&times;</span>
+                            <div style="padding: 4px; margin-bottom: 5px;">
+                                <p id="change_me">Sign in</p>
+                            </div>
+                            <hr style="width:65%;margin: auto;">
+                        </div>
+                        <div id="modal-body">
+                            <div id="workspace">
+                                <div id=removable>
+                                    <div>Email Address:*</div>
+                                    <div style="padding: 0px;">
+                                        <div><input type="email" id="mail" placeholder="" />
+                                        </div>
+                                        <div id="signin_mail"> </div>
+                                    </div>
+                                    <div>Password:*</div>
+                                    <div style="padding: 0px;">
+                                        <div style="margin-bottom: 0px;">
+                                            <input type="password" id="password"  placeholder="Minimum 8 characters" />
+                                        </div>
+                                        <div id="signin_pass"> </div>
+                                    </div><div></div>
+                                    <div>
+                                        <button onclick="sign_in()">Sign In</button>
+                                        <div id="show-flex">
+                                            <div>Forgot Password?</div>
+                                            <div>New to Fabindia?</div>
+                                            <div><button onclick="sign_up()"  id="create-acc">Create Account</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="header-middle">
+                <img src="https://www.fabindia.com/file/general/Fabindia_logo.svg" alt="LOGO">
+            </div>
+            <div class="header-right">
+                <div class="wishlist">
+                    <img src="./image/icon-heart-black.png" alt="">
+                </div>
+                <div class="cart"><button style="background-color: white; border: none;" onclick="go_to_cart()"> 
+                    <img src="./image/icon-bag-black.png" alt=""></button>
+                   
+                </div>
+            </div>
+        </div>
+        <div class="nav-bar">
+             <ul>
+                    <li class="d">
+                            <div class="d-btn"><button style="background-color: white; border: none;" onclick="go_to_products()">
+                                NEW ARRIVALS</button> </div>   
+                            <div class="d-content1" style="height: 220px; line-height: 20px;">
+                                <div class="NA_text_block1">
+                                    <p>Women</p><p>Men</p><p>Kids</p><p>Home Linen</p><p>Home Decor</p>
+                                </div> 
+                                <div class="NA_text_block2">
+                                    <p>Festive Collection</p><p>FabKids</p><p>FabNu</p><p>RhimJhim</p><p>Ekkees</p>
+                                </div>  
+                                </div>           
+                    </li>
+                    <li class="d">
+                        <div class="d-btn"><button style="background-color: white; border: none;" onclick="go_to_products()">
+                            COLLECTIONS</button></div>   
+                        <div class="d-content2" style="height: 275px; line-height: 25px;">
+                            <div class="coll_text_block1">
+                                <p>Festive Collection</p><p>FabKids</p><p>Indian Spring</p><p>Wedding Collection</p><p>Home Spring Collection</p>
+                                <p>Indigo & Red Collection</p><p>Banarasi Collection</p> <p>Cashmere Collections</p>
+                            </div> 
+                            <div class="coll_text_block2">
+                               <p>RhimJhim</p><p>Gifting Ideas</p><p>Summer Collection</p><p>Rajwada Collection</p>
+                               <p>Hand Block Print</p><p>Wool collection</p><p>Ikat collection</p><p>Ajrakh Collection</p>
+                            </div>  
+                            <div class="coll_text_block3">
+                                <p>Ekkees</p><p>Work From Home</p><p>FabNu</p><p>Home Work Edition</p>
+                                <p>Indigo Collection</p><p>Winter Essentials</p><p>Kalamkari Collection</p>
+                             </div>    
+                            </div>        
+                    </li>
+                    <li class="d">
+                        <div class="d-btn"><button style="background-color: white; border: none;" onclick="go_to_women()"> 
+                            WOMEN</button></div>   
+                        <div class="d-content3" style="height: 400px;">
+                            <div class="women_text_block1" style="margin-left: 4%;">
+                                <p>ETHNIC WEAR</p><p>Kurtas</p><p>Dupattas</p><p>Chudidars</p><p>Salwars</p>
+                                <p>Indian Sets</p><p style="margin-bottom: 5%;">Lehenga Sets</p> <p>WESTERN WEAR</p><p>Pants & Palaz</p><p>Tops & Shirts</p>
+                                <p>Tunics</p><p>Dresses</p><p>Skirts</p><p>Coats & Jack</p><p>Western Sets</p><p>Sleepwear</p>
+                            </div> 
+                            <div class="women_text_block2" style="margin-right: 7%;">
+                               <p>SARIS & BLOUSES</p><p>STOLES & SARONGS</p><p>JEWELLERY</p><p>BAGS</p>
+                               <p>FOOTWEAR</p><p>WOMEN ACCESSORIES</p>
+                            </div>  
+                            <div class="women_text_block3">
+                                <p><u><i>WHAT'S NEW</i></u></p><p>JASHN-E-RIWAAZ</p><p>FABNU</p><p>RHIMJHIM</p>
+                                <p>EKKEES</p>
+                             </div>   
+                             <div class="women_text_block4" style="width: 9%;">
+                                <p>COLLECTION</p><p>Malhar</p><p>Work From ho</p><p>Gifting Ideas</p><p>Ajrakh</p><p>Rajwada Colle</p>
+                                <p>Indigo Collecti</p><p>Summer Colle</p><p>Indian Spring</p><p>Wool Collection</p><p>Cashmere Coll</p>
+                                <p>Indigo & Red</p><p>Hand Block Pri</p><p>Ikat collection</p><p>Kalamkari</p><p>Banarasi</p>
+                             </div>  
+                             <div class="women_text_block5" style="width: 10%; margin-left: 0%; margin-top: 0%; margin-right: 0%;">
+                                 <p>SALE!</p><p>BEAUTY</p><p>STYLE GUIDES</p>
+                              </div>  
+                              <div class="women_img" style="margin-left: 2%;">
+                                <img src="https://www.fabindia.com/file/general/women-2aug21.jpg" class="img_size"/>
+                             </div>    
+                            </div>       
+                    </li>
+                    <li class="d">
+                        <div class="d-btn"><button style="background-color: white; border: none;" onclick="go_to_men()">
+                             MEN</button></div>   
+                        <div class="d-content4" style="height: 290px;">
+                            <div class="men_text_block1" style="margin-left: 4%; margin-right: 0%; margin-top: 0%;">
+                                <p>ETHNIC WEAR</p><p>Kurtas</p><p>Nehru Jacket</p><p>Churidars</p><p>Pyjamas</p><p>Salwar</p>
+                                <p  style="margin-bottom: 5%;">Dhotis</p> <p>WESTERN WEAR</p><p>Shirts</p><p>Trousers</p>
+                                <p>Shorts</p>
+                            </div> 
+                            <div class="men_text_block2" style="margin-right: 7%;">
+                               <p>MEN</p><p>ACCESSORIES</p><p>Stoles</p><p>Footwear</p><p>Jewellery</p><p>Shawls</p>
+                               <p>Accessories</p><p>Mufflers</p>
+                            </div>  
+                            <div class="men_text_block3">
+                                <p><u><i>WHAT'S NEW</i></u></p><p>JASHN-E-RIWAAZ</p><p>RHIMJHIM</p>
+                                <p>EKKEES</p>
+                             </div>   
+                             <div class="men_text_block4" style="width: 9%;">
+                                <p>COLLECTION</p><p>Malhar</p><p>Work From ho</p><p>Gifting Ideas</p><p>Rajwada Colle</p>
+                                <p>Indigo Collecti</p><p>Summer Colle</p><p>Indian Spring</p><p>Wool Collection</p>
+                               <p>Hand Block Pri</p><p>Ikat collection</p><p>Kalamkari</p>
+                             </div>  
+                             <div class="men_text_block5" style="width: 10%;">
+                                 <p>SALE!</p><p>CUSTOM KURTAS</p><p>STYLE GUIDES</p>
+                              </div>  
+                              <div class="men_img" style="margin-left: 2%;">
+                                <img src="https://www.fabindia.com/file/general/men-2aug21.jpg" class="img_size"/>
+                             </div>    
+                              
+                            </div>        
+                    </li>
+                    <li class="d">
+                        <div class="d-btn">KIDS</div>   
+                        <div class="d-content5" style="height: 400px;">
+                            <div class="kid_text_block1" style="margin-left: 4%; margin-right: 0%; margin-top: 0%;">
+                                <p>GIRLS</p><p>Dresses</p><p>Sets</p><p>Lehengas</p><p>Tops & Tunics</p><p>Kurtas</p>
+                                <p>Bottom Wear</p> <p>Frocks</p><p style="margin-bottom: 5%;">Sleepwear</p><p>BOYS</p><p>Kurtas</p><p>Shirts</p>
+                                <p>Jackets</p><p>Sets</p><p>Bottom Wear</p><p>Sleepwear</p>
+                            </div> 
+                            <div class="kid_text_block2">
+                               <p>INFANT GIRLS</p><p>Lehenga Sets</p><p>Frocks</p><p style="margin-bottom: 5%;">Sets</p><p>INFANT BOYS</p><p>Kurtas</p>
+                               <p>Kurta Sets</p><p>Dhoti Sets</p><p>Sets</p><p>Pyjama Sets</p><p>Shirts</p><p>Bottom Wear</p>
+                            </div>  
+                            <div class="kid_text_block3" style="margin-right: 6%; width: 8%">
+                                <p>KIDS</p><p>ACCESSORIES</p><p>Jewellery</p> <p>Accessories</p><p>Footwear</p>
+                             </div>  
+                            <div class="kid_text_block4">
+                                <p><u><i>WHAT'S NEW</i></u></p><p>JASHN-E-RIWAAZ</p><p>FABKIDS</p><p>RHIMJHIM</p>
+                                <p>EKKEES</p>
+                             </div>   
+                             <div class="kid_text_block5" style="width: 9%;">
+                                <p>COLLECTION</p><p>Malhar</p><p>Gifting Ideas</p><p>Rajwada Colle</p>
+                                <p>Indigo Collecti</p><p>Summer Colle</p><p>Indian Spring</p><p>Hand Block Pri</p>
+                             </div>  
+                             <div class="kid_text_block6" style="width: 10%;">
+                                 <p>SALE!</p><p>STYLE GUIDES</p>
+                              </div>  
+                              <div class="kid_img" style="margin-left: 2%;">
+                                <img src="https://www.fabindia.com/file/general/kids-2aug21.jpg" class="img_size"/>
+                             </div> 
+                            </div>            
+                    </li>
+                    <li class="d">
+                        <div class="d-btn"><button style="background-color: white; border: none;" onclick="go_to_decor()">
+                            HOME LINEN</button></div>   
+                        <div class="d-content6" style="height: 400px;">
+                                <div class="home_text_block1" style="margin-left: 4%; margin-right: 0%; margin-top: 0%;">
+                                    <p>TABLE LINEN</p><p>Table Runners</p><p>Table Napkins</p><p>Table Mats</p><p>Table Covers</p><p>Mats & Napki</p>
+                                    <p  style="margin-bottom: 5%;">Chair Pads</p> <p>CUSHIONS</p><p>Floor Cushions</p><p>Cushion Cove</p>
+                                    <p  style="margin-bottom: 5%;">Bolster Covers</p><p>CURTAINS</p>
+                                </div> 
+                                <div class="home_text_block2" style="margin-right: 7%;">
+                                   <p>BED LINEN</p><p>Throws</p><p>Quilts</p><p>Pillow Covers</p><p>Dohars</p><p>Cushion cove</p>
+                                   <p>Bedsheets</p><p  style="margin-bottom: 5%;">Bedcovers</p><p>BATH LINEN</p><p>Towels</p><p>Toiletery Bags</p>
+                                   <p>Shower Curta</p><p>Gamchas</p><p>Bathrobes &</p><p>Bathmats</p><p>Bath Accesso</p>
+                                </div>  
+                                <div class="home_text_block3">
+                                    <p><u><i>WHAT'S NEW</i></u></p><p>JASHN-E-RIWAAZ</p><p>FABKIDS</p><p>FABNU</p>
+                                    <p>EKKEES</p>
+                                 </div>   
+                                 <div class="home_text_block4" style="width: 9%;">
+                                    <p>COLLECTION</p><p>Home Work E</p><p>Indigo Collecti</p><p>Spring Collecti</p>
+                                    <p>Summer Colle</p> <p>Hand Block Pri</p><p>Ikat collection</p><p>Kalamkari</p>
+                                 </div>  
+                                 <div class="home_text_block5" style="width: 10%;">
+                                     <p style="margin-bottom: 5%;">SALE!</p><p>BUNDDLE OFFERS</p><p>INTERIOR DESIGN SOLUTIONS</p>
+                                    <p>LOOKBOOK</p><p>STYLE GUIDES</p>
+                                  </div>  
+                                  <div class="home_img" style="margin-left: 2%;">
+                                    <img src="https://www.fabindia.com/file/general/home-linen-2aug21.jpg" class="img_size"/>
+                                 </div>  
+                            </div>      
+                    </li>
+                    <li class="d">
+                        <div class="d-btn">DINING & DECOR</div>   
+                        <div class="d-content7" style="height: 330px;">
+                            <div class="dine_text_block1" style="width: 10%; margin-left: 4%; margin-right: 0%; margin-top: 0%;">
+                                <p>TABLEWARE</p><p>Serveware</p><p>Drinkware</p><p>Dinnerware</p><p style="margin-bottom: 5%;">Dining Access</p>
+                                <p>LIGHTING</p><p>Table Lamps</p> <p>Lamp Shades</p><p>Hanging & Str</p><p style="margin-bottom: 5%;">Floor Lamps</p>
+                                <p>KITCHEN</p><p>Kitchen Linen</p><p>Kitchen Utility</p>
+                            </div> 
+                            <div class="dine_text_block2">
+                               <p>CURTAINS FLOOR COVERINGS</p><p>Footmats</p><p style="margin-bottom: 5%;">Dhurries</p><p>GIFTING & STATIONERY</p>
+                               <p>Tags</p><p>Stationery</p><p>Paper Bags</p><p>Notebooks</p><p>Gift Boxes</p><p>Games & Toys</p><p>Envelopes</p><p>Book Ends</p>
+                            </div>  
+                            <div class="dine_text_block3" style="margin-right: 6%; width: 8%">
+                                <p>DECOR</p><p>Bundles</p><p>Wall Decor</p> <p>Utility & Tissu</p><p>T-Lites & Lant</p><p>Platters & Urlis</p>
+                                <p>Planters & Va</p><p>Hardware</p><p>Frames</p><p>Clocks</p><p>Candles & Inc</p><p>Accents & Ob</p>
+                             </div>  
+                            <div class="dine_text_block4">
+                                <p><u><i>WHAT'S NEW</i></u></p><p>JASHN-E-RIWAAZ</p><p>FABNU</p> <p>EKKEES</p>
+                             </div>   
+                             <div class="dine_text_block5" style="width: 9%;">
+                                <p>COLLECTION</p><p>Home Work E</p><p>Gifting Ideas</p>
+                                <p>Indigo Collecti</p><p>Spring Collecti</p><p>Summer Colle</p>
+                             </div>  
+                             <div class="dine_text_block6" style="width: 10%;">
+                                 <p>SALE!</p><p>BUNDLE OFFERS</p><p>INTERIOR DESIGN SOUTIONS</p><p>LOOKBOOK</p><p>STYLE GUIDES</p><p>PERSONAL ACCESSORIES</p>
+                              </div>  
+                              <div class="dine_img" style="margin-left: 2%;">
+                                <img src="https://www.fabindia.com/file/general/home-decor-2aug21.jpg" class="img_size"/>
+                             </div> 
+                            </div>        
+                    </li>
+                    <li class="d">
+                        <div class="d-btn"><button style="background-color: white; border: none;" onclick="go_to_decor()"> 
+                            FURNITURES</button></div>   
+                        <div class="d-content8" style="height: 410px;">
+                            <div class="furni_text_block1" style="width: 8%; margin-left: 4%; margin-right: 0%; margin-top: 0%;">
+                                <p>VARANDAH</p><p>Tables</p><p>Chairs</p><p>Benches</p><p>Tents</p><p style="margin-bottom: 5%;">Umberellas</p>
+                                <p>BEDROOM</p><p>Wardrobe</p> <p>Tables</p><p>Chairs</p>
+                                <p>Cabinets</p><p>Beds</p>
+                            </div> 
+                            <div class="furni_text_block2" style="width: 9%;">
+                               <p>STUDY ROOM</p><p>Tables</p><p>Racks</p><p style="margin-bottom: 5%;">Chairs</p><p>LIVING</p>
+                               <p>Trolleys</p><p>Tables</p><p>Stools</p><p>sofas & Seating</p><p>Ottomans & P</p>
+                               <p>Entertainmen</p><p>Consoles</p><p>Chairs</p><p>Cabinets</p>
+                            </div>  
+                            <div class="furni_text_block3" style=" width: 7%">
+                                <p>DINING</p><p>Tables</p><p>Chairs</p> <p>Cabinets</p><p>Benches</p>
+                             </div>
+                             <div class="furni_text_block4" style="width: 8%; margin-right: 5%;">
+                                <p>ACCENTS & ACCESSORIES</p><p>Trolleys</p><p>Tables</p><p>Storage Boxes</p><p>Stools</p><p>Shelf</p>
+                                <p>Screens</p><p>Racks</p> <p>Ottomans & P</p><p>Mirrors</p><p>Hangers</p><p>Consoles</p>
+                                <p>Chairs</p><p>Cabinets</p><p>Benches</p><p>Accessories</p>
+                            </div> 
+                            <div class="furni_text_block5" style="width: 8%;">
+                                <p><u><i>WHAT'S NEW</i></u></p> <p>EKKEES</p>
+                             </div>   
+                             <div class="furni_text_block6" style="width: 9%;">
+                                <p>COLLECTION</p><p>Home Work E</p>
+                                <p>Kashi Collection</p><p>Amer Collection</p>
+                             </div>  
+                             <div class="furni_text_block7" style="width: 10%;">
+                                 <p style="margin-bottom: 5%;">SALE!</p><p>INTERIOR DESIGN SOUTIONS</p><p>LOOKBOOK</p><p>STYLE GUIDES</p>
+                              </div>  
+                              <div class="furni_img" style="margin-left: 2%;">
+                                <img src="https://www.fabindia.com/file/general/furniture-2aug21.jpg" class="img_size"/>
+                             </div> 
+                         </div>         
+                    </li>
+                    <li class="d">
+                        <div class="d-btn">BEAUTY</div>   
+                        <div class="d-content9" style="height: 380px;">
+                            <div class="beauty_text_block1" style="width: 9%; margin: 0% 2%">
+                                <p>SKINCARE</p><p>Face</p><p>Bath & Body</p><p style="margin-bottom: 5%;">Hands & Feet</p>
+                                <p>HAIRCARE</p><p>Hair Oils</p> <p>Shampoo</p><p>Mirrors</p><p>Conditioners</p>
+                                <p style="margin-bottom: 5%; ">Hair Packs</p><p>FRAGRANCES</p>
+                                <p>Perfume Oils</p><p>Essential Oils</p><p>Body Sprays</p><p>Eau De Parfum</p>
+                            </div> 
+                            <div class="beauty_text_block2" style="width: 20%; margin-top: 0%;">
+                                <p>SPECIALS</p> <p>Hand Cleansi</p><p>Lip Butters</p><p>Kajal</p><p>Mosquito Rep</p>
+                             </div>   
+                             <div class="beauty_text_block3" style="width: 8%; margin: 0% 3%;">
+                                <p>COLLECTION</p><p>Wellness</p>
+                                <p>Kashi Collection</p><p>Amer Collection</p>
+                             </div>  
+                             <div class="beauty_text_block4" style="width: 15%;margin-top: 0%;">
+                                 <p style="margin-bottom: 5%;">GIFT SETS</p><p>NEW LAUNCHES</p><p>STYLE GUIDES</p>
+                              </div>  
+                              <div class="furni_img">
+                                <img src="https://www.fabindia.com/file/general/furniture-2aug21.jpg" class="img_size"/>
+                             </div> 
+                            </div>           
+                    </li>
+                    <li class="d">
+                        <div class="d-btn">FOOD</div>   
+                        <div class="d-content10" style="height: 32ss0px;">
+                            <div class="food_text_block1" style="width: 9%; margin: 0% 2% 0% 4%;">
+                                <p>SPICES SEASONINGS & MASALAS</p><p>Spices</p><p style="margin-bottom: 5%;">Seasoninigs & Salad Dressin</p>
+                                <p>DRIEDFRUITS NUTS & SEEDS</p><p>Candied & De</p><p style="margin-bottom: 5%;">Seeds & Nuts</p>
+                                <p>PRESERVES</p><p>Conserves & Jellies & Crus</p>
+                            </div> 
+                            <div class="food_text_block2" style="width: 10%; margin: 0% 2%">
+                               <p>RICE FLOUR & PULSES</p><p>Flour</p><p>Pulses</p><p style="margin-bottom: 5%;">Rice & Grains</p>
+                               <p>READY2EAT & COOK</p> <p>Snacks & Heal</p><p>Breakfast Cer</p><p>Instant mixes</p>
+                               <p style="margin-top: 5%;">SWEETNERS</p><p>Sugar</p><p>Honey</p>
+                            </div>  
+                            <div class="food_text_block3" style=" width: 7%; margin: 0% 2%">
+                                <p>TEA COFFEE & BEVERAGES</p><p>Black Tea</p><p>Green Tea</p> <p>Tulsi Tea</p><p>Herbal Tea</p>
+                                <p>Infusion Tea</p><p>Premium Tea</p><p>Flavoured Tea</p><p>Coffee</p><p>Fruit Concent</p><p>Powdered Dri</p>
+                             </div>
+                             <div class="food_text_block4" style="width: 8%; margin: 0% 2%">
+                                <p>OILS GHEE & NUTBUTTERS</p><p>Ghee</p><p>Nut Butters</p><p>Oils</p>
+                            </div> 
+                            <div class="food_text_block5" style="width: 15%; margin: 0% 2%">
+                                <p style="margin-bottom: 5%;">HERBS</p> <p>AYURVEDIC & SUPPLEMENTS</p><p>SAUCES</p>
+                                <p>PICKLES & CHUTNEYS</p><p>PASTA & NOODLES</p><p>STYLE GUIDES</p>
+                             </div>   
+                              <div class="food_img" style="margin-left: 2%;">
+                                <img src="https://www.fabindia.com/file/general/FOOD.jpg" class="img_size"/>
+                             </div> 
+                        </div>         
+                    </li>
+                    <li class="d">
+                        <div class="d-btn">CUSTOM KURTAS!</div>           
+                    </li>
+                    <li class="d">
+                        <div class="d-btn">SALE!</div>           
+                    </li>
+                  </ul>
+        </div>
+        </div>
+    </header>
+    <!-- Header End-->
+
+    <!--Slider start-->
+    <div class="slider-crousel" id="mySlideshow">
+
+    </div>
+    <!--Slider end-->
+    <!-- Section trending start-->
+    <section class="trending">
+        <div class="section-heading">
+            <h3 id="heading"> WE HAVE SOMETHING FOR EVERYONE</h3>
+            <p id="sec-content">Bright hues & versatile styles: get that perfect festive look for yourself & your home
+                with our wide assortment</p>
+        </div>
+        <div id="slider" class="slider-slick">
+
+        </div>
+        <img src="" alt="">
+    </section>
+    <!-- Section trending end-->
+
+
+    <!-- section latest -->
+
+    <section class="latest-section">
+        <div class="section-heading">
+            <h3 id="heading"> LATEST FROM THE SEASON</h3>
+        </div>
+        <div class="latest-part-head">
+            <div class="part-left-head" id="partleftheading">
+                <div class="her">
+                    <h1>FOR HER</h1>
+                </div>
+                <div class="para">
+                    Dip into our festive collection lovingly crafted for you to shine from dusk to dawn.
+                </div>
+            </div>
+            
+            <div class="part-right-head" id="partrightheading">
+                <div class="her">
+                    <h1>FOR HIM</h1>
+                </div>
+                <div class="para">
+                    Dip into our festive collection lovingly crafted for you to shine from dusk to dawn.
+                </div>
+            </div>
+            
+        </div>
+        <div class="latest-part">
+            <div class="part-left" id="partleft">
+
+            </div>
+            
+            <div class="part-right" id="partright">
+
+            </div>
+            
+        </div>
+        
+    </section>
+
+    <!-- section latest -->
+
+    <!-- section latest slider -->
+
+    <section class="latest-slider">
+        
+        
+            <div id="partleftslider" >
+
+            </div>
+            <div id="partrightslider" >
+
+            </div>
+        
+    </section>
+
+    <!-- section latest slider -->
+
+
+    <!-- Home Decor section -->
+
+    <section class="homedecor">
+        <div class="decor-heading">
+            <h3 id="decorhead"> HOME DECOR & FURNITURE</h3>
+            <p id="decor-content">Build a home soaked in the festive spirit with our range of linens, decor & furniture</p>
+        </div>
+        <div id="mySlideshowdecor"></div>
+        </section>
+        <!-- decor slideshow container -->
+
+        <section id="decorslidecontainer">
+            <section class="decor-slider-item" id="parthomeslider">
+                
+        </section>
+        </section>
+        
+
+        <!-- decor slideshow container -->
+
+        <!-- celebrity -->
+
+        <section id="celebrity">
+            <h1 style="text-align: center; margin: 40px;">CELEBRITY CLOSET</h1>
+            <section class="celebrity-slider-item" id="partcelebrityslider">
+                
+        </section>
+        </section>
+
+        <!-- celebrity -->
+
+        <!-- suggested -->
+
+        <section id="suggested">
+            <h1 style="text-align: center; margin: 40px;">SUGGESTED FOR YOU</h1>
+            <section class="suggested-slider-item" id="partsuggestedslider">
+                
+        </section>
+        </section>
+
+        <!-- suggested -->
+        <!-- fab edit -->
+
+        <section id="fabedit">
+            <h1 style="text-align: center; margin: 40px;">FAB EDITS</h1>
+            <section class="fabedit-slider-item" id="partfabeditslider">
+                
+        </section>
+        </section>
+
+        <!-- fab edit -->
+    
+
+    <!-- Home decor section -->
+
+
+    <!-- sale -->
+
+    <section class="sale">
+        <div class="sale-heading">
+            <h3 id="salehead"> HOME DECOR & FURNITURE</h3>
+            
+        </div>
+        <div id="saleimg">
+            <img src="https://www.fabindia.com/file/general/hp-bkb-15sep21-1.jpg" alt="" width="100%">
+        </div>
+        </section>
+
+    <!-- sale -->
+
+    <!-- video -->
+
+    <section class="video">
+        <div class="video-heading">
+            <h3 id="videohead"> FAM THAT'S AS FAB AS YOU - JOIN US!</h3>
+            <p id="video-content">Build a home soaked in the festive spirit with our range of linens, decor & furniture</p>
+        </div>
+        <div id="videofab">
+            <iframe width="1190" height="480" src="https://www.youtube.com/embed/ONjZbf0Vtu0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        </section>
+
+    <!-- video -->
+
+    <!-- Footer -->
+
+    <div id="bottom">
+        <div id="bottom_t">
+          <div>
+            <h3>Let Us Help You</h3>
+            <p>Order Tracking</p>
+            <p>Bulk Orders</p>
+            <p>Store Locator</p>
+            <p>Franchise Form</p>
+            <p>Furniture Warranty Policy</p>
+          </div>
+          <div>
+            <h3>Support</h3>
+            <p>Customer Service</p>
+            <p>How To Order</p>
+            <p>Billing And Payments</p>
+            <p>Shipping And Delivery</p>
+            <p>Returns And Exchanges</p>
+            <p>FAQs</p>
+          </div>
+          <div>
+            <h3>Company</h3>
+            <p>About Us</p>
+            <p>Style Guides</p>
+            <p>Contact Us</p>
+            <p>Careers</p>
+            <p>Privacy Policy</p>
+            <p>Terms Of Use</p>
+            <p>Business Enquiries</p>
+            <p>The Fabindia Schools</p>
+          </div>
+          <div>
+            <h3>About Fabindia</h3>
+            <p>60 Years Of Fabindia</p>
+            <p>Philosophy</p>
+            <p>About Fabindia Products</p>
+            <p>Organic Certification</p>
+            <p>Fabric Care</p>
+            <p>FabCafe</p>
+            <p><strong>Fab</strong><em>family</em> - Loyalty Program</p>
+            <p>Interior Design Solutions</p>
+          </div>
+          <div>
+            <h3>Stay in Touch</h3>
+            <img src="image\st.png" style="margin-top: 10px; cursor: pointer" />
+          </div>
+        </div>
+        <hr />
+        <div id="bottom_b">
+          <h3>© Copyright 2018 Fabindia.com. All Rights Reserved</h3>
+          <img
+            src="https://www.fabindia.com/file/v4659334362150706955/widget/FabindiaFooter/images/payment-cards-n_1.jpg"
+          />
+        </div>
+      </div>
+        <a
+        href="https://wa.me/9876543210"
+        class="whatsapp_float"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <i class="fa fa-whatsapp whatsapp-icon"></i>
+      </a>
+
+    <!-- Footer -->
+
+
+    <!-- script -->
+
+    <script src="./JS/main.js"></script>
+    <script src="./JS/trending.js"></script>
+    <script src="./JS/signup.js"></script>
+    <script src="./JS/latestleft.js"></script>
+    <script src="./JS/latestright.js"></script>
+    <script src="./JS/latestleftslider.js"></script>
+    <script src="./JS/latestrightslider.js"></script>
+    <script src="./JS/homedecor.js"></script>
+    <script src="./JS/homedecoritem.js"></script>
+    <script src="./JS/celebritycloset.js"></script>
+    <script src="./JS/suggested.js"></script>
+    <script src="./JS/fabedit.js"></script>
+
+    <!-- script -->
+
+</body>
+
+</html>
