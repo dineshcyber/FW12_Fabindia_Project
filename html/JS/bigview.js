@@ -73,11 +73,35 @@ big.forEach(function (product){
   
       product_name.textContent = product.name;
 
+      let selectsize = document.createElement('p');
+      selectsize.innerText = "Select Size";
+
+      let size1 = document.createElement('div');
+      size1.innerText = "S";
+
+      let size2 = document.createElement('div');
+      size2.innerText = "M";
+
+      let size3 = document.createElement('div');
+      size3.innerText = "L";
+
+      let size4 = document.createElement('div');
+      size4.innerText = "XL";
+
+      let size5 = document.createElement('div');
+      size5.innerText = "XXL";
+
+      let sizediv = document.createElement('div');  sizediv.setAttribute('id','sizediv')
+      sizediv.append(size1,size2,size3,size4,size5);
+
+
+
       let hrline1 = document.createElement('hr');
       let hrline2 = document.createElement('hr');
       let hrline3 = document.createElement('hr');
       let hrline4= document.createElement('hr');
       let hrline5= document.createElement('hr');
+      let hrline6= document.createElement('hr');
    
 
       let addtocartbtn = document.createElement('button'); addtocartbtn.setAttribute('id','goto');
@@ -121,6 +145,10 @@ big.forEach(function (product){
 
      if(product.category == "Decorative") {
         
+       sizediv.style.display = "none";
+       selectsize.style.display = "none";
+       hrline6.style.display = "none";
+
        point1.innerText = "Classic";
             
       point2.innerText = "Multicolour available";
@@ -131,6 +159,12 @@ big.forEach(function (product){
     }
 
       else{
+
+        if(product.name == "Woven jamdani sari"){
+          sizediv.style.display = "none";
+          selectsize.style.display = "none";
+          hrline6.style.display = "none";
+        }
       
         point1.innerText = "Comfort Fit";
            
@@ -141,6 +175,8 @@ big.forEach(function (product){
        point4.innerText = "Modal Fabric";
 
       }
+
+
 
 
       let time = document.createElement('p');
@@ -158,7 +194,7 @@ div1.append(img);
 pindiv.append(pincode , checkbtn,pinverify)
 
     let div2 = document.getElementById('detailsbox');  
-      div2.append(product_name,hrline1,product_price,addtocartbtn,cartstatus,hrline2,check,pindiv,hrline3,itemdetail,point1,point2,point3,point4,hrline4,time,timeinfo,hrline5);
+      div2.append(product_name,hrline1,selectsize,sizediv,hrline6,product_price,addtocartbtn,cartstatus,hrline2,check,pindiv,hrline3,itemdetail,point1,point2,point3,point4,hrline4,time,timeinfo,hrline5);
      
   
   

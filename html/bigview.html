@@ -120,6 +120,23 @@
       #detailsbox {
         width: 50%;
       }
+      #sizediv{
+        width:50%;
+        display: flex;
+        
+      }
+      
+      #sizediv div{
+        cursor: pointer;
+        width:18%;
+        border:1px solid black;
+        margin-right:2%;
+        text-align: center;
+        font-size: small;
+        margin-top:1%;
+        padding-top: 1%;
+       padding-bottom: 1%;
+      }
 
       li {
         font-size: small;
@@ -128,6 +145,7 @@
       }
       #detailsbox p {
         font-size: 120%;
+        
       }
 
       button {
@@ -155,6 +173,7 @@
         margin-right: 30%;
         margin-top: 3%;
         margin-bottom: 3%;
+        opacity: .5;
       }
 
       input::-webkit-outer-spin-button,
@@ -226,6 +245,113 @@
       }
 
       /*======= FOOTER END =========*/
+
+      @media(max-width:900px){
+          #bigview{
+            
+              display:inline;
+              margin-left:0
+              
+            }
+            #imagebox{
+              width:85%;
+              margin:auto;
+              margin-left:17%;
+              margin-top:2%;
+       
+            }
+            #detailsbox {
+        width: 75%;
+        margin:17%;
+        margin-bottom:0;
+        margin-top:5%;
+       
+      }
+
+      #detailsbox p{
+        font-size: normal;
+      }
+      #mediaq p{
+      display: none;
+    
+      }
+      #bottom img{
+        display:none;
+      }
+      #bottom_t{
+        display: inline;
+        
+      }
+      #mediaq h3{
+        margin-left:50px
+      }
+      #mediaproducts {
+        display: none;
+      }
+      
+      #onlycart{
+        display: none;
+      }
+      #scroller-t input {
+        padding-left: 10px;
+        height: 40px;
+        width: 100%;
+      }
+      #scroller-t #mediaimg {
+        width: 100px;
+        height: auto;
+      }
+     
+      #detailsbox button{
+        height:35px;
+      }
+      .checkbtn{
+        width:20%;
+      }
+      #bottom{
+        margin-top:8%;
+      }
+      
+      }
+      @media (max-width:500px){
+        
+        body{
+          min-width:350px;
+        }
+        #imagebox,#detailsbox{
+              width:85%;
+              margin:auto;
+              margin-left:17%;
+              margin-top:2%;
+       
+            }
+            #detailsbox{
+              margin-bottom: 0;
+            }
+             #scroller-t #mediaimg{
+               width:60px;
+             }
+             #detailsbox p{
+               font-size:small;
+               font-weight: bold;
+              
+             }
+             #detailsbox button{
+        height:30px;
+        width:100px;
+      }
+      .checkbtn{
+        width:20%;
+      }
+      #bottom h3{
+             font-size:80%;
+             
+      }
+      #bottom{
+        margin-top: 10%;
+        height: max-content;
+      }
+      }
     </style>
   </head>
   <body>
@@ -237,7 +363,7 @@
         <div>
           <a href="index.html">
             <img
-              src="https://www.fabindia.com/file/general/fab_india_logo.png"
+              src="https://www.fabindia.com/file/general/fab_india_logo.png" id="mediaimg"
               alt="Fabindia Logo"
             />
           </a>
@@ -248,38 +374,38 @@
             Sorry! We could not find any products to match your search.
           </p>
         </div>
-        <div>
-          <p style="text-align: right; padding-bottom: 10px; cursor: pointer">
+        <div >
+          <p id="onlycart" style="text-align: right; padding-bottom: 10px; cursor: pointer">
             Sign In | Sign Up | <strong>Fab</strong><em>family</em> | Track Your
             Order | Store Locator
           </p>
           <div id="scroller-t-r">
-            <p>📞 INR</p>
+            <p id="onlycart">📞 INR</p>
             <img
               src="https://www.fabindia.com/file/v8385693196996654632/general/india_flag.svg"
             />
             <p>˅</p>
             <img
-              src="https://www.fabindia.com/file/general/icon-loyalty-star-old-page.png"
+              src="https://www.fabindia.com/file/general/icon-loyalty-star-old-page.png" id="onlycart"
             />
-            <img src="./image/icon-heart-black.png" alt="" />
+            <img src="./image/icon-heart-black.png" id="onlycart" alt="" />
             <a href="cart.html"
-              ><img src="./image/icon-bag-black.png" alt=""
+              ><img  src="./image/icon-bag-black.png" alt=""
             /></a>
           </div>
         </div>
       </div>
       <div id="scroller-b">
         <p>New Arrivals ˅</p>
-        <p>Collections ˅</p>
+        <p id="mediaproducts">Collections ˅</p>
         <p>Women ˅</p>
         <p>Men ˅</p>
-        <p>Kids ˅</p>
-        <p>Home Linen ˅</p>
+        <p id="mediaproducts">Kids ˅</p>
+        <p id="mediaproducts">Home Linen ˅</p>
         <p>Dining & Decor ˅</p>
-        <p>Furniture ˅</p>
-        <p>Beauty ˅</p>
-        <p>Food ˅</p>
+        <p id="mediaproducts">Furniture ˅</p>
+        <p id="mediaproducts">Beauty ˅</p>
+        <p id="mediaproducts"> Food ˅</p>
       </div>
     </div>
 
@@ -291,7 +417,7 @@
 
     <div id="bottom">
       <div id="bottom_t">
-        <div>
+        <div id="mediaq">
           <h3>Let Us Help You</h3>
           <p>Order Tracking</p>
           <p>Bulk Orders</p>
@@ -299,7 +425,7 @@
           <p>Franchise Form</p>
           <p>Furniture Warranty Policy</p>
         </div>
-        <div>
+        <div id="mediaq">
           <h3>Support</h3>
           <p>Customer Service</p>
           <p>How To Order</p>
@@ -308,7 +434,7 @@
           <p>Returns And Exchanges</p>
           <p>FAQs</p>
         </div>
-        <div>
+        <div id="mediaq">
           <h3>Company</h3>
           <p>About Us</p>
           <p>Style Guides</p>
@@ -319,7 +445,7 @@
           <p>Business Enquiries</p>
           <p>The Fabindia Schools</p>
         </div>
-        <div>
+        <div id="mediaq">
           <h3>About Fabindia</h3>
           <p>60 Years Of Fabindia</p>
           <p>Philosophy</p>
@@ -333,7 +459,7 @@
           </p>
           <p>Interior Design Solutions</p>
         </div>
-        <div>
+        <div id="mediaq">
           <h3>Stay in Touch</h3>
           <img src="image\st.png" style="margin-top: 10px; cursor: pointer" />
         </div>
@@ -347,5 +473,5 @@
       </div>
     </div>
   </body>
-  <script src="bigview.js"></script>
+  <script src="./JS/bigview.js"></script>
 </html>
