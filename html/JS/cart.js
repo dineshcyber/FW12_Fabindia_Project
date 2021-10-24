@@ -66,12 +66,20 @@ cartinfo.forEach(function(c){
  let cimg = document.createElement('img'); 
    cimg.src=c.img;
    
- let naam = document.createElement('p')
-   naam.textContent = "Name";
-   let cname = document.createElement('div');
+ let naam = document.createElement('p')  
+   naam.textContent = "Name:";
+   let cname = document.createElement('div');  
    cname.textContent = c.name;
+   let csize = document.createElement('div');  csize.setAttribute('id','csize')
+   csize.innerText = "Size: "+c.size;
    let divname = document.createElement('div');
-   divname.append(naam,cname);
+
+   if(c.category === "Decorative"){
+    divname.append(naam,cname);
+   }else{
+    divname.append(naam,cname,csize);
+   }
+   
 
 
    let pricenaam = document.createElement('p');
@@ -84,9 +92,9 @@ cartinfo.forEach(function(c){
    let cpcn = document.createElement('div');  cpcn.setAttribute('class','cpcn');
    cpcn.append(divname,divprice);
 
-   let hrline1 = document.createElement('hr');
+   let hrline1 = document.createElement('hr'); hrline1.setAttribute('id','hrlinee')
 
-   let cpcnhr = document.createElement('div');
+   let cpcnhr = document.createElement('div'); cpcnhr.setAttribute('id','cpcnhr')
    cpcnhr.append(cpcn,hrline1);
 
    let removebtn = document.createElement('img');   removebtn.setAttribute('id','remov')
@@ -99,7 +107,9 @@ let c_all = document.createElement('div');  c_all.setAttribute('class','c_all')
 c_all.append(cimg,cpcnhr);
 
 let divr = document.createElement('div');  divr.setAttribute('id','divr');
-divr.append(c_all,removebtn)
+divr.append(c_all,removebtn);
+
+
 
 let divmain = document.getElementById('cartimage');
 divmain.append(divr);
