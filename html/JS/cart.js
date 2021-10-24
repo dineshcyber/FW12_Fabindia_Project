@@ -201,6 +201,7 @@ function empty(){
 
         document.getElementById('empty').innerHTML = "Your current shopping cart is empty";
         document.getElementById("orderdetail").innerHTML = "";
+        document.getElementById("orderdetail").style.border = 'none';
 
     }
 }
