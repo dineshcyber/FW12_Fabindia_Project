@@ -66,12 +66,20 @@ cartinfo.forEach(function(c){
  let cimg = document.createElement('img'); 
    cimg.src=c.img;
    
- let naam = document.createElement('p')
-   naam.textContent = "Name";
-   let cname = document.createElement('div');
+ let naam = document.createElement('p')  
+   naam.textContent = "Name:";
+   let cname = document.createElement('div');  
    cname.textContent = c.name;
+   let csize = document.createElement('div');  csize.setAttribute('id','csize')
+   csize.innerText = "Size: "+c.size;
    let divname = document.createElement('div');
-   divname.append(naam,cname);
+
+   if(c.category === "Decorative"){
+    divname.append(naam,cname);
+   }else{
+    divname.append(naam,cname,csize);
+   }
+   
 
 
    let pricenaam = document.createElement('p');
@@ -84,7 +92,7 @@ cartinfo.forEach(function(c){
    let cpcn = document.createElement('div');  cpcn.setAttribute('class','cpcn');
    cpcn.append(divname,divprice);
 
-   let hrline1 = document.createElement('hr');
+   let hrline1 = document.createElement('hr'); hrline1.setAttribute('id','hrlinee')
 
    let cpcnhr = document.createElement('div');
    cpcnhr.append(cpcn,hrline1);
