@@ -100,20 +100,23 @@
       /* SCROLLER END */
 
       body {
-        background-color: #f3f1ea;
+        background-color: #f4f2e5;
         font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
       }
       #cartbox {
+      
         display: flex;
         width: 100%;
         /* border: 1px solid red; */
         margin: auto;
       }
       #cartimage {
-        width: 100%;
+       
+        width: 85%;
         /* border: 1px solid red; */
       }
       #orderdetail {
+      
         width: 30%;
         margin-left: 3.5%;
       }
@@ -127,7 +130,7 @@
         width: 15%;
       }
       .c_all {
-        background-color: #f8f8f6;
+       
         margin: 20px 20px 0;
         width: 100%;
         padding: 10px;
@@ -142,20 +145,43 @@
         margin-left: 100%;
       }
       .cpcn {
-        width: 100%;
-        margin-left: 30%;
-        height: 80px;
+        
+        width: 80%;
+        margin-left: 50%;
+        height: 80%;
+        
       }
-
+      #divr {
+        width:85%;
+        display: flex;
+        background-color: #f8f8f6;
+        margin-top: 2%;
+        margin-left:3%;
+        padding-bottom: 1.5%;
+      }
+      #divr #remov {
+        width: 21px;
+        height: 21px;
+        margin-right:2%;
+        margin-top:2%;
+        opacity: 2;
+      }
+      
+      #csize{
+        margin-top: 15%;
+        width:140%;
+        
+      }
+      
       body hr {
-        width: 58%;
+        width: 60%;
         margin-left: 2.5%;
       }
-      body .c_all hr {
+       #hrlinee {
         /* position: static; */
-        margin-top: 30px;
-        width: 200%;
-        margin-left: 30%;
+        margin-top: 3%;
+        width: 300%;
+        margin-left: 25%;
         /* border: 1px solid red; */
       }
       h2 {
@@ -186,17 +212,7 @@
         color: rgba(82, 12, 12, 0.767);
       }
 
-      #divr {
-        display: flex;
-      }
-      #divr #remov {
-        width: 22px;
-        height: 22px;
-
-        position: relative;
-        right: 70px;
-        bottom: -40px;
-      }
+      
       #continue button {
         border: none;
         background-color: #e5cc76;
@@ -210,6 +226,9 @@
         opacity: 0.8;
         cursor: pointer;
       }
+      .signinup{
+  text-align: right; padding-bottom: 10px; cursor: pointer;
+}
 
       /*======= FOOTER START ========*/
       #bottom {
@@ -218,7 +237,7 @@
         width: 100%;
         background-color: #dbd9cd;
         height: fit-content;
-        margin-top: 350px;
+        margin-top: 150px;
       }
       #bottom_t {
         display: grid;
@@ -253,6 +272,9 @@
       #bottom hr {
         width: 100%;
       }
+      #mediaq img{
+        margin-top: 10px; cursor: pointer;
+      }
 
       /*======= FOOTER END =========*/
     </style>
@@ -278,7 +300,7 @@
           </p>
         </div>
         <div>
-          <p style="text-align: right; padding-bottom: 10px; cursor: pointer">
+          <p class="signinup">
             Sign In | Sign Up | <strong>Fab</strong><em>family</em> | Track Your
             Order | Store Locator
           </p>
@@ -292,7 +314,7 @@
               src="https://www.fabindia.com/file/general/icon-loyalty-star-old-page.png"
             />
             <img src="./image/icon-heart-black.png" alt="" />
-            <a href="./Pages/cart.html"
+            <a href="cart.html"
               ><img src="./image/icon-bag-black.png" alt=""
             /></a>
           </div>
@@ -320,7 +342,7 @@
       <div id="orderdetail"></div>
     </div>
     <div id="continue">
-      <a href="./Pages/products.html"><button>Continue Shopping</button></a>
+      <a href="products.html"><button>Continue Shopping</button></a>
     </div>
 
     <div id="bottom">
@@ -362,14 +384,14 @@
           <p>Fabric Care</p>
           <p>FabCafe</p>
           <p>
-            <strong style="background-color: #dbd9cd">Fab</strong
-            ><em style="background-color: #dbd9cd">family</em> - Loyalty Program
+            <strong >Fab</strong
+            ><em >family</em> - Loyalty Program
           </p>
           <p>Interior Design Solutions</p>
         </div>
         <div>
           <h3>Stay in Touch</h3>
-          <img src="image\st.png" style="margin-top: 10px; cursor: pointer" />
+          <img src="image\st.png" />
         </div>
       </div>
       <hr />

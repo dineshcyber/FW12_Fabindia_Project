@@ -19,16 +19,16 @@ function myFunction() {
 //mouseover start
 let links = document.getElementById(`scroller-b`).querySelectorAll(`p`);
 links[2].addEventListener(`click`, function () {
-  window.location.href = "./Pages/women.html";
+  window.location.href = "women.html";
 });
 links[3].addEventListener(`click`, function () {
-  window.location.href = "./Pages/men.html";
+  window.location.href = "men.html";
 });
 links[6].addEventListener(`click`, function () {
-  window.location.href = "./Pages/decorative.html";
+  window.location.href = "decorative.html";
 });
 links[1].addEventListener(`click`, function () {
-  window.location.href = "./Pages/products.html";
+  window.location.href = "products.html";
 });
 
 //input-bar
@@ -37,11 +37,11 @@ var warning = document.getElementById(`warning`);
 input.addEventListener("keypress", function (e) {
   if (e.key === "Enter") {
     if (input.value == `men` || input.value == `MEN`) {
-      window.location.href = "./Pages/men.html";
+      window.location.href = "men.html";
     } else if (input.value == `women` || input.value == `WOMEN`) {
-      window.location.href = "./Pages/women.html";
+      window.location.href = "women.html";
     } else if (input.value == `decor` || input.value == `DECOR`) {
-      window.location.href = "./Pages/decorative.html";
+      window.location.href = "decorative.html";
     } else {
       warning.style.display = `block`;
       input.value = null;
@@ -49,7 +49,7 @@ input.addEventListener("keypress", function (e) {
   }
 });
 
-//to display decorative products
+//to display women products
 
 let parent = document.getElementById("products");
 
@@ -57,7 +57,7 @@ let info = JSON.parse(localStorage.getItem("productinfo"));
 
 function showProducts() {
   info.forEach(function (product) {
-    if (product.category == "Decorative") {
+    if (product.category == "women") {
       let div = document.createElement("div");
 
       let img = document.createElement("img");
@@ -96,7 +96,7 @@ showProducts();
 function sort1() {
   parent.innerHTML = null;
   info.forEach(function (product) {
-    if (Number(product.cost <= 1500) && product.category == "Decorative") {
+    if (Number(product.cost <= 1500) && product.category == "women") {
       let div = document.createElement("div");
 
       let img = document.createElement("img");
@@ -130,10 +130,11 @@ function sort1() {
 }
 
 //sorting2
+
 function sort2() {
   parent.innerHTML = null;
   info.forEach(function (product) {
-    if (Number(product.cost > 1500) && product.category == "Decorative") {
+    if (Number(product.cost > 1500) && product.category == "women") {
       let div = document.createElement("div");
 
       let img = document.createElement("img");
@@ -154,7 +155,6 @@ function sort2() {
       wishlist.src = "image/icon-heart-black.png";
 
       wishlist.setAttribute("id", "wishlist");
-
       div.onclick = function () {
         visible(product);
       };
@@ -178,7 +178,7 @@ function visible(pro) {
   take.push(pro);
   localStorage.setItem("visible", JSON.stringify(take));
 
-  window.location.href = "./Pages/bigview.html";
+  window.location.href = "bigview.html";
 }
 
 //-----Description and layout sort panel----

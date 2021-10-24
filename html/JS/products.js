@@ -19,16 +19,16 @@ function myFunction() {
 //mouseover start
 let links = document.getElementById(`scroller-b`).querySelectorAll(`p`);
 links[2].addEventListener(`click`, function () {
-  window.location.href = "./Pages/women.html";
+  window.location.href = "women.html";
 });
 links[3].addEventListener(`click`, function () {
-  window.location.href = "./Pages/men.html";
+  window.location.href = "men.html";
 });
 links[6].addEventListener(`click`, function () {
-  window.location.href = "./Pages/decorative.html";
+  window.location.href = "decorative.html";
 });
 links[1].addEventListener(`click`, function () {
-  window.location.href = "./Pages/products.html";
+  window.location.href = "products.html";
 });
 
 //input-bar
@@ -37,11 +37,11 @@ var warning = document.getElementById(`warning`);
 input.addEventListener("keypress", function (e) {
   if (e.key === "Enter") {
     if (input.value == `men` || input.value == `MEN`) {
-      window.location.href = "./Pages/men.html";
+      window.location.href = "men.html";
     } else if (input.value == `women` || input.value == `WOMEN`) {
-      window.location.href = "./Pages/women.html";
+      window.location.href = "women.html";
     } else if (input.value == `decor` || input.value == `DECOR`) {
-      window.location.href = "./Pages/decorative.html";
+      window.location.href = "decorative.html";
     } else {
       warning.style.display = `block`;
       input.value = null;
@@ -58,6 +58,7 @@ let productdata = [
     img: "https://www.fabindia.com/ccstore/v1/images/?source=/file/v334622535619501789/products/10702336BU.f.230921.JPG&height=475&width=475",
     category: "men",
     cost: 2790,
+    size:['S','M','L','XL','XXL']
   },
   {
     name: "Cotton trouser men",
@@ -65,6 +66,7 @@ let productdata = [
     img: "https://www.fabindia.com/ccstore/v1/images/?source=/file/v8534366497497831468/products/10679252BU.b.020421.jpg&height=475&width=475",
     category: "men",
     cost: 2190,
+    size:['S','M','L','XL','XXL']
   },
   {
     name: "Nehru jacket men",
@@ -72,6 +74,7 @@ let productdata = [
     img: "https://www.fabindia.com/ccstore/v1/images/?source=/file/v8235932954286286566/products/10675304BK.f.20.02.21.jpg&height=475&width=475",
     category: "men",
     cost: 1490,
+     size:['S','M','L','XL','XXL']
   },
   {
     name: "Cotton regular salwar",
@@ -79,6 +82,7 @@ let productdata = [
     img: "https://www.fabindia.com/ccstore/v1/images/?source=/file/v5979244302314366052/products/10584859WH.f.14032019.jpg&height=475&width=475",
     category: "men",
     cost: 490,
+     size:['S','M','L','XL','XXL']
   },
   {
     name: "Viscose slimfit kurta",
@@ -86,6 +90,7 @@ let productdata = [
     img: "https://www.fabindia.com/ccstore/v1/images/?source=/file/v8213431944360027281/products/10697663GD.f.230921.JPG&height=475&width=475",
     category: "men",
     cost: 790,
+     size:['S','M','L','XL','XXL']
   },
 
   {
@@ -94,6 +99,7 @@ let productdata = [
     img: "https://www.fabindia.com/ccstore/v1/images/?source=/file/v1337066270086581501/products/10701109BU.f.25.09.21.jpg&height=475&width=475",
     category: "women",
     cost: 3490,
+     size:['S','M','L','XL','XXL']
   },
   {
     name: "Silk Dupta",
@@ -101,6 +107,7 @@ let productdata = [
     img: "https://www.fabindia.com/ccstore/v1/images/?source=/file/v6052351309828903515/products/10700958BU.f.23.09.21.JPG&height=475&width=475",
     category: "women",
     cost: 1490,
+     size:['S','M','L','XL','XXL']
   },
   {
     name: "Cotton kurta red",
@@ -108,6 +115,7 @@ let productdata = [
     img: "https://www.fabindia.com/ccstore/v1/images/?source=/file/v6311478562554356972/products/10668524WN.f.041020.jpg&height=475&width=475",
     category: "women",
     cost: 3790,
+     size:['S','M','L','XL','XXL']
   },
   {
     name: "Cotton printed kurta",
@@ -115,13 +123,15 @@ let productdata = [
     img: "https://www.fabindia.com/ccstore/v1/images/?source=/file/v5068411366971496723/products/10634946BG.f.080212.jpg&height=475&width=475",
     category: "women",
     cost: 2900,
+     size:['S','M','L','XL','XXL']
   },
   {
-    name: " Woven jamdani sari",
+    name: "Cotton Kalamkari Dress",
     price: "M.R.P. ₹5900.00",
-    img: "https://www.fabindia.com/ccstore/v1/images/?source=/file/v8581662257803837945/products/10702075GR.f.23.09.21.JPG&height=475&width=475",
+    img: "https://www.fabindia.com/ccstore/v1/images/?source=/file/v5276218749460330157/products/10672312MR.f.160221.jpg&height=475&width=475",
     category: "women",
     cost: 5900,
+    size:['S','M','L','XL','XXL']
   },
   {
     name: "Bosho coffee-mug",
@@ -129,6 +139,7 @@ let productdata = [
     img: "https://www.fabindia.com/ccstore/v1/images/?source=/file/v6328376165428136595/products/10693032BU.f.270721.jpg&height=475&width=475",
     category: "Decorative",
     cost: 490,
+   
   },
   {
     name: "Jeev wood Tripod",
@@ -136,6 +147,7 @@ let productdata = [
     img: "https://www.fabindia.com/ccstore/v1/images/?source=/file/v9114850615711217690/products/10674238NT.f.240321.jpg&height=475&width=475",
     category: "Decorative",
     cost: 9490,
+    
   },
   {
     name: "Livna Dinner Plate",
@@ -299,7 +311,7 @@ function visible(pro) {
   take.push(pro);
   localStorage.setItem("visible", JSON.stringify(take));
 
-  window.location.href = "./Pages/bigview.html";
+  window.location.href = "bigview.html";
 }
 
 //-----Description and layout sort panel----

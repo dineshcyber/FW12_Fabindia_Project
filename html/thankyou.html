@@ -4,8 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>Buy fabindia product</title>
+    <title>Thank You</title>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Mulish&display=swap");
       * {
@@ -28,7 +27,6 @@
         top: 0;
         width: 100%;
       }
-
       /* SCROLLER START */
       #scroller {
         border-bottom: 1px solid gray;
@@ -99,86 +97,7 @@
 
       /* SCROLLER END */
 
-      body {
-        background-color: #f4f2e5;
-        font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
-      }
-      #bigview {
-        width: 84%;
-        background-color: #f3f1ea;
-
-        margin: auto;
-        display: flex;
-        margin-top: 2%;
-      }
-      #imagebox {
-        width: 50%;
-      }
-      #imagebox img {
-        width: 75%;
-      }
-      #detailsbox {
-        width: 50%;
-      }
-
-      li {
-        font-size: small;
-        margin-top: 0.5%;
-        margin-right: 30%;
-      }
-      #detailsbox p {
-        font-size: 120%;
-      }
-
-      button {
-        width: 25%;
-        height: 6%;
-        background-color: #e5cc76;
-        font-weight: bold;
-        border: none;
-        margin-top: 1%;
-      }
-
-      .checkbtn {
-        background-color: black;
-        color: white;
-        height: 30px;
-        width: 18%;
-      }
-      input {
-        height: 25px;
-        background-color: #f3f1ea;
-        width: 30%;
-      }
-      hr {
-        width: 70%;
-        margin-right: 30%;
-        margin-top: 3%;
-        margin-bottom: 3%;
-      }
-
-      input::-webkit-outer-spin-button,
-      input::-webkit-inner-spin-button {
-        -webkit-appearance: none;
-      }
-      .header {
-        float: left;
-
-        height: 155px;
-        width: 100%;
-        margin: auto;
-
-        background-color: #f4f2e5;
-      }
-      button:hover {
-        opacity: 0.6;
-        cursor: pointer;
-      }
-      img:hover {
-        cursor: pointer;
-      }
-
-      /*======= FOOTER START ========*/
+      /* ======= FOOTER START ========*/
       #bottom {
         padding-top: 20px;
         float: left;
@@ -190,17 +109,17 @@
       #bottom_t {
         display: grid;
         width: 100%;
-        grid-template-columns: 20% 20% 20% 20% 20%;
         background-color: #dbd9cd;
+        grid-template-columns: auto auto auto auto auto;
       }
       #bottom p {
         margin: 10px 0px;
-        font-size: medium;
         background-color: #dbd9cd;
       }
 
       #bottom_t > div {
         margin: 1% auto;
+        padding: 0px 20px;
         background-color: #dbd9cd;
       }
       #bottom_b {
@@ -210,22 +129,40 @@
       }
 
       #bottom_b > h3 {
-        margin: 1.5%;
-
-        background-color: #dbd9cd;
+        margin: 2.7%;
       }
       #bottom_b > img {
-        margin: 1.7%;
+        height: 55px;
+        width: auto;
+        margin: auto 2%;
       }
       #bottom hr {
         width: 100%;
-        margin-bottom: 10px;
       }
       h3 {
         background-color: #dbd9cd;
       }
-
-      /*======= FOOTER END =========*/
+      /*======= FOOTER END ========= */
+      #thanks {
+        margin: auto;
+        /* border: 1px solid red; */
+        height: 200px;
+      }
+      #thanks h1,
+      #thanks h4 {
+        margin-top: 30px;
+        margin-left: 20px;
+      }
+      #thanks button {
+        cursor: pointer;
+        font-weight: 600;
+        margin: 100px auto 45% 45%;
+        background-color: #ddbc4b;
+        border: 0;
+        height: 40px;
+        width: 180px;
+        border-radius: 2px;
+      }
     </style>
   </head>
   <body>
@@ -263,7 +200,7 @@
               src="https://www.fabindia.com/file/general/icon-loyalty-star-old-page.png"
             />
             <img src="./image/icon-heart-black.png" alt="" />
-            <a href="./Pages/cart.html"
+            <a href="cart.html"
               ><img src="./image/icon-bag-black.png" alt=""
             /></a>
           </div>
@@ -283,10 +220,12 @@
       </div>
     </div>
 
-    <div id="bigview">
-      <div id="imagebox"></div>
-
-      <div id="detailsbox"></div>
+    <div id="thanks">
+      <h1>Your Order has been placed Successfully</h1>
+      <h4>Thank you for shopping with us</h4>
+      <a href="products.html">
+        <button>Continue Shopping</button>
+      </a>
     </div>
 
     <div id="bottom">
@@ -347,5 +286,56 @@
       </div>
     </div>
   </body>
-  <script src="./JS/bigview.js"></script>
 </html>
+<script>
+  //Scroller hider start
+  window.onscroll = function () {
+    myFunction();
+  };
+
+  var header = document.getElementById("scroller");
+
+  var sticky = header.offsetTop;
+
+  function myFunction() {
+    if (window.pageYOffset > sticky) {
+      header.classList.add("sticky");
+    } else {
+      header.classList.remove("sticky");
+    }
+  }
+  //scroller hider end
+
+  //mouseover start
+  let links = document.getElementById(`scroller-b`).querySelectorAll(`p`);
+  links[2].addEventListener(`click`, function () {
+    window.location.href = "women.html";
+  });
+  links[3].addEventListener(`click`, function () {
+    window.location.href = "men.html";
+  });
+  links[6].addEventListener(`click`, function () {
+    window.location.href = "decorative.html";
+  });
+  links[1].addEventListener(`click`, function () {
+    window.location.href = "products.html";
+  });
+
+  //input-bar
+  var input = document.getElementById(`search`);
+  var warning = document.getElementById(`warning`);
+  input.addEventListener("keypress", function (e) {
+    if (e.key === "Enter") {
+      if (input.value == `men` || input.value == `MEN`) {
+        window.location.href = "men.html";
+      } else if (input.value == `women` || input.value == `WOMEN`) {
+        window.location.href = "women.html";
+      } else if (input.value == `decor` || input.value == `DECOR`) {
+        window.location.href = "decorative.html";
+      } else {
+        warning.style.display = `block`;
+        input.value = null;
+      }
+    }
+  });
+</script>
