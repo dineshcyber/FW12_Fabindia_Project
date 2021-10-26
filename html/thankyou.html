@@ -163,6 +163,50 @@
         width: 180px;
         border-radius: 2px;
       }
+
+      /* ===========RESPONSIVE=========== */
+      @media (max-width: 900px) {
+        #scroller-t #mediaimg {
+          width: 100px;
+          height: auto;
+        }
+        #scroller-t input {
+          padding-left: 10px;
+          height: 40px;
+          width: 100%;
+        }
+        #scroller #warning {
+          font-size: xx-small;
+        }
+        #bottom img,
+        #bottom p {
+          display: none;
+        }
+        #bottom_t {
+          display: inline;
+        }
+        #bottom {
+          margin-top: 80px;
+          padding-bottom: 20px;
+        }
+        #bottom h3 {
+          font-size: medium;
+        }
+      }
+      @media (max-width: 500px) {
+        body {
+          min-width: 350px;
+        }
+        #scroller-t #mediaimg {
+          width: 60px;
+        }
+        #bottom h3 {
+          font-size: 80%;
+        }
+        #bottom {
+          height: max-content;
+        }
+      }
     </style>
   </head>
   <body>
