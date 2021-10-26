@@ -178,6 +178,12 @@
         #scroller #warning {
           font-size: xx-small;
         }
+        #mediaproducts {
+          display: none;
+        }
+        #onlycart {
+          display: none;
+        }
         #bottom img,
         #bottom p {
           display: none;
@@ -191,6 +197,9 @@
         }
         #bottom h3 {
           font-size: medium;
+        }
+        #thanks button {
+          margin: 100px auto 45% 35%;
         }
       }
       @media (max-width: 500px) {
@@ -219,6 +228,7 @@
           <a href="index.html">
             <img
               src="https://www.fabindia.com/file/general/fab_india_logo.png"
+              id="mediaimg"
               alt="Fabindia Logo"
             />
           </a>
@@ -230,20 +240,21 @@
           </p>
         </div>
         <div>
-          <p style="text-align: right; padding-bottom: 10px; cursor: pointer">
+          <p id="onlycart" class="signinup">
             Sign In | Sign Up | <strong>Fab</strong><em>family</em> | Track Your
             Order | Store Locator
           </p>
           <div id="scroller-t-r">
-            <p>📞 INR</p>
+            <p id="onlycart">📞 INR</p>
             <img
               src="https://www.fabindia.com/file/v8385693196996654632/general/india_flag.svg"
             />
             <p>˅</p>
             <img
               src="https://www.fabindia.com/file/general/icon-loyalty-star-old-page.png"
+              id="onlycart"
             />
-            <img src="./image/icon-heart-black.png" alt="" />
+            <img src="./image/icon-heart-black.png" id="onlycart" alt="" />
             <a href="cart.html"
               ><img src="./image/icon-bag-black.png" alt=""
             /></a>
@@ -251,16 +262,16 @@
         </div>
       </div>
       <div id="scroller-b">
-        <p>New Arrivals ˅</p>
+        <p id="mediaproducts">New Arrivals ˅</p>
         <p>Collections ˅</p>
         <p>Women ˅</p>
         <p>Men ˅</p>
-        <p>Kids ˅</p>
-        <p>Home Linen ˅</p>
+        <p id="mediaproducts">Kids ˅</p>
+        <p id="mediaproducts">Home Linen ˅</p>
         <p>Dining & Decor ˅</p>
-        <p>Furniture ˅</p>
-        <p>Beauty ˅</p>
-        <p>Food ˅</p>
+        <p id="mediaproducts">Furniture ˅</p>
+        <p id="mediaproducts">Beauty ˅</p>
+        <p id="mediaproducts">Food ˅</p>
       </div>
     </div>
 
