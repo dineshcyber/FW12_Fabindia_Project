@@ -61,6 +61,7 @@
         border-radius: 2px;
         height: 40px;
         width: 80%;
+        text-align: center;
       }
       #scroller-t-r {
         display: flex;
@@ -105,20 +106,20 @@
       }
       #bigview {
         width: 84%;
-        background-color: #f3f1ea;
-
         margin: auto;
         display: flex;
         margin-top: 2%;
       }
       #imagebox {
         width: 50%;
+        
       }
       #imagebox img {
         width: 75%;
       }
       #detailsbox {
         width: 50%;
+       
       }
       #sizediv{
         width:50%;
@@ -137,15 +138,21 @@
         padding-top: 1%;
        padding-bottom: 1%;
       }
+     
 
       li {
         font-size: small;
         margin-top: 0.5%;
         margin-right: 30%;
+       
       }
       #detailsbox p {
-        font-size: 120%;
-        
+        font-size: 95%;
+        font-weight: bold;
+      
+      }
+      #detailsbox #itemname{
+        font-size: larger;
       }
 
       button {
@@ -155,6 +162,7 @@
         font-weight: bold;
         border: none;
         margin-top: 1%;
+
       }
 
       .checkbtn {
@@ -165,7 +173,7 @@
       }
       input {
         height: 25px;
-        background-color: #f3f1ea;
+     
         width: 30%;
       }
       hr {
@@ -175,6 +183,7 @@
         margin-bottom: 3%;
         opacity: .5;
       }
+      
 
       input::-webkit-outer-spin-button,
       input::-webkit-inner-spin-button {
@@ -197,6 +206,7 @@
         cursor: pointer;
       }
 
+     
       /*======= FOOTER START ========*/
       #bottom {
         padding-top: 20px;
@@ -210,6 +220,9 @@
         display: grid;
         width: 100%;
         grid-template-columns: 20% 20% 20% 20% 20%;
+        background-color: #dbd9cd;
+      }
+      #fabcolor{
         background-color: #dbd9cd;
       }
       #bottom p {
@@ -239,12 +252,20 @@
       #bottom hr {
         width: 100%;
         margin-bottom: 10px;
+        height: .15%;
+        background-color: black;
       }
       h3 {
         background-color: #dbd9cd;
       }
-
+      #mediaq img{
+        margin-top: 10px; cursor: pointer;
+      }
       /*======= FOOTER END =========*/
+.signinup{
+  text-align: right; padding-bottom: 10px; cursor: pointer;
+}
+      
 
       @media(max-width:900px){
           #bigview{
@@ -293,9 +314,11 @@
         display: none;
       }
       #scroller-t input {
-        padding-left: 10px;
-        height: 40px;
+        padding-left: 5px;
+        height: 30px;
         width: 100%;
+        font-size: 45%;
+        text-align: center;
       }
       #scroller-t #mediaimg {
         width: 100px;
@@ -310,7 +333,12 @@
       }
       #bottom{
         margin-top:8%;
-      }
+        height:250px;
+        
+      }    
+      #scroller #warning {
+   font-size: xx-small;
+ }
       
       }
       @media (max-width:500px){
@@ -325,6 +353,7 @@
               margin-top:2%;
        
             }
+            
             #detailsbox{
               margin-bottom: 0;
             }
@@ -351,6 +380,8 @@
         margin-top: 10%;
         height: max-content;
       }
+      
+      
       }
     </style>
   </head>
@@ -375,7 +406,7 @@
           </p>
         </div>
         <div >
-          <p id="onlycart" style="text-align: right; padding-bottom: 10px; cursor: pointer">
+          <p id="onlycart" class="signinup">
             Sign In | Sign Up | <strong>Fab</strong><em>family</em> | Track Your
             Order | Store Locator
           </p>
@@ -396,8 +427,8 @@
         </div>
       </div>
       <div id="scroller-b">
-        <p>New Arrivals ˅</p>
-        <p id="mediaproducts">Collections ˅</p>
+        <p id="mediaproducts">New Arrivals ˅</p>
+        <p>Collections ˅</p>
         <p>Women ˅</p>
         <p>Men ˅</p>
         <p id="mediaproducts">Kids ˅</p>
@@ -454,14 +485,14 @@
           <p>Fabric Care</p>
           <p>FabCafe</p>
           <p>
-            <strong style="background-color: #dbd9cd">Fab</strong
-            ><em style="background-color: #dbd9cd">family</em> - Loyalty Program
+            <strong id="fabcolor">Fab</strong
+            ><em  id="fabcolor">family</em> - Loyalty Program
           </p>
           <p>Interior Design Solutions</p>
         </div>
         <div id="mediaq">
           <h3>Stay in Touch</h3>
-          <img src="image\st.png" style="margin-top: 10px; cursor: pointer" />
+          <img src="image\st.png"  />
         </div>
       </div>
       <hr />

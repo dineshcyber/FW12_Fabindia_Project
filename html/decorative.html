@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buy New Arrivals Decorative</title>
+    
+    <title>Buy New Arrivals decor</title>
     <style>
-@import url("https://fonts.googleapis.com/css2?family=Mulish&display=swap");
+ @import url("https://fonts.googleapis.com/css2?family=Mulish&display=swap");
     * {
       margin: 0;
       font-family: "Mulish", sans-serif;
@@ -98,11 +99,8 @@
 
     /* SCROLLER END */
 
-
-   body{
-            background-color:#f4f2e5;
- }
-
+       
+  
 #productsbox{
 display:flex;
 width:100%;
@@ -113,19 +111,18 @@ width:100%;
     margin-left:5%;
 }
 #products {
-  width:100%;
+    width:100%;
     font-family: "Mulish", sans-serif;
     display: grid;
-    grid-template-columns: 33% 33% 33%;
+    grid-template-columns: auto auto auto;
     gap:2%;
+   
 }
 #products img{
 width:100%;
 
 }
- 
 
-    
     .category{
         font-size:17px;
         font-weight: 600;
@@ -163,13 +160,14 @@ width:100%;
     a{
         color:rgb(85, 82, 82);
         font-weight: lighter;
+        text-decoration: none;
     }
     a:hover{
         color:rgba(133, 19, 19, 0.767);
     }
     .sort{
        align-items: center;
-       font-size: 14px;
+       
     }
     .price button{
         font-family: sans-serif;
@@ -178,14 +176,14 @@ width:100%;
         color:rgb(85, 82, 82);
         background-color:#f4f2e5;
     }
-
     #products img:hover{
 /* opacity: .5; */
 cursor: pointer;
 
-}
+}  
 
-#products p{
+
+  #products p{
      background-color: #f9f8f1;
      font-size: small;
      margin-left: 2px;
@@ -197,49 +195,67 @@ cursor: pointer;
        padding-bottom: 25px;
        font-size: medium;
  }
+ 
+ .signinup{
+  text-align: right; padding-bottom: 10px; cursor: pointer;
+}
 
 /*======= FOOTER START ========*/
 #bottom {
   padding-top: 20px;
-    float: left;
+  
     width: 100%;
     background-color: #dbd9cd;
-    height: 400px;
-    margin-top: 100px;
+    font-size:medium;
+    
+    margin-top:400px;
+   
 }
 #bottom_t {
   display: grid;
-    width: 100%;  background-color: #dbd9cd;
-    grid-template-columns: 20% 20% 20% 20% 20%;
+    width: 100%;
+    grid-template-columns: 20% 20% 20% 20% 20%; background-color: #dbd9cd;
+
 }
+#fabcolor{
+        background-color: #dbd9cd;
+      }
+      #mediaq img{
+        margin-top: 10px; cursor: pointer;
+      }
 #bottom p{
-  margin: 10px 0px;  background-color: #dbd9cd;
+  margin: 10px 0px; background-color: #dbd9cd;
 }
 
 #bottom_t > div {
   margin: 1% auto;
-  padding: 0px 20px;  background-color: #dbd9cd;
+  padding: 0px 20px;
+  background-color: #dbd9cd;
+
 }
 #bottom_b {
   display: flex;
-  justify-content: space-between;  background-color: #dbd9cd;
+  justify-content: space-between;
+  background-color: #dbd9cd;
+
 }
 
-#bottom_b > h3 {
+ #bottom_b > h3 {
   margin: 2.7%;
+  background-color: #dbd9cd;
+
 }
 #bottom_b > img {
   margin: 1.7%;
 }
-/*======= FOOTER END =========*/
-
 #bottom hr{ 
     width:100%;
 }
-  h3{
-    background-color: #dbd9cd;
-  }
-    
+ h3{
+     background-color:#dbd9cd; ;
+ }
+/*======= FOOTER END =========*/
+ 
 /*======= Description Panel Start =====*/
 #desc{
   margin-top: 10px;
@@ -271,8 +287,111 @@ cursor: pointer;
 #desc-b2{
   border: 1px solid gray;
 }
+#desc p{
+  background-color: #F9F8F1;
+}
 /*======= Description Panel End =====*/
+
+@media(max-width:800px){
+  #productsbox{
+    display: inline;
+  }
+  #products{
+    margin-top: 2%;
+    grid-template-columns: auto auto;
+    margin-left: 3%;
+  }
+  #desc{
+    display:none;
+  }
+  .sort{
+    width:100%;
+    margin-top:1%;
+    display:flex;
+    
+    margin-left:3%
+  }
+  hr{
+    display: none;
+  }
+  .category{
+    width:43%;
+    border:1px solid black;
+    margin-top: 1%;
+    padding:1% 1% 1%;
+    font-size:medium
+    
+  }
+  .price{
+    width:43%;
+    border:1px solid black;
+    margin-top: 1%;
+    margin-left:3%;
+    padding:1% 1% 1%;
+    font-size:medium
+    
+  }
+  #bottom{
+    margin-top:30%;
+  }
+  #bottom img{
+    display: none;
+  }
+  #bottom p{
+    display:none
+  }
+  #bottom_t{
+    displaY:inline;
+  }
+  #bottom h3{
+    font-size: medium;
+    font-weight: normal;
+  }
+  #onlycart{
+    display: none;
+  }
+  #scroller-t #mediaimg {
+        width: 100px;
+        height: auto;
+      }
+      #scroller-t input {
+        padding-left: 10px;
+        height: 40px;
+        width: 100%;
+      }
+      #mediaproducts {
+        display: none;
+      }
+      #scroller #warning {
+   font-size: xx-small;
+ }
+}
+@media(max-width:500px){
+  body{
+    min-width: 350px;
+  }
+  .category,.price{
+    font-size:x-small;
+  }
+  #scroller-t #mediaimg{
+    width:70px;
+   
+  }
+  #bottom h3{
+    font-size: small;
+  }
+  #scroller-t input{
+    font-size:xx-small;
+    padding:0;
+    width:95px;
+    height:25px;
+    text-align: center;
+  }
+  #scroller #warning {
+   font-size: xx-small;
+ }
   
+}
 
     </style>
 </head>
@@ -285,7 +404,7 @@ cursor: pointer;
           <div>
             <a href="index.html">
               <img
-                src="https://www.fabindia.com/file/general/fab_india_logo.png"
+                src="https://www.fabindia.com/file/general/fab_india_logo.png" id="mediaimg"
                 alt="Fabindia Logo"
               />
             </a>
@@ -297,20 +416,20 @@ cursor: pointer;
             </p>
           </div>
           <div>
-            <p style="text-align: right; padding-bottom: 10px; cursor: pointer">
+            <p id="onlycart" class="signinup">
               Sign In | Sign Up | <strong>Fab</strong><em>family</em> | Track Your
               Order | Store Locator
             </p>
             <div id="scroller-t-r">
-              <p>📞 INR</p>
+              <p id="onlycart">📞 INR</p>
               <img
                 src="https://www.fabindia.com/file/v8385693196996654632/general/india_flag.svg"
               />
               <p>˅</p>
               <img
-                src="https://www.fabindia.com/file/general/icon-loyalty-star-old-page.png"
+              id="onlycart" src="https://www.fabindia.com/file/general/icon-loyalty-star-old-page.png"
               />
-              <img src="./image/icon-heart-black.png" alt="" />
+              <img src="./image/icon-heart-black.png" id="onlycart" alt="" />
               <a href="cart.html"
                 ><img src="./image/icon-bag-black.png" alt=""
               /></a>
@@ -318,28 +437,26 @@ cursor: pointer;
           </div>
         </div>
         <div id="scroller-b">
-             <p>New Arrivals ˅</p>  
-             <p>Collections ˅</p>
+          <p id="mediaproducts">New Arrivals ˅</p>
+          <p  >Collections ˅</p>
           <p>Women ˅</p>
           <p>Men ˅</p>
-          <p>Kids ˅</p>
-          <p>Home Linen ˅</p>
-          <p>Dining & Decor ˅</p>
-          <p>Furniture ˅</p>
-          <p>Beauty ˅</p>
-          <p>Food ˅</p>
+          <p  id="mediaproducts">Kids ˅</p>
+          <p  id="mediaproducts">Home Linen ˅</p>
+          <p >Dining & Decor ˅</p>
+          <p  id="mediaproducts">Furniture ˅</p>
+          <p  id="mediaproducts"> Beauty ˅</p>
+          <p  id="mediaproducts">Food ˅</p>
         </div>
       </div>
-   
-
 
 
 
     <div id="productsbox">
         <div class="sort">
           <div class= "category">Category 
-           <div class= "disappear"><a  href="products.html">All</a></div>
-           <div class= "disappear"><a  href="men.html">Men</a></div>
+           <div class= "disappear"><a   href="products.html">All</a></div>
+           <div class= "disappear" ><a  href="men.html">Men</a></div>
            <div class= "disappear"><a  href="women.html">Women</a></div>
            <div class= "disappear"><a  href="decorative.html">Decorative</a></div><hr/>
         </div> 
@@ -348,21 +465,21 @@ cursor: pointer;
             <div class= "disappear"><a href="#nothing"> <button onclick="sort1()">₹0 - ₹1500</a></button></div>
             <div class= "disappear"><a href="#nothing"><button onclick="sort2()">₹1500 - ₹10000</a></button></div><hr/>
         </div>
-             
-         
             
- 
-         </div>
-         <div style="margin-right: 5%;">
+        
+           
+
+        </div>
+        <div style="margin-right: 5%;">
 
           <div id="desc">
            <div>
              <p>
-               <strong style="background-color: #F9F8F1;">Dining & Decorative Items</strong>
+               <strong >Dining & Decor</strong>
              </p>
            </div>
            <div id="desc-sort">
-             <p style="background-color:#F9F8F1;">View By:</p>
+             <p >View By:</p>
              <button id="desc-b1">|||</button>
              <button id="desc-b2">||||</button>
            </div>
@@ -371,7 +488,7 @@ cursor: pointer;
           <div id="products"></div>
         </div>
     </div>
-
+    
 
     <div id="bottom">
       <div id="bottom_t">
@@ -411,12 +528,12 @@ cursor: pointer;
           <p>Organic Certification</p>
           <p>Fabric Care</p>
           <p>FabCafe</p>
-          <p><strong style="background-color: #DBD9CD;">Fab</strong><em style="background-color: #DBD9CD;">family</em> - Loyalty Program</p>
+          <p><strong id="fabcolor">Fab</strong><em id="fabcolor">family</em> - Loyalty Program</p>
           <p>Interior Design Solutions</p>
         </div>
-        <div>
+        <div id="mediaq">
           <h3>Stay in Touch</h3>
-          <img src="image\st.png" style="margin-top: 10px; cursor: pointer" />
+          <img src="image\st.png"  />
         </div>
       </div>
       <hr />
@@ -427,7 +544,6 @@ cursor: pointer;
         />
       </div>
     </div>
-    
 </body>
 <script src="./JS/decorative.js"></script>
 </html>

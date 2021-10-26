@@ -95,6 +95,7 @@
       color: #8f2c34;
       padding-top: 5px;
       display: none;
+      font-size:5%;
     }
 
     /* SCROLLER END */
@@ -167,7 +168,7 @@ width:100%;
     }
     .sort{
        align-items: center;
-       font-size: 14px;
+       
     }
     .price button{
         font-family: sans-serif;
@@ -196,16 +197,18 @@ cursor: pointer;
        font-size: medium;
  }
  
-
+ .signinup{
+  text-align: right; padding-bottom: 10px; cursor: pointer;
+}
 
 /*======= FOOTER START ========*/
 #bottom {
   padding-top: 20px;
-    float: left;
+  
     width: 100%;
     background-color: #dbd9cd;
     font-size:medium;
-    height: fit-content;
+    
     margin-top:400px;
    
 }
@@ -215,6 +218,12 @@ cursor: pointer;
     grid-template-columns: 20% 20% 20% 20% 20%; background-color: #dbd9cd;
 
 }
+#fabcolor{
+        background-color: #dbd9cd;
+      }
+      #mediaq img{
+        margin-top: 10px; cursor: pointer;
+      }
 #bottom p{
   margin: 10px 0px; background-color: #dbd9cd;
 }
@@ -279,7 +288,113 @@ cursor: pointer;
 #desc-b2{
   border: 1px solid gray;
 }
+#desc p{
+  background-color: #F9F8F1;
+}
 /*======= Description Panel End =====*/
+
+@media(max-width:800px){
+  #productsbox{
+    display: inline;
+  }
+  #products{
+    margin-top: 2%;
+    grid-template-columns: auto auto;
+    margin-left: 3%;
+  }
+  #desc{
+    display:none;
+  }
+  .sort{
+    width:100%;
+    margin-top:1%;
+    display:flex;
+    
+    margin-left:3%
+  }
+  hr{
+    display: none;
+  }
+  .category{
+    width:43%;
+    border:1px solid black;
+    margin-top: 1%;
+    padding:1% 1% 1%;
+    font-size:medium
+    
+  }
+  .price{
+    width:43%;
+    border:1px solid black;
+    margin-top: 1%;
+    margin-left:3%;
+    padding:1% 1% 1%;
+    font-size:medium
+    
+  }
+  #bottom{
+    margin-top:100%
+  }
+  #bottom img{
+    display: none;
+  }
+  #bottom p{
+    display:none
+  }
+  #bottom_t{
+    displaY:inline;
+  }
+  #bottom h3{
+    font-size: medium;
+    font-weight: normal;
+  }
+  #onlycart{
+    display: none;
+  }
+  #scroller-t #mediaimg {
+        width: 100px;
+        height: auto;
+      }
+      #scroller-t input {
+        padding-left: 10px;
+        height: 40px;
+        width: 100%;
+        text-align: center;
+      }
+      #mediaproducts {
+        display: none;
+      }
+      #scroller #warning {
+   font-size: xx-small;
+ }
+}
+@media(max-width:500px){
+  body{
+    min-width: 350px;
+  }
+  .category,.price{
+    font-size:x-small;
+  }
+  #scroller-t #mediaimg{
+    width:70px;
+   
+  }
+  #bottom h3{
+    font-size: small;
+  }
+  #scroller-t input{
+    font-size:xx-small;
+    padding:0;
+    width:95px;
+    height:25px;
+    text-align: center;
+  }
+ #scroller #warning {
+   font-size: xx-small;
+ }
+ 
+  
+}
 
     </style>
 </head>
@@ -292,7 +407,7 @@ cursor: pointer;
           <div>
             <a href="index.html">
               <img
-                src="https://www.fabindia.com/file/general/fab_india_logo.png"
+                src="https://www.fabindia.com/file/general/fab_india_logo.png" id="mediaimg"
                 alt="Fabindia Logo"
               />
             </a>
@@ -304,20 +419,20 @@ cursor: pointer;
             </p>
           </div>
           <div>
-            <p style="text-align: right; padding-bottom: 10px; cursor: pointer">
+            <p id="onlycart" class="signinup">
               Sign In | Sign Up | <strong>Fab</strong><em>family</em> | Track Your
               Order | Store Locator
             </p>
             <div id="scroller-t-r">
-              <p>📞 INR</p>
+              <p id="onlycart">📞 INR</p>
               <img
                 src="https://www.fabindia.com/file/v8385693196996654632/general/india_flag.svg"
               />
               <p>˅</p>
               <img
-                src="https://www.fabindia.com/file/general/icon-loyalty-star-old-page.png"
+              id="onlycart" src="https://www.fabindia.com/file/general/icon-loyalty-star-old-page.png"
               />
-              <img src="./image/icon-heart-black.png" alt="" />
+              <img src="./image/icon-heart-black.png" id="onlycart" alt="" />
               <a href="cart.html"
                 ><img src="./image/icon-bag-black.png" alt=""
               /></a>
@@ -325,16 +440,16 @@ cursor: pointer;
           </div>
         </div>
         <div id="scroller-b">
-          <p>New Arrivals ˅</p>
+          <p id="mediaproducts">New Arrivals ˅</p>
           <p>Collections ˅</p>
           <p>Women ˅</p>
           <p>Men ˅</p>
-          <p>Kids ˅</p>
-          <p>Home Linen ˅</p>
-          <p>Dining & Decor ˅</p>
-          <p>Furniture ˅</p>
-          <p>Beauty ˅</p>
-          <p>Food ˅</p>
+          <p  id="mediaproducts">Kids ˅</p>
+          <p  id="mediaproducts">Home Linen ˅</p>
+          <p >Dining & Decor ˅</p>
+          <p  id="mediaproducts">Furniture ˅</p>
+          <p  id="mediaproducts"> Beauty ˅</p>
+          <p  id="mediaproducts">Food ˅</p>
         </div>
       </div>
 
@@ -363,11 +478,11 @@ cursor: pointer;
           <div id="desc">
            <div>
              <p>
-               <strong style="background-color: #F9F8F1;">All Products</strong>
+               <strong >All Products</strong>
              </p>
            </div>
            <div id="desc-sort">
-             <p style="background-color:#F9F8F1;">View By:</p>
+             <p>View By:</p>
              <button id="desc-b1">|||</button>
              <button id="desc-b2">||||</button>
            </div>
@@ -416,12 +531,12 @@ cursor: pointer;
           <p>Organic Certification</p>
           <p>Fabric Care</p>
           <p>FabCafe</p>
-          <p><strong style="background-color: #DBD9CD;">Fab</strong><em style="background-color: #DBD9CD;">family</em> - Loyalty Program</p>
+          <p><strong id="fabcolor">Fab</strong><em id="fabcolor">family</em> - Loyalty Program</p>
           <p>Interior Design Solutions</p>
         </div>
-        <div>
+        <div id="mediaq">
           <h3>Stay in Touch</h3>
-          <img src="image\st.png" style="margin-top: 10px; cursor: pointer" />
+          <img src="image\st.png" />
         </div>
       </div>
       <hr />
