@@ -240,6 +240,54 @@
       }
       /*========== RIGHT PANEL END ========== */
 
+      /*======= FOOTER START ========*/
+      #bottom {
+        padding-top: 20px;
+        float: left;
+        width: 100%;
+        background-color: #dbd9cd;
+        height: fit-content;
+        margin-top: 150px;
+      }
+      #bottom_t {
+        display: grid;
+        width: 100%;
+        grid-template-columns: 20% 20% 20% 20% 20%;
+        background-color: #dbd9cd;
+      }
+      #bottom p {
+        font-weight: normal;
+        margin: 10px 0px;
+        background-color: #dbd9cd;
+      }
+
+      #bottom_t > div {
+        margin: 1% auto;
+        padding: 0px 20px;
+        background-color: #dbd9cd;
+      }
+      #bottom_b {
+        display: flex;
+        justify-content: space-between;
+        background-color: #dbd9cd;
+      }
+
+      #bottom_b > h3 {
+        margin: 2.7%;
+        background-color: #dbd9cd;
+      }
+      #bottom_b > img {
+        margin: 1.7%;
+      }
+      #bottom hr {
+        width: 100%;
+      }
+      #mediaq img{
+        margin-top: 10px; cursor: pointer;
+      }
+
+      /*======= FOOTER END =========*/
+
       /*========= RESPONSIVE============*/
 @media(max-width:900px){
  #main_panel{
@@ -297,6 +345,23 @@ flex-direction: column;
       #confirm{
         width: 100%;
       }
+      #proceed{
+        margin: auto;
+      }
+      #bottom img,#bottom p{
+    display: none;
+  }
+  #bottom_t{
+    
+        display: inline;
+  }
+  #bottom{
+    margin-top:80px;
+    padding-bottom:20px;
+  }
+  #bottom h3{
+    font-size: medium;
+  }
 
 }
     </style>
