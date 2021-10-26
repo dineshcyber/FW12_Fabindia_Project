@@ -132,7 +132,7 @@
         padding: 20px 0;
       }
       #pay2 {
-        display: none;
+        /* display: none; */
         border-top: 1px solid gray;
       }
       #pay3 {
@@ -239,6 +239,8 @@
         width: 70%;
       }
       /*========== RIGHT PANEL END ========== */
+
+      /*========= RESPONSIVE============*/
 @media(max-width:900px){
  #main_panel{
    /* border: 1px solid red; */
@@ -248,11 +250,23 @@
  #main_panel_left{
    width: 100%;
    border-right: none;
-   border: 1px solid red;
+   /* border: 1px solid red; */
  }
  #main_panel_right{
    width: 100%;
-   border: 1px solid red;
+   /* border: 1px solid red; */
+  }
+#pay3{
+flex-direction: column;
+}
+  #p3l{
+    display: flex;
+    width: 100%;
+    height: auto;
+    padding-left: 0px;
+  }
+  #p3l > p{
+   margin: auto;
  }
 }
     </style>
