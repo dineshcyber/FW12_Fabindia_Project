@@ -239,6 +239,131 @@
         width: 70%;
       }
       /*========== RIGHT PANEL END ========== */
+
+      /*======= FOOTER START ========*/
+      #bottom {
+        padding-top: 20px;
+        float: left;
+        width: 100%;
+        background-color: #dbd9cd;
+        height: fit-content;
+        margin-top: 150px;
+      }
+      #bottom_t {
+        display: grid;
+        width: 100%;
+        grid-template-columns: 20% 20% 20% 20% 20%;
+        background-color: #dbd9cd;
+      }
+      #bottom p {
+        font-weight: normal;
+        margin: 10px 0px;
+        background-color: #dbd9cd;
+      }
+
+      #bottom_t > div {
+        margin: 1% auto;
+        padding: 0px 20px;
+        background-color: #dbd9cd;
+      }
+      #bottom_b {
+        display: flex;
+        justify-content: space-between;
+        background-color: #dbd9cd;
+      }
+
+      #bottom_b > h3 {
+        margin: 2.7%;
+        background-color: #dbd9cd;
+      }
+      #bottom_b > img {
+        margin: 1.7%;
+      }
+      #bottom hr {
+        width: 100%;
+      }
+      #mediaq img{
+        margin-top: 10px; cursor: pointer;
+      }
+
+      /*======= FOOTER END =========*/
+
+      /*========= RESPONSIVE============*/
+@media(max-width:900px){
+ #main_panel{
+   /* border: 1px solid red; */
+   display: flex;
+   flex-direction: column;
+ }
+ #main_panel_left{
+   width: 100%;
+   border-right: none;
+   /* border: 1px solid red; */
+ }
+ #main_panel_right{
+   width: 100%;
+   border: 1px solid black;
+  }
+#pay3{
+flex-direction: column;
+}
+  #p3l{
+    display: flex;
+    width: 100%;
+    height: auto;
+    padding-left: 0px;
+  }
+  #p3l > p{
+   margin: auto;
+ }
+ #p3r-t{
+   flex-direction: column;
+ }
+ #p3r-t > img {
+        margin: 1%;
+      }
+
+      #form{
+        display: flex;
+        flex-direction: column;
+      }
+      #form > div {
+        padding-top: 15px;
+        padding-left: 20%;
+      }
+      #form > div > p{
+        margin: 0 auto;
+        width: 100%;
+      }
+      #form2{
+        border: 1px solid black;
+        padding: 10px;
+      }
+      #form2 input{
+        width: 90%;
+      }
+      #confirm{
+        width: 100%;
+      }
+      #proceed{
+        margin: auto;
+      }
+      #bottom img,#bottom p{
+    display: none;
+  }
+  #bottom_t{
+    
+        display: inline;
+  }
+  #bottom{
+    margin-top:80px;
+    padding-bottom:20px;
+  }
+  #bottom h3{
+    font-size: medium;
+  }
+
+}
     </style>
   </head>
   <body>
@@ -558,7 +683,7 @@
   let resetLogin = JSON.parse(localStorage.getItem(`reset`));
   let loggedUser = document.getElementById(`loggedUser`);
   loggedUser.textContent = user[0].s_in_mail;
-  //Current Logged In user - Start
+  //Current Logged In user - End
 
   // Order Summary Start
   let mpr_i = document.getElementById(`mpr_i`);

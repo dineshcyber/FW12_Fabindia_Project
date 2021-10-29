@@ -267,8 +267,7 @@ big.forEach(function (product){
       
 let div1 = document.getElementById('imagebox');
 div1.append(img);
-
-pindiv.append(pincode , checkbtn,pinverify)
+pindiv.append(pincode , checkbtn,pinverify); 
 
     let div2 = document.getElementById('detailsbox'); 
 

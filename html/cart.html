@@ -107,13 +107,13 @@
       
         display: flex;
         width: 100%;
-        /* border: 1px solid red; */
+        
         margin: auto;
       }
       #cartimage {
        
         width: 85%;
-        /* border: 1px solid red; */
+        
       }
       #orderdetail {
       
@@ -122,15 +122,27 @@
       }
       .c_all,
       .cpcn {
+      
         display: flex;
         font-size: small;
       }
+      #cpcnhr{
+       
+      
+        width:80%;
+        margin-left:8%;
+        
+      }
+      .itemprice{
+        margin-left: 25%;
+      }
       #cartimage img {
         cursor: pointer;
-        width: 15%;
+        width: 150px;
+        height:200px
       }
       .c_all {
-       
+        
         margin: 20px 20px 0;
         width: 100%;
         padding: 10px;
@@ -139,16 +151,14 @@
         font-weight: bold;
         padding-top: 20px;
         line-height: 20px;
+        font-size:100%;
       }
 
-      .itemprice {
-        margin-left: 100%;
-      }
+     
       .cpcn {
-        
+       
         width: 80%;
-        margin-left: 50%;
-        height: 80%;
+       height: 80%;
         
       }
       #divr {
@@ -158,6 +168,7 @@
         margin-top: 2%;
         margin-left:3%;
         padding-bottom: 1.5%;
+        
       }
       #divr #remov {
         width: 21px;
@@ -169,21 +180,19 @@
       
       #csize{
         margin-top: 15%;
-        width:140%;
-        
+        font-size:100%;
+      
       }
       
-      body hr {
+      hr {
         width: 60%;
         margin-left: 2.5%;
       }
-       #hrlinee {
-        /* position: static; */
-        margin-top: 3%;
-        width: 300%;
-        margin-left: 25%;
-        /* border: 1px solid red; */
+      #hrlinee{
+        width:90%;
+        margin-left: 0;
       }
+       
       h2 {
         margin-top: 50px;
         margin-left: 4.5%;
@@ -277,6 +286,130 @@
       }
 
       /*======= FOOTER END =========*/
+  @media(max-width:900px){
+
+    #cartbox{
+      display: inline;
+    }
+    #cartimage{
+      width:100%;
+      
+      
+    }
+    #divr{
+      width:95%;
+      height:200px;
+
+    }
+    #cartimage img{
+      width:120px;
+      height:150px;
+    }
+    #orderdetail{
+      margin-top:3%;
+      border:1px solid black;
+      width:88%;
+      padding:2%;
+    }
+    #orderdetail hr{
+      width:90%;
+      margin-top:1%;
+    }
+    #orderdetail button{
+      margin-top: 1%;
+    }
+    hr{
+      width:95%;
+    }
+  #bottom img,#bottom p{
+    display: none;
+  }
+  #bottom_t{
+    
+        display: inline;
+  }
+  #continue button{
+    margin:30px;
+  }
+  #bottom{
+    margin-top:80px;
+    padding-bottom:20px;
+  }
+  #bottom h3{
+    font-size: medium;
+  }
+  #onlycart,#mediaproducts{
+    display: none;
+  }
+  #scroller-t #mediaimg {
+        width: 100px;
+        height: auto;
+      }
+      #scroller-t input {
+        padding-left: 10px;
+        height: 40px;
+        width: 100%;
+      }
+      #scroller #warning {
+   font-size: xx-small;
+ }
+}
+@media(max-width:500px){
+  body{
+    min-width:350px;
+  }
+  #divr{
+    width:94%;
+    margin-top:4%;
+    
+  }
+  #orderdetail{
+    margin-top:4%;
+  }
+  #scroller-t #mediaimg{
+    width:70px;
+   
+  }
+  
+  #scroller-t input{
+    font-size:xx-small;
+    padding:0;
+    width:95px;
+    height:25px;
+    text-align: center;
+  }
+  #scroller #warning {
+   font-size: xx-small;
+ }
+ #empty{
+   font-size: large;
+   
+ }
+ .cpcn{
+   display: inline;
+ }
+ .itemprice{
+   margin-left:0;
+   margin-top: 0;
+ }
+ #csize{
+   margin-top:0
+ }
+ #bottom h3{
+   font-size: small;
+   
+ }
+ #bottom{
+   margin-top:160px;
+ }
+ #bottom{
+   
+   padding-bottom: 25px;
+ }
+}
+      
+     
+      
     </style>
   </head>
   <body>
@@ -288,7 +421,7 @@
         <div>
           <a href="index.html">
             <img
-              src="https://www.fabindia.com/file/general/fab_india_logo.png"
+              src="https://www.fabindia.com/file/general/fab_india_logo.png" id="mediaimg"
               alt="Fabindia Logo"
             />
           </a>
@@ -300,20 +433,20 @@
           </p>
         </div>
         <div>
-          <p class="signinup">
+          <p id="onlycart" class="signinup">
             Sign In | Sign Up | <strong>Fab</strong><em>family</em> | Track Your
             Order | Store Locator
           </p>
           <div id="scroller-t-r">
-            <p>📞 INR</p>
+            <p id="onlycart">📞 INR</p>
             <img
               src="https://www.fabindia.com/file/v8385693196996654632/general/india_flag.svg"
             />
             <p>˅</p>
             <img
-              src="https://www.fabindia.com/file/general/icon-loyalty-star-old-page.png"
+              src="https://www.fabindia.com/file/general/icon-loyalty-star-old-page.png" id="onlycart"
             />
-            <img src="./image/icon-heart-black.png" alt="" />
+            <img src="./image/icon-heart-black.png" id="onlycart" alt="" />
             <a href="cart.html"
               ><img src="./image/icon-bag-black.png" alt=""
             /></a>
@@ -321,16 +454,16 @@
         </div>
       </div>
       <div id="scroller-b">
-        <p>New Arrivals ˅</p>
+        <p id="mediaproducts">New Arrivals ˅</p>
         <p>Collections ˅</p>
         <p>Women ˅</p>
         <p>Men ˅</p>
-        <p>Kids ˅</p>
-        <p>Home Linen ˅</p>
+        <p id="mediaproducts">Kids ˅</p>
+        <p id="mediaproducts">Home Linen ˅</p>
         <p>Dining & Decor ˅</p>
-        <p>Furniture ˅</p>
-        <p>Beauty ˅</p>
-        <p>Food ˅</p>
+        <p id="mediaproducts">Furniture ˅</p>
+        <p id="mediaproducts">Beauty ˅</p>
+        <p id="mediaproducts">Food ˅</p>
       </div>
     </div>
 

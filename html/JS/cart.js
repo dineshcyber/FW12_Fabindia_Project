@@ -94,7 +94,7 @@ cartinfo.forEach(function(c){
 
    let hrline1 = document.createElement('hr'); hrline1.setAttribute('id','hrlinee')
 
-   let cpcnhr = document.createElement('div');
+   let cpcnhr = document.createElement('div'); cpcnhr.setAttribute('id','cpcnhr')
    cpcnhr.append(cpcn,hrline1);
 
    let removebtn = document.createElement('img');   removebtn.setAttribute('id','remov')
@@ -107,7 +107,9 @@ let c_all = document.createElement('div');  c_all.setAttribute('class','c_all')
 c_all.append(cimg,cpcnhr);
 
 let divr = document.createElement('div');  divr.setAttribute('id','divr');
-divr.append(c_all,removebtn)
+divr.append(c_all,removebtn);
+
+
 
 let divmain = document.getElementById('cartimage');
 divmain.append(divr);
@@ -199,6 +201,7 @@ function empty(){
 
         document.getElementById('empty').innerHTML = "Your current shopping cart is empty";
         document.getElementById("orderdetail").innerHTML = "";
+        document.getElementById("orderdetail").style.border = 'none';
 
     }
 }
