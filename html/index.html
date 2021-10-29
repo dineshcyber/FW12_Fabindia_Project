@@ -19,52 +19,77 @@
 
 </head>
 
-<body>
+<body id="resize">
      <!-- Header Start-->
      <header class="header" id="myHeader">
         <div class="top-header">
             <div class="header-left">
-                <button id="signin"> <img src="./image/icon-signin-black.png" alt=""> Sign In</button>
-                <!-- The Modal -->
-                <div id="myModal" class="modal">
+                <div id="menu_btn" >
+                    <button class="menu_btn"> 
+                    <img src="https://www.inventicons.com/uploads/iconset/496/wm/512/Menu_Line-98.png" class="img_nav"></button>
+                    </div>
+                <div class="popup">
+                  <div class="popup-overlay"></div>
+                  <div class="main-popup">
+                    <div class="popup-content">
+                      <span class="close-btn">&times;</span>
+                        <hr>
+                      <div id="pop_sign">
+                          <br/>
+                          <div class="popbtn"><button onclick="signinpage()">&nbsp;&nbsp;Sign In&nbsp;</button></div>
+                          <div class="popbtn"><button onclick="signupppage()">|&nbsp;&nbsp;&nbsp;Sign Up&nbsp;&nbsp;</button></div>
+                      </div>
+                      <hr>
+                      <div class="pop_opt"><button onclick="go_to_products()" style="width: 100%"> New Arrivals</button></div>
+                      <hr>
+                      <div class="pop_opt"><button onclick="go_to_men()">Men</button></div>
+                      <hr>
+                      <div class="pop_opt"><button onclick="go_to_women()">Women</button></div>
+                      <hr>
+                      <div class="pop_opt"><button onclick="go_to_decor()">Decors</button></div>
+                      <hr>
+                     </div>
+                  </div>
+                </div>
+                <div id="sign_icon">
+                    <button onclick="signinpage()"> 
+                        <img src="./image/icon-signin-black.png" class="img_nav"></button>
+                </div>
+               
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
 
-                    <!-- Modal content -->
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <span class="close">&times;</span>
-                            <div style="padding: 4px; margin-bottom: 5px;">
-                                <p id="change_me">Sign in</p>
-                            </div>
-                            <hr style="width:65%;margin: auto;">
+    <!-- Modal content -->
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <div style="padding: 4px; margin-bottom: 5px;">
+                <p id="change_me">Sign in</p>
+            </div>
+            <hr style="width:65%;margin: auto;">
+        </div>
+        <div id="modal-body">
+            <div id="workspace">
+                <div id=removable>
+                    <div>Email Address:*</div>
+                    <div style="padding: 0px;">
+                        <div><input type="email" id="mail" placeholder="" />
                         </div>
-                        <div id="modal-body">
-                            <div id="workspace">
-                                <div id=removable>
-                                    <div>Email Address:*</div>
-                                    <div style="padding: 0px;">
-                                        <div><input type="email" id="mail" placeholder="" />
-                                        </div>
-                                        <div id="signin_mail"> </div>
-                                    </div>
-                                    <div>Password:*</div>
-                                    <div style="padding: 0px;">
-                                        <div style="margin-bottom: 0px;">
-                                            <input type="password" id="password"  placeholder="Minimum 8 characters" />
-                                        </div>
-                                        <div id="signin_pass"> </div>
-                                    </div><div></div>
-                                    <div>
-                                        <button onclick="sign_in()">Sign In</button>
-                                        <div id="show-flex">
-                                            <div>Forgot Password?</div>
-                                            <div>New to Fabindia?</div>
-                                            <div><button onclick="sign_up()"  id="create-acc">Create Account</button>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-
+                        <div id="signin_mail"> </div>
+                    </div>
+                    <div>Password:*</div>
+                    <div style="padding: 0px;">
+                        <div>
+                            <input type="password" id="password"  placeholder="Minimum 8 characters" />
+                        </div>
+                        <div id="signin_pass"> </div>
+                    </div><div></div>
+                    <div>
+                        <button onclick="sign_in()">Sign In</button>
+                        <div id="show-flex">
+                            <div>Forgot Password?</div>
+                            <div>New to Fabindia?</div>
+                            <div><button onclick="signupppage()" id="create-acc">Create Account</button>
                             </div>
                         </div>
                     </div>
@@ -72,6 +97,95 @@
                 </div>
 
             </div>
+        </div>
+    </div>
+
+</div>
+
+<div id="myModal2" class="modal2">
+
+    <!-- Modal content -->
+    <div class="modal-content2">
+        <div class="modal-header2">
+            <span class="close2">&times;</span>
+            <div style="padding: 4px; margin-bottom: 5px;">
+                <p>Sign up</p>
+            </div>
+            <hr style="width:65%; margin: auto;">
+        </div>
+        <div id="modal-body2">
+            <div id="workspace2">
+            
+                <div id=removable2>
+                    <div>First Name:*</div>
+                    <div style="padding: 0px;">
+                        <div><input type="text" id="name" placeholder="" />
+                        </div>
+                        <div id="nme_mand"> </div>
+                    </div>
+                    <div>Last Name:*</div>
+                    <div style="padding: 0px;">
+                        <div>
+                            <input type="text" id="l_name"  placeholder="" />
+                        </div>
+                        <div id="lnme_mand"> </div>
+                    </div>
+                    <div>Mobile Number:*</div>
+                    <div style="padding: 0px;">
+                        <div>
+                            <input type="number" id="phne_nmbr"  placeholder="Enter 10 digit mobile number" />
+                        </div>
+                        <div id="phne_mand"> </div>
+                    </div>
+                    <div>Email Address:*</div>
+                    <div style="padding: 0px;">
+                        <div>
+                            <input type="mail" id="su_mail"  placeholder="" />
+                        </div>
+                        <div id="mail_mand"> </div>
+                    </div>
+                    <div>Referal Code:*</div>
+                    <div style="padding: 0px;">
+                        <div>
+                            <input type="text" id="ref_code" placeholder="" />
+                        </div>
+                    </div>
+                    <div>Password:*</div>
+                    <div style="padding: 0px;">
+                        <div>
+                            <input type="password" id="su_pass"  placeholder="Minimum 8 characters" />
+                        </div>
+                        <div id="pass_mand"></div>
+                    </div>
+                    <div>Confirm Your Password:*</div>
+                    <div style="padding: 0px;">
+                        <div>
+                            <input type="password" id="su_cpass"  placeholder="" />
+                        </div>
+                        <div id="cpass_mand"></div>
+                    </div>
+                    <div></div>
+                    <div id="newsletter">I wish to receive the newsletter</div>
+                    <div></div>
+                    <div><button id="su_btn" onclick="sign_up()">Submit</button></div>
+                    <div></div>
+                    <div id="terms">By creating an account you agree to Fabindia's terms of use and privacy policy</div>
+                </div>
+                
+                <hr style="width:100%;margin: auto;">
+                <h2 class="already">Already Have an Account?</h2>
+                <div id="submit_btn"><button onclick="already_si()" id="already_btn">Sign In</button></div>
+        
+                
+                </div>
+           
+        </div>
+    </div>
+
+</div>
+
+
+</div>
             <div class="header-middle">
                 <img src="https://www.fabindia.com/file/general/Fabindia_logo.svg" alt="LOGO">
             </div>
@@ -83,6 +197,11 @@
                     <img src="./image/icon-bag-black.png" alt=""></button>
                    
                 </div>
+
+            </div>
+            <div id="note">
+                <div style="margin-top: 20%; margin-left: 2%; width: 200px;"><strong>WELCOME...!</strong></div>
+                <div id="note_con" style= "margin-top: 2%; margin-left: 5%"></div>
             </div>
         </div>
         <div class="nav-bar">
