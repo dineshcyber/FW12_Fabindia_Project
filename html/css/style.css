@@ -213,8 +213,9 @@ li a {
 }
 
 /* The Close Button */
+/* The Close Button */
 .close,
-.close {
+.close2 {
   float: right;
   font-size: 20px;
   border: 1px solid #000;
@@ -242,25 +243,69 @@ li a {
   background-color: #f4f2e5;
 }
 
-#modal-body {
+#modal-body, #modal-body2 {
   padding: 2px 16px;
 }
-#workspace {
+#workspace, #workspace2 {
   width: 65%;
   margin: auto;
 }
-#removable {
-  font-family: "Mulish", sans-serif;
-  width: 65%;
-  margin: auto;
+#workspace2 {
+  height: 740px;
+}
+#removable,
+#removable2{
+  width: 100%;
   display: grid;
-  height: 230px;
-  gap: 1%;
-  grid-template-columns: 30% 70%;
-  grid-template-rows: 60px 60px 60px 60px 60px 60px 13px 30px;
+  gap: 2%;
+  height: 240px;
+  grid-template-columns: 28% 70%;
 }
-#mail,
-#password {
+#removable2 {
+  height: 535px;
+}
+#removable2 >div:nth-child(14){
+  height: 10px;
+}
+#removable2 >div:nth-child(n+15):nth-child(-n+16){
+  height: 10px;
+  margin:auto 2px;
+  font-size: 12px;
+  }
+  #removable2 >div:nth-child(n+17):nth-child(-n+18){
+    height: 17px;
+    margin-top: 0px;
+    }
+    #terms {
+      font-size: 10px;
+      margin-top: 5px;
+    }
+  .already {
+    margin: auto;
+    width: 58%;
+    margin-top: 3%;
+  }
+  #submit_btn {
+    width: 50%;
+    margin: auto;
+    margin-top: 5px;
+  }
+  #already_btn {
+    width: 100%;
+    margin: auto;
+    border: 1px solid black;
+    text-align: center;
+    padding: 0%;
+    height: 30px;
+    border-radius: 2px;
+  }
+  
+  #mail,
+  #password,
+  #name, #l_name,
+  #phne_nmbr, #su_mail,
+  #ref_code, #su_pass,
+  #su_cpass {
   font-family: "Mulish", sans-serif;
   width: 95%;
   border: 1px solid #cccccc;
@@ -268,7 +313,7 @@ li a {
   border-radius: 5px;
   padding: 8px;
 }
-#removable > div:nth-child(6) > button {
+#removable > div:nth-child(6) > button, #su_btn {
   margin: 0%;
   background-color: #ddbc4b;
   width: 100%;
@@ -297,13 +342,7 @@ li a {
   margin-bottom: 0%;
   color: maroon;
 }
-#workspace > div {
-  width: 100%;
-  display: grid;
-  gap: 2%;
-  grid-template-columns: 28% 70%;
-  grid-template-rows: 53px 53px 53px;
-}
+
 
 .d {
   float: left;
@@ -1186,3 +1225,129 @@ li a {
 }
 
 /* whatsapp */
+#pop_sign {
+  display: flex;
+  text-align: center;
+  padding: 10px 5px;
+
+}
+.popbtn > button {
+  margin: auto;
+  border-radius: 0px;
+  padding: 0px;
+}
+.pop_opt > button {
+  width: 100%;
+  text-align: left;
+  margin: auto;
+}
+
+.popup {
+	position: absolute;
+	width: 100%;
+	height: 100vh;
+	display: none;
+	overflow: hidden;
+	margin-top: 0%;
+}
+.popup-overlay {
+	background-color: rgba(0, 0, 0, 0.575);
+	height: 100vh;
+	width: 100%;
+	position: absolute;
+}
+.main-popup {
+	position: absolute;
+	left: 0;
+	height: 500px;
+	width: 50%;
+	z-index: 1;
+	background: white;
+	padding: 30px 20px;
+	line-height: 1rem;
+	display: flex;
+	text-align: left;
+	transform: translateX(-100%);
+  font-size: 20px;
+}
+.close-btn {
+	border: 1px solid black;
+  border-radius: 20px;
+	padding: 5px;
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	font-size: 2rem;
+	cursor: pointer;
+	transition: .5s ease all;
+  margin-bottom: 0px;
+}
+.close-btn:hover {
+	background: white;
+}
+.popup-content p {
+	font-size: 18px;
+	line-height: 2rem;
+  margin-top: 0px;
+}
+#menu_btn {
+  display: none;
+}
+@keyframes slide-in {
+	0% {
+		transform: translateX(-100%);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+@keyframes slide-out {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(-100%);
+	}
+}
+@media(max-width: 768px) {
+#sign_icon, .nav-bar  {
+  display: none;
+}
+#menu_btn{
+  display: block;
+}
+#top-header{
+  width: 90%;
+  height: 30px;
+}
+.section-heading {
+  width: 80%;
+  margin: 20px auto;
+  text-align: center;
+}
+#slider {
+  width: 100%;
+  margin: auto;
+  padding: 10px;
+  height: 400px;
+  display: grid;
+  grid-gap: 5%;
+  grid-template-columns: 20% 20% 20% 20%;
+  justify-content: center;
+}
+#slider > div >p {
+  width: 100%;
+  margin: auto;
+  text-align: left;
+ 
+}
+
+
+.section-heading #heading {
+  width: 100%;
+}
+}
+
+
+
+
