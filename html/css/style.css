@@ -441,7 +441,57 @@ li a {
   background: inherit;
   text-transform: uppercase;
 }
-
+.d-content1 {
+  height: 220px; 
+  line-height: 20px;
+}
+.d-content2 {
+  height: 275px;
+   line-height: 25px;
+}
+.d-content3, .d-content5, .d-content6{
+  height: 400px;
+}
+.d-content8 {
+ height: 410px;
+}
+.women_text_block1 {
+  margin-left: 4%;
+}
+.p1 {
+  margin-bottom: 5%;
+}
+.sty_wid {
+  margin-right: 7%;
+}
+.wid9 {
+  width: 9%;
+}
+.furni_text_block1 {
+  width: 8%; 
+  margin-left: 4%; 
+  margin-right: 0%; 
+  margin-top: 0%;
+}
+.furni_text_block3 {
+  width: 7%;
+}
+.furni_text_block4 {
+  width: 8%; margin-right: 5%;
+}
+.furni_text_block5 {
+  width: 8%;
+}
+.women_text_block4, .men_text_block4,
+ .kid_text_block5, .home_text_block4,
+ .dine_text_block5, .furni_text_block2,
+ .furni_text_block6 {
+ 
+  width: 9%;
+ }
+ .wid9 {
+   width: 9%;
+ }
 .d-content1,
 .d-content2,
 .d-content3,
@@ -1292,6 +1342,35 @@ li a {
 }
 #menu_btn {
   display: none;
+}
+.div1 {
+  padding: 4px; 
+  margin-bottom: 5px;
+}
+.line {
+  width:65%;
+  margin: auto;
+}
+.line2 {
+  width:100%;
+  margin: auto;
+}
+.cart > button {
+  background-color: white;
+   border: none;
+}
+.div2 {
+  margin-top: 20%;
+   margin-left: 2%;
+    width: 200px;
+}
+#note_con {
+  margin-top: 2%; 
+  margin-left: 5%;
+}
+.sty_div {
+  background-color: white; 
+  border: none;
 }
 @keyframes slide-in {
 	0% {
