@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Unna&display=swap"
+      rel="stylesheet"
+    />
+    <title>Fabindia Checkout</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./css/checkout.css">
+  </head>
+  <body>
+    <div id="top">
+      <img
+        id="logo"
+        src="https://www.fabindia.com/file/v8385693196996654632/general/fab_india_logo.png"
+      />
+      <p>📞 +918010488888</p>
+    </div>
+
+    <div id="main_panel">
+      <div id="main_panel_left">
+        <div id="details">
+          <div>
+            <h2>Login Details</h2>
+            <p id="loggedUser">Please Log In</p>
+          </div>
+          <div>
+            <a href="index.html">
+              <button id="reset">Change</button>
+            </a>
+          </div>
+        </div>
+
+        <div id="ship_bill">
+          <h2>Shipping/Billing Address</h2>
+          <p id="warning">Please Select a Shipping Address to continue</p>
+        </div>
+
+        <div id="ship_bill2">
+          <form id="form">
+            <div>
+              <p>Pin/Zip Code*</p>
+              <input type="number" placeholder="Pin/Zip Code" />
+            </div>
+            <div>
+              <p>Country*</p>
+              <select id="country">
+                <option value="india">India</option>
+                <option value="usa">United States of America</option>
+                <option value="bangladesh">Bangladesh</option>
+                <option value="singapore">Singapore</option>
+              </select>
+            </div>
+            <div></div>
+            <div>
+              <p>State*</p>
+              <select id="state">
+                <option value="default">State/Region</option>
+                <option value="ap">Andhra Pradesh</option>
+                <option value="haryana">Haryana</option>
+                <option value="up">Uttar Pradesh</option>
+                <option value="delhi">Delhi</option>
+                <option value="wb">West Bengal</option>
+              </select>
+            </div>
+            <div>
+              <p>City*</p>
+              <input type="text" placeholder="City" />
+            </div>
+            <div></div>
+            <div>
+              <p>First Name*</p>
+              <input type="text" placeholder="First Name" />
+            </div>
+            <div>
+              <p>Last Name*</p>
+              <input type="text" placeholder="Last Name" />
+            </div>
+            <div></div>
+            <div>
+              <p>Address Line 1*</p>
+              <input type="text" placeholder="Address Line 1" />
+            </div>
+            <div>
+              <p>Address Line 2</p>
+              <input type="text" placeholder="Address Line 2" />
+            </div>
+            <div></div>
+            <div>
+              <p>Mobile</p>
+              <input type="number" placeholder="Mobile" />
+            </div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div>
+              <button id="proceed">Save and Continue</button>
+              <p id="warning3">You must fill the required mandatory * fields</p>
+            </div>
+          </form>
+        </div>
+
+        <div id="pay1">
+          <h2>Payment Details</h2>
+        </div>
+        <div id="pay2">
+          <h2 style="padding: 20px 0">Make Payment</h2>
+          <div id="pay3">
+            <div id="p3l">
+              <p>Credit/Debit card</p>
+              <p>Net Banking</p>
+              <p>UPI</p>
+              <p>Google Pay</p>
+              <p>Wallet</p>
+              <p>Gift Card</p>
+              <p>EMI</p>
+            </div>
+            <div id="p3r">
+              <div id="p3r-t">
+                <img
+                  src="https://www.fabindia.com/file/general/logo-hdfc.png"
+                />
+                <p>
+                  Get 10% discount on Rs. 5000/- or above with your HDFC credit
+                  card. T&C apply.
+                </p>
+              </div>
+              <div id="p3r-b">
+                <h3 style="padding: 15px 0">Enter your card details</h3>
+                <form id="form2">
+                  <p>Card Number*</p>
+                  <input type="number" placeholder="Card Number" />
+                  <p>Name on Card*</p>
+                  <input type="text" placeholder="Name on Card" />
+                  <p>Expires On*</p>
+                  <input type="number" placeholder="Month" />
+                  <input type="number" placeholder="Year" />
+                  <input type="password" placeholder="CVV" />
+                  <h4>Be quick, be safe. Save your card details</h4>
+                  <button id="confirm">Pay Now</button>
+                  <h4 id="warning2">One or more of the required fields are empty</h4>
+                  <h4 id="warning5">Enter a valid 16-digit card number</h4> 
+                  <h4 id="warning6">CVV is the unique 3 dight number at the back of your card</h4> 
+                  <h4 id="warning7">Expiry Date in the MM YYYY format</h4>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="main_panel_right">
+        <div id="mp_box">
+          <h3>Order Summary</h3>
+          <hr />
+          <p style="padding-top: 20px;"><strong> Your Items:</strong><p id="mpr_i"></p></p>
+          <p id="mpr_q" style="padding-top: 10px;">Qty:</p>
+          <!-- <p>Size:</p> -->
+          <br />
+          <br />
+          <br />
+          <br />
+          <p>Sub Total: <strong id="subTot">Rs 0</strong></p>
+          <hr />
+          <p>
+            Delivery Charges: <strong>Rs </strong
+            ><strong id="delivery">0</strong>
+          </p>
+          <hr />
+          <p>Total: <strong id="total">Rs 0</strong></p>
+          <p id="warning4">
+            Cart is Empty <a href="products.html">Continue Shopping</a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div id="bottom">
+      <div id="bottom_t">
+        <div>
+          <h3>Let Us Help You</h3>
+          <p>Order Tracking</p>
+          <p>Bulk Orders</p>
+          <p>Store Locator</p>
+          <p>Franchise Form</p>
+          <p>Furniture Warranty Policy</p>
+        </div>
+        <div>
+          <h3>Support</h3>
+          <p>Customer Service</p>
+          <p>How To Order</p>
+          <p>Billing And Payments</p>
+          <p>Shipping And Delivery</p>
+          <p>Returns And Exchanges</p>
+          <p>FAQs</p>
+        </div>
+        <div>
+          <h3>Company</h3>
+          <p>About Us</p>
+          <p>Style Guides</p>
+          <p>Contact Us</p>
+          <p>Careers</p>
+          <p>Privacy Policy</p>
+          <p>Terms Of Use</p>
+          <p>Business Enquiries</p>
+          <p>The Fabindia Schools</p>
+        </div>
+        <div>
+          <h3>About Fabindia</h3>
+          <p>60 Years Of Fabindia</p>
+          <p>Philosophy</p>
+          <p>About Fabindia Products</p>
+          <p>Organic Certification</p>
+          <p>Fabric Care</p>
+          <p>FabCafe</p>
+          <p><strong>Fab</strong><em>family</em> - Loyalty Program</p>
+          <p>Interior Design Solutions</p>
+        </div>
+        <div>
+          <h3>Stay in Touch</h3>
+          <img src="image\st.png" style="margin-top: 10px; cursor: pointer" />
+        </div>
+      </div>
+      <hr />
+      <div id="bottom_b">
+        <h3>© Copyright 2018 Fabindia.com. All Rights Reserved</h3>
+        <img
+          src="https://www.fabindia.com/file/v4659334362150706955/widget/FabindiaFooter/images/payment-cards-n_1.jpg"
+        />
+      </div>
+    </div>
+  </body>
+  <script src="./JS/checkout.js"></script>
+</html>
