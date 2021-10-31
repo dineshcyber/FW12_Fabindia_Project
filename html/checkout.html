@@ -690,7 +690,20 @@ flex-direction: column;
       localStorage.removeItem(`cart`)
     } else if (validation_counter2 == 0 && del.textContent == 0) {
       warning4.style.display = `block`;
-    } else {
+    }
+    else if(validation_counter2 == 0 && validation_counter5 > 0 ){
+      warning2.style.display = `none`;
+      warning6.style.display = `none`;
+      warning5.style.display = `block`;
+    }
+    else if(validation_counter2 == 0 && validation_counter6 > 0){ 
+      warning2.style.display = `none`;
+      warning5.style.display = `none`;
+      warning6.style.display = `block`;
+    }
+     else {
+      warning5.style.display = `none`;
+      warning6.style.display = `none`;
       warning2.style.display = `block`;
     }
   });
