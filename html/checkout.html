@@ -241,6 +241,11 @@
         padding-top: 5px;
         display: none;
       }
+      #warning7{
+        color: maroon;
+        padding-top: 5px;
+        display: none;
+      }
       /*========= FINAL PAYMENT END ===========*/
 
       /*========== RIGHT PANEL START ========== */
@@ -509,6 +514,7 @@ flex-direction: column;
                   <h4 id="warning2">One or more of the required fields are empty</h4>
                   <h4 id="warning5">Enter a valid 16-digit card number</h4> 
                   <h4 id="warning6">CVV is the unique 3 dight number at the back of your card</h4> 
+                  <h4 id="warning7">Expiry Date in the MM YYYY format</h4>
                 </form>
               </div>
             </div>
@@ -665,11 +671,13 @@ flex-direction: column;
   let warning4 = document.getElementById(`warning4`);
   let warning5 = document.getElementById(`warning5`);
   let warning6 = document.getElementById(`warning6`);
+  let warning7 = document.getElementById(`warning7`);
   final.addEventListener(`click`, function (e) {
     e.preventDefault();
     var validation_counter2 = 0;
     var validation_counter5 = 0;
     var validation_counter6 = 0;
+    var validation_counter7 = 0;
     for (var i = 0; i < form_details2.length - 1; i++) {
       if (form_details2[i].value == `` || form_details2[i].value == null) {
         validation_counter2++;
@@ -682,10 +690,14 @@ flex-direction: column;
     if(form_details2[4].value.length != 3){
         validation_counter6++;
       }
-
-    console.log(validation_counter2,validation_counter5, validation_counter6);
+    if(form_details2[2].value.length != 2){
+      validation_counter7++;
+    } 
+    if(form_details2[3].value.length != 4){
+      validation_counter7++;
+    }
      
-    if (validation_counter2 == 0 && del.textContent == 150 && validation_counter5 ==0 && validation_counter6 == 0) {
+    if (validation_counter2 == 0 && del.textContent == 150 && validation_counter5 ==0 && validation_counter6 == 0 && validation_counter7 == 0) {
       window.location.href = `thankyou.html`;
       localStorage.removeItem(`cart`)
     } else if (validation_counter2 == 0 && del.textContent == 0) {
@@ -694,16 +706,25 @@ flex-direction: column;
     else if(validation_counter2 == 0 && validation_counter5 > 0 ){
       warning2.style.display = `none`;
       warning6.style.display = `none`;
+      warning7.style.display = `none`;
       warning5.style.display = `block`;
     }
     else if(validation_counter2 == 0 && validation_counter6 > 0){ 
       warning2.style.display = `none`;
       warning5.style.display = `none`;
+      warning7.style.display = `none`;
       warning6.style.display = `block`;
+    }
+    else if(validation_counter2 == 0 && validation_counter7 > 0 ){
+      warning2.style.display = `none`;
+      warning5.style.display = `none`;
+      warning6.style.display = `none`;
+      warning7.style.display = `block`;
     }
      else {
       warning5.style.display = `none`;
       warning6.style.display = `none`;
+      warning7.style.display = `none`;
       warning2.style.display = `block`;
     }
   });
