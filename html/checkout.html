@@ -231,6 +231,16 @@
         display: none;
         font-weight: 500;
       }
+      #warning5{
+        color: maroon;
+        padding-top: 5px;
+        display: none;
+      }
+      #warning6{
+        color: maroon;
+        padding-top: 5px;
+        display: none;
+      }
       /*========= FINAL PAYMENT END ===========*/
 
       /*========== RIGHT PANEL START ========== */
@@ -487,7 +497,7 @@ flex-direction: column;
                 <h3 style="padding: 15px 0">Enter your card details</h3>
                 <form id="form2">
                   <p>Card Number*</p>
-                  <input type="text" placeholder="Card Number" />
+                  <input type="number" placeholder="Card Number" />
                   <p>Name on Card*</p>
                   <input type="text" placeholder="Name on Card" />
                   <p>Expires On*</p>
@@ -496,9 +506,9 @@ flex-direction: column;
                   <input type="password" placeholder="CVV" />
                   <h4>Be quick, be safe. Save your card details</h4>
                   <button id="confirm">Pay Now</button>
-                  <h4 id="warning2">
-                    One or more of the required fields are empty
-                  </h4>
+                  <h4 id="warning2">One or more of the required fields are empty</h4>
+                  <h4 id="warning5">Enter a valid 16-digit card number</h4> 
+                  <h4 id="warning6">CVV is the unique 3 dight number at the back of your card</h4> 
                 </form>
               </div>
             </div>
@@ -653,15 +663,29 @@ flex-direction: column;
   let final = document.getElementById(`confirm`);
   let warning2 = document.getElementById(`warning2`);
   let warning4 = document.getElementById(`warning4`);
+  let warning5 = document.getElementById(`warning5`);
+  let warning6 = document.getElementById(`warning6`);
   final.addEventListener(`click`, function (e) {
     e.preventDefault();
     var validation_counter2 = 0;
+    var validation_counter5 = 0;
+    var validation_counter6 = 0;
     for (var i = 0; i < form_details2.length - 1; i++) {
       if (form_details2[i].value == `` || form_details2[i].value == null) {
         validation_counter2++;
       }
     }
-    if (validation_counter2 == 0 && del.textContent == 150) {
+
+    if(form_details2[0].value.length != 16){
+        validation_counter5++;
+      }
+    if(form_details2[4].value.length != 3){
+        validation_counter6++;
+      }
+
+    console.log(validation_counter2,validation_counter5, validation_counter6);
+     
+    if (validation_counter2 == 0 && del.textContent == 150 && validation_counter5 ==0 && validation_counter6 == 0) {
       window.location.href = `thankyou.html`;
       localStorage.removeItem(`cart`)
     } else if (validation_counter2 == 0 && del.textContent == 0) {
