@@ -1,0 +1,366 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap");
+body {
+  background-color: #f4f2e5;
+}
+p {
+  font-family: "Mulish", sans-serif;
+}
+/*====== HEADER START ======*/
+#top {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  border-bottom: 1px solid gray;
+  margin-left: 2.5%;
+}
+#top > img {
+  margin: 1%;
+  cursor: pointer;
+}
+#top > p {
+  margin: 25px;
+  cursor: pointer;
+}
+/*====== HEADER END ========*/
+
+/* ------------------------- */
+#main_panel {
+  display: flex;
+  margin-left: 2.5%;
+}
+#main_panel_left {
+  width: 74%;
+  border-right: 1px solid gray;
+}
+#main_panel_right {
+  width: 26%;
+}
+/* ------------------------- */
+
+/*=========== LOGIN DETAILS START ==========*/
+#details {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#details button {
+  cursor: pointer;
+  background-color: black;
+  border: black;
+  color: white;
+  width: 100px;
+  height: 35px;
+  border-radius: 5px;
+  margin-right: 50px;
+}
+/*=========== LOGIN DETAILS END ==========*/
+
+/*========= SHIPPING/BILLING START*=========*/
+#ship_bill {
+  border-bottom: 1px solid gray;
+  border-top: 1px solid gray;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  cursor: pointer;
+}
+#ship_bill > h2 {
+  margin: 0px;
+}
+#ship_bill > p {
+  display: none;
+  margin: 0px;
+  color: maroon;
+  font-weight: bold;
+  font-size: 13px;
+}
+#form {
+  border-bottom: 1px solid grey;
+  padding-bottom: 30px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+#form > div > p {
+  font-weight: bold;
+  margin: 5px;
+}
+#form > div {
+  padding-top: 30px;
+}
+#form > div > input,
+#form > div > select {
+  width: 60%;
+  padding-left: 5px;
+  font-family: "Mulish", sans-serif;
+  height: 30px;
+  border: 1px solid #cccccc;
+  background-color: #f9f8f1;
+}
+#form > div > select {
+  height: 35px;
+  width: 62%;
+}
+#proceed {
+  font-family: "Mulish", sans-serif;
+  font-weight: bold;
+  height: 45px;
+  background-color: #ddbc4b;
+  border: none;
+  border-radius: 3px;
+  width: 200px;
+  cursor: pointer;
+}
+/*========= SHIPPING/BILLING END =========*/
+
+/*========= FINAL PAYMENT START ===========*/
+#pay1 {
+  padding: 20px 0;
+}
+#pay2 {
+  display: none;
+  border-top: 1px solid gray;
+}
+#pay3 {
+  margin: auto;
+  display: flex;
+  gap: 10px;
+  padding-bottom: 20px;
+}
+#p3l {
+  height: 400px;
+  width: 35%;
+  background-color: #f9f8f1;
+  padding-left: 20px;
+  font-size: 12px;
+  line-height: 30px;
+}
+#p3l > p:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+#p3r {
+  background-color: #f9f8f1;
+  padding-bottom: 20px;
+}
+#p3r-t {
+  width: 90%;
+  margin: auto;
+  background-color: white;
+  margin-top: 15px;
+  display: flex;
+}
+#p3r-t > img {
+  margin: auto;
+}
+#p3r-t > p {
+  margin: 2%;
+}
+#p3r-b {
+  width: 85%;
+  margin: auto;
+}
+#form2 > input {
+  padding-left: 10px;
+  font-family: "Mulish", sans-serif;
+  height: 30px;
+  border: 1px solid #cccccc;
+  background-color: #f9f8f1;
+  margin-bottom: 20px;
+  width: 50%;
+}
+#form2 > input:nth-of-type(3),
+#form2 > input:nth-of-type(4) {
+  width: 90px;
+}
+#form2 > input:nth-of-type(5) {
+  width: 90px;
+  margin-left: 30px;
+}
+#form2 > p {
+  margin: 0px;
+  font-weight: bold;
+  font-size: 14px;
+}
+h4 {
+  font-family: "Mulish", sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+}
+#confirm {
+  cursor: pointer;
+  font-family: "Mulish", sans-serif;
+  font-weight: bold;
+  height: 40px;
+  background-color: #ddc36c;
+  border: none;
+  border-radius: 3px;
+  width: 50%;
+}
+#warning2 {
+  color: maroon;
+  padding-top: 5px;
+  display: none;
+}
+#warning3 {
+  color: maroon;
+  padding-top: 5px;
+  font-size: 13px;
+  display: none;
+}
+#warning4 {
+  color: maroon;
+  padding-top: 5px;
+  font-size: 16px;
+  display: none;
+  font-weight: 500;
+}
+#warning5 {
+  color: maroon;
+  padding-top: 5px;
+  display: none;
+}
+#warning6 {
+  color: maroon;
+  padding-top: 5px;
+  display: none;
+}
+#warning7 {
+  color: maroon;
+  padding-top: 5px;
+  display: none;
+}
+/*========= FINAL PAYMENT END ===========*/
+
+/*========== RIGHT PANEL START ========== */
+#mp_box {
+  margin: 58px auto;
+  width: 70%;
+}
+/*========== RIGHT PANEL END ========== */
+
+/*======= FOOTER START ========*/
+#bottom {
+  padding-top: 20px;
+  float: left;
+  width: 100%;
+  background-color: #dbd9cd;
+  height: fit-content;
+  margin-top: 150px;
+}
+#bottom_t {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  background-color: #dbd9cd;
+}
+#bottom p {
+  font-weight: normal;
+  margin: 10px 0px;
+  background-color: #dbd9cd;
+}
+
+#bottom_t > div {
+  margin: 1% auto;
+  padding: 0px 20px;
+  background-color: #dbd9cd;
+}
+#bottom_b {
+  display: flex;
+  justify-content: space-between;
+  background-color: #dbd9cd;
+}
+
+#bottom_b > h3 {
+  margin: 2.7%;
+  background-color: #dbd9cd;
+}
+#bottom_b > img {
+  margin: 1.7%;
+}
+#bottom hr {
+  width: 100%;
+}
+#mediaq img {
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+/*======= FOOTER END =========*/
+
+/*========= RESPONSIVE============*/
+@media (max-width: 900px) {
+  #main_panel {
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+  }
+  #main_panel_left {
+    width: 100%;
+    border-right: none;
+    /* border: 1px solid red; */
+  }
+  #main_panel_right {
+    width: 100%;
+    border: 1px solid black;
+  }
+  #pay3 {
+    flex-direction: column;
+  }
+  #p3l {
+    display: flex;
+    width: 100%;
+    height: auto;
+    padding-left: 0px;
+  }
+  #p3l > p {
+    margin: auto;
+  }
+  #p3r-t {
+    flex-direction: column;
+  }
+  #p3r-t > img {
+    margin: 1%;
+  }
+
+  #form {
+    display: flex;
+    flex-direction: column;
+  }
+  #form > div {
+    padding-top: 15px;
+    padding-left: 20%;
+  }
+  #form > div > p {
+    margin: 0 auto;
+    width: 100%;
+  }
+  #form2 {
+    border: 1px solid black;
+    padding: 10px;
+  }
+  #form2 input {
+    width: 90%;
+  }
+  #confirm {
+    width: 100%;
+  }
+  #proceed {
+    margin: auto;
+  }
+  #bottom img,
+  #bottom p {
+    display: none;
+  }
+  #bottom_t {
+    display: inline;
+  }
+  #bottom {
+    margin-top: 80px;
+    padding-bottom: 20px;
+  }
+  #bottom h3 {
+    font-size: medium;
+  }
+}
