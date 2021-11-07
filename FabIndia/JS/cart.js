@@ -197,7 +197,7 @@ empty();
 //to display if cart is empty
 
 function empty(){
-    if(JSON.parse(localStorage.getItem('cart')).length == 0){
+    if(JSON.parse(localStorage.getItem('cart')).length == 0 || null || undefined){
 
         document.getElementById('empty').innerHTML = "Your current shopping cart is empty";
         document.getElementById("orderdetail").innerHTML = "";
